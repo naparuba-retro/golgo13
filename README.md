@@ -40,7 +40,7 @@ You only need the games you want to play. Launching the program with no ROM show
 
 **3. Run the program and pick a game.** The first time, an in-app **build screen** reads your ROMs, generates the game code **on your machine**, compiles it and builds the French translation, with a progress display (it takes several minutes, once per game). Then you play. Everything is done from the menu: no command line.
 
-![Game selector](docs/img/selection.png)
+![Game selector](docs/img/selector.png)
 
 - **Linux / Steam Deck (AppImage)**: it carries its own Python, CMake, Ninja, zig cc and SDL3, so there is nothing to install. Everything is kept in the `golgo13/` folder beside the AppImage. Tested on a Steam Deck (desktop mode).
 - **Windows**: the in-app build needs [Python 3.10+](https://www.python.org/downloads/) and the Visual Studio *Build Tools* (C++ workload) installed once. It works in a project-local environment: nothing is ever installed in your global Python.
