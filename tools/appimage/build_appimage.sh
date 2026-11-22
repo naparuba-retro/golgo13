@@ -9,7 +9,13 @@ APP="$PWD/AppDir"; rm -rf "$APP"; mkdir -p "$APP/usr/bin" "$APP/opt"
 echo "== private Python"
 curl -fsSL "$PBS" | tar -xz -C "$APP/usr"; mv "$APP/usr/python" "$APP/usr/python" 2>/dev/null || true
 "$APP/usr/python/bin/python3" -m pip install --quiet --disable-pip-version-check pillow numpy cmake ninja ziglang
-for t in cmake ninja; do ln -sf "../python/bin/$t" "$APP/usr/bin/$t"; done
+# pip's entry scripts carry the CI path in their shebang: use the real binaries (ninja is one; cmake is called through a wrapper so it finds its modules)
+ln -sf ../python/bin/ninja "$APP/usr/bin/ninja"
+cat > "$APP/usr/bin/cmake" <<'C'
+#!/bin/sh
+exec "$(dirname "$(readlink -f "$0")")/../python/lib/python3.11/site-packages/cmake/data/bin/cmake" "$@"
+C
+chmod +x "$APP/usr/bin/cmake"
 cat > "$APP/usr/bin/zigcc" <<'Z'
 #!/bin/sh
 exec "$(dirname "$(readlink -f "$0")")/../python/bin/python3" -m ziglang cc "$@"

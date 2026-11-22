@@ -7,7 +7,7 @@ OUTER="$(dirname "${APPIMAGE:-$HERE}")"
 WORK="${GOLGO13_HOME:-$OUTER/golgo13}"
 VER="$(cat "$SRC/VERSION" 2>/dev/null)"
 
-export PATH="$HERE/usr/python/bin:$HERE/usr/bin:$PATH"
+export PATH="$HERE/usr/bin:$HERE/usr/python/bin:$PATH"
 export GOLGO13_PYTHON="$HERE/usr/python/bin/python3"
 export GOLGO13_BUNDLED=1
 export GOLGO13_SDL3_PREFIX="$HERE/usr/sdl3"
