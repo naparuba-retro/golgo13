@@ -20,7 +20,7 @@ jobs:
         shell: bash
         run: |
           python -m venv .venv
-          echo "$PWD/.venv/Scripts" >> "$GITHUB_PATH"
+          echo "$GITHUB_WORKSPACE\.venv\Scripts" >> "$GITHUB_PATH"
           .venv/Scripts/python -m pip install pillow numpy
       - name: Third-party (SDL3, minimp3)
         run: |
