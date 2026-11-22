@@ -1,0 +1,13 @@
+{
+  "assets": {
+    "033dc690/00": {"ja": "ちょっと速すぎる気がするが…", "text": "Ça me semble un peu trop rapide…", "style": "caption"},
+    "033dc690/01": {"ja": "…ここを動くな。", "text": "…Ne bouge pas d'ici.", "style": "caption"},
+    "033dc690/02": {"ja": "見に行くのか？", "text": "Tu vas voir ?", "style": "caption"},
+    "033dc690/04": {"ja": "ううっ…", "text": "Ngh…", "style": "caption"},
+    "033dc690/05": {"ja": "くそっ！！", "text": "Merde !!", "style": "caption"},
+    "033dc690/06": {"ja": "へへ…もうブレーキは使えないぜ…", "text": "Hé hé… on ne peut plus freiner…", "style": "caption"},
+    "033dc690/07": {"ja": "この先の崖で…", "text": "À la falaise, juste devant…", "style": "caption"},
+    "033dc690/08": {"ja": "殺し屋　シュミット", "text": "Tueur Schmitt", "style": "plate"},
+    "033dc690/09": {"ja": "じゃあ、このままでは崖に 転落するというのか…！！", "text": "Alors, tel quel, on va tomber de la falaise… !!", "style": "caption"}
+  }
+}

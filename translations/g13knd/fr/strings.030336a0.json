@@ -1,0 +1,49 @@
+{
+ "assets": {
+  "030336a0/00": {
+   "ja": "操作説明",
+   "text": "Commandes",
+   "style": "heading_green"
+  },
+  "030336a0/01": {
+   "ja": "銃の斜め後方に 立ち位置をとる。",
+   "text": "Placez-vous en diagonale, derrière le fusil.",
+   "style": "instruction"
+  },
+  "030336a0/02": {
+   "ja": "右手でグリップを握り、 人さし指をトリガーにかける。",
+   "text": "Saisissez la poignée de la main droite, l'index sur la gâchette.",
+   "style": "instruction"
+  },
+  "030336a0/03": {
+   "ja": "左手でハンドガードの 真下近くを持ち支える。",
+   "text": "Soutenez le fusil de la main gauche, près du dessous du garde-main.",
+   "style": "instruction"
+  },
+  "030336a0/04": {
+   "ja": "ストックを右肩に押し当てて、 銃を保持する。",
+   "text": "Appuyez la crosse contre l'épaule droite pour tenir le fusil.",
+   "style": "instruction"
+  },
+  "030336a0/05": {
+   "ja": "頬をストックに当て、目は スコープから10cm程度離す。",
+   "text": "Posez la joue sur la crosse, l'œil à environ 10 cm de la lunette.",
+   "style": "instruction"
+  },
+  "030336a0/06": {
+   "ja": "頭はスコープの正面に 持ってくる。",
+   "text": "Placez la tête face à la lunette.",
+   "style": "instruction"
+  },
+  "030336a0/07": {
+   "ja": "視界が一杯に広がるよう スコープとの距離を調整する。",
+   "text": "Ajustez la distance à la lunette pour que le champ de vision soit plein.",
+   "style": "instruction"
+  },
+  "030336a0/08": {
+   "ja": "視界に影が出ないように、 スコープをまっすぐに見る。",
+   "text": "Regardez droit dans la lunette pour éviter les ombres dans le champ de vision.",
+   "style": "instruction"
+  }
+ }
+}

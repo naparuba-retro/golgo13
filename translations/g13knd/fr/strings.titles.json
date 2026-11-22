@@ -1,0 +1,96 @@
+{
+ "assets": {
+  "030561f0/01": {
+   "text": "Crise des semi-conducteurs",
+   "style": "story_title"
+  },
+  "030561f0/02": {
+   "text": "La veille du coup d'État",
+   "style": "story_title",
+   "mode": "overlay"
+  },
+  "030561f0/03": {
+   "text": "Bateau de traîne",
+   "style": "story_title"
+  },
+  "030561f0/04": {
+   "text": "Huis clos : la cellule",
+   "style": "story_title"
+  },
+  "030561f0/05": {
+   "text": "Le jardin de l'assassinat",
+   "style": "story_title"
+  },
+  "030561f0/06": {
+   "text": "Les souliers de la mafia",
+   "style": "story_title"
+  },
+  "030561f0/07": {
+   "text": "Image coupée « G »",
+   "style": "story_title"
+  },
+  "030561f0/08": {
+   "text": "La nuit de la secte meurtrière",
+   "style": "story_title"
+  },
+  "030561f0/09": {
+   "text": "Le plan d'assassinat de « G »",
+   "style": "story_title"
+  },
+  "030561f0/10": {
+   "text": "Magie du turf",
+   "style": "story_title"
+  },
+  "030561f0/11": {
+   "text": "Chien de chasse",
+   "style": "story_title"
+  },
+  "030561f0/12": {
+   "text": "L'agent infiltré",
+   "style": "story_title"
+  },
+  "030561f0/13": {
+   "text": "Le défi du poseur de bombes",
+   "style": "story_title"
+  },
+  "030561f0/14": {
+   "text": "Tir antichar",
+   "style": "story_title"
+  },
+  "030561f0/15": {
+   "text": "Le passé du conférencier",
+   "style": "story_title"
+  },
+  "030561f0/16": {
+   "text": "La terre des tempêtes de sable",
+   "style": "story_title"
+  },
+  "030561f0/17": {
+   "text": "Blizzard",
+   "style": "story_title",
+   "mode": "overlay"
+  },
+  "030561f0/18": {
+   "text": "Câble de remorquage",
+   "style": "story_title"
+  },
+  "030561f0/19": {
+   "text": "La chambre scellée",
+   "style": "story_title"
+  },
+  "030561f0/20": {
+   "text": "Le gène ensanglanté",
+   "style": "story_title"
+  },
+  "030561f0/00": {
+   "ja": "選択：ライフル　決定：トリガー",
+   "text": "Choisir : fusil     Valider : gâchette",
+   "style": "ui_bar_red"
+  },
+  "030561f0/21": {
+   "ja": "信頼度",
+   "text": "Confiance",
+   "style": "gold_label"
+  }
+ }
+}

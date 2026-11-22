@@ -1,0 +1,73 @@
+# ====================================================================================================================
+# Nothing derived from the games, the ROMs or the manga is ever committed: it is rebuilt locally from the user's own files.
+# ====================================================================================================================
+
+# --- ROMs and user-supplied game data -------------------------------------------------------------------------
+/roms/*
+!/roms/README.md
+!/roms/.gitkeep
+*.zip
+*.7z
+*.rom
+*.bin
+*.ic[0-9]*
+*.ram
+*.nv
+*.1f
+*.1h
+*.1j
+*.2f
+*.2h
+*.2j
+glt1*
+glg1*
+gls1*
+/golgo13/
+/extract/
+/work/
+
+# --- generated code (recompiled from the ROMs) and build output -----------------------------------------------
+/generated/
+/generated_h8/
+/generated_*/
+/build/
+*.exe
+*.dll
+*.obj
+*.lib
+*.pdb
+*.rsp
+
+# --- translation outputs: built from the ROMs by tools/translation/build.py (they embed game pixels) ----------
+/translations/**/overlay.g13o
+/translations/**/patch.g13t
+/translations/**/patch.report.json
+/translations/**/preview/
+/translations/**/preview_sheet.png
+/translations/**/captures/
+/translations/captures/
+*.cap
+
+# --- menu assets built locally (fonts baked from system fonts, card art cut from the user's own manga scans) ----
+/data/ui/*.bin
+/data/ui/cards/
+*.rgba
+*.g13i
+
+# --- recorded sessions / screenshots / dumps produced by tests --------------------------------------------------
+*.g13r
+*.ppm
+/sessions/
+settings.ini
+wiimote.cal
+
+# --- local toolchains and third-party sources (re-downloadable, see PLAN.md) --------------------------------------
+.venv/
+tools/mame/
+tools/dl/
+third_party/
+
+# --- Python / editors --------------------------------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.log

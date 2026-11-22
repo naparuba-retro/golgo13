@@ -1,0 +1,423 @@
+{
+  "assets": {
+    "cap:result_fail:title": {
+      "ja": "狙撃失敗",
+      "capture": "result_fail",
+      "select": {
+        "rect": [
+          74,
+          6,
+          438,
+          114
+        ],
+        "tp": [
+          1
+        ],
+        "clut_y": [
+          760
+        ]
+      },
+      "erase": [
+        74,
+        6,
+        438,
+        114
+      ],
+      "text": "TIR RATÉ",
+      "style": "result_title"
+    },
+    "cap:result_fail:accuracy": {
+      "ja": "精度ポイント",
+      "capture": "result_fail",
+      "select": {
+        "rect": [
+          80,
+          122,
+          252,
+          158
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          758
+        ]
+      },
+      "erase": [
+        80,
+        122,
+        252,
+        158
+      ],
+      "text": "Précision",
+      "style": "result_label"
+    },
+    "cap:result_fail:time": {
+      "ja": "タイム",
+      "capture": "result_fail",
+      "select": {
+        "rect": [
+          144,
+          162,
+          252,
+          198
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          756
+        ]
+      },
+      "erase": [
+        144,
+        162,
+        252,
+        198
+      ],
+      "text": "Temps",
+      "style": "result_label"
+    },
+    "cap:result_fail:trust": {
+      "ja": "信頼度",
+      "capture": "result_fail",
+      "select": {
+        "rect": [
+          30,
+          222,
+          162,
+          258
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          755
+        ]
+      },
+      "erase": [
+        30,
+        222,
+        162,
+        258
+      ],
+      "text": "Confiance",
+      "style": "result_label"
+    },
+    "cap:result_fail:reward": {
+      "ja": "報酬",
+      "capture": "result_fail",
+      "select": {
+        "rect": [
+          146,
+          337,
+          222,
+          373
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          753
+        ]
+      },
+      "erase": [
+        146,
+        337,
+        222,
+        373
+      ],
+      "text": "Prime",
+      "style": "result_label"
+    },
+    "cap:result_fail:swiss": {
+      "ja": "スイス銀行残高",
+      "capture": "result_fail",
+      "select": {
+        "rect": [
+          18,
+          377,
+          222,
+          413
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          752
+        ]
+      },
+      "erase": [
+        18,
+        377,
+        222,
+        413
+      ],
+      "text": "Banque suisse",
+      "style": "result_label"
+    },
+    "cap:result_ok:title": {
+      "ja": "狙撃成功",
+      "capture": "result_ok",
+      "select": {
+        "rect": [
+          130,
+          8,
+          490,
+          112
+        ],
+        "tp": [
+          1
+        ],
+        "clut_y": [
+          757
+        ]
+      },
+      "erase": [
+        130,
+        8,
+        490,
+        112
+      ],
+      "text": "TIR RÉUSSI",
+      "style": "result_title_ok"
+    },
+    "cap:snipe_ok:title": {
+      "ja": "狙撃成功",
+      "capture": "snipe_ok",
+      "select": {
+        "rect": [
+          130,
+          8,
+          490,
+          112
+        ],
+        "tp": [
+          1
+        ],
+        "clut_y": [
+          759
+        ]
+      },
+      "erase": [
+        130,
+        8,
+        490,
+        112
+      ],
+      "text": "TIR RÉUSSI",
+      "style": "result_title_ok"
+    },
+    "cap:result_ok:accuracy": {
+      "ja": "精度ポイント",
+      "capture": "result_ok",
+      "select": {
+        "rect": [
+          80,
+          122,
+          252,
+          158
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          754
+        ]
+      },
+      "erase": [
+        80,
+        122,
+        252,
+        158
+      ],
+      "text": "Précision",
+      "style": "result_label"
+    },
+    "cap:result_ok:time": {
+      "ja": "タイム",
+      "capture": "result_ok",
+      "select": {
+        "rect": [
+          144,
+          162,
+          252,
+          198
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          752
+        ]
+      },
+      "erase": [
+        144,
+        162,
+        252,
+        198
+      ],
+      "text": "Temps",
+      "style": "result_label"
+    },
+    "cap:result_ok:trust": {
+      "ja": "信頼度",
+      "capture": "result_ok",
+      "select": {
+        "rect": [
+          30,
+          222,
+          162,
+          258
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          751
+        ]
+      },
+      "erase": [
+        30,
+        222,
+        162,
+        258
+      ],
+      "text": "Confiance",
+      "style": "result_label"
+    },
+    "cap:result_ok:reward": {
+      "ja": "報酬",
+      "capture": "result_ok",
+      "select": {
+        "rect": [
+          146,
+          337,
+          222,
+          373
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          749
+        ]
+      },
+      "erase": [
+        146,
+        337,
+        222,
+        373
+      ],
+      "text": "Prime",
+      "style": "result_label"
+    },
+    "cap:result_ok:swiss": {
+      "ja": "スイス銀行残高",
+      "capture": "result_ok",
+      "select": {
+        "rect": [
+          18,
+          377,
+          222,
+          413
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          748
+        ]
+      },
+      "erase": [
+        18,
+        377,
+        222,
+        413
+      ],
+      "text": "Banque suisse",
+      "style": "result_label"
+    },
+    "cap:game_over:lifetime": {
+      "ja": "生涯獲得報酬",
+      "capture": "game_over",
+      "select": {
+        "rect": [
+          35,
+          324,
+          227,
+          356
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          754
+        ]
+      },
+      "erase": [
+        35,
+        324,
+        227,
+        356
+      ],
+      "text": "Gains cumulés",
+      "style": "result_label"
+    },
+    "cap:game_over:average": {
+      "ja": "平均精度ポイント",
+      "capture": "game_over",
+      "select": {
+        "rect": [
+          3,
+          364,
+          227,
+          396
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          753
+        ]
+      },
+      "erase": [
+        3,
+        364,
+        227,
+        396
+      ],
+      "text": "Précision moyenne",
+      "style": "result_label"
+    },
+    "cap:game_over:fiction": {
+      "ja": "この物語は、すべてフィクションです。",
+      "capture": "game_over",
+      "select": {
+        "rect": [
+          288,
+          384,
+          512,
+          448
+        ],
+        "tp": [
+          1
+        ],
+        "clut_y": [
+          755
+        ]
+      },
+      "paint": {
+        "rect": [
+          312,
+          411,
+          506,
+          431
+        ],
+        "fill": "#000000"
+      },
+      "text": "● Cette histoire est entièrement fictive.",
+      "style": "footnote"
+    }
+  }
+}

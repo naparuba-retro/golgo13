@@ -1,0 +1,84 @@
+{
+  "assets": {
+    "032f5b10/00": {
+      "ja": "国連専用機…聞こえるか？",
+      "text": "Avion spécial de l'ONU… m'entendez-vous ?",
+      "style": "caption"
+    },
+    "032f5b10/01": {
+      "ja": "この機はハイジャックされた！",
+      "text": "Cet appareil est détourné !",
+      "style": "caption"
+    },
+    "032f5b10/02": {
+      "ja": "機長がコックピットに 来て欲しいと…",
+      "text": "Le commandant demande que vous veniez dans le cockpit…",
+      "style": "caption"
+    },
+    "032f5b10/03": {
+      "ja": "…緊急事態のようです！",
+      "text": "…Il semble que ce soit une urgence !",
+      "style": "caption"
+    },
+    "032f5b10/04": {
+      "ja": "地上からハイジャックとは どういう事だ！？",
+      "text": "Un détournement depuis le sol ? Qu'est-ce que ça veut dire !?",
+      "style": "caption"
+    },
+    "032f5b10/05": {
+      "ja": "我々にはスティンガーがある… 軍を即座に撤退させろ！",
+      "text": "Nous avons des Stinger… Retirez immédiatement l'armée !",
+      "style": "caption"
+    },
+    "032f5b10/06": {
+      "ja": "ス、スティンガーミサイル…！",
+      "text": "D-des missiles Stinger… !",
+      "style": "caption"
+    },
+    "032f5b10/07": {
+      "ja": "用件を聞こうか…",
+      "text": "Voyons de quoi il s'agit…",
+      "style": "caption"
+    },
+    "032f5b10/08": {
+      "ja": "き、緊急事態なんです…",
+      "text": "C'est une u-urgence…",
+      "style": "caption"
+    },
+    "032f5b10/09": {
+      "ja": "犯人の反政府ゲリラ・リーダー、 シアドです。",
+      "text": "Le coupable est le chef de la guérilla antigouvernementale, Siad.",
+      "style": "caption"
+    },
+    "032f5b10/10": {
+      "ja": "たった一発のスティンガーで ハイジャックしたのです…",
+      "text": "Il a détourné l'avion avec un seul Stinger…",
+      "style": "caption"
+    },
+    "032f5b10/11": {
+      "ja": "軍隊の展開は困難ですが、 スティンガーさえなければ…",
+      "text": "Déployer l'armée est difficile, mais sans le Stinger…",
+      "style": "caption"
+    },
+    "032f5b10/12": {
+      "ja": "お願いします…スティンガーを 排除してください！",
+      "text": "Je vous en prie… éliminez le Stinger !",
+      "style": "caption"
+    },
+    "032f5b10/13": {
+      "ja": "ちっ、畜生！ 思い知らせてやる…！",
+      "text": "Merde, saloperie ! Je vais te faire payer…!",
+      "style": "caption"
+    },
+    "032f5b10/14": {
+      "ja": "国連紛争地域視察団",
+      "text": "Inspection ONU",
+      "style": "plate"
+    },
+    "032f5b10/15": {
+      "ja": "国連事務局",
+      "text": "Secrétariat de l'ONU",
+      "style": "plate"
+    }
+  }
+}

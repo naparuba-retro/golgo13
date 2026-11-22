@@ -1,0 +1,1668 @@
+{
+ "assets": {
+  "00000000/00": {
+   "text": "…Pas mal du tout… Golgo 13 !",
+   "style": "caption"
+  },
+  "00000000/01": {
+   "text": "Mais cette fois, tu es fini…",
+   "style": "caption"
+  },
+  "00183000/00": {
+   "text": "Détruisez le missile blindé en tir rapide",
+   "style": "objective"
+  },
+  "00193000/00": {
+   "text": "Détruisez la bouteille de vin d'un tir",
+   "style": "objective"
+  },
+  "00195000/00": {
+   "text": "Menacez la cible pour arrêter son cœur artificiel",
+   "style": "objective"
+  },
+  "00197000/00": {
+   "text": "Anéantissez les forces spéciales des services secrets",
+   "style": "objective"
+  },
+  "00199000/00": {
+   "text": "Visez le rotor en continu pour abattre l'hélicoptère",
+   "style": "objective"
+  },
+  "0019c000/00": {
+   "text": "Tirez en vous fiant à la photo",
+   "style": "objective"
+  },
+  "001a0000/00": {
+   "text": "Trouvez le boss et abattez-le",
+   "style": "objective"
+  },
+  "001a2000/00": {
+   "text": "Abattez les 2 cibles coup sur coup",
+   "style": "objective"
+  },
+  "001a4000/00": {
+   "text": "Éliminez toutes les mines",
+   "style": "objective"
+  },
+  "001a4000/01": {
+   "text": "Anéantissez les gardes-frontières",
+   "style": "objective"
+  },
+  "001a8000/00": {
+   "text": "Visez le tube d'entraînement de la roue principale",
+   "style": "objective"
+  },
+  "001a8000/01": {
+   "text": "Tirez avant qu'il ne monte dans la voiture",
+   "style": "objective"
+  },
+  "001ab000/00": {
+   "text": "Éliminez les tireurs d'élite, puis la cible",
+   "style": "objective"
+  },
+  "00b2b000/00": {
+   "text": "Désolé de vous avoir fait attendre… Mr. Togo",
+   "style": "caption"
+  },
+  "01390000/00": {
+   "text": "Le vin de 1800 servi à la prochaine dégustation…",
+   "style": "caption"
+  },
+  "01390000/01": {
+   "text": "Voici le résultat de l'enquête…",
+   "style": "caption"
+  },
+  "01390000/02": {
+   "text": "…C'était bien ce que je soupçonnais.",
+   "style": "caption"
+  },
+  "01390000/03": {
+   "text": "Il semble que dans la confusion de la guerre mondiale…",
+   "style": "caption"
+  },
+  "01390000/04": {
+   "text": "Le contenu a très probablement été échangé…",
+   "style": "caption"
+  },
+  "01390000/05": {
+   "text": "Si c'est le cas…",
+   "style": "caption"
+  },
+  "01390000/06": {
+   "text": "Ni la tradition ni le prestige de notre association…",
+   "style": "caption"
+  },
+  "01390000/07": {
+   "text": "Quelle horreur !…",
+   "style": "caption"
+  },
+  "01390000/08": {
+   "text": "…Voilà où nous en sommes.",
+   "style": "caption"
+  },
+  "01390000/09": {
+   "text": "En clair, la cible est le vin servi à la dégustation.",
+   "style": "caption"
+  },
+  "01390000/10": {
+   "text": "Qu'en dites-vous ?…",
+   "style": "caption"
+  },
+  "01390000/11": {
+   "text": "J'accepte…",
+   "style": "caption"
+  },
+  "01390000/12": {
+   "text": "Quant au débouchage du fameux millésime 1800…",
+   "style": "caption"
+  },
+  "01390000/13": {
+   "text": "Nous le confierons à M. Arnoux, président de l'association !",
+   "style": "caption"
+  },
+  "01390000/14": {
+   "text": "Prés. Assoc. du vin Arnoux",
+   "style": "plate_ov"
+  },
+  "013bf000/00": {
+   "text": "Voilà Bonnet, la cible…",
+   "style": "caption"
+  },
+  "013bf000/01": {
+   "text": "Il survit grâce à un cœur artificiel, mais…",
+   "style": "caption"
+  },
+  "013bf000/02": {
+   "text": "Il tient la politique d'une main de fer…",
+   "style": "caption"
+  },
+  "013bf000/03": {
+   "text": "Ses méthodes dignes d'un gangster…",
+   "style": "caption"
+  },
+  "013bf000/04": {
+   "text": "…donnent bien du fil à retordre à notre police nationale…",
+   "style": "caption"
+  },
+  "013bf000/05": {
+   "text": "Mais dans notre position, un meurtre nous poserait problème…",
+   "style": "caption"
+  },
+  "013bf000/06": {
+   "text": "Faites croire à une panne de son cœur artificiel !…",
+   "style": "caption"
+  },
+  "013bf000/07": {
+   "text": "Pourriez-vous accepter, malgré tout ?…",
+   "style": "caption"
+  },
+  "013bf000/08": {
+   "text": "…Golgo 13 !!",
+   "style": "caption"
+  },
+  "013bf000/09": {
+   "text": "Hmm… J'ai hâte de m'y mettre !",
+   "style": "caption"
+  },
+  "013bf000/10": {
+   "text": "Docteur, pas d'imprudence…",
+   "style": "caption"
+  },
+  "013bf000/11": {
+   "text": "Je sais, je sais…",
+   "style": "caption"
+  },
+  "013bf000/12": {
+   "text": "Allons abattre le gros gibier !",
+   "style": "caption"
+  },
+  "013bf000/13": {
+   "text": "Oh !?",
+   "style": "caption"
+  },
+  "013bf000/14": {
+   "text": "Hiii !!",
+   "style": "caption"
+  },
+  "013bf000/15": {
+   "text": "Où… où est-il !?",
+   "style": "caption"
+  },
+  "013bf000/16": {
+   "text": "Montre-toi !!",
+   "style": "caption"
+  },
+  "013bf000/17": {
+   "text": "Politicien Bonnet",
+   "style": "plate_ov"
+  },
+  "013bf000/18": {
+   "text": "Police nationale Perdisa",
+   "style": "plate_ov"
+  },
+  "01573000/00": {
+   "text": "Bien sûr, je suis là pour un tir !",
+   "style": "caption"
+  },
+  "01573000/01": {
+   "text": "Mais la cible n'est pas encore choisie…",
+   "style": "caption"
+  },
+  "01573000/02": {
+   "text": "Ils visent les documents secrets que j'ai emportés,",
+   "style": "caption"
+  },
+  "01573000/03": {
+   "text": "un tueur des services secrets va sûrement venir…",
+   "style": "caption"
+  },
+  "01573000/04": {
+   "text": "Je veux vous confier le soin de les régler…",
+   "style": "caption"
+  },
+  "01573000/05": {
+   "text": "………",
+   "style": "caption"
+  },
+  "01573000/06": {
+   "text": "Je veux vous confier le soin de les régler…",
+   "style": "caption"
+  },
+  "01573000/07": {
+   "text": "Golgo 13 est avec eux…",
+   "style": "caption"
+  },
+  "01573000/08": {
+   "text": "Ne vous approchez pas à moins de 600 mètres de son arme !",
+   "style": "caption"
+  },
+  "01573000/09": {
+   "text": "Hé !!",
+   "style": "caption"
+  },
+  "01573000/10": {
+   "text": "Tirez !!",
+   "style": "caption"
+  },
+  "01573000/11": {
+   "text": "Ouaaah !!",
+   "style": "caption"
+  },
+  "01573000/12": {
+   "text": "T… Togo !!",
+   "style": "caption"
+  },
+  "01573000/13": {
+   "text": "P… pourquoi ne répond-il pas !?",
+   "style": "caption"
+  },
+  "01573000/14": {
+   "text": "Leur portée utile est de 1 300 mètres…",
+   "style": "caption"
+  },
+  "01573000/15": {
+   "text": "Il tire de l'extérieur de la portée de nos armes…",
+   "style": "caption"
+  },
+  "01573000/16": {
+   "text": "Bien, ils ont fui vers les montagnes…",
+   "style": "caption"
+  },
+  "01573000/17": {
+   "text": "Comme prévu, nous allons les rattraper !",
+   "style": "caption"
+  },
+  "01573000/18": {
+   "text": "Le voilà !!",
+   "style": "caption"
+  },
+  "01573000/19": {
+   "text": "Ici, il y a bien 610 mètres…",
+   "style": "caption"
+  },
+  "01573000/20": {
+   "text": "Leurs balles ne devraient pas nous atteindre !!",
+   "style": "caption"
+  },
+  "01573000/21": {
+   "text": "Agent secret Giunti",
+   "style": "plate_ov"
+  },
+  "01573000/22": {
+   "text": "Forces spéciales des services secrets",
+   "style": "plate_ov"
+  },
+  "017bc000/00": {
+   "text": "Les lâches du gouvernement se décident enfin…",
+   "style": "caption"
+  },
+  "017bc000/01": {
+   "text": "à passer à l'action pour nous écraser…",
+   "style": "caption"
+  },
+  "017bc000/02": {
+   "text": "Et ces poltrons qui nous craignent…",
+   "style": "caption"
+  },
+  "017bc000/03": {
+   "text": "Ils auraient engagé un terroriste professionnel…",
+   "style": "caption"
+  },
+  "017bc000/04": {
+   "text": "Les types qui obéissent aux ordres de ces lâches…",
+   "style": "caption"
+  },
+  "017bc000/05": {
+   "text": "Ripostons de notre côté !",
+   "style": "caption"
+  },
+  "017bc000/06": {
+   "text": "Et réussissons la révolution de nos propres mains…",
+   "style": "caption"
+  },
+  "017bc000/07": {
+   "text": "N'apporterons-nous pas le bonheur à ce pays !?",
+   "style": "caption"
+  },
+  "017bc000/08": {
+   "text": "An… anéantis, dites-vous !?",
+   "style": "caption"
+  },
+  "017bc000/09": {
+   "text": "Nos troupes d'élite…",
+   "style": "caption"
+  },
+  "017bc000/10": {
+   "text": "Battons en retraite ici pour le moment…",
+   "style": "caption"
+  },
+  "017bc000/11": {
+   "text": "Nous aurons forcément une chance de repartir !!",
+   "style": "caption"
+  },
+  "017bc000/12": {
+   "text": "Vous êtes en sécurité maintenant… Général !",
+   "style": "caption"
+  },
+  "017bc000/13": {
+   "text": "Cet hélico est blindé, et vous connaissez mon adresse…",
+   "style": "caption"
+  },
+  "017bc000/14": {
+   "text": "Base du Front révolutionnaire national",
+   "style": "plate_ov"
+  },
+  "017bc000/15": {
+   "text": "Général Vieira",
+   "style": "plate_ov"
+  },
+  "01900000/00": {
+   "text": "Qu… quoi !!",
+   "style": "caption"
+  },
+  "01900000/01": {
+   "text": "Fuite radioactive à la centrale de Motos !!",
+   "style": "caption"
+  },
+  "01900000/02": {
+   "text": "Qu… qu'est-ce que vous dites !?",
+   "style": "caption"
+  },
+  "01900000/03": {
+   "text": "Y a-t-il un moyen d'agir !?",
+   "style": "caption"
+  },
+  "01900000/04": {
+   "text": "De l'autre côté, on détruit la tuyauterie…",
+   "style": "caption"
+  },
+  "01900000/05": {
+   "text": "Ils disent qu'il n'y a qu'à baisser la pression dans le réacteur…",
+   "style": "caption"
+  },
+  "01900000/06": {
+   "text": "Confions-le à cet homme…",
+   "style": "caption"
+  },
+  "01900000/07": {
+   "text": "…« G », vous dites !?",
+   "style": "caption"
+  },
+  "01900000/08": {
+   "text": "Dans la liste des personnes mises en quarantaine…",
+   "style": "caption"
+  },
+  "01900000/09": {
+   "text": "Il s'y trouvait par hasard, paraît-il…",
+   "style": "caption"
+  },
+  "01900000/10": {
+   "text": "Fisher, du Comité de gestion des crises nationales…",
+   "style": "caption"
+  },
+  "01900000/11": {
+   "text": "Je sais qui vous êtes !",
+   "style": "caption"
+  },
+  "01900000/12": {
+   "text": "Golgo 13 !!",
+   "style": "caption"
+  },
+  "01900000/13": {
+   "text": "J'ignore pourquoi vous êtes ici…",
+   "style": "caption"
+  },
+  "01900000/14": {
+   "text": "Je veux vous confier un travail !",
+   "style": "caption"
+  },
+  "01900000/15": {
+   "text": "Dans le réacteur nucléaire rempli de vapeur…",
+   "style": "caption"
+  },
+  "01900000/16": {
+   "text": "Percez les tuyaux que je vous indiquerai !",
+   "style": "caption"
+  },
+  "01900000/17": {
+   "text": "C'est dangereux, mais…",
+   "style": "caption"
+  },
+  "01900000/18": {
+   "text": "Vous seul pouvez le faire !!",
+   "style": "caption"
+  },
+  "01900000/19": {
+   "text": "À l'intérieur, la vapeur gêne la vue…",
+   "style": "caption"
+  },
+  "01900000/20": {
+   "text": "Nous n'avons que cette photo…",
+   "style": "caption"
+  },
+  "01900000/21": {
+   "text": "Très bien…",
+   "style": "caption"
+  },
+  "01900000/22": {
+   "text": "Allons-y !",
+   "style": "caption"
+  },
+  "01900000/23": {
+   "text": "Centrale nucléaire de Motos",
+   "style": "plate_ov"
+  },
+  "01900000/24": {
+   "text": "Comité de gestion des crises",
+   "style": "plate_ov"
+  },
+  "01900000/25": {
+   "text": "Comité de crise  Fisher",
+   "style": "plate_ov"
+  },
+  "01a4e000/00": {
+   "text": "Notre proposition a été rejetée, comme prévu…",
+   "style": "caption"
+  },
+  "01a4e000/01": {
+   "text": "On ne peut rien attendre du gouvernement…",
+   "style": "caption"
+  },
+  "01a4e000/02": {
+   "text": "Vous parlez des guérilleros antigouvernementaux ?",
+   "style": "caption"
+  },
+  "01a4e000/03": {
+   "text": "Oui, ils ont fait des ruines leur repaire, et…",
+   "style": "caption"
+  },
+  "01a4e000/04": {
+   "text": "ils vendent ces vestiges morceau par morceau pour financer leurs activités…",
+   "style": "caption"
+  },
+  "01a4e000/05": {
+   "text": "Leur véritable chef, c'est Roger…",
+   "style": "caption"
+  },
+  "01a4e000/06": {
+   "text": "La puissance de Roger, aussi grand nom de la finance…",
+   "style": "caption"
+  },
+  "01a4e000/07": {
+   "text": "On ne peut que penser qu'elle s'étend jusqu'au gouvernement !",
+   "style": "caption"
+  },
+  "01a4e000/08": {
+   "text": "Quoi !?",
+   "style": "caption"
+  },
+  "01a4e000/09": {
+   "text": "Qu… quoi !?",
+   "style": "caption"
+  },
+  "01a4e000/10": {
+   "text": "Des enquêteurs bénévoles…",
+   "style": "caption"
+  },
+  "01a4e000/11": {
+   "text": "ont encore été tués par les guérilleros !!",
+   "style": "caption"
+  },
+  "01a4e000/12": {
+   "text": "Il ne reste plus qu'à demander à cet homme…",
+   "style": "caption"
+  },
+  "01a4e000/13": {
+   "text": "Nom de code : Golgo 13…",
+   "style": "caption"
+  },
+  "01a4e000/14": {
+   "text": "C'est un terroriste international !",
+   "style": "caption"
+  },
+  "01a4e000/15": {
+   "text": "Patron, soyez tranquille !",
+   "style": "caption"
+  },
+  "01a4e000/16": {
+   "text": "Même si l'information est vraie, ici c'est un angle mort total…",
+   "style": "caption"
+  },
+  "01a4e000/17": {
+   "text": "Quel que soit le talent du tueur…",
+   "style": "caption"
+  },
+  "01a4e000/18": {
+   "text": "Un triple treillis protège le patron !",
+   "style": "caption"
+  },
+  "01a4e000/19": {
+   "text": "Prot. int. des ruines Pilet",
+   "style": "plate_ov"
+  },
+  "01a4e000/20": {
+   "text": "Mission de fouilles Swaters",
+   "style": "plate_ov"
+  },
+  "01a4e000/21": {
+   "text": "Guérilla antigouv. Roger",
+   "style": "plate_ov"
+  },
+  "01c4f000/00": {
+   "text": "Toi, recule…",
+   "style": "caption"
+  },
+  "01c4f000/01": {
+   "text": "Prenez votre temps, je vous en prie…",
+   "style": "caption"
+  },
+  "01c4f000/02": {
+   "text": "Je vous écoute.",
+   "style": "caption"
+  },
+  "01c4f000/03": {
+   "text": "Les cibles sont Scheler, du commerce extérieur, et…",
+   "style": "caption"
+  },
+  "01c4f000/04": {
+   "text": "Carini, de la politique économique !",
+   "style": "caption"
+  },
+  "01c4f000/05": {
+   "text": "Ils ne font que se disputer le pouvoir…",
+   "style": "caption"
+  },
+  "01c4f000/06": {
+   "text": "et n'écoutent pas la volonté du peuple…",
+   "style": "caption"
+  },
+  "01c4f000/07": {
+   "text": "Même si on les écarte…",
+   "style": "caption"
+  },
+  "01c4f000/08": {
+   "text": "le fond ne changera sans doute pas…",
+   "style": "caption"
+  },
+  "01c4f000/09": {
+   "text": "mais en jetant une pierre dans la mare, peut-être…",
+   "style": "caption"
+  },
+  "01c4f000/10": {
+   "text": "Est-ce simplement le zèle d'un vieil homme…",
+   "style": "caption"
+  },
+  "01c4f000/11": {
+   "text": "Concernant le déficit commercial…",
+   "style": "caption"
+  },
+  "01c4f000/12": {
+   "text": "il semble que presque rien ne s'améliore !",
+   "style": "caption"
+  },
+  "01c4f000/13": {
+   "text": "La vie des citoyens en subit déjà les effets…",
+   "style": "caption"
+  },
+  "01c4f000/14": {
+   "text": "…Comment envisagez-vous votre propre position ?!",
+   "style": "caption"
+  },
+  "01c4f000/15": {
+   "text": "Alors, cette économie nationale glaciale, cause de tout…",
+   "style": "caption"
+  },
+  "01c4f000/16": {
+   "text": "à qui la faute si on ne la redresse pas ?!",
+   "style": "caption"
+  },
+  "01c4f000/17": {
+   "text": "Un jour, nous réglerons nos comptes…",
+   "style": "caption"
+  },
+  "01c4f000/18": {
+   "text": "mais trêve jusqu'à ce que l'économie se stabilise…",
+   "style": "caption"
+  },
+  "01c4f000/19": {
+   "text": "Éminence grise Manzon",
+   "style": "plate_ov"
+  },
+  "01c4f000/20": {
+   "text": "Politique économique Carini",
+   "style": "plate_ov"
+  },
+  "01c4f000/21": {
+   "text": "Commerce extérieur Scheler",
+   "style": "plate_ov"
+  },
+  "01fae000/00": {
+   "text": "G… Golgo 13 !",
+   "style": "caption"
+  },
+  "01fae000/01": {
+   "text": "Vrai… vraiment !?",
+   "style": "caption"
+  },
+  "01fae000/02": {
+   "text": "Pour faire son travail dans notre pays,",
+   "style": "caption"
+  },
+  "01fae000/03": {
+   "text": "il franchira forcément cette frontière par la route !",
+   "style": "caption"
+  },
+  "01fae000/04": {
+   "text": "Voilà qui est intéressant !!",
+   "style": "caption"
+  },
+  "01fae000/05": {
+   "text": "Après tout, c'est le meilleur du monde !!",
+   "style": "caption"
+  },
+  "01fae000/06": {
+   "text": "J'ai hâte de me mesurer à lui !!",
+   "style": "caption"
+  },
+  "01fae000/07": {
+   "text": "Le champ de mines fait des centaines de mètres…",
+   "style": "caption"
+  },
+  "01fae000/08": {
+   "text": "Même Golgo ne pourra pas venir jusqu'ici…",
+   "style": "caption"
+  },
+  "01fae000/09": {
+   "text": "Il arrive !?",
+   "style": "caption"
+  },
+  "01fae000/10": {
+   "text": "Je vois !!",
+   "style": "caption"
+  },
+  "01fae000/11": {
+   "text": "Il se fraie lui-même son chemin !!",
+   "style": "caption"
+  },
+  "01fae000/12": {
+   "text": "Il arrive !!",
+   "style": "caption"
+  },
+  "01fae000/13": {
+   "text": "Chef gardes-frontières Garney",
+   "style": "plate_ov"
+  },
+  "0233b000/00": {
+   "text": "La cible est le grand spécialiste des armes bactériologiques…",
+   "style": "caption"
+  },
+  "0233b000/01": {
+   "text": "Le docteur Brooks !",
+   "style": "caption"
+  },
+  "0233b000/02": {
+   "text": "Détenteur d'un savoir immense sur les armes bactériologiques,",
+   "style": "caption"
+  },
+  "0233b000/03": {
+   "text": "il tente en ce moment de faire défection vers un pays ennemi.",
+   "style": "caption"
+  },
+  "0233b000/04": {
+   "text": "S'il y parvient…",
+   "style": "caption"
+  },
+  "0233b000/05": {
+   "text": "l'ennemi obtiendra l'atout des armes bactériologiques…",
+   "style": "caption"
+  },
+  "0233b000/06": {
+   "text": "Pour abattre le docteur, déjà sous la protection de l'ennemi,",
+   "style": "caption"
+  },
+  "0233b000/07": {
+   "text": "la seule occasion est pendant son transfert vers le pays ennemi…",
+   "style": "caption"
+  },
+  "0233b000/08": {
+   "text": "Les préparatifs de son transfert avancent à grands pas…",
+   "style": "caption"
+  },
+  "0233b000/09": {
+   "text": "Même si tout se passe bien…",
+   "style": "caption"
+  },
+  "0233b000/10": {
+   "text": "S'il n'y a plus de temps…",
+   "style": "caption"
+  },
+  "0233b000/11": {
+   "text": "Cessez de me faire perdre mon temps…",
+   "style": "caption"
+  },
+  "0233b000/12": {
+   "text": "Qu… quoi !?",
+   "style": "caption"
+  },
+  "0233b000/13": {
+   "text": "On n'y arrivera donc pas !?",
+   "style": "caption"
+  },
+  "0233b000/14": {
+   "text": "À ce rythme, la rencontre en plein vol…",
+   "style": "caption"
+  },
+  "0233b000/15": {
+   "text": "sera tout ce qu'on pourra faire…",
+   "style": "caption"
+  },
+  "0233b000/16": {
+   "text": "Quoi qu'il en soit…",
+   "style": "caption"
+  },
+  "0233b000/17": {
+   "text": "Dépêchons-nous…",
+   "style": "caption"
+  },
+  "0233b000/18": {
+   "text": "Nous allons bientôt croiser l'avion ennemi…",
+   "style": "caption"
+  },
+  "0233b000/19": {
+   "text": "Glissez-vous sous l'avion ennemi en descente…",
+   "style": "caption"
+  },
+  "0233b000/20": {
+   "text": "Un instant d'ouverture me suffit…",
+   "style": "caption"
+  },
+  "0233b000/21": {
+   "text": "Dir. services secrets Parnell",
+   "style": "plate_ov"
+  },
+  "0233b000/22": {
+   "text": "Docteur Brooks",
+   "style": "plate_ov"
+  },
+  "0233b000/23": {
+   "text": "Agent secret Cray",
+   "style": "plate_ov"
+  },
+  "0237d000/00": {
+   "text": "Le train d'atterrissage principal ne sort pas !!",
+   "style": "caption"
+  },
+  "0237d000/01": {
+   "text": "Qu… quoi !?",
+   "style": "caption"
+  },
+  "0237d000/02": {
+   "text": "Panne du train principal à l'instant !",
+   "style": "caption"
+  },
+  "0237d000/03": {
+   "text": "Demande d'accueil pour un atterrissage sur le ventre à la base !",
+   "style": "caption"
+  },
+  "0237d000/04": {
+   "text": "C'est… c'est fichu !!",
+   "style": "caption"
+  },
+  "0237d000/05": {
+   "text": "C'est la fin !!",
+   "style": "caption"
+  },
+  "0237d000/06": {
+   "text": "…Ici la tour de contrôle,",
+   "style": "caption"
+  },
+  "0237d000/07": {
+   "text": "les secours sont prêts…",
+   "style": "caption"
+  },
+  "0237d000/08": {
+   "text": "Très bien… j'y vais !!",
+   "style": "caption"
+  },
+  "024d7000/00": {
+   "text": "Je vous ai fait attendre, n'est-ce pas ?",
+   "style": "caption"
+  },
+  "024d7000/01": {
+   "text": "Entrons tout de suite dans le vif du sujet !",
+   "style": "caption"
+  },
+  "024d7000/02": {
+   "text": "Gérant de hedge fund parmi les premiers au monde…",
+   "style": "caption"
+  },
+  "024d7000/03": {
+   "text": "Je veux que vous éliminiez Hill !",
+   "style": "caption"
+  },
+  "024d7000/04": {
+   "text": "Sa puissance financière est telle…",
+   "style": "caption"
+  },
+  "024d7000/05": {
+   "text": "qu'il peut ruiner la monnaie d'un pays entier !!",
+   "style": "caption"
+  },
+  "024d7000/06": {
+   "text": "Cet être, véritable menace pour les marchés mondiaux…",
+   "style": "caption"
+  },
+  "024d7000/07": {
+   "text": "doit être éliminé à tout prix !",
+   "style": "caption"
+  },
+  "024d7000/08": {
+   "text": "Mais il ne quitte jamais son fief, la « Mirror Tower »,",
+   "style": "caption"
+  },
+  "024d7000/09": {
+   "text": "pas un pas hors de l'étage le plus élevé !",
+   "style": "caption"
+  },
+  "024d7000/10": {
+   "text": "De plus, des tireurs d'élite protègent les environs…",
+   "style": "caption"
+  },
+  "024d7000/11": {
+   "text": "Le tir sera difficile…",
+   "style": "caption"
+  },
+  "024d7000/12": {
+   "text": "…Très bien, j'accepte !",
+   "style": "caption"
+  },
+  "024d7000/13": {
+   "text": "Merci infiniment !",
+   "style": "caption"
+  },
+  "024d7000/14": {
+   "text": "Nous préparerons le matériel nécessaire !",
+   "style": "caption"
+  },
+  "024d7000/15": {
+   "text": "La réunion stratégique est prête.",
+   "style": "caption"
+  },
+  "024d7000/16": {
+   "text": "Compris…",
+   "style": "caption"
+  },
+  "024d7000/17": {
+   "text": "Gérant de hedge fund Hill",
+   "style": "plate_ov"
+  },
+  "024d7000/18": {
+   "text": "Org. int. d'aide financière Tambay",
+   "style": "plate_ov"
+  },
+  "024d7000/19": {
+   "text": "« Mirror Tower »",
+   "style": "plate_ov"
+  },
+  "02719000/00": {
+   "text": "Choix : fusil    Valider : gâchette",
+   "style": "ui_bar_blue"
+  },
+  "02719000/02": {
+   "text": "Détournement depuis le sol",
+   "style": "story_title"
+  },
+  "02719000/05": {
+   "text": "Zone de neige abondante",
+   "style": "story_title"
+  },
+  "02719000/11": {
+   "text": "La tradition couleur raisin",
+   "style": "story_title"
+  },
+  "02719000/12": {
+   "text": "Overload",
+   "style": "story_title"
+  },
+  "02719000/13": {
+   "text": "Portée utile maximale",
+   "style": "story_title"
+  },
+  "02719000/14": {
+   "text": "Vol acrobatique",
+   "style": "story_title"
+  },
+  "02719000/15": {
+   "text": "Syndrome chinois",
+   "style": "story_title"
+  },
+  "02719000/16": {
+   "text": "Le corridor à treillis",
+   "style": "story_title"
+  },
+  "02719000/17": {
+   "text": "Accord entre gentlemen",
+   "style": "story_title"
+  },
+  "02719000/18": {
+   "text": "Au-delà du champ de mines",
+   "style": "story_title"
+  },
+  "02719000/19": {
+   "text": "Soixante minutes inéluctables",
+   "style": "story_title"
+  },
+  "02719000/20": {
+   "text": "Tireurs d'élite de l'escorte",
+   "style": "story_title"
+  },
+  "02760000/01": {
+   "text": "Placez-vous à côté du fusil",
+   "style": "tut_box"
+  },
+  "cap:card:ammo": {
+   "capture": "card",
+   "select": {
+    "rect": [
+     160,
+     50,
+     322,
+     96
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     760
+    ]
+   },
+   "erase": [
+    160,
+    50,
+    322,
+    96
+   ],
+   "text": "Munitions",
+   "style": "card_label",
+   "text_area": [
+    160,
+    50,
+    322,
+    84
+   ]
+  },
+  "cap:card:time": {
+   "capture": "card",
+   "select": {
+    "rect": [
+     340,
+     50,
+     502,
+     96
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     759
+    ]
+   },
+   "erase": [
+    340,
+    50,
+    502,
+    96
+   ],
+   "text": "Temps limite",
+   "style": "card_label",
+   "text_area": [
+    340,
+    50,
+    502,
+    84
+   ]
+  },
+  "cap:card:shot": {
+   "capture": "card",
+   "select": {
+    "rect": [
+     276,
+     266,
+     320,
+     306
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     760
+    ]
+   },
+   "erase": [
+    276,
+    266,
+    320,
+    306
+   ],
+   "text": "coup",
+   "style": "card_label"
+  },
+  "cap:card:sec": {
+   "capture": "card",
+   "select": {
+    "rect": [
+     456,
+     266,
+     500,
+     306
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     759
+    ]
+   },
+   "erase": [
+    456,
+    266,
+    500,
+    306
+   ],
+   "text": "sec",
+   "style": "card_label"
+  },
+  "cap:jnr_res_fail:title": {
+   "capture": "res_fail",
+   "select": {
+    "rect": [
+     74,
+     6,
+     438,
+     114
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     760
+    ]
+   },
+   "erase": [
+    74,
+    6,
+    438,
+    114
+   ],
+   "text": "TIR RATÉ",
+   "style": "result_title"
+  },
+  "cap:jnr_res_fail:accuracy": {
+   "capture": "res_fail",
+   "select": {
+    "rect": [
+     150,
+     118,
+     222,
+     162
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     757
+    ]
+   },
+   "erase": [
+    150,
+    118,
+    222,
+    162
+   ],
+   "text": "Précision",
+   "style": "result_label_k"
+  },
+  "cap:jnr_res_fail:time": {
+   "capture": "res_fail",
+   "select": {
+    "rect": [
+     128,
+     157,
+     222,
+     203
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     756
+    ]
+   },
+   "erase": [
+    128,
+    157,
+    222,
+    203
+   ],
+   "text": "Temps",
+   "style": "result_label_k"
+  },
+  "cap:jnr_res_fail:reward": {
+   "capture": "res_fail",
+   "select": {
+    "rect": [
+     153,
+     333,
+     222,
+     377
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "erase": [
+    153,
+    333,
+    222,
+    377
+   ],
+   "text": "Prime",
+   "style": "result_label_k"
+  },
+  "cap:jnr_res_fail:swiss": {
+   "capture": "res_fail",
+   "select": {
+    "rect": [
+     80,
+     372,
+     221,
+     418
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "erase": [
+    80,
+    372,
+    221,
+    418
+   ],
+   "text": "Banque suisse",
+   "style": "result_label_k"
+  },
+  "cap:at_dist:title": {
+   "capture": "at_dist",
+   "select": {
+    "rect": [
+     40,
+     20,
+     440,
+     108
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     736,
+     737,
+     764,
+     766,
+     767
+    ]
+   },
+   "erase": [
+    40,
+    20,
+    440,
+    108
+   ],
+   "text": "Portée de tir maximale",
+   "style": "at_red"
+  },
+  "cap:at_assets:txt": {
+   "capture": "at_assets",
+   "select": {
+    "rect": [
+     20,
+     40,
+     415,
+     350
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "erase": [
+    20,
+    40,
+    415,
+    350
+   ],
+   "text": "Fortune totale : plus de 1 100 000 000 $",
+   "style": "at_gold"
+  },
+  "cap:at_death:txt": {
+   "capture": "at_death",
+   "select": {
+    "rect": [
+     20,
+     40,
+     255,
+     245
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     748
+    ]
+   },
+   "erase": [
+    20,
+    40,
+    255,
+    245
+   ],
+   "text": "Taux de mortalité des clients ayant trahi",
+   "style": "at_pink"
+  },
+  "cap:at_grid:and": {
+   "capture": "at_grid",
+   "select": {
+    "rect": [
+     15,
+     38,
+     155,
+     122
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     745
+    ]
+   },
+   "erase": [
+    15,
+    38,
+    155,
+    122
+   ],
+   "text": "Et",
+   "style": "at_cell"
+  },
+  "cap:at_grid:today": {
+   "capture": "at_grid",
+   "select": {
+    "rect": [
+     355,
+     34,
+     495,
+     123
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     744
+    ]
+   },
+   "erase": [
+    355,
+    34,
+    495,
+    123
+   ],
+   "text": "aujourd'hui",
+   "style": "at_cell"
+  },
+  "cap:at_grid:again": {
+   "capture": "at_grid",
+   "select": {
+    "rect": [
+     209,
+     192,
+     297,
+     280
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     743
+    ]
+   },
+   "erase": [
+    209,
+    192,
+    297,
+    280
+   ],
+   "text": "encore",
+   "style": "at_cell"
+  },
+  "cap:at_grid:him": {
+   "capture": "at_grid",
+   "select": {
+    "rect": [
+     41,
+     352,
+     134,
+     441
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     742
+    ]
+   },
+   "erase": [
+    41,
+    352,
+    134,
+    441
+   ],
+   "text": "il reçoit",
+   "style": "at_cell"
+  },
+  "cap:at_grid:req": {
+   "capture": "at_grid",
+   "select": {
+    "rect": [
+     353,
+     348,
+     499,
+     440
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     741
+    ]
+   },
+   "erase": [
+    353,
+    348,
+    499,
+    440
+   ],
+   "text": "un contrat",
+   "style": "at_cell"
+  },
+  "cap:at_req:a": {
+   "capture": "at_req",
+   "select": {
+    "rect": [
+     30,
+     23,
+     142,
+     137
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     736
+    ]
+   },
+   "erase": [
+    30,
+    23,
+    142,
+    137
+   ],
+   "text": "Je",
+   "style": "at_cell"
+  },
+  "cap:at_req:b": {
+   "capture": "at_req",
+   "select": {
+    "rect": [
+     199,
+     23,
+     313,
+     137
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     767
+    ]
+   },
+   "erase": [
+    199,
+    23,
+    313,
+    137
+   ],
+   "text": "vous",
+   "style": "at_cell"
+  },
+  "cap:at_req:c": {
+   "capture": "at_req",
+   "select": {
+    "rect": [
+     372,
+     24,
+     480,
+     136
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     766
+    ]
+   },
+   "erase": [
+    372,
+    24,
+    480,
+    136
+   ],
+   "text": "écoute",
+   "style": "at_cell"
+  },
+  "cap:at_req:d": {
+   "capture": "at_req",
+   "select": {
+    "rect": [
+     30,
+     180,
+     140,
+     300
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     765
+    ]
+   },
+   "erase": [
+    30,
+    180,
+    140,
+    300
+   ],
+   "text": "…",
+   "style": "at_cell"
+  },
+  "cap:at_req:e": {
+   "capture": "at_req",
+   "select": {
+    "rect": [
+     37,
+     353,
+     133,
+     453
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     764
+    ]
+   },
+   "erase": [
+    37,
+    353,
+    133,
+    453
+   ],
+   "text": "Dites",
+   "style": "at_cell"
+  },
+  "cap:at_req:f": {
+   "capture": "at_req",
+   "select": {
+    "rect": [
+     207,
+     343,
+     305,
+     457
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     763
+    ]
+   },
+   "erase": [
+    207,
+    343,
+    305,
+    457
+   ],
+   "text": "moi",
+   "style": "at_cell"
+  },
+  "cap:at_req:g": {
+   "capture": "at_req",
+   "select": {
+    "rect": [
+     369,
+     347,
+     483,
+     457
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     762
+    ]
+   },
+   "erase": [
+    369,
+    347,
+    483,
+    457
+   ],
+   "text": "tout",
+   "style": "at_cell"
+  },
+  "cap:at_title:sub": {
+   "capture": "at_title",
+   "select": {
+    "rect": [
+     178,
+     215,
+     480,
+     275
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     756
+    ]
+   },
+   "erase": [
+    178,
+    215,
+    480,
+    275
+   ],
+   "text": "Requiem des coups de feu",
+   "style": "at_sub"
+  },
+  "cap:tut_bub:bubble": {
+   "capture": "tut_bub",
+   "select": {
+    "rect": [
+     0,
+     0,
+     200,
+     190
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     767
+    ]
+   },
+   "paint": {
+    "rect": [
+     10,
+     6,
+     180,
+     190
+    ],
+    "fill": "auto"
+   },
+   "lines": [
+    "Aucune",
+    "anomalie",
+    "sur l'arme,",
+    "on dirait…"
+   ],
+   "style": "bubble"
+  },
+  "cap:tut_bub:low": {
+   "capture": "tut_bub",
+   "select": {
+    "rect": [
+     0,
+     230,
+     200,
+     421
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     767
+    ]
+   },
+   "paint": {
+    "rect": [
+     10,
+     190,
+     130,
+     318
+    ],
+    "fill": "auto"
+   },
+   "lines": [
+    " "
+   ],
+   "style": "bubble"
+  }
+ }
+}

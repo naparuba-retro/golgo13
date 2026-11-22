@@ -1,0 +1,79 @@
+{
+  "assets": {
+    "033f2660/00": {
+      "ja": "お待たせ致しました…",
+      "text": "Désolé de vous avoir fait attendre…",
+      "style": "caption"
+    },
+    "033f2660/01": {
+      "ja": "彼が我々の「最終兵器」だ！",
+      "text": "C'est lui, notre « arme ultime » !",
+      "style": "caption"
+    },
+    "033f2660/02": {
+      "ja": "さっそくだが…",
+      "text": "Sans plus attendre…",
+      "style": "caption"
+    },
+    "033f2660/03": {
+      "ja": "我々のいる兵器産業界は AWC社の独占状態にある…",
+      "text": "Le secteur de l'armement où nous opérons est monopolisé par AWC…",
+      "style": "caption"
+    },
+    "033f2660/04": {
+      "ja": "そこでAWC社のデータをハッキング して欲しいという訳だ。",
+      "text": "C'est pourquoi nous voulons que vous piratiez les données d'AWC.",
+      "style": "caption"
+    },
+    "033f2660/05": {
+      "ja": "もちろんギャラは 期待してもらって結構だ…",
+      "text": "Bien entendu, vous pouvez compter sur un cachet généreux…",
+      "style": "caption"
+    },
+    "033f2660/06": {
+      "ja": "わかりました… やってみましょう！",
+      "text": "Entendu… Essayons !",
+      "style": "caption"
+    },
+    "033f2660/07": {
+      "ja": "ターゲットはデビッド・モーガン、 「職業的ハッカー」だ！",
+      "text": "La cible est David Morgan, un « hacker professionnel » !",
+      "style": "caption"
+    },
+    "033f2660/08": {
+      "ja": "彼が狙うAWC社には 軍事機密情報が流出している…",
+      "text": "Des secrets militaires ont fuité chez AWC, la cible de Morgan…",
+      "style": "caption"
+    },
+    "033f2660/09": {
+      "ja": "我々自身の問題なのだが… 時間が無いのだ…",
+      "text": "C'est notre propre problème, mais… nous manquons de temps…",
+      "style": "caption"
+    },
+    "033f2660/10": {
+      "ja": "頼む！…Mr.デューク・トウゴウ！",
+      "text": "Je compte sur vous ! … M. Duke Togo !",
+      "style": "caption"
+    },
+    "033f2660/11": {
+      "ja": "もうそろそろファイヤー・ウォールを 突破するだろう…",
+      "text": "Il va bientôt franchir le pare-feu…",
+      "style": "caption"
+    },
+    "033f2660/12": {
+      "ja": "AWCも丸裸だ…",
+      "text": "AWC sera mis à nu…",
+      "style": "caption"
+    },
+    "033f2660/14": {
+      "ja": "職業的企業ハッカー　モーガン",
+      "text": "Hacker Morgan",
+      "style": "plate"
+    },
+    "033f2660/15": {
+      "ja": "国防総省　パーカー大佐",
+      "text": "Colonel Parker, Défense",
+      "style": "plate"
+    }
+  }
+}

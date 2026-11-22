@@ -1,0 +1,15 @@
+{
+  "assets": {
+    "034bc170/00": {"ja": "裁決委員　ヒルズ", "text": "Commissaire Hills", "style": "plate"},
+    "034bc170/01": {"ja": "用件を聞こう…", "text": "Voyons de quoi il s'agit…", "style": "caption"},
+    "034bc170/02": {"ja": "有力馬にドーピングの疑惑 があるのです。", "text": "Il y a des soupçons de dopage sur un cheval favori.", "style": "caption"},
+    "034bc170/03": {"ja": "明日は王室開催のレースが 行われますが…", "text": "Demain a lieu une course organisée par la famille royale…", "style": "caption"},
+    "034bc170/04": {"ja": "王室開催だけに不祥事は 許されません。", "text": "et, étant royale, aucun scandale n'est permis.", "style": "caption"},
+    "034bc170/05": {"ja": "実施されないと立証できない のですが…", "text": "Impossible de le prouver tant que le contrôle n'est pas mené…", "style": "caption"},
+    "034bc170/06": {"ja": "ただし、１つだけ方法が あります。", "text": "Il n'y a toutefois qu'un seul moyen.", "style": "caption"},
+    "034bc170/07": {"ja": "疾走中に中和剤を注入する ことです。", "text": "Injecter un neutralisant pendant que le cheval galope.", "style": "caption"},
+    "034bc170/08": {"ja": "それは薬物を投与された 同じ場所へ…", "text": "Au même endroit où la drogue a été administrée…", "style": "caption"},
+    "034bc170/09": {"ja": "こんなことを頼めるのは…", "text": "Je ne peux demander cela qu'à…", "style": "caption"},
+    "034bc170/10": {"ja": "あなたしかいないのです！", "text": "vous, et à personne d'autre !", "style": "caption"}
+  }
+}

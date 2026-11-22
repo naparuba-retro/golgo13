@@ -1,0 +1,74 @@
+{
+ "assets": {
+  "033e3de0/00": {
+   "ja": "…差出人、情報局ウイリアムズ…",
+   "text": "…Expéditeur : service de renseignement, Williams…",
+   "style": "caption"
+  },
+  "033e3de0/01": {
+   "ja": "久々だな…デューク…",
+   "text": "Ça fait longtemps… Duke…",
+   "style": "caption"
+  },
+  "033e3de0/02": {
+   "ja": "早速だが…悪いニュースだ。",
+   "text": "Allons droit au but… j'ai de mauvaises nouvelles.",
+   "style": "caption"
+  },
+  "033e3de0/03": {
+   "ja": "実は情報局の一部の人間が暴走して…",
+   "text": "En fait, certains éléments du service ont dérapé…",
+   "style": "caption"
+  },
+  "033e3de0/04": {
+   "ja": "…生物学を駆使した戦士を開発したのだ。",
+   "text": "…ils ont mis au point un guerrier issu de la biologie.",
+   "style": "caption"
+  },
+  "033e3de0/05": {
+   "ja": "そのマシンの資料がこれだ。",
+   "text": "Voici le dossier sur cette machine.",
+   "style": "caption"
+  },
+  "033e3de0/06": {
+   "ja": "遺伝子工学と薬物を駆使した…",
+   "text": "Grâce au génie génétique et aux drogues…",
+   "style": "caption"
+  },
+  "033e3de0/07": {
+   "ja": "…まさにバケモノと言っていい！",
+   "text": "…on peut vraiment parler de monstre !",
+   "style": "caption"
+  },
+  "033e3de0/08": {
+   "ja": "そして…やつらの狙いは君なのだ！",
+   "text": "Et… c'est toi qu'ils visent !",
+   "style": "caption"
+  },
+  "033e3de0/09": {
+   "ja": "ただ、これは情報局の総意ではない…",
+   "text": "Mais ce n'est pas la volonté de tout le service…",
+   "style": "caption"
+  },
+  "033e3de0/10": {
+   "ja": "一部の人間の暴走なのだ…",
+   "text": "Ce ne sont que quelques éléments incontrôlés…",
+   "style": "caption"
+  },
+  "033e3de0/11": {
+   "ja": "情報を流す意図を汲んでくれ…デューク！",
+   "text": "Comprends pourquoi je te transmets ces informations… Duke !",
+   "style": "caption"
+  },
+  "033e3de0/12": {
+   "ja": "見つけたぞ…ゴルゴ13！",
+   "text": "Je t'ai trouvé… Golgo 13 !",
+   "style": "caption"
+  },
+  "033e3de0/13": {
+   "ja": "情報局部長　ウイリアムズ",
+   "text": "Dir. du service Williams",
+   "style": "plate"
+  }
+ }
+}

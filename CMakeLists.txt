@@ -1,0 +1,51 @@
+cmake_minimum_required(VERSION 3.20)
+project(golgo13 C)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+if(NOT CMAKE_BUILD_TYPE)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+set(CMAKE_C_FLAGS_RELEASE "-O2")
+
+option(GOLGO_FETCH_SDL3 "download and build SDL3 (CI / systems without SDL3 packages)" OFF)
+if(GOLGO_FETCH_SDL3)
+  include(FetchContent)
+  set(SDL_SHARED OFF CACHE BOOL "" FORCE)
+  set(SDL_STATIC ON CACHE BOOL "" FORCE)
+  set(SDL_TESTS OFF CACHE BOOL "" FORCE)
+  set(SDL_EXAMPLES OFF CACHE BOOL "" FORCE)
+  FetchContent_Declare(SDL3 GIT_REPOSITORY https://github.com/libsdl-org/SDL.git GIT_TAG release-3.4.20 GIT_SHALLOW TRUE)
+  FetchContent_MakeAvailable(SDL3)
+else()
+  find_package(SDL3 REQUIRED CONFIG)
+endif()
+
+file(GLOB GEN_MIPS CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/generated/*.c)
+file(GLOB GEN_H8   CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/generated_h8/*.c)
+set(RT_SRC
+  runtime/core/main.c runtime/core/machine.c runtime/core/loader.c runtime/core/inflate.c runtime/core/translate.c
+  runtime/gte/gte.c runtime/gte/rt_gte.c runtime/h8/h8_machine.c
+  runtime/gpu/gpu.c runtime/audio/c352.c runtime/video/mdec.c
+  runtime/platform/platform_sdl3.c runtime/platform/wiimote.c runtime/core/games_code.c
+  runtime/ui/ui.c runtime/ui/options.c runtime/ui/menu.c)
+
+file(GLOB GEN_KND_MIPS CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/generated_g13knd/*.c)
+file(GLOB GEN_KND_H8   CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/generated_h8_g13knd/*.c)
+if(NOT GEN_MIPS)
+  message(WARNING "generated/ is empty: building WITHOUT recompiled game code (menu only). See README, section Construire.")
+  list(APPEND RT_SRC runtime/core/no_game_code.c)
+endif()
+add_executable(golgo13 ${RT_SRC} ${GEN_MIPS} ${GEN_H8} ${GEN_KND_MIPS} ${GEN_KND_H8})
+if(GEN_KND_MIPS)   # Kiseki no Dandou code, present only if generated (GOLGO_GAME=g13knd tools/recomp_*)
+  set_source_files_properties(${GEN_KND_MIPS} PROPERTIES COMPILE_DEFINITIONS RT_INLINE_MEM)
+  target_compile_definitions(golgo13 PRIVATE HAVE_G13KND)
+  target_include_directories(golgo13 PRIVATE generated_g13knd generated_h8_g13knd)
+endif()
+set_source_files_properties(${GEN_MIPS} PROPERTIES COMPILE_DEFINITIONS RT_INLINE_MEM)
+target_include_directories(golgo13 PRIVATE runtime/include runtime/core runtime/gte runtime/h8
+  runtime/gpu runtime/platform runtime/audio runtime/video runtime/ui generated generated_h8)
+target_compile_options(golgo13 PRIVATE -fwrapv -fno-strict-aliasing -w)
+target_link_libraries(golgo13 PRIVATE SDL3::SDL3 m)
+if(WIN32)
+  target_link_libraries(golgo13 PRIVATE hid setupapi bthprops)   # Wiimote HID access
+endif()

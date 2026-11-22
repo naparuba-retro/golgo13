@@ -1,0 +1,29 @@
+{
+  "assets": {
+    "03478df0/00": {
+      "ja": "国家情報部長　ランディ",
+      "text": "Chef rens. Randy",
+      "style": "plate"
+    },
+    "03478df0/01": {
+      "ja": "用件を聞こうか…",
+      "text": "Voyons de quoi il s'agit…",
+      "style": "caption"
+    },
+    "03478df0/02": {
+      "ja": "仲間を救ってくれ！ ゴルゴ13！",
+      "text": "Sauvez mes camarades ! Golgo 13 !",
+      "style": "caption"
+    },
+    "03478df0/03": {
+      "ja": "そこで、あなたに処刑を 失敗させて欲しいのだ…",
+      "text": "C'est pourquoi je veux que vous fassiez échouer l'exécution…",
+      "style": "caption"
+    },
+    "03478df0/04": {
+      "ja": "諜報活動をしていた仲間が 処刑されます…",
+      "text": "Des camarades qui faisaient du renseignement vont être exécutés…",
+      "style": "caption"
+    }
+  }
+}

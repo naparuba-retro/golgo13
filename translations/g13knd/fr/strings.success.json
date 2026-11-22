@@ -1,0 +1,131 @@
+{
+ "assets": {
+  "cap:ok_result:title": {
+   "ja": "狙撃成功",
+   "capture": "ok_result",
+   "select": {
+    "rect": [
+     130,
+     6,
+     490,
+     112
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     759
+    ]
+   },
+   "erase": [
+    130,
+    6,
+    490,
+    112
+   ],
+   "text": "TIR RÉUSSI",
+   "style": "result_title_ok"
+  },
+  "cap:tut_pos:box": {
+   "capture": "tut_pos",
+   "select": {
+    "rect": [
+     56,
+     350,
+     455,
+     430
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     762,
+     763
+    ],
+    "distinct_from": [
+     "tut_bubble"
+    ]
+   },
+   "paint": {
+    "rect": [
+     64,
+     358,
+     448,
+     422
+    ],
+    "fill": "auto"
+   },
+   "text": "Mettez-vous en position à côté du fusil",
+   "style": "tut_box"
+  },
+  "cap:tut_bubble:box": {
+   "capture": "tut_bubble",
+   "select": {
+    "rect": [
+     56,
+     350,
+     455,
+     430
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     761,
+     762
+    ],
+    "distinct_from": [
+     "tut_pos"
+    ]
+   },
+   "paint": {
+    "rect": [
+     64,
+     358,
+     448,
+     422
+    ],
+    "fill": "auto"
+   },
+   "text": "Vous ne pouvez pas le voir si vous approchez trop vos yeux",
+   "style": "tut_box"
+  },
+  "cap:tut_manga:bubble": {
+   "capture": "tut_manga",
+   "select": {
+    "rect": [
+     330,
+     0,
+     512,
+     421
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     763
+    ]
+   },
+   "paint": {
+    "rect": [
+     372,
+     12,
+     495,
+     340
+    ],
+    "fill": "#ffffff",
+    "sample": [
+     -4,
+     -4
+    ]
+   },
+   "lines": [
+    "Aucune",
+    "anomalie",
+    "sur l'arme,",
+    "on dirait…"
+   ],
+   "style": "bubble"
+  }
+ }
+}

@@ -1,0 +1,162 @@
+{
+  "card_m1": {
+    "note": "Objective card of the first story (Semiconductor Crisis): coin x2, start, shoot the first story tile, wait for the card.",
+    "frame": 8100,
+    "presses": [
+      "2000:6:coin",
+      "2030:6:coin",
+      "2600:30:start",
+      "4000:8:trigger",
+      "4100:8:trigger",
+      "4200:8:trigger"
+    ]
+  },
+  "tut_a": {
+    "note": "Tutorial step 1: character holding the rifle, green caption box",
+    "frame": 2680,
+    "presses": [
+      "2000:6:coin",
+      "2030:6:coin",
+      "2600:30:start"
+    ],
+    "aim": "260,188"
+  },
+  "tut_b": {
+    "note": "Tutorial step 2: scope view, green caption box",
+    "frame": 2900,
+    "presses": [
+      "2000:6:coin",
+      "2030:6:coin",
+      "2600:30:start"
+    ],
+    "aim": "260,188"
+  },
+  "tut_range": {
+    "note": "Tutorial range, before the scope sensor is held",
+    "frame": 3325,
+    "presses": [
+      "2000:6:coin",
+      "2030:6:coin",
+      "2600:30:start",
+      "3330:700:sensor",
+      "3500:6:trigger",
+      "3640:6:trigger",
+      "3780:6:trigger"
+    ],
+    "aim": "260,188"
+  },
+  "tut_scope": {
+    "note": "Tutorial range, scope view: line 2 'align the sight and shoot'",
+    "frame": 3600,
+    "presses": [
+      "2000:6:coin",
+      "2030:6:coin",
+      "2600:30:start",
+      "3330:700:sensor",
+      "3500:6:trigger",
+      "3640:6:trigger",
+      "3780:6:trigger"
+    ],
+    "aim": "260,188"
+  },
+  "tut_end": {
+    "note": "Tutorial range, end: line 2 'finished'",
+    "frame": 3810,
+    "presses": [
+      "2000:6:coin",
+      "2030:6:coin",
+      "2600:30:start",
+      "3330:700:sensor",
+      "3500:6:trigger",
+      "3640:6:trigger",
+      "3780:6:trigger"
+    ],
+    "aim": "260,188"
+  },
+  "tut_manga": {
+    "note": "Manga panel with the speech bubble after the tutorial",
+    "frame": 3960,
+    "presses": [
+      "2000:6:coin",
+      "2030:6:coin",
+      "2600:30:start",
+      "3330:700:sensor",
+      "3500:6:trigger",
+      "3640:6:trigger",
+      "3780:6:trigger"
+    ],
+    "aim": "260,188"
+  },
+  "result_fail": {
+    "note": "Result screen after a failed shot (time over, no shots): 'Sniping failed', accuracy points, time, trust, reward, Swiss bank balance",
+    "frame": 9790,
+    "presses": [
+      "2000:6:coin",
+      "2030:6:coin",
+      "2600:30:start",
+      "4000:8:trigger",
+      "4100:8:trigger",
+      "4200:8:trigger"
+    ]
+  },
+  "result_ok": {
+    "note": "Success result screen (green, 'Sniping success' title), from the reference session",
+    "replay": "captures/ref_s2.g13r",
+    "frame": 4290
+  },
+  "snipe_ok": {
+    "note": "SNIPE POINT success screen, from the reference session",
+    "replay": "captures/ref_s2.g13r",
+    "frame": 10170
+  },
+  "card_unl": {
+    "note": "Objective card with unlimited ammo, from the reference session",
+    "replay": "captures/ref_s2.g13r",
+    "frame": 7755
+  },
+  "card_unl2": {
+    "note": "Objective card unlimited ammo + aimed text",
+    "replay": "captures/ref_s2.g13r",
+    "frame": 16300
+  },
+  "game_over": {
+    "note": "Game over screen with lifetime reward and average accuracy (idle replay: nothing shot until the credits run out)",
+    "replay": "captures/ref_idle.g13r",
+    "frame": 16950
+  },
+  "card_snow": {
+    "note": "Objective card of 'Region de fortes neiges' (avalanche objective), bot session",
+    "replay": "captures/ref_r3.g13r",
+    "frame": 33390
+  },
+  "card_p1": {
+    "note": "Objective card (sprite plate), bot session",
+    "replay": "captures/ref_r3.g13r",
+    "frame": 24400
+  },
+  "card_p2": {
+    "note": "Objective card (sprite plate), bot session",
+    "replay": "captures/ref_r3.g13r",
+    "frame": 39240
+  },
+  "card_p3": {
+    "note": "Objective card (sprite plate), bot session",
+    "replay": "captures/ref_r3.g13r",
+    "frame": 43130
+  },
+  "card_p4": {
+    "note": "Objective card (sprite plate), bot session",
+    "replay": "captures/ref_r3.g13r",
+    "frame": 46800
+  },
+  "card_p5": {
+    "note": "Objective card (sprite plate), bot session",
+    "replay": "captures/ref_r3.g13r",
+    "frame": 48600
+  },
+  "card_p6": {
+    "note": "Objective card (sprite plate), bot session",
+    "replay": "captures/ref_r3.g13r",
+    "frame": 52200
+  }
+}

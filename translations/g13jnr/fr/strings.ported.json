@@ -1,0 +1,2701 @@
+{
+ "assets": {
+  "cap:golgo13_card_m1:ammo": {
+   "capture": "golgo13_card_m1",
+   "select": {
+    "rect": [
+     160,
+     50,
+     320,
+     100
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    160,
+    50,
+    322,
+    103
+   ],
+   "text": "Munitions",
+   "style": "card_label",
+   "text_area": [
+    160,
+    50,
+    322,
+    98
+   ]
+  },
+  "cap:golgo13_card_m1:sec": {
+   "capture": "golgo13_card_m1",
+   "select": {
+    "rect": [
+     430,
+     250,
+     502,
+     310
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    434,
+    252,
+    498,
+    308
+   ],
+   "text": "sec",
+   "style": "card_label",
+   "text_area": [
+    434,
+    252,
+    498,
+    302
+   ]
+  },
+  "cap:golgo13_card_m1:shot": {
+   "capture": "golgo13_card_m1",
+   "select": {
+    "rect": [
+     255,
+     250,
+     320,
+     310
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    256,
+    252,
+    312,
+    308
+   ],
+   "text": "coup",
+   "style": "card_label",
+   "text_area": [
+    256,
+    252,
+    312,
+    302
+   ]
+  },
+  "cap:golgo13_card_m1:target": {
+   "capture": "golgo13_card_m1",
+   "select": {
+    "rect": [
+     36,
+     384,
+     140,
+     416
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    36,
+    384,
+    140,
+    416
+   ],
+   "text": "Cible",
+   "style": "card_label"
+  },
+  "cap:golgo13_card_m1:time": {
+   "capture": "golgo13_card_m1",
+   "select": {
+    "rect": [
+     340,
+     50,
+     502,
+     100
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    339,
+    50,
+    502,
+    103
+   ],
+   "text": "Temps limite",
+   "style": "card_label",
+   "text_area": [
+    339,
+    50,
+    502,
+    98
+   ]
+  },
+  "cap:golgo13_tut_a:box": {
+   "capture": "golgo13_tut_a",
+   "select": {
+    "rect": [
+     64,
+     358,
+     448,
+     422
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     762,
+     763
+    ]
+   },
+   "paint": {
+    "rect": [
+     64,
+     358,
+     448,
+     422
+    ],
+    "fill": "auto"
+   },
+   "text": "Mettez-vous en position à côté du fusil",
+   "style": "tut_box"
+  },
+  "cap:golgo13_tut_b:box": {
+   "capture": "golgo13_tut_b",
+   "select": {
+    "rect": [
+     64,
+     358,
+     448,
+     422
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     761,
+     762
+    ]
+   },
+   "paint": {
+    "rect": [
+     64,
+     358,
+     448,
+     422
+    ],
+    "fill": "auto"
+   },
+   "text": "Vous ne pouvez pas le voir si vous approchez trop vos yeux",
+   "style": "tut_box"
+  },
+  "cap:golgo13_tut_end:line": {
+   "capture": "golgo13_tut_end",
+   "select": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     767
+    ]
+   },
+   "paint": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "fill": "auto"
+   },
+   "text": "Terminé",
+   "style": "tut_bar"
+  },
+  "cap:golgo13_tut_manga:bubble": {
+   "capture": "golgo13_tut_manga",
+   "select": {
+    "rect": [
+     376,
+     10,
+     492,
+     336
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     765,
+     766
+    ]
+   },
+   "paint": {
+    "rect": [
+     376,
+     10,
+     492,
+     336
+    ],
+    "fill": "#ffffff",
+    "sample": [
+     -4,
+     -4
+    ]
+   },
+   "lines": [
+    "Aucune",
+    "anomalie",
+    "sur l'arme,",
+    "on dirait…"
+   ],
+   "style": "bubble"
+  },
+  "cap:golgo13_tut_range:line": {
+   "capture": "golgo13_tut_range",
+   "select": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "paint": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "fill": "auto"
+   },
+   "text": "Visez la cible avec la lunette !",
+   "style": "tut_bar"
+  },
+  "cap:golgo13_tut_range:title": {
+   "capture": "golgo13_tut_range",
+   "select": {
+    "rect": [
+     60,
+     378,
+     452,
+     412
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "paint": {
+    "rect": [
+     60,
+     378,
+     452,
+     412
+    ],
+    "fill": "auto"
+   },
+   "text": "Réglage du fusil de sniper",
+   "style": "tut_bar"
+  },
+  "cap:golgo13_tut_scope:line": {
+   "capture": "golgo13_tut_scope",
+   "select": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     744
+    ]
+   },
+   "paint": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "fill": "auto"
+   },
+   "text": "Alignez le viseur et tirez !",
+   "style": "tut_bar"
+  },
+  "0029f000/00": {
+   "ja": "諸君、よく来てくれた！",
+   "text": "Messieurs, merci d'être venus !",
+   "style": "caption"
+  },
+  "0029f000/01": {
+   "ja": "当家自慢の庭園にでもどうかね…",
+   "text": "Que diriez-vous d'aller dans le jardin dont notre maison est si fière…",
+   "style": "caption"
+  },
+  "0029f000/02": {
+   "ja": "用件を聞こう…",
+   "text": "Voyons de quoi il s'agit…",
+   "style": "caption"
+  },
+  "0029f000/03": {
+   "ja": "実は、遺憾ながらMI6内部の あるグループが…",
+   "text": "En fait, malheureusement, un groupe au sein du MI6…",
+   "style": "caption"
+  },
+  "0029f000/04": {
+   "ja": "カネにつられて、私の暗殺を 目論んでいるのだ！",
+   "text": "attiré par l'argent, projette de m'assassiner !",
+   "style": "caption"
+  },
+  "0029f000/05": {
+   "ja": "そこで今週末、私の家に グループのトップを呼び出す…",
+   "text": "Ce week-end, j'invite donc le chef de ce groupe chez moi…",
+   "style": "caption"
+  },
+  "0029f000/06": {
+   "ja": "その席で、君に問題グループのトップを 除去して欲しい！",
+   "text": "Je veux que vous éliminiez ce chef de groupe sur place !",
+   "style": "caption"
+  },
+  "0029f000/07": {
+   "ja": "さて、どこのグループが 私を暗殺するのかね？",
+   "text": "Voyons, quel groupe projette de m'assassiner ?",
+   "style": "caption"
+  },
+  "0029f000/08": {
+   "ja": "そ、そんな…！！",
+   "text": "N-non, pas possible… !!",
+   "style": "caption"
+  },
+  "0029f000/09": {
+   "ja": "ここに証拠資料もある… カネ目当てとは愚かしい…",
+   "text": "J'ai ici les preuves… Agir pour l'argent est stupide…",
+   "style": "caption"
+  },
+  "0029f000/10": {
+   "ja": "しかし、私は逃げ隠れする つもりはない。",
+   "text": "Mais je n'ai pas l'intention de fuir ni de me cacher.",
+   "style": "caption"
+  },
+  "0029f000/11": {
+   "ja": "むしろ、そのチャンスを 与えようではないか！",
+   "text": "Au contraire, donnons-leur cette occasion !",
+   "style": "caption"
+  },
+  "0029f000/12": {
+   "ja": "ただ、私は自慢のこの庭で 生涯を閉じたい…",
+   "text": "Mais je voudrais finir mes jours dans ce jardin dont je suis fier…",
+   "style": "caption"
+  },
+  "0029f000/13": {
+   "ja": "さあ、それぞれ別の場所で 資料を読んで…",
+   "text": "Allons, lisez chacun les documents dans un endroit différent…",
+   "style": "caption"
+  },
+  "0029f000/14": {
+   "ja": "逃走経路を考えた上で、 私を狙うがいい…！！",
+   "text": "Une fois votre voie de fuite prévue, vous pouvez me viser…!!",
+   "style": "caption"
+  },
+  "0029f000/15": {
+   "ja": "MI6部長　ヒューム",
+   "text": "Chef MI6 Hume",
+   "style": "plate"
+  },
+  "0029f000/16": {
+   "ja": "MI6 幹部",
+   "text": "Cadre du MI6",
+   "style": "plate"
+  },
+  "004ca000/00": {
+   "ja": "国連専用機…聞こえるか？",
+   "text": "Avion spécial de l'ONU… m'entendez-vous ?",
+   "style": "caption"
+  },
+  "004ca000/01": {
+   "ja": "この機はハイジャックされた！",
+   "text": "Cet appareil est détourné !",
+   "style": "caption"
+  },
+  "004ca000/02": {
+   "ja": "機長がコックピットに 来て欲しいと…",
+   "text": "Le commandant demande que vous veniez dans le cockpit…",
+   "style": "caption"
+  },
+  "004ca000/03": {
+   "ja": "…緊急事態のようです！",
+   "text": "…Il semble que ce soit une urgence !",
+   "style": "caption"
+  },
+  "004ca000/04": {
+   "ja": "地上からハイジャックとは どういう事だ！？",
+   "text": "Un détournement depuis le sol ? Qu'est-ce que ça veut dire !?",
+   "style": "caption"
+  },
+  "004ca000/05": {
+   "ja": "我々にはスティンガーがある… 軍を即座に撤退させろ！",
+   "text": "Nous avons des Stinger… Retirez immédiatement l'armée !",
+   "style": "caption"
+  },
+  "004ca000/06": {
+   "ja": "ス、スティンガーミサイル…！",
+   "text": "D-des missiles Stinger… !",
+   "style": "caption"
+  },
+  "004ca000/07": {
+   "ja": "用件を聞こうか…",
+   "text": "Voyons de quoi il s'agit…",
+   "style": "caption"
+  },
+  "004ca000/08": {
+   "ja": "き、緊急事態なんです…",
+   "text": "C'est une u-urgence…",
+   "style": "caption"
+  },
+  "004ca000/09": {
+   "ja": "犯人の反政府ゲリラ・リーダー、 シアドです。",
+   "text": "Le coupable est le chef de la guérilla antigouvernementale, Siad.",
+   "style": "caption"
+  },
+  "004ca000/10": {
+   "ja": "たった一発のスティンガーで ハイジャックしたのです…",
+   "text": "Il a détourné l'avion avec un seul Stinger…",
+   "style": "caption"
+  },
+  "004ca000/11": {
+   "ja": "軍隊の展開は困難ですが、 スティンガーさえなければ…",
+   "text": "Déployer l'armée est difficile, mais sans le Stinger…",
+   "style": "caption"
+  },
+  "004ca000/12": {
+   "ja": "お願いします…スティンガーを 排除してください！",
+   "text": "Je vous en prie… éliminez le Stinger !",
+   "style": "caption"
+  },
+  "004ca000/13": {
+   "ja": "ちっ、畜生！ 思い知らせてやる…！",
+   "text": "Merde, saloperie ! Je vais te faire payer…!",
+   "style": "caption"
+  },
+  "004ca000/14": {
+   "ja": "国連紛争地域視察団",
+   "text": "Inspection ONU",
+   "style": "plate"
+  },
+  "004ca000/15": {
+   "ja": "国連事務局",
+   "text": "Secrétariat de l'ONU",
+   "style": "plate"
+  },
+  "006bf000/00": {
+   "ja": "私がコンタクトをお願いした タルッフィです…",
+   "text": "Je suis Taruffi, celui qui vous a demandé de prendre contact…",
+   "style": "caption"
+  },
+  "006bf000/01": {
+   "ja": "用件を聞こう…",
+   "text": "Voyons de quoi il s'agit…",
+   "style": "caption"
+  },
+  "006bf000/02": {
+   "ja": "ターゲットは女優のセラフィーニです。",
+   "text": "La cible est l'actrice Serafini.",
+   "style": "caption"
+  },
+  "006bf000/03": {
+   "ja": "しかし殺すのではありません…",
+   "text": "Mais il ne s'agit pas de la tuer…",
+   "style": "caption"
+  },
+  "006bf000/04": {
+   "ja": "実は彼女の交際している男 というのが、",
+   "text": "En fait, l'homme qu'elle fréquente…",
+   "style": "caption"
+  },
+  "006bf000/05": {
+   "ja": "若手シューズデザイナーの ヴィロレーシなんですが…",
+   "text": "est un jeune créateur de chaussures, Viroresi…",
+   "style": "caption"
+  },
+  "006bf000/06": {
+   "ja": "彼の資金はマフィアから 出ているのです。",
+   "text": "Ses fonds viennent de la mafia.",
+   "style": "caption"
+  },
+  "006bf000/07": {
+   "ja": "もし、彼の靴が原因でセラフィーニが 怪我をしたら…",
+   "text": "Si Serafini se blessait à cause de ses chaussures…",
+   "style": "caption"
+  },
+  "006bf000/08": {
+   "ja": "マスコミもこの事を 放ってはおかないでしょう。",
+   "text": "la presse ne laisserait pas passer ça.",
+   "style": "caption"
+  },
+  "006bf000/09": {
+   "ja": "つまり、彼女の靴を 狙撃して欲しいのです！",
+   "text": "Autrement dit, je veux que vous tiriez sur sa chaussure !",
+   "style": "caption"
+  },
+  "006bf000/10": {
+   "ja": "お願いできないでしょうか… ゴルゴ13！！",
+   "text": "Puis-je compter sur vous… Golgo 13 !!",
+   "style": "caption"
+  },
+  "006bf000/11": {
+   "ja": "靴製造者協会会長　タルッフィ",
+   "text": "Pdt chaussures Taruffi",
+   "style": "plate"
+  },
+  "006bf000/12": {
+   "ja": "女優　セラフィーニ",
+   "text": "Actrice Serafini",
+   "style": "plate"
+  },
+  "006bf000/13": {
+   "ja": "シューズデザイナー　ヴィロレーシ",
+   "text": "Styliste Viroresi",
+   "style": "plate"
+  },
+  "00823000/00": {
+   "ja": "…Mr.トウゴウか！？ いつの間に…",
+   "text": "…M. Togo ?! Depuis quand êtes-vous là…",
+   "style": "caption"
+  },
+  "00823000/01": {
+   "ja": "…そっちが入ってくる 15分前からいる。",
+   "text": "…Je suis là depuis quinze minutes avant votre arrivée.",
+   "style": "caption"
+  },
+  "00823000/02": {
+   "ja": "依頼人といえど事前の観察を 欠かさないルールでしたな…",
+   "text": "Même pour un client, la règle est de ne jamais omettre l'observation préalable, n'est-ce pas…",
+   "style": "caption"
+  },
+  "00823000/03": {
+   "ja": "さっそくだが…フォー・コンツェルンの ダイヤを狙撃して欲しい！",
+   "text": "Sans attendre… je veux que vous tiriez sur le diamant du Four Konzern !",
+   "style": "caption"
+  },
+  "00823000/04": {
+   "ja": "公にはなっていないが、ゆうに 1000カラットはある…",
+   "text": "Ce n'est pas public, mais il fait largement 1000 carats…",
+   "style": "caption"
+  },
+  "00823000/05": {
+   "ja": "もちろんダイヤは 地上最強の硬度を有する…",
+   "text": "Bien sûr, le diamant possède la dureté la plus élevée sur terre…",
+   "style": "caption"
+  },
+  "00823000/06": {
+   "ja": "だからこそ、あなたに 依頼するのだ…Mr.トウゴウ！",
+   "text": "C'est justement pourquoi nous nous adressons à vous… M. Togo !",
+   "style": "caption"
+  },
+  "00823000/07": {
+   "ja": "これをもらおう…",
+   "text": "Je prends ceci…",
+   "style": "caption"
+  },
+  "00823000/08": {
+   "ja": "ただし、要求通りに職人に カットしてもらいたい…",
+   "text": "Mais je veux qu'un artisan le taille comme exigé…",
+   "style": "caption"
+  },
+  "00823000/09": {
+   "ja": "このダイヤを一撃で 打ち砕いて欲しい…",
+   "text": "Je veux que vous brisiez ce diamant d'un seul coup…",
+   "style": "caption"
+  },
+  "00823000/10": {
+   "ja": "…気に入ったぞ、若いの！",
+   "text": "…Il me plaît, jeune homme !",
+   "style": "caption"
+  },
+  "00823000/11": {
+   "ja": "ダイヤを砕くには、 結晶方向へ逆らって…",
+   "text": "Pour briser un diamant, il faut aller à l'encontre du sens du cristal…",
+   "style": "caption"
+  },
+  "00823000/12": {
+   "ja": "正反対のポイントに打撃を 加えることだ！",
+   "text": "en frappant au point diamétralement opposé !",
+   "style": "caption"
+  },
+  "00823000/13": {
+   "ja": "J&Iカンパニー代表　コリンズ",
+   "text": "J&I Company Collins",
+   "style": "plate"
+  },
+  "00823000/14": {
+   "ja": "フォー・コンツェルン総帥　エイモン",
+   "text": "Four Konzern Amon",
+   "style": "plate"
+  },
+  "00941000/00": {
+   "ja": "ちょっと速すぎる気がするが…",
+   "text": "Ça me semble un peu trop rapide…",
+   "style": "caption"
+  },
+  "00941000/01": {
+   "ja": "…ここを動くな。",
+   "text": "…Ne bouge pas d'ici.",
+   "style": "caption"
+  },
+  "00941000/02": {
+   "ja": "見に行くのか？",
+   "text": "Tu vas voir ?",
+   "style": "caption"
+  },
+  "00941000/04": {
+   "ja": "ううっ…",
+   "text": "Ngh…",
+   "style": "caption"
+  },
+  "00941000/05": {
+   "ja": "くそっ！！",
+   "text": "Merde !!",
+   "style": "caption"
+  },
+  "00941000/06": {
+   "ja": "へへ…もうブレーキは使えないぜ…",
+   "text": "Hé hé… on ne peut plus freiner…",
+   "style": "caption"
+  },
+  "00941000/07": {
+   "ja": "この先の崖で…",
+   "text": "À la falaise, juste devant…",
+   "style": "caption"
+  },
+  "00941000/08": {
+   "ja": "殺し屋　シュミット",
+   "text": "Tueur Schmitt",
+   "style": "plate"
+  },
+  "00941000/09": {
+   "ja": "じゃあ、このままでは崖に 転落するというのか…！！",
+   "text": "Alors, tel quel, on va tomber de la falaise… !!",
+   "style": "caption"
+  },
+  "cap:golgo13_card_unl:unlimited": {
+   "ja": "無制限",
+   "capture": "golgo13_card_unl",
+   "select": {
+    "rect": [
+     184,
+     94,
+     296,
+     266
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     760
+    ]
+   },
+   "erase": [
+    184,
+    94,
+    296,
+    266
+   ],
+   "lines": [
+    "ILLI",
+    "MITÉ"
+   ],
+   "style": "card_unlimited"
+  },
+  "cap:golgo13_card_snow:objective": {
+   "ja": "雪崩を起こして列車を止めろ",
+   "capture": "golgo13_card_snow",
+   "select": {
+    "rect": [
+     198,
+     347,
+     454,
+     434
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     757
+    ],
+    "distinct_from": [
+     "golgo13_card_p1",
+     "golgo13_card_p2",
+     "golgo13_card_p3",
+     "golgo13_card_p4",
+     "golgo13_card_p5",
+     "golgo13_card_p6",
+     "golgo13_card_m1",
+     "golgo13_card_unl"
+    ]
+   },
+   "paint": {
+    "rect": [
+     180,
+     358,
+     480,
+     424
+    ],
+    "fill": "#000000"
+   },
+   "text": "Provoquez une avalanche pour arrêter le train",
+   "style": "objective"
+  },
+  "cap:golgo13_result_fail:title": {
+   "ja": "狙撃失敗",
+   "capture": "golgo13_result_fail",
+   "select": {
+    "rect": [
+     74,
+     6,
+     438,
+     114
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     760
+    ]
+   },
+   "erase": [
+    74,
+    6,
+    438,
+    114
+   ],
+   "text": "TIR RATÉ",
+   "style": "result_title"
+  },
+  "cap:golgo13_result_fail:accuracy": {
+   "ja": "精度ポイント",
+   "capture": "golgo13_result_fail",
+   "select": {
+    "rect": [
+     80,
+     122,
+     252,
+     158
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     758
+    ]
+   },
+   "erase": [
+    80,
+    122,
+    252,
+    158
+   ],
+   "text": "Précision",
+   "style": "result_label"
+  },
+  "cap:golgo13_result_fail:time": {
+   "ja": "タイム",
+   "capture": "golgo13_result_fail",
+   "select": {
+    "rect": [
+     144,
+     162,
+     252,
+     198
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     756
+    ]
+   },
+   "erase": [
+    144,
+    162,
+    252,
+    198
+   ],
+   "text": "Temps",
+   "style": "result_label"
+  },
+  "cap:golgo13_result_fail:trust": {
+   "ja": "信頼度",
+   "capture": "golgo13_result_fail",
+   "select": {
+    "rect": [
+     30,
+     222,
+     162,
+     258
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     755
+    ]
+   },
+   "erase": [
+    30,
+    222,
+    162,
+    258
+   ],
+   "text": "Confiance",
+   "style": "result_label"
+  },
+  "cap:golgo13_result_fail:reward": {
+   "ja": "報酬",
+   "capture": "golgo13_result_fail",
+   "select": {
+    "rect": [
+     146,
+     337,
+     222,
+     373
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "erase": [
+    146,
+    337,
+    222,
+    373
+   ],
+   "text": "Prime",
+   "style": "result_label"
+  },
+  "cap:golgo13_result_fail:swiss": {
+   "ja": "スイス銀行残高",
+   "capture": "golgo13_result_fail",
+   "select": {
+    "rect": [
+     18,
+     377,
+     222,
+     413
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "erase": [
+    18,
+    377,
+    222,
+    413
+   ],
+   "text": "Banque suisse",
+   "style": "result_label"
+  },
+  "cap:golgo13_result_ok:title": {
+   "ja": "狙撃成功",
+   "capture": "golgo13_result_ok",
+   "select": {
+    "rect": [
+     130,
+     8,
+     490,
+     112
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     757
+    ]
+   },
+   "erase": [
+    130,
+    8,
+    490,
+    112
+   ],
+   "text": "TIR RÉUSSI",
+   "style": "result_title_ok"
+  },
+  "cap:golgo13_snipe_ok:title": {
+   "ja": "狙撃成功",
+   "capture": "golgo13_snipe_ok",
+   "select": {
+    "rect": [
+     130,
+     8,
+     490,
+     112
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     759
+    ]
+   },
+   "erase": [
+    130,
+    8,
+    490,
+    112
+   ],
+   "text": "TIR RÉUSSI",
+   "style": "result_title_ok"
+  },
+  "cap:golgo13_result_ok:accuracy": {
+   "ja": "精度ポイント",
+   "capture": "golgo13_result_ok",
+   "select": {
+    "rect": [
+     80,
+     122,
+     252,
+     158
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     754
+    ]
+   },
+   "erase": [
+    80,
+    122,
+    252,
+    158
+   ],
+   "text": "Précision",
+   "style": "result_label"
+  },
+  "cap:golgo13_result_ok:time": {
+   "ja": "タイム",
+   "capture": "golgo13_result_ok",
+   "select": {
+    "rect": [
+     144,
+     162,
+     252,
+     198
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "erase": [
+    144,
+    162,
+    252,
+    198
+   ],
+   "text": "Temps",
+   "style": "result_label"
+  },
+  "cap:golgo13_result_ok:trust": {
+   "ja": "信頼度",
+   "capture": "golgo13_result_ok",
+   "select": {
+    "rect": [
+     30,
+     222,
+     162,
+     258
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     751
+    ]
+   },
+   "erase": [
+    30,
+    222,
+    162,
+    258
+   ],
+   "text": "Confiance",
+   "style": "result_label"
+  },
+  "cap:golgo13_result_ok:reward": {
+   "ja": "報酬",
+   "capture": "golgo13_result_ok",
+   "select": {
+    "rect": [
+     146,
+     337,
+     222,
+     373
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     749
+    ]
+   },
+   "erase": [
+    146,
+    337,
+    222,
+    373
+   ],
+   "text": "Prime",
+   "style": "result_label"
+  },
+  "cap:golgo13_result_ok:swiss": {
+   "ja": "スイス銀行残高",
+   "capture": "golgo13_result_ok",
+   "select": {
+    "rect": [
+     18,
+     377,
+     222,
+     413
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     748
+    ]
+   },
+   "erase": [
+    18,
+    377,
+    222,
+    413
+   ],
+   "text": "Banque suisse",
+   "style": "result_label"
+  },
+  "cap:golgo13_game_over:lifetime": {
+   "ja": "生涯獲得報酬",
+   "capture": "golgo13_game_over",
+   "select": {
+    "rect": [
+     35,
+     324,
+     227,
+     356
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     754
+    ]
+   },
+   "erase": [
+    35,
+    324,
+    227,
+    356
+   ],
+   "text": "Gains cumulés",
+   "style": "result_label"
+  },
+  "cap:golgo13_game_over:average": {
+   "ja": "平均精度ポイント",
+   "capture": "golgo13_game_over",
+   "select": {
+    "rect": [
+     3,
+     364,
+     227,
+     396
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "erase": [
+    3,
+    364,
+    227,
+    396
+   ],
+   "text": "Précision moyenne",
+   "style": "result_label"
+  },
+  "cap:golgo13_game_over:fiction": {
+   "ja": "この物語は、すべてフィクションです。",
+   "capture": "golgo13_game_over",
+   "select": {
+    "rect": [
+     288,
+     384,
+     512,
+     448
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     755
+    ]
+   },
+   "paint": {
+    "rect": [
+     312,
+     411,
+     506,
+     431
+    ],
+    "fill": "#000000"
+   },
+   "text": "● Cette histoire est entièrement fictive.",
+   "style": "footnote"
+  },
+  "cap:knd_tut_end:line": {
+   "capture": "knd_tut_end",
+   "select": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     767
+    ]
+   },
+   "paint": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "fill": "auto"
+   },
+   "text": "Terminé",
+   "style": "tut_bar"
+  },
+  "cap:knd_tut_range:line": {
+   "capture": "knd_tut_range",
+   "select": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "paint": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "fill": "auto"
+   },
+   "text": "Visez la cible avec la lunette !",
+   "style": "tut_bar"
+  },
+  "cap:knd_tut_range:title": {
+   "capture": "knd_tut_range",
+   "select": {
+    "rect": [
+     60,
+     378,
+     452,
+     412
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "paint": {
+    "rect": [
+     60,
+     378,
+     452,
+     412
+    ],
+    "fill": "auto"
+   },
+   "text": "Réglage du fusil de sniper",
+   "style": "tut_bar"
+  },
+  "cap:knd_tut_scope:line": {
+   "capture": "knd_tut_scope",
+   "select": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     744
+    ]
+   },
+   "paint": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "fill": "auto"
+   },
+   "text": "Alignez le viseur et tirez !",
+   "style": "tut_bar"
+  },
+  "cap:knd_card_unl:unlimited": {
+   "ja": "無制限",
+   "capture": "knd_card_unl",
+   "select": {
+    "rect": [
+     184,
+     94,
+     296,
+     266
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     760
+    ]
+   },
+   "erase": [
+    184,
+    94,
+    296,
+    266
+   ],
+   "lines": [
+    "ILLI",
+    "MITÉ"
+   ],
+   "style": "card_unlimited"
+  },
+  "cap:knd_card_snow:objective": {
+   "ja": "雪崩を起こして列車を止めろ",
+   "capture": "knd_card_snow",
+   "select": {
+    "rect": [
+     198,
+     347,
+     454,
+     434
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     757
+    ],
+    "distinct_from": [
+     "knd_card_p1",
+     "knd_card_p2",
+     "knd_card_p3",
+     "knd_card_p4",
+     "knd_card_p5",
+     "knd_card_p6",
+     "knd_card_m1",
+     "knd_card_unl"
+    ]
+   },
+   "paint": {
+    "rect": [
+     180,
+     358,
+     480,
+     424
+    ],
+    "fill": "#000000"
+   },
+   "text": "Provoquez une avalanche pour arrêter le train",
+   "style": "objective"
+  },
+  "cap:knd_result_fail:title": {
+   "ja": "狙撃失敗",
+   "capture": "knd_result_fail",
+   "select": {
+    "rect": [
+     74,
+     6,
+     438,
+     114
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     760
+    ]
+   },
+   "erase": [
+    74,
+    6,
+    438,
+    114
+   ],
+   "text": "TIR RATÉ",
+   "style": "result_title"
+  },
+  "cap:knd_result_fail:accuracy": {
+   "ja": "精度ポイント",
+   "capture": "knd_result_fail",
+   "select": {
+    "rect": [
+     158,
+     118,
+     222,
+     162
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     757
+    ]
+   },
+   "erase": [
+    158,
+    118,
+    222,
+    162
+   ],
+   "text": "Précision",
+   "style": "result_label_k"
+  },
+  "cap:knd_result_fail:time": {
+   "ja": "タイム",
+   "capture": "knd_result_fail",
+   "select": {
+    "rect": [
+     130,
+     157,
+     222,
+     203
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     756
+    ]
+   },
+   "erase": [
+    130,
+    157,
+    222,
+    203
+   ],
+   "text": "Temps",
+   "style": "result_label_k"
+  },
+  "cap:knd_result_fail:trust": {
+   "ja": "信頼度",
+   "capture": "knd_result_fail",
+   "select": {
+    "rect": [
+     130,
+     205,
+     290,
+     315
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     755
+    ]
+   },
+   "text": "Confiance",
+   "style": "result_label",
+   "paint": {
+    "rect": [
+     138,
+     214,
+     222,
+     258
+    ],
+    "fill": "#00185a"
+   }
+  },
+  "cap:knd_result_fail:reward": {
+   "ja": "報酬",
+   "capture": "knd_result_fail",
+   "select": {
+    "rect": [
+     157,
+     333,
+     222,
+     377
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "erase": [
+    157,
+    333,
+    222,
+    377
+   ],
+   "text": "Prime",
+   "style": "result_label_k"
+  },
+  "cap:knd_result_fail:swiss": {
+   "ja": "スイス銀行残高",
+   "capture": "knd_result_fail",
+   "select": {
+    "rect": [
+     17,
+     372,
+     221,
+     418
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "erase": [
+    17,
+    372,
+    221,
+    418
+   ],
+   "text": "Banque suisse",
+   "style": "result_label_k"
+  },
+  "cap:knd_result_ok:title": {
+   "ja": "狙撃成功",
+   "capture": "knd_result_ok",
+   "select": {
+    "rect": [
+     130,
+     8,
+     490,
+     112
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     757
+    ]
+   },
+   "erase": [
+    130,
+    8,
+    490,
+    112
+   ],
+   "text": "TIR RÉUSSI",
+   "style": "result_title_ok"
+  },
+  "cap:knd_snipe_ok:title": {
+   "ja": "狙撃成功",
+   "capture": "knd_snipe_ok",
+   "select": {
+    "rect": [
+     130,
+     8,
+     490,
+     112
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     759
+    ]
+   },
+   "erase": [
+    130,
+    8,
+    490,
+    112
+   ],
+   "text": "TIR RÉUSSI",
+   "style": "result_title_ok"
+  },
+  "cap:knd_result_ok:accuracy": {
+   "ja": "精度ポイント",
+   "capture": "knd_result_ok",
+   "select": {
+    "rect": [
+     80,
+     122,
+     252,
+     158
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     754
+    ]
+   },
+   "erase": [
+    80,
+    122,
+    252,
+    158
+   ],
+   "text": "Précision",
+   "style": "result_label"
+  },
+  "cap:knd_result_ok:time": {
+   "ja": "タイム",
+   "capture": "knd_result_ok",
+   "select": {
+    "rect": [
+     144,
+     162,
+     252,
+     198
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "erase": [
+    144,
+    162,
+    252,
+    198
+   ],
+   "text": "Temps",
+   "style": "result_label"
+  },
+  "cap:knd_result_ok:trust": {
+   "ja": "信頼度",
+   "capture": "knd_result_ok",
+   "select": {
+    "rect": [
+     30,
+     222,
+     162,
+     258
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     751
+    ]
+   },
+   "erase": [
+    30,
+    222,
+    162,
+    258
+   ],
+   "text": "Confiance",
+   "style": "result_label"
+  },
+  "cap:knd_result_ok:reward": {
+   "ja": "報酬",
+   "capture": "knd_result_ok",
+   "select": {
+    "rect": [
+     146,
+     337,
+     222,
+     373
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     749
+    ]
+   },
+   "erase": [
+    146,
+    337,
+    222,
+    373
+   ],
+   "text": "Prime",
+   "style": "result_label"
+  },
+  "cap:knd_result_ok:swiss": {
+   "ja": "スイス銀行残高",
+   "capture": "knd_result_ok",
+   "select": {
+    "rect": [
+     18,
+     377,
+     222,
+     413
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     748
+    ]
+   },
+   "erase": [
+    18,
+    377,
+    222,
+    413
+   ],
+   "text": "Banque suisse",
+   "style": "result_label"
+  },
+  "cap:knd_game_over:lifetime": {
+   "ja": "生涯獲得報酬",
+   "capture": "knd_game_over",
+   "select": {
+    "rect": [
+     35,
+     324,
+     227,
+     356
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     754
+    ]
+   },
+   "erase": [
+    35,
+    324,
+    227,
+    356
+   ],
+   "text": "Gains cumulés",
+   "style": "result_label"
+  },
+  "cap:knd_game_over:average": {
+   "ja": "平均精度ポイント",
+   "capture": "knd_game_over",
+   "select": {
+    "rect": [
+     3,
+     364,
+     227,
+     396
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "erase": [
+    3,
+    364,
+    227,
+    396
+   ],
+   "text": "Précision moyenne",
+   "style": "result_label"
+  },
+  "cap:knd_game_over:fiction": {
+   "ja": "この物語は、すべてフィクションです。",
+   "capture": "knd_game_over",
+   "select": {
+    "rect": [
+     288,
+     384,
+     512,
+     448
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     755
+    ]
+   },
+   "paint": {
+    "rect": [
+     312,
+     411,
+     506,
+     431
+    ],
+    "fill": "#000000"
+   },
+   "text": "● Cette histoire est entièrement fictive.",
+   "style": "footnote"
+  },
+  "cap:knd_card_dia:ammo": {
+   "capture": "knd_card_dia",
+   "select": {
+    "rect": [
+     160,
+     50,
+     320,
+     100
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    165,
+    54,
+    318,
+    97
+   ],
+   "text": "Munitions",
+   "style": "card_label",
+   "text_area": [
+    172,
+    54,
+    314,
+    96
+   ]
+  },
+  "cap:knd_card_dia:sec": {
+   "capture": "knd_card_dia",
+   "select": {
+    "rect": [
+     430,
+     250,
+     502,
+     310
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    434,
+    252,
+    498,
+    308
+   ],
+   "text": "sec",
+   "style": "card_label",
+   "text_area": [
+    434,
+    252,
+    498,
+    302
+   ]
+  },
+  "cap:knd_card_dia:shot": {
+   "capture": "knd_card_dia",
+   "select": {
+    "rect": [
+     255,
+     250,
+     325,
+     312
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    270,
+    258,
+    322,
+    310
+   ],
+   "text": "coup",
+   "style": "card_label",
+   "text_area": [
+    272,
+    262,
+    320,
+    304
+   ]
+  },
+  "cap:knd_card_dia:time": {
+   "capture": "knd_card_dia",
+   "select": {
+    "rect": [
+     340,
+     50,
+     502,
+     100
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    345,
+    54,
+    498,
+    97
+   ],
+   "text": "Temps limite",
+   "style": "card_label",
+   "text_area": [
+    352,
+    54,
+    494,
+    96
+   ]
+  },
+  "02766000/00": {
+   "ja": "操作説明",
+   "text": "Commandes",
+   "style": "heading_green"
+  },
+  "00b2b000/01": {
+   "ja": "用件を聞こうか",
+   "text": "Voyons, de quoi s'agit-il ?",
+   "style": "caption"
+  },
+  "00b2b000/02": {
+   "ja": "写真を出すんだ！",
+   "text": "Sortez la photo !",
+   "style": "caption"
+  },
+  "00b2b000/03": {
+   "ja": "俺の腹心だったスルタノフだ…",
+   "text": "C'est Sultanov, mon homme de confiance…",
+   "style": "caption"
+  },
+  "00b2b000/04": {
+   "ja": "やつは組織の情報と引き換えに…",
+   "text": "Il compte, en échange d'informations sur l'organisation…",
+   "style": "caption"
+  },
+  "00b2b000/05": {
+   "ja": "森林調査団に紛れて亡命を計画している…",
+   "text": "Il prépare sa fuite à l'étranger en se mêlant à une mission d'étude forestière…",
+   "style": "caption"
+  },
+  "00b2b000/06": {
+   "ja": "このまま放ってはおけないのだが…",
+   "text": "On ne peut pas le laisser faire…",
+   "style": "caption"
+  },
+  "00b2b000/07": {
+   "ja": "その顔も、今は整形でわかりはしねえ…",
+   "text": "Même son visage est méconnaissable, avec la chirurgie esthétique…",
+   "style": "caption"
+  },
+  "00b2b000/08": {
+   "ja": "この仕事にはあんたの鋭い嗅覚が必要なんだ！",
+   "text": "Pour ce travail, il me faut votre flair !",
+   "style": "caption"
+  },
+  "00b2b000/09": {
+   "ja": "頼む、Mr.トウゴウ！",
+   "text": "Je compte sur vous, M. Togo !",
+   "style": "caption"
+  },
+  "00b2b000/10": {
+   "ja": "企業集団のボス　ルカシェンコ",
+   "text": "Patron du groupe Loukachenko",
+   "style": "plate"
+  },
+  "00b2b000/11": {
+   "ja": "スルタノフ",
+   "text": "Sultanov",
+   "style": "plate"
+  },
+  "00d4b000/00": {
+   "ja": "情報局長は君達の活躍に大変満足している…",
+   "text": "Le directeur du service est très satisfait de votre action…",
+   "style": "caption"
+  },
+  "00d4b000/01": {
+   "ja": "しかし、ここにきてこの国の警察も…",
+   "text": "Mais voilà que la police de ce pays aussi…",
+   "style": "caption"
+  },
+  "00d4b000/02": {
+   "ja": "君達の行動に不信感を抱いているようだ…",
+   "text": "semble se méfier de vos agissements…",
+   "style": "caption"
+  },
+  "00d4b000/03": {
+   "ja": "そこで君達には一時的に帰国してもらう。",
+   "text": "Vous allez donc rentrer au pays pour un temps.",
+   "style": "caption"
+  },
+  "00d4b000/04": {
+   "ja": "命は守ってもらえるのでしょうね…？",
+   "text": "Ma vie sera protégée, n'est-ce pas… ?",
+   "style": "caption"
+  },
+  "00d4b000/05": {
+   "ja": "もちろんだ！",
+   "text": "Bien sûr !",
+   "style": "caption"
+  },
+  "00d4b000/06": {
+   "ja": "そのために世界一の男を呼んである…",
+   "text": "Pour cela, j'ai fait appel au meilleur homme du monde…",
+   "style": "caption"
+  },
+  "00d4b000/07": {
+   "ja": "止まれ！",
+   "text": "Halte !",
+   "style": "caption"
+  },
+  "00d4b000/08": {
+   "ja": "動くな！",
+   "text": "Ne bougez pas !",
+   "style": "caption"
+  },
+  "00d4b000/09": {
+   "ja": "…せ、戦車だ！",
+   "text": "…U-un char d'assaut !",
+   "style": "caption"
+  },
+  "00d4b000/10": {
+   "ja": "情報局局員　ソメール",
+   "text": "Agent du service Sommer",
+   "style": "plate"
+  },
+  "00d4b000/11": {
+   "ja": "情報局スパイ　ブラッコ夫妻",
+   "text": "Espions du service Bracco",
+   "style": "plate"
+  },
+  "00f34000/00": {
+   "ja": "自動車というものは我が国で発明され…",
+   "text": "L'automobile a été inventée dans notre pays…",
+   "style": "caption"
+  },
+  "00f34000/01": {
+   "ja": "…そして発展した。",
+   "text": "…et s'y est développée.",
+   "style": "caption"
+  },
+  "00f34000/02": {
+   "ja": "我々は車に関して…負けてはならないのです！",
+   "text": "En matière d'automobile… nous ne devons pas perdre !",
+   "style": "caption"
+  },
+  "00f34000/03": {
+   "ja": "ターゲットのマシンです。",
+   "text": "Voici la machine de la cible.",
+   "style": "caption"
+  },
+  "00f34000/04": {
+   "ja": "来月のラリーでリタイアさせて欲しいのです…",
+   "text": "Je veux qu'elle abandonne au rallye du mois prochain…",
+   "style": "caption"
+  },
+  "00f34000/05": {
+   "ja": "ただし、痕跡が残るのは困ります…",
+   "text": "Mais il ne faut surtout pas laisser de traces…",
+   "style": "caption"
+  },
+  "00f34000/06": {
+   "ja": "…タイヤのトラブルに見せかけて欲しいのです。",
+   "text": "…faites croire à un problème de pneu.",
+   "style": "caption"
+  },
+  "00f34000/07": {
+   "ja": "舞い上がる砂塵の中での正確な狙撃は…",
+   "text": "Un tir précis dans un nuage de poussière…",
+   "style": "caption"
+  },
+  "00f34000/08": {
+   "ja": "あなたにしかできないのです！",
+   "text": "Vous seul en êtes capable !",
+   "style": "caption"
+  },
+  "00f34000/09": {
+   "ja": "自動車連盟幹部　アリソン",
+   "text": "Féd. automobile Allison",
+   "style": "plate"
+  },
+  "01127000/00": {
+   "ja": "こうやって杯を交わすのも…",
+   "text": "Trinquer ainsi, ensemble…",
+   "style": "caption"
+  },
+  "01127000/01": {
+   "ja": "…本当に久しぶりだな。",
+   "text": "…ça fait vraiment longtemps.",
+   "style": "caption"
+  },
+  "01127000/02": {
+   "ja": "ところで、相談があるとの事だったが…？",
+   "text": "Au fait, tu voulais me consulter… ?",
+   "style": "caption"
+  },
+  "01127000/03": {
+   "ja": "マリオーリを知っているか？",
+   "text": "Connais-tu Marioli ?",
+   "style": "caption"
+  },
+  "01127000/04": {
+   "ja": "新鋭の水上スキーヤーだな…",
+   "text": "Ce jeune espoir du ski nautique…",
+   "style": "caption"
+  },
+  "01127000/05": {
+   "ja": "やつめ、このわしの弱みにつけこんで…",
+   "text": "Ce type, profitant de ma faiblesse…",
+   "style": "caption"
+  },
+  "01127000/06": {
+   "ja": "金銭を要求してきた…",
+   "text": "m'a réclamé de l'argent…",
+   "style": "caption"
+  },
+  "01127000/07": {
+   "ja": "弱みに心当たりはあるんだな？",
+   "text": "Tu vois donc de quelle faiblesse il s'agit ?",
+   "style": "caption"
+  },
+  "01127000/08": {
+   "ja": "しかし、やつなんかに金を取られるのは…",
+   "text": "Mais me laisser extorquer par un type pareil…",
+   "style": "caption"
+  },
+  "01127000/09": {
+   "ja": "プライドが許さん！",
+   "text": "Mon orgueil ne le permet pas !",
+   "style": "caption"
+  },
+  "01127000/10": {
+   "ja": "だから元公安の私に相談というわけか…",
+   "text": "Alors tu viens trouver l'ancien de la Sûreté que je suis…",
+   "style": "caption"
+  },
+  "01127000/11": {
+   "ja": "……",
+   "text": "……",
+   "style": "caption"
+  },
+  "01127000/12": {
+   "ja": "始末するか…？",
+   "text": "On s'en débarrasse… ?",
+   "style": "caption"
+  },
+  "01127000/13": {
+   "ja": "そんな事は…",
+   "text": "Je n'irais pas jusque-là…",
+   "style": "caption"
+  },
+  "01127000/14": {
+   "ja": "まあ、私に任せるんだな…",
+   "text": "Bon, laisse-moi faire…",
+   "style": "caption"
+  },
+  "01127000/15": {
+   "ja": "…ターゲットのマリオーリだ！",
+   "text": "…La cible, c'est Marioli !",
+   "style": "caption"
+  },
+  "01127000/16": {
+   "ja": "水上スキーの事故を演出して欲しい…",
+   "text": "Je veux que tu mettes en scène un accident de ski nautique…",
+   "style": "caption"
+  },
+  "01127000/17": {
+   "ja": "元公安委員長　シェル",
+   "text": "Ex-chef de la Sûreté Shell",
+   "style": "plate"
+  },
+  "01127000/18": {
+   "ja": "実業家　ホーソン",
+   "text": "Homme d'affaires Hawthorne",
+   "style": "plate"
+  },
+  "012e3000/00": {
+   "ja": "…差出人、情報局ウイリアムズ…",
+   "text": "…Expéditeur : service de renseignement, Williams…",
+   "style": "caption"
+  },
+  "012e3000/01": {
+   "ja": "久々だな…デューク…",
+   "text": "Ça fait longtemps… Duke…",
+   "style": "caption"
+  },
+  "012e3000/02": {
+   "ja": "早速だが…悪いニュースだ。",
+   "text": "Allons droit au but… j'ai de mauvaises nouvelles.",
+   "style": "caption"
+  },
+  "012e3000/03": {
+   "ja": "実は情報局の一部の人間が暴走して…",
+   "text": "En fait, certains éléments du service ont dérapé…",
+   "style": "caption"
+  },
+  "012e3000/04": {
+   "ja": "…生物学を駆使した戦士を開発したのだ。",
+   "text": "…ils ont mis au point un guerrier issu de la biologie.",
+   "style": "caption"
+  },
+  "012e3000/05": {
+   "ja": "そのマシンの資料がこれだ。",
+   "text": "Voici le dossier sur cette machine.",
+   "style": "caption"
+  },
+  "012e3000/06": {
+   "ja": "遺伝子工学と薬物を駆使した…",
+   "text": "Grâce au génie génétique et aux drogues…",
+   "style": "caption"
+  },
+  "012e3000/07": {
+   "ja": "…まさにバケモノと言っていい！",
+   "text": "…on peut vraiment parler de monstre !",
+   "style": "caption"
+  },
+  "012e3000/08": {
+   "ja": "そして…やつらの狙いは君なのだ！",
+   "text": "Et… c'est toi qu'ils visent !",
+   "style": "caption"
+  },
+  "012e3000/09": {
+   "ja": "ただ、これは情報局の総意ではない…",
+   "text": "Mais ce n'est pas la volonté de tout le service…",
+   "style": "caption"
+  },
+  "012e3000/10": {
+   "ja": "一部の人間の暴走なのだ…",
+   "text": "Ce ne sont que quelques éléments incontrôlés…",
+   "style": "caption"
+  },
+  "012e3000/11": {
+   "ja": "情報を流す意図を汲んでくれ…デューク！",
+   "text": "Comprends pourquoi je te transmets ces informations… Duke !",
+   "style": "caption"
+  },
+  "012e3000/12": {
+   "ja": "見つけたぞ…ゴルゴ13！",
+   "text": "Je t'ai trouvé… Golgo 13 !",
+   "style": "caption"
+  },
+  "012e3000/13": {
+   "ja": "情報局部長　ウイリアムズ",
+   "text": "Dir. du service Williams",
+   "style": "plate"
+  },
+  "0269d000/00": {
+   "ja": "お、おしまいだ…",
+   "text": "C'est… la fin…",
+   "style": "caption"
+  },
+  "0269d000/01": {
+   "ja": "彼に敵対する者は、必ず…",
+   "text": "Quiconque s'oppose à lui finit toujours…",
+   "style": "caption"
+  },
+  "cap:knd_bigcomic:line": {
+   "ja": "小学館　ビッグコミック連載中",
+   "capture": "knd_bigcomic",
+   "select": {
+    "rect": [
+     40,
+     215,
+     500,
+     280
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     765
+    ]
+   },
+   "paint": {
+    "rect": [
+     42,
+     220,
+     498,
+     272
+    ],
+    "fill": "#000000"
+   },
+   "text": "Publié dans Big Comic (Shogakukan)",
+   "style": "bigcomic_line"
+  },
+  "cap:knd_intro3:name": {
+   "ja": "デューク東郷",
+   "capture": "knd_intro3",
+   "select": {
+    "rect": [
+     128,
+     213,
+     386,
+     268
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764,
+     765,
+     766
+    ]
+   },
+   "erase": [
+    128,
+    213,
+    386,
+    268
+   ],
+   "text": "Duke Togo",
+   "style": "intro_white"
+  },
+  "cap:knd_intro2:tag": {
+   "ja": "全ての組織に最も恐れられ　最も信頼される男――",
+   "capture": "knd_intro2",
+   "select": {
+    "rect": [
+     30,
+     304,
+     508,
+     412
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     743,
+     744,
+     745,
+     746,
+     747,
+     748,
+     749,
+     750,
+     751,
+     752,
+     753,
+     754,
+     755,
+     756,
+     757,
+     758,
+     759,
+     760,
+     761,
+     762,
+     763
+    ]
+   },
+   "erase": [
+    30,
+    304,
+    508,
+    412
+   ],
+   "lines": [
+    "L'homme que toutes les organisations",
+    "craignent le plus, et en qui",
+    "elles ont le plus confiance――"
+   ],
+   "style": "intro_tag",
+   "text_area": [
+    42,
+    304,
+    506,
+    412
+   ]
+  },
+  "cap:knd_go_bubble:text": {
+   "ja": "ち、ちくしょう！！　なんてやつだ！！",
+   "capture": "knd_go_bubble",
+   "select": {
+    "rect": [
+     0,
+     0,
+     128,
+     224
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     757
+    ]
+   },
+   "paint": {
+    "rect": [
+     12,
+     4,
+     110,
+     176
+    ],
+    "fill": "auto"
+   },
+   "lines": [
+    "Zut,",
+    "zut !!",
+    "Quel",
+    "type !!"
+   ],
+   "style": "bubble"
+  },
+  "cap:knd_intro1b:rate": {
+   "ja": "狙撃成功確率　99.98%――",
+   "capture": "knd_intro1b",
+   "select": {
+    "rect": [
+     10,
+     350,
+     300,
+     458
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     747,
+     748,
+     749,
+     750,
+     751,
+     752,
+     753,
+     754,
+     755,
+     756,
+     757,
+     758
+    ]
+   },
+   "erase": [
+    10,
+    350,
+    300,
+    458
+   ],
+   "lines": [
+    "Réussite des tirs :",
+    "99,98 %――"
+   ],
+   "style": "intro_tag",
+   "text_area": [
+    18,
+    354,
+    296,
+    456
+   ]
+  },
+  "00182000/00": {
+   "ja": "スパイを探し出せ",
+   "text": "Débusquez l'espion",
+   "style": "objective"
+  },
+  "00185000/00": {
+   "ja": "靴のかかと部分を狙撃",
+   "text": "Visez le talon de la chaussure",
+   "style": "objective"
+  },
+  "00187000/00": {
+   "ja": "ダイヤを撃ち砕け",
+   "text": "Brisez le diamant d'un tir",
+   "style": "objective"
+  },
+  "00188000/00": {
+   "ja": "ターゲットの飼犬に特定させて狙撃",
+   "text": "Faites identifier la cible par son chien, puis tirez",
+   "style": "objective"
+  },
+  "0018b000/00": {
+   "ja": "砲身を正面から狙撃",
+   "text": "Tirez dans le canon, de face",
+   "style": "objective"
+  },
+  "0018d000/00": {
+   "ja": "タイヤ部分を狙撃",
+   "text": "Visez le pneu",
+   "style": "objective"
+  },
+  "0018f000/00": {
+   "ja": "牽引ロープを狙撃",
+   "text": "Visez le câble de remorquage",
+   "style": "objective"
+  },
+  "00191000/00": {
+   "ja": "生物工学で強化された戦士と対決",
+   "text": "Affrontez le guerrier issu de la bio-ingénierie",
+   "style": "objective"
+  },
+  "cap:knd_ok_result:title": {
+   "ja": "狙撃成功",
+   "capture": "knd_ok_result",
+   "select": {
+    "rect": [
+     130,
+     6,
+     490,
+     112
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     759
+    ]
+   },
+   "erase": [
+    130,
+    6,
+    490,
+    112
+   ],
+   "text": "TIR RÉUSSI",
+   "style": "result_title_ok"
+  },
+  "cap:knd_tut_pos:box": {
+   "capture": "knd_tut_pos",
+   "select": {
+    "rect": [
+     56,
+     350,
+     455,
+     430
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     762,
+     763
+    ],
+    "distinct_from": [
+     "knd_tut_bubble"
+    ]
+   },
+   "paint": {
+    "rect": [
+     64,
+     358,
+     448,
+     422
+    ],
+    "fill": "auto"
+   },
+   "text": "Mettez-vous en position à côté du fusil",
+   "style": "tut_box"
+  },
+  "cap:knd_tut_bubble:box": {
+   "capture": "knd_tut_bubble",
+   "select": {
+    "rect": [
+     56,
+     350,
+     455,
+     430
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     761,
+     762
+    ],
+    "distinct_from": [
+     "knd_tut_pos"
+    ]
+   },
+   "paint": {
+    "rect": [
+     64,
+     358,
+     448,
+     422
+    ],
+    "fill": "auto"
+   },
+   "text": "Vous ne pouvez pas le voir si vous approchez trop vos yeux",
+   "style": "tut_box"
+  },
+  "cap:knd_tut_manga:bubble": {
+   "capture": "knd_tut_manga",
+   "select": {
+    "rect": [
+     330,
+     0,
+     512,
+     421
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     763
+    ]
+   },
+   "paint": {
+    "rect": [
+     372,
+     12,
+     495,
+     340
+    ],
+    "fill": "#ffffff",
+    "sample": [
+     -4,
+     -4
+    ]
+   },
+   "lines": [
+    "Aucune",
+    "anomalie",
+    "sur l'arme,",
+    "on dirait…"
+   ],
+   "style": "bubble"
+  },
+  "02719000/01": {
+   "text": "Le jardin de l'assassinat",
+   "style": "story_title"
+  },
+  "02719000/03": {
+   "text": "Les souliers de la mafia",
+   "style": "story_title"
+  },
+  "02719000/04": {
+   "text": "Image coupée « G »",
+   "style": "story_title"
+  },
+  "02719000/06": {
+   "text": "Chien de chasse",
+   "style": "story_title"
+  },
+  "02719000/07": {
+   "text": "Tir antichar",
+   "style": "story_title"
+  },
+  "02719000/08": {
+   "text": "La terre des tempêtes de sable",
+   "style": "story_title"
+  },
+  "02719000/09": {
+   "text": "Câble de remorquage",
+   "style": "story_title"
+  },
+  "02719000/10": {
+   "text": "Le gène ensanglanté",
+   "style": "story_title"
+  },
+  "02719000/21": {
+   "ja": "信頼度",
+   "text": "Confiance",
+   "style": "gold_label"
+  }
+ }
+}

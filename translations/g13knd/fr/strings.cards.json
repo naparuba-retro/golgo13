@@ -1,0 +1,45 @@
+{
+ "styles": {
+  "bigcomic_line": {
+   "mode": "overlay",
+   "font": "arialbd.ttf",
+   "size": 30,
+   "min_size": 16,
+   "fill": "#ffffff",
+   "align": "center",
+   "valign": "middle",
+   "max_lines": 1
+  }
+ },
+ "assets": {
+  "cap:bigcomic:line": {
+   "ja": "小学館　ビッグコミック連載中",
+   "capture": "bigcomic",
+   "select": {
+    "rect": [
+     40,
+     215,
+     500,
+     280
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     765
+    ]
+   },
+   "paint": {
+    "rect": [
+     42,
+     220,
+     498,
+     272
+    ],
+    "fill": "#000000"
+   },
+   "text": "Publié dans Big Comic (Shogakukan)",
+   "style": "bigcomic_line"
+  }
+ }
+}

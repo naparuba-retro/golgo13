@@ -1,0 +1,59 @@
+{
+ "assets": {
+  "032b9490/00": {
+   "ja": "テーラーだけど、カギをお願い…",
+   "text": "C'est Taylor, la clé s'il vous plaît…",
+   "style": "caption"
+  },
+  "032b9490/01": {
+   "ja": "テーラー様ですね？",
+   "text": "Monsieur Taylor, c'est bien vous ?",
+   "style": "caption"
+  },
+  "032b9490/02": {
+   "ja": "潜入捜査中のテーラーが命を狙われている…",
+   "text": "Taylor, en mission d'infiltration, est visé par un assassin…",
+   "style": "caption"
+  },
+  "032b9490/03": {
+   "ja": "しかしその実行日以外はわかっていないのだ！",
+   "text": "Mais seule la date de l'attentat est connue !",
+   "style": "caption"
+  },
+  "032b9490/04": {
+   "ja": "ここで捜査を止められる訳にはいかない…",
+   "text": "Je ne peux pas laisser l'enquête s'arrêter ici…",
+   "style": "caption"
+  },
+  "032b9490/05": {
+   "ja": "…暗殺者を排除して欲しい！",
+   "text": "…Éliminez l'assassin, je vous en prie !",
+   "style": "caption"
+  },
+  "032b9490/06": {
+   "ja": "頭が痛いわ…",
+   "text": "J'ai mal à la tête…",
+   "style": "caption"
+  },
+  "032b9490/07": {
+   "ja": "すみません…ドクターを呼んでいただけませんか？",
+   "text": "Excusez-moi… pourriez-vous appeler un médecin ?",
+   "style": "caption"
+  },
+  "032b9490/08": {
+   "ja": "テーラー",
+   "text": "Taylor",
+   "style": "plate"
+  },
+  "032b9490/09": {
+   "ja": "中央情報局　アスカリ",
+   "text": "CIA Askari",
+   "style": "plate"
+  },
+  "032b9490/10": {
+   "ja": "暗殺者　ベーラ",
+   "text": "Assassin Béla",
+   "style": "plate"
+  }
+ }
+}

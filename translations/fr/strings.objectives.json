@@ -1,0 +1,162 @@
+{
+  "assets": {
+    "031364b0/00": {
+      "ja": "ヘリコプターに乗るまでに撃て",
+      "text": "Tirez avant qu'il monte dans l'hélicoptère",
+      "style": "objective"
+    },
+    "03138fb0/00": {
+      "ja": "ボートから狙撃",
+      "text": "Tirer depuis un bateau",
+      "style": "objective"
+    },
+    "0313aa70/00": {
+      "ja": "4挺のライフルを狙撃しろ",
+      "text": "Visez les 4 fusils",
+      "style": "objective"
+    },
+    "0313d360/00": {
+      "ja": "見えなくなるまでに撃て",
+      "text": "Tirez avant qu'il ne disparaisse",
+      "style": "objective"
+    },
+    "0313fc50/00": {
+      "ja": "旅客機内のターゲットを撃て",
+      "text": "Abattez la cible dans l'avion de ligne",
+      "style": "objective"
+    },
+    "03142750/00": {
+      "ja": "チャンスを逃さず撃て",
+      "text": "Ne ratez pas l'occasion, tirez",
+      "style": "objective"
+    },
+    "03144e40/00": {
+      "ja": "スパイを探し出せ",
+      "text": "Débusquez l'espion",
+      "style": "objective"
+    },
+    "03146f10/00": {
+      "ja": "連射で固いミサイルを破壊",
+      "text": "Détruisez le missile blindé en tir rapide",
+      "style": "objective"
+    },
+    "03149c10/00": {
+      "ja": "靴のかかと部分を狙撃",
+      "text": "Visez le talon de la chaussure",
+      "style": "objective"
+    },
+    "0314c500/00": {
+      "ja": "防弾ガラスを撃ち破れ",
+      "text": "Brisez la vitre pare-balles",
+      "style": "objective"
+    },
+    "0314ebf0/00": {
+      "ja": "ダイヤを撃ち砕け",
+      "text": "Brisez le diamant d'un tir",
+      "style": "objective"
+    },
+    "0315c2f0/00": {
+      "ja": "ヘリコプターから狙撃",
+      "text": "Tirer depuis un hélicoptère",
+      "style": "objective"
+    },
+    "0315e7d0/00": {
+      "ja": "狙撃を阻止しろ",
+      "text": "Empêchez le tir",
+      "style": "objective"
+    },
+    "03160490/00": {
+      "ja": "照明弾を頼りに撃て",
+      "text": "Tirez en vous guidant sur la fusée éclairante",
+      "style": "objective"
+    },
+    "03162dd0/00": {
+      "ja": "受刑者を救え",
+      "text": "Sauvez le condamné",
+      "style": "objective"
+    },
+    "03164ae0/00": {
+      "ja": "弦を狙って撃て",
+      "text": "Visez les cordes",
+      "style": "objective"
+    },
+    "03166c00/00": {
+      "ja": "ゲリラ部隊を殲滅",
+      "text": "Anéantissez les guérilleros",
+      "style": "objective"
+    },
+    "031692f0/00": {
+      "ja": "中和剤を狙撃注射",
+      "text": "Injectez le neutralisant par tir",
+      "style": "objective"
+    },
+    "cap:card_unl:unlimited": {
+      "ja": "無制限",
+      "capture": "card_unl",
+      "select": {
+        "rect": [
+          184,
+          94,
+          296,
+          266
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          760
+        ]
+      },
+      "erase": [
+        184,
+        94,
+        296,
+        266
+      ],
+      "lines": [
+        "ILLI",
+        "MITÉ"
+      ],
+      "style": "card_unlimited"
+    },
+    "cap:card_snow:objective": {
+      "ja": "雪崩を起こして列車を止めろ",
+      "capture": "card_snow",
+      "select": {
+        "rect": [
+          198,
+          347,
+          454,
+          434
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          757
+        ],
+        "distinct_from": [
+          "card_p1",
+          "card_p2",
+          "card_p3",
+          "card_p4",
+          "card_p5",
+          "card_p6",
+          "card_m1",
+          "card_unl"
+        ]
+      },
+      "paint": {
+        "rect": [
+          180,
+          358,
+          480,
+          424
+        ],
+        "fill": "#000000"
+      },
+      "text": "Provoquez une avalanche pour arrêter le train",
+      "style": "objective"
+    }
+  }
+}

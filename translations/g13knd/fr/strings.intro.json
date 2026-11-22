@@ -1,0 +1,198 @@
+{
+ "styles": {
+  "intro_white": {
+   "mode": "overlay",
+   "font": "arialbi.ttf",
+   "size": 44,
+   "min_size": 14,
+   "fill": "#ffffff",
+   "outline": "#000000",
+   "outline_width": 1,
+   "align": "center",
+   "valign": "middle",
+   "max_lines": 1
+  },
+  "intro_tag": {
+   "mode": "overlay",
+   "font": "arialbi.ttf",
+   "size": 26,
+   "min_size": 12,
+   "fill": "#ffffff",
+   "outline": "#000000",
+   "outline_width": 1,
+   "align": "left",
+   "valign": "middle",
+   "line_height": 32,
+   "max_lines": 3
+  }
+ },
+ "assets": {
+  "cap:intro3:name": {
+   "ja": "デューク東郷",
+   "capture": "intro3",
+   "select": {
+    "rect": [
+     128,
+     213,
+     386,
+     268
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764,
+     765,
+     766
+    ]
+   },
+   "erase": [
+    128,
+    213,
+    386,
+    268
+   ],
+   "text": "Duke Togo",
+   "style": "intro_white"
+  },
+  "cap:intro2:tag": {
+   "ja": "全ての組織に最も恐れられ　最も信頼される男――",
+   "capture": "intro2",
+   "select": {
+    "rect": [
+     30,
+     304,
+     508,
+     412
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     743,
+     744,
+     745,
+     746,
+     747,
+     748,
+     749,
+     750,
+     751,
+     752,
+     753,
+     754,
+     755,
+     756,
+     757,
+     758,
+     759,
+     760,
+     761,
+     762,
+     763
+    ]
+   },
+   "erase": [
+    30,
+    304,
+    508,
+    412
+   ],
+   "lines": [
+    "L'homme que toutes les organisations",
+    "craignent le plus, et en qui",
+    "elles ont le plus confiance――"
+   ],
+   "style": "intro_tag",
+   "text_area": [
+    42,
+    304,
+    506,
+    412
+   ]
+  },
+  "cap:go_bubble:text": {
+   "ja": "ち、ちくしょう！！　なんてやつだ！！",
+   "capture": "go_bubble",
+   "select": {
+    "rect": [
+     0,
+     0,
+     128,
+     224
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     757
+    ]
+   },
+   "paint": {
+    "rect": [
+     12,
+     4,
+     110,
+     176
+    ],
+    "fill": "auto"
+   },
+   "lines": [
+    "Zut,",
+    "zut !!",
+    "Quel",
+    "type !!"
+   ],
+   "style": "bubble"
+  },
+  "cap:intro1b:rate": {
+   "ja": "狙撃成功確率　99.98%――",
+   "capture": "intro1b",
+   "select": {
+    "rect": [
+     10,
+     350,
+     300,
+     458
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     747,
+     748,
+     749,
+     750,
+     751,
+     752,
+     753,
+     754,
+     755,
+     756,
+     757,
+     758
+    ]
+   },
+   "erase": [
+    10,
+    350,
+    300,
+    458
+   ],
+   "lines": [
+    "Réussite des tirs :",
+    "99,98 %――"
+   ],
+   "style": "intro_tag",
+   "text_area": [
+    18,
+    354,
+    296,
+    456
+   ]
+  }
+ }
+}

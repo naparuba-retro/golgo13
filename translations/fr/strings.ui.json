@@ -1,0 +1,68 @@
+{
+  "assets": {
+    "0305f5d0/00": {
+      "ja": "操作説明",
+      "text": "Commandes",
+      "style": "heading_green"
+    },
+    "0305f5d0/01": {
+      "ja": "銃の斜め後方に 立ち位置をとる。",
+      "text": "Placez-vous en diagonale, derrière le fusil.",
+      "style": "instruction"
+    },
+    "0305f5d0/02": {
+      "ja": "右手でグリップを握り、 人さし指をトリガーにかける。",
+      "text": "Saisissez la poignée de la main droite, l'index sur la gâchette.",
+      "style": "instruction"
+    },
+    "0305f5d0/03": {
+      "ja": "左手でハンドガードの 真下近くを持ち支える。",
+      "text": "Soutenez le fusil de la main gauche, près du dessous du garde-main.",
+      "style": "instruction"
+    },
+    "0305f5d0/04": {
+      "ja": "ストックを右肩に押し当てて、 銃を保持する。",
+      "text": "Appuyez la crosse contre l'épaule droite pour tenir le fusil.",
+      "style": "instruction"
+    },
+    "0305f5d0/05": {
+      "ja": "頬をストックに当て、目は スコープから10cm程度離す。",
+      "text": "Posez la joue sur la crosse, l'œil à environ 10 cm de la lunette.",
+      "style": "instruction"
+    },
+    "0305f5d0/06": {
+      "ja": "頭はスコープの正面に 持ってくる。",
+      "text": "Placez la tête face à la lunette.",
+      "style": "instruction"
+    },
+    "0305f5d0/07": {
+      "ja": "視界が一杯に広がるよう スコープとの距離を調整する。",
+      "text": "Ajustez la distance à la lunette pour que le champ de vision soit plein.",
+      "style": "instruction"
+    },
+    "0305f5d0/08": {
+      "ja": "視界に影が出ないように、 スコープをまっすぐに見る。",
+      "text": "Regardez droit dans la lunette pour éviter les ombres dans le champ de vision.",
+      "style": "instruction"
+    },
+    "03614fc0/00": {
+      "ja": "「ゴルゴ13」 小学館 ビッグコミック連載中",
+      "lines": [
+        "« GOLGO 13 »",
+        "Publié en feuilleton dans",
+        "Big Comic (Shogakukan)"
+      ],
+      "style": "credit_card"
+    },
+    "030a9100/00": {
+      "ja": "選択：ライフル　決定：トリガー",
+      "text": "Choisir : fusil     Valider : gâchette",
+      "style": "ui_bar_red"
+    },
+    "030a9100/01": {
+      "ja": "信頼度",
+      "text": "Confiance",
+      "style": "gold_label"
+    }
+  }
+}

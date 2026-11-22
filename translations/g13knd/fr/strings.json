@@ -1,0 +1,1299 @@
+{
+ "meta": {
+  "lang": "fr",
+  "name": "Français",
+  "note": "Traduction provisoire ; à relire et corriger librement."
+ },
+ "assets": {
+  "03114f90/00": {
+   "text": "Voyons ce que vous avez à me dire…",
+   "style": "caption"
+  },
+  "03114f90/01": {
+   "text": "La cible est Huang Dazong.",
+   "style": "caption"
+  },
+  "03114f90/02": {
+   "text": "Officiellement, il dirige un fabricant d'ordinateurs, mais…",
+   "style": "caption"
+  },
+  "03114f90/03": {
+   "text": "En coulisses, il fait de la contrebande de semi-conducteurs.",
+   "style": "caption"
+  },
+  "03114f90/04": {
+   "text": "Huang se trouve actuellement au Japon, mais",
+   "style": "caption"
+  },
+  "03114f90/05": {
+   "text": "Le problème, c'est la position de tir.",
+   "style": "caption"
+  },
+  "03114f90/06": {
+   "text": "Il habite au dernier étage d'une tour résidentielle.",
+   "style": "caption"
+  },
+  "03114f90/07": {
+   "text": "Pardon du dérangement, mais nous allons tourner un film.",
+   "style": "caption"
+  },
+  "03114f90/08": {
+   "text": "Nous utiliserons une cartouche à blanc.",
+   "style": "caption"
+  },
+  "03114f90/09": {
+   "text": "Aujourd'hui, nous avons quelque chose à montrer au président…",
+   "style": "caption"
+  },
+  "03114f90/10": {
+   "text": "Ce sera la pièce maîtresse de la campagne publicitaire.",
+   "style": "caption"
+  },
+  "03114f90/11": {
+   "text": "Cadre de police Hong",
+   "style": "plate"
+  },
+  "03114f90/12": {
+   "text": "Huang Dazong",
+   "style": "plate"
+  },
+  "03114f90/13": {
+   "text": "Président Hidate Akiyama",
+   "style": "plate"
+  },
+  "cap:tut_end:line": {
+   "capture": "tut_end",
+   "select": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     767
+    ]
+   },
+   "paint": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "fill": "auto"
+   },
+   "text": "Terminé",
+   "style": "tut_bar"
+  },
+  "cap:tut_range:line": {
+   "capture": "tut_range",
+   "select": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "paint": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "fill": "auto"
+   },
+   "text": "Visez la cible avec la lunette !",
+   "style": "tut_bar"
+  },
+  "cap:tut_range:title": {
+   "capture": "tut_range",
+   "select": {
+    "rect": [
+     60,
+     378,
+     452,
+     412
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "paint": {
+    "rect": [
+     60,
+     378,
+     452,
+     412
+    ],
+    "fill": "auto"
+   },
+   "text": "Réglage du fusil de sniper",
+   "style": "tut_bar"
+  },
+  "cap:tut_scope:line": {
+   "capture": "tut_scope",
+   "select": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     744
+    ]
+   },
+   "paint": {
+    "rect": [
+     24,
+     415,
+     488,
+     447
+    ],
+    "fill": "auto"
+   },
+   "text": "Alignez le viseur et tirez !",
+   "style": "tut_bar"
+  },
+  "03140990/00": {
+   "ja": "どうしても行くというのか…",
+   "text": "Vous tenez absolument à y aller…",
+   "style": "caption"
+  },
+  "03140990/01": {
+   "ja": "現政権では我が国に未来はありません…",
+   "text": "Avec le gouvernement actuel, notre pays n'a pas d'avenir…",
+   "style": "caption"
+  },
+  "03140990/02": {
+   "ja": "私はこの国を強くしたいんだ…",
+   "text": "Je veux rendre ce pays plus fort…",
+   "style": "caption"
+  },
+  "03140990/03": {
+   "ja": "…武力で事態がどう変わるというのだ。",
+   "text": "…En quoi la force changerait-elle la situation ?",
+   "style": "caption"
+  },
+  "03140990/04": {
+   "ja": "わかりました… 協力が得られなくて残念です。",
+   "text": "Je comprends… Dommage de ne pas obtenir votre coopération.",
+   "style": "caption"
+  },
+  "03140990/05": {
+   "ja": "用件に入ってくれ…",
+   "text": "Venons-en à l'affaire…",
+   "style": "caption"
+  },
+  "03140990/06": {
+   "ja": "ターゲットは陸軍将校グラントだ！",
+   "text": "La cible est un officier de l'armée de terre, Grant !",
+   "style": "caption"
+  },
+  "03140990/07": {
+   "ja": "彼はクーデターを計画しており…",
+   "text": "Il prépare un coup d'État…",
+   "style": "caption"
+  },
+  "03140990/08": {
+   "ja": "…このまま放っておいては国家の存亡にかかわる。",
+   "text": "…Si on le laisse faire, c'est l'existence même de la nation qui est en jeu.",
+   "style": "caption"
+  },
+  "03140990/09": {
+   "ja": "わかった…やってみよう…",
+   "text": "Compris… Je vais essayer…",
+   "style": "caption"
+  },
+  "03140990/10": {
+   "ja": "陸軍将校　グラント",
+   "text": "Officier Grant",
+   "style": "plate"
+  },
+  "03140990/11": {
+   "ja": "元政務次官　ハミルトン",
+   "text": "Ex-vice-ministre Hamilton",
+   "style": "plate"
+  },
+  "03140990/12": {
+   "ja": "反政府軍基地",
+   "text": "Base des rebelles",
+   "style": "plate"
+  },
+  "031685e0/00": {
+   "ja": "マフィアのボス　フィオリオ",
+   "text": "Parrain de la mafia Fiorio",
+   "style": "plate"
+  },
+  "031685e0/01": {
+   "ja": "俺を狙っている奴がいるのか…？",
+   "text": "Quelqu'un en voudrait à ma peau… ?",
+   "style": "caption"
+  },
+  "031685e0/02": {
+   "ja": "デューク・トウゴウ… またの名をゴルゴ13！",
+   "text": "Duke Togo… alias Golgo 13 !",
+   "style": "caption",
+   "lines": [
+    "Duke Togo…",
+    "alias Golgo 13 !"
+   ]
+  },
+  "031685e0/03": {
+   "ja": "ゴ、ゴルゴ13だと？！",
+   "text": "G-Golgo 13, dis-tu ?!",
+   "style": "caption"
+  },
+  "031685e0/04": {
+   "ja": "週末は別荘で過ごした方が安全でしょう…",
+   "text": "Il serait plus sûr de passer le week-end à la villa…",
+   "style": "caption"
+  },
+  "031685e0/05": {
+   "ja": "くれぐれも警備を怠るなっ…。",
+   "text": "Surtout, ne relâchez pas la garde…",
+   "style": "caption"
+  },
+  "0317bce0/00": {
+   "ja": "私の妻と娘だ…",
+   "text": "Ma femme et ma fille…",
+   "style": "caption"
+  },
+  "0317bce0/01": {
+   "ja": "彼女たちは私を標的としたテロの犠牲になってしまった。",
+   "text": "Elles ont été victimes d'un attentat qui me visait.",
+   "style": "caption"
+  },
+  "0317bce0/02": {
+   "ja": "私はテロの首謀者ドイルを、",
+   "text": "Doyle, le cerveau de l'attentat…",
+   "style": "caption"
+  },
+  "0317bce0/03": {
+   "ja": "絶対に許せないのだっ！！",
+   "text": "Je ne pourrai jamais lui pardonner !!",
+   "style": "caption"
+  },
+  "0317bce0/04": {
+   "ja": "奴は厳重な警備の敷かれた 独房の中にいる…",
+   "text": "Il est dans une cellule d'isolement sous haute surveillance…",
+   "style": "caption"
+  },
+  "0317bce0/05": {
+   "ja": "独房には一切窓が無いのだが…",
+   "text": "La cellule n'a aucune fenêtre, mais…",
+   "style": "caption"
+  },
+  "0317bce0/06": {
+   "ja": "接見用の小窓、",
+   "text": "un petit guichet pour les visites,",
+   "style": "caption"
+  },
+  "0317bce0/07": {
+   "ja": "通路のスライド式ドア、",
+   "text": "la porte coulissante du couloir,",
+   "style": "caption"
+  },
+  "0317bce0/08": {
+   "ja": "広場に通じる回転扉、",
+   "text": "la porte tournante donnant sur la cour,",
+   "style": "caption"
+  },
+  "0317bce0/09": {
+   "ja": "そのすべてが開いたとき、 唯一狙撃が可能となる。",
+   "text": "c'est quand tout cela est ouvert que le tir devient possible, et seulement alors.",
+   "style": "caption"
+  },
+  "0317bce0/10": {
+   "ja": "元財務大臣　バルドー",
+   "text": "Ex-min. Finances Bardot",
+   "style": "plate"
+  },
+  "0319ee60/00": {
+   "ja": "諸君、よく来てくれた！",
+   "text": "Messieurs, merci d'être venus !",
+   "style": "caption"
+  },
+  "0319ee60/01": {
+   "ja": "当家自慢の庭園にでもどうかね…",
+   "text": "Que diriez-vous d'aller dans le jardin dont notre maison est si fière…",
+   "style": "caption"
+  },
+  "0319ee60/02": {
+   "ja": "用件を聞こう…",
+   "text": "Voyons de quoi il s'agit…",
+   "style": "caption"
+  },
+  "0319ee60/03": {
+   "ja": "実は、遺憾ながらMI6内部の あるグループが…",
+   "text": "En fait, malheureusement, un groupe au sein du MI6…",
+   "style": "caption"
+  },
+  "0319ee60/04": {
+   "ja": "カネにつられて、私の暗殺を 目論んでいるのだ！",
+   "text": "attiré par l'argent, projette de m'assassiner !",
+   "style": "caption"
+  },
+  "0319ee60/05": {
+   "ja": "そこで今週末、私の家に グループのトップを呼び出す…",
+   "text": "Ce week-end, j'invite donc le chef de ce groupe chez moi…",
+   "style": "caption"
+  },
+  "0319ee60/06": {
+   "ja": "その席で、君に問題グループのトップを 除去して欲しい！",
+   "text": "Je veux que vous éliminiez ce chef de groupe sur place !",
+   "style": "caption"
+  },
+  "0319ee60/07": {
+   "ja": "さて、どこのグループが 私を暗殺するのかね？",
+   "text": "Voyons, quel groupe projette de m'assassiner ?",
+   "style": "caption"
+  },
+  "0319ee60/08": {
+   "ja": "そ、そんな…！！",
+   "text": "N-non, pas possible… !!",
+   "style": "caption"
+  },
+  "0319ee60/09": {
+   "ja": "ここに証拠資料もある… カネ目当てとは愚かしい…",
+   "text": "J'ai ici les preuves… Agir pour l'argent est stupide…",
+   "style": "caption"
+  },
+  "0319ee60/10": {
+   "ja": "しかし、私は逃げ隠れする つもりはない。",
+   "text": "Mais je n'ai pas l'intention de fuir ni de me cacher.",
+   "style": "caption"
+  },
+  "0319ee60/11": {
+   "ja": "むしろ、そのチャンスを 与えようではないか！",
+   "text": "Au contraire, donnons-leur cette occasion !",
+   "style": "caption"
+  },
+  "0319ee60/12": {
+   "ja": "ただ、私は自慢のこの庭で 生涯を閉じたい…",
+   "text": "Mais je voudrais finir mes jours dans ce jardin dont je suis fier…",
+   "style": "caption"
+  },
+  "0319ee60/13": {
+   "ja": "さあ、それぞれ別の場所で 資料を読んで…",
+   "text": "Allons, lisez chacun les documents dans un endroit différent…",
+   "style": "caption"
+  },
+  "0319ee60/14": {
+   "ja": "逃走経路を考えた上で、 私を狙うがいい…！！",
+   "text": "Une fois votre voie de fuite prévue, vous pouvez me viser…!!",
+   "style": "caption"
+  },
+  "0319ee60/15": {
+   "ja": "MI6部長　ヒューム",
+   "text": "Chef MI6 Hume",
+   "style": "plate"
+  },
+  "0319ee60/16": {
+   "ja": "MI6 幹部",
+   "text": "Cadre du MI6",
+   "style": "plate"
+  },
+  "031dcec0/00": {
+   "ja": "私がコンタクトをお願いした タルッフィです…",
+   "text": "Je suis Taruffi, celui qui vous a demandé de prendre contact…",
+   "style": "caption"
+  },
+  "031dcec0/01": {
+   "ja": "用件を聞こう…",
+   "text": "Voyons de quoi il s'agit…",
+   "style": "caption"
+  },
+  "031dcec0/02": {
+   "ja": "ターゲットは女優のセラフィーニです。",
+   "text": "La cible est l'actrice Serafini.",
+   "style": "caption"
+  },
+  "031dcec0/03": {
+   "ja": "しかし殺すのではありません…",
+   "text": "Mais il ne s'agit pas de la tuer…",
+   "style": "caption"
+  },
+  "031dcec0/04": {
+   "ja": "実は彼女の交際している男 というのが、",
+   "text": "En fait, l'homme qu'elle fréquente…",
+   "style": "caption"
+  },
+  "031dcec0/05": {
+   "ja": "若手シューズデザイナーの ヴィロレーシなんですが…",
+   "text": "est un jeune créateur de chaussures, Viroresi…",
+   "style": "caption"
+  },
+  "031dcec0/06": {
+   "ja": "彼の資金はマフィアから 出ているのです。",
+   "text": "Ses fonds viennent de la mafia.",
+   "style": "caption"
+  },
+  "031dcec0/07": {
+   "ja": "もし、彼の靴が原因でセラフィーニが 怪我をしたら…",
+   "text": "Si Serafini se blessait à cause de ses chaussures…",
+   "style": "caption"
+  },
+  "031dcec0/08": {
+   "ja": "マスコミもこの事を 放ってはおかないでしょう。",
+   "text": "la presse ne laisserait pas passer ça.",
+   "style": "caption"
+  },
+  "031dcec0/09": {
+   "ja": "つまり、彼女の靴を 狙撃して欲しいのです！",
+   "text": "Autrement dit, je veux que vous tiriez sur sa chaussure !",
+   "style": "caption"
+  },
+  "031dcec0/10": {
+   "ja": "お願いできないでしょうか… ゴルゴ13！！",
+   "text": "Puis-je compter sur vous… Golgo 13 !!",
+   "style": "caption"
+  },
+  "031dcec0/11": {
+   "ja": "靴製造者協会会長　タルッフィ",
+   "text": "Pdt chaussures Taruffi",
+   "style": "plate"
+  },
+  "031dcec0/12": {
+   "ja": "女優　セラフィーニ",
+   "text": "Actrice Serafini",
+   "style": "plate"
+  },
+  "031dcec0/13": {
+   "ja": "シューズデザイナー　ヴィロレーシ",
+   "text": "Styliste Viroresi",
+   "style": "plate"
+  },
+  "0320bec0/00": {
+   "ja": "…Mr.トウゴウか！？ いつの間に…",
+   "text": "…M. Togo ?! Depuis quand êtes-vous là…",
+   "style": "caption"
+  },
+  "0320bec0/01": {
+   "ja": "…そっちが入ってくる 15分前からいる。",
+   "text": "…Je suis là depuis quinze minutes avant votre arrivée.",
+   "style": "caption"
+  },
+  "0320bec0/02": {
+   "ja": "依頼人といえど事前の観察を 欠かさないルールでしたな…",
+   "text": "Même pour un client, la règle est de ne jamais omettre l'observation préalable, n'est-ce pas…",
+   "style": "caption"
+  },
+  "0320bec0/03": {
+   "ja": "さっそくだが…フォー・コンツェルンの ダイヤを狙撃して欲しい！",
+   "text": "Sans attendre… je veux que vous tiriez sur le diamant du Four Konzern !",
+   "style": "caption"
+  },
+  "0320bec0/04": {
+   "ja": "公にはなっていないが、ゆうに 1000カラットはある…",
+   "text": "Ce n'est pas public, mais il fait largement 1000 carats…",
+   "style": "caption"
+  },
+  "0320bec0/05": {
+   "ja": "もちろんダイヤは 地上最強の硬度を有する…",
+   "text": "Bien sûr, le diamant possède la dureté la plus élevée sur terre…",
+   "style": "caption"
+  },
+  "0320bec0/06": {
+   "ja": "だからこそ、あなたに 依頼するのだ…Mr.トウゴウ！",
+   "text": "C'est justement pourquoi nous nous adressons à vous… M. Togo !",
+   "style": "caption"
+  },
+  "0320bec0/07": {
+   "ja": "これをもらおう…",
+   "text": "Je prends ceci…",
+   "style": "caption"
+  },
+  "0320bec0/08": {
+   "ja": "ただし、要求通りに職人に カットしてもらいたい…",
+   "text": "Mais je veux qu'un artisan le taille comme exigé…",
+   "style": "caption"
+  },
+  "0320bec0/09": {
+   "ja": "このダイヤを一撃で 打ち砕いて欲しい…",
+   "text": "Je veux que vous brisiez ce diamant d'un seul coup…",
+   "style": "caption"
+  },
+  "0320bec0/10": {
+   "ja": "…気に入ったぞ、若いの！",
+   "text": "…Il me plaît, jeune homme !",
+   "style": "caption"
+  },
+  "0320bec0/11": {
+   "ja": "ダイヤを砕くには、 結晶方向へ逆らって…",
+   "text": "Pour briser un diamant, il faut aller à l'encontre du sens du cristal…",
+   "style": "caption"
+  },
+  "0320bec0/12": {
+   "ja": "正反対のポイントに打撃を 加えることだ！",
+   "text": "en frappant au point diamétralement opposé !",
+   "style": "caption"
+  },
+  "0320bec0/13": {
+   "ja": "J&Iカンパニー代表　コリンズ",
+   "text": "J&I Company Collins",
+   "style": "plate"
+  },
+  "0320bec0/14": {
+   "ja": "フォー・コンツェルン総帥　エイモン",
+   "text": "Four Konzern Amon",
+   "style": "plate"
+  },
+  "032437c0/00": {
+   "ja": "ターゲットのビグラムだ…",
+   "text": "La cible est Bigram…",
+   "style": "caption"
+  },
+  "032437c0/01": {
+   "ja": "新興宗教「人類救済の森」の 教祖なのだが…",
+   "text": "C'est le gourou de la nouvelle religion « La Forêt du Salut de l'Humanité »…",
+   "style": "caption"
+  },
+  "032437c0/02": {
+   "ja": "その活動は宗教の範囲を 超えており、",
+   "text": "Ses activités dépassent le cadre religieux,",
+   "style": "caption"
+  },
+  "032437c0/03": {
+   "ja": "無差別テロまで引き起こしている。",
+   "text": "et vont jusqu'à provoquer des attentats aveugles.",
+   "style": "caption"
+  },
+  "032437c0/04": {
+   "ja": "ただ、信者全員が悪いわけではない…",
+   "text": "Mais tous les fidèles ne sont pas fautifs…",
+   "style": "caption"
+  },
+  "032437c0/05": {
+   "ja": "問題は教祖ビグラム本人なのだ！",
+   "text": "Le problème, c'est le gourou Bigram lui-même !",
+   "style": "caption"
+  },
+  "032437c0/06": {
+   "ja": "現在、彼らは密林の奥地で 集団生活をしている。",
+   "text": "Actuellement, ils vivent en communauté au fond de la jungle.",
+   "style": "caption"
+  },
+  "032437c0/07": {
+   "ja": "信者の犠牲を出さずに、 ビグラムの息の根を止めてくれ！",
+   "text": "Éliminez Bigram sans faire de victimes parmi les fidèles !",
+   "style": "caption"
+  },
+  "032437c0/08": {
+   "ja": "お願いだ！ゴルゴ13！！",
+   "text": "Je vous en supplie ! Golgo 13 !!",
+   "style": "caption"
+  },
+  "032437c0/09": {
+   "ja": "「人類救済の森」教祖　ビグラム",
+   "text": "Gourou Bigram",
+   "style": "plate"
+  },
+  "032437c0/10": {
+   "ja": "元公安部長　ゴンザレス",
+   "text": "Ex-chef sûreté Gonzalez",
+   "style": "plate"
+  },
+  "03271340/00": {
+   "ja": "裁決委員　ヒルズ",
+   "text": "Commissaire Hills",
+   "style": "plate"
+  },
+  "03271340/01": {
+   "ja": "用件を聞こう…",
+   "text": "Voyons de quoi il s'agit…",
+   "style": "caption"
+  },
+  "03271340/02": {
+   "ja": "有力馬にドーピングの疑惑 があるのです。",
+   "text": "Il y a des soupçons de dopage sur un cheval favori.",
+   "style": "caption"
+  },
+  "03271340/03": {
+   "ja": "明日は王室開催のレースが 行われますが…",
+   "text": "Demain a lieu une course organisée par la famille royale…",
+   "style": "caption"
+  },
+  "03271340/04": {
+   "ja": "王室開催だけに不祥事は 許されません。",
+   "text": "et, étant royale, aucun scandale n'est permis.",
+   "style": "caption"
+  },
+  "03271340/05": {
+   "ja": "実施されないと立証できない のですが…",
+   "text": "Impossible de le prouver tant que le contrôle n'est pas mené…",
+   "style": "caption"
+  },
+  "03271340/06": {
+   "ja": "ただし、１つだけ方法が あります。",
+   "text": "Il n'y a toutefois qu'un seul moyen.",
+   "style": "caption"
+  },
+  "03271340/07": {
+   "ja": "疾走中に中和剤を注入する ことです。",
+   "text": "Injecter un neutralisant pendant que le cheval galope.",
+   "style": "caption"
+  },
+  "03271340/08": {
+   "ja": "それは薬物を投与された 同じ場所へ…",
+   "text": "Au même endroit où la drogue a été administrée…",
+   "style": "caption"
+  },
+  "03271340/09": {
+   "ja": "こんなことを頼めるのは…",
+   "text": "Je ne peux demander cela qu'à…",
+   "style": "caption"
+  },
+  "03271340/10": {
+   "ja": "あなたしかいないのです！",
+   "text": "vous, et à personne d'autre !",
+   "style": "caption"
+  },
+  "cap:card_unl:unlimited": {
+   "ja": "無制限",
+   "capture": "card_unl",
+   "select": {
+    "rect": [
+     184,
+     94,
+     296,
+     266
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     760
+    ]
+   },
+   "erase": [
+    184,
+    94,
+    296,
+    266
+   ],
+   "lines": [
+    "ILLI",
+    "MITÉ"
+   ],
+   "style": "card_unlimited"
+  },
+  "cap:card_snow:objective": {
+   "ja": "雪崩を起こして列車を止めろ",
+   "capture": "card_snow",
+   "select": {
+    "rect": [
+     198,
+     347,
+     454,
+     434
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     757
+    ],
+    "distinct_from": [
+     "card_p1",
+     "card_p2",
+     "card_p3",
+     "card_p4",
+     "card_p5",
+     "card_p6",
+     "card_m1",
+     "card_unl"
+    ]
+   },
+   "paint": {
+    "rect": [
+     180,
+     358,
+     480,
+     424
+    ],
+    "fill": "#000000"
+   },
+   "text": "Provoquez une avalanche pour arrêter le train",
+   "style": "objective"
+  },
+  "cap:result_fail:title": {
+   "ja": "狙撃失敗",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     74,
+     6,
+     438,
+     114
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     760
+    ]
+   },
+   "erase": [
+    74,
+    6,
+    438,
+    114
+   ],
+   "text": "TIR RATÉ",
+   "style": "result_title"
+  },
+  "cap:result_fail:accuracy": {
+   "ja": "精度ポイント",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     80,
+     122,
+     252,
+     158
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     758
+    ]
+   },
+   "erase": [
+    80,
+    122,
+    252,
+    158
+   ],
+   "text": "Précision",
+   "style": "result_label"
+  },
+  "cap:result_fail:time": {
+   "ja": "タイム",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     144,
+     162,
+     252,
+     198
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     756
+    ]
+   },
+   "erase": [
+    144,
+    162,
+    252,
+    198
+   ],
+   "text": "Temps",
+   "style": "result_label"
+  },
+  "cap:result_fail:trust": {
+   "ja": "信頼度",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     30,
+     222,
+     162,
+     258
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     755
+    ]
+   },
+   "erase": [
+    30,
+    222,
+    162,
+    258
+   ],
+   "text": "Confiance",
+   "style": "result_label"
+  },
+  "cap:result_fail:reward": {
+   "ja": "報酬",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     146,
+     337,
+     222,
+     373
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "erase": [
+    146,
+    337,
+    222,
+    373
+   ],
+   "text": "Prime",
+   "style": "result_label"
+  },
+  "cap:result_fail:swiss": {
+   "ja": "スイス銀行残高",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     18,
+     377,
+     222,
+     413
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "erase": [
+    18,
+    377,
+    222,
+    413
+   ],
+   "text": "Banque suisse",
+   "style": "result_label"
+  },
+  "cap:result_ok:title": {
+   "ja": "狙撃成功",
+   "capture": "result_ok",
+   "select": {
+    "rect": [
+     130,
+     8,
+     490,
+     112
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     757
+    ]
+   },
+   "erase": [
+    130,
+    8,
+    490,
+    112
+   ],
+   "text": "TIR RÉUSSI",
+   "style": "result_title_ok"
+  },
+  "cap:snipe_ok:title": {
+   "ja": "狙撃成功",
+   "capture": "snipe_ok",
+   "select": {
+    "rect": [
+     130,
+     8,
+     490,
+     112
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     759
+    ]
+   },
+   "erase": [
+    130,
+    8,
+    490,
+    112
+   ],
+   "text": "TIR RÉUSSI",
+   "style": "result_title_ok"
+  },
+  "cap:result_ok:accuracy": {
+   "ja": "精度ポイント",
+   "capture": "result_ok",
+   "select": {
+    "rect": [
+     80,
+     122,
+     252,
+     158
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     754
+    ]
+   },
+   "erase": [
+    80,
+    122,
+    252,
+    158
+   ],
+   "text": "Précision",
+   "style": "result_label"
+  },
+  "cap:result_ok:time": {
+   "ja": "タイム",
+   "capture": "result_ok",
+   "select": {
+    "rect": [
+     144,
+     162,
+     252,
+     198
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "erase": [
+    144,
+    162,
+    252,
+    198
+   ],
+   "text": "Temps",
+   "style": "result_label"
+  },
+  "cap:result_ok:trust": {
+   "ja": "信頼度",
+   "capture": "result_ok",
+   "select": {
+    "rect": [
+     30,
+     222,
+     162,
+     258
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     751
+    ]
+   },
+   "erase": [
+    30,
+    222,
+    162,
+    258
+   ],
+   "text": "Confiance",
+   "style": "result_label"
+  },
+  "cap:result_ok:reward": {
+   "ja": "報酬",
+   "capture": "result_ok",
+   "select": {
+    "rect": [
+     146,
+     337,
+     222,
+     373
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     749
+    ]
+   },
+   "erase": [
+    146,
+    337,
+    222,
+    373
+   ],
+   "text": "Prime",
+   "style": "result_label"
+  },
+  "cap:result_ok:swiss": {
+   "ja": "スイス銀行残高",
+   "capture": "result_ok",
+   "select": {
+    "rect": [
+     18,
+     377,
+     222,
+     413
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     748
+    ]
+   },
+   "erase": [
+    18,
+    377,
+    222,
+    413
+   ],
+   "text": "Banque suisse",
+   "style": "result_label"
+  },
+  "cap:game_over:lifetime": {
+   "ja": "生涯獲得報酬",
+   "capture": "game_over",
+   "select": {
+    "rect": [
+     35,
+     324,
+     227,
+     356
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     754
+    ]
+   },
+   "erase": [
+    35,
+    324,
+    227,
+    356
+   ],
+   "text": "Gains cumulés",
+   "style": "result_label"
+  },
+  "cap:game_over:average": {
+   "ja": "平均精度ポイント",
+   "capture": "game_over",
+   "select": {
+    "rect": [
+     3,
+     364,
+     227,
+     396
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "erase": [
+    3,
+    364,
+    227,
+    396
+   ],
+   "text": "Précision moyenne",
+   "style": "result_label"
+  },
+  "cap:game_over:fiction": {
+   "ja": "この物語は、すべてフィクションです。",
+   "capture": "game_over",
+   "select": {
+    "rect": [
+     288,
+     384,
+     512,
+     448
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     755
+    ]
+   },
+   "paint": {
+    "rect": [
+     312,
+     411,
+     506,
+     431
+    ],
+    "fill": "#000000"
+   },
+   "text": "● Cette histoire est entièrement fictive.",
+   "style": "footnote"
+  },
+  "030561f0/00": {
+   "ja": "選択：ライフル　決定：トリガー",
+   "text": "Choisir : fusil     Valider : gâchette",
+   "style": "ui_bar_red"
+  },
+  "cap:card_dia:ammo": {
+   "capture": "card_dia",
+   "select": {
+    "rect": [
+     160,
+     50,
+     320,
+     100
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    165,
+    54,
+    318,
+    97
+   ],
+   "text": "Munitions",
+   "style": "card_label",
+   "text_area": [
+    172,
+    54,
+    314,
+    96
+   ]
+  },
+  "cap:card_dia:sec": {
+   "capture": "card_dia",
+   "select": {
+    "rect": [
+     430,
+     250,
+     502,
+     310
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    434,
+    252,
+    498,
+    308
+   ],
+   "text": "sec",
+   "style": "card_label",
+   "text_area": [
+    434,
+    252,
+    498,
+    302
+   ]
+  },
+  "cap:card_dia:shot": {
+   "capture": "card_dia",
+   "select": {
+    "rect": [
+     255,
+     250,
+     325,
+     312
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    270,
+    258,
+    322,
+    310
+   ],
+   "text": "coup",
+   "style": "card_label",
+   "text_area": [
+    272,
+    262,
+    320,
+    304
+   ]
+  },
+  "cap:card_dia:time": {
+   "capture": "card_dia",
+   "select": {
+    "rect": [
+     340,
+     50,
+     502,
+     100
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     761,
+     762,
+     763,
+     764
+    ]
+   },
+   "erase": [
+    345,
+    54,
+    498,
+    97
+   ],
+   "text": "Temps limite",
+   "style": "card_label",
+   "text_area": [
+    352,
+    54,
+    494,
+    96
+   ]
+  }
+ }
+}

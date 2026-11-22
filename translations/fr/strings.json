@@ -1,0 +1,521 @@
+{
+  "meta": {
+    "lang": "fr",
+    "name": "Français",
+    "note": "Traduction provisoire ; à relire et corriger librement."
+  },
+  "assets": {
+    "030a9100/02": {
+      "text": "Crise des semi-conducteurs",
+      "style": "story_title"
+    },
+    "030a9100/03": {
+      "text": "La veille du coup d'État",
+      "style": "story_title"
+    },
+    "030a9100/04": {
+      "text": "Bateau de traîne",
+      "style": "story_title"
+    },
+    "030a9100/05": {
+      "text": "Corps en plastique",
+      "style": "story_title"
+    },
+    "030a9100/06": {
+      "text": "Trajectoire fabriquée",
+      "style": "story_title"
+    },
+    "030a9100/07": {
+      "text": "Le gardien de l'ordre",
+      "style": "story_title"
+    },
+    "030a9100/08": {
+      "text": "Huis clos : la cellule",
+      "style": "story_title"
+    },
+    "030a9100/09": {
+      "text": "Le jardin de l'assassinat",
+      "style": "story_title"
+    },
+    "030a9100/10": {
+      "text": "Détournement depuis le sol",
+      "style": "story_title"
+    },
+    "030a9100/11": {
+      "text": "Les souliers de la mafia",
+      "style": "story_title"
+    },
+    "030a9100/12": {
+      "text": "Le château pare-balles",
+      "style": "story_title"
+    },
+    "030a9100/13": {
+      "text": "Image coupée « G »",
+      "style": "story_title"
+    },
+    "030a9100/14": {
+      "text": "Région de fortes neiges",
+      "style": "story_title"
+    },
+    "030a9100/15": {
+      "text": "Pare-feu",
+      "style": "story_title"
+    },
+    "030a9100/16": {
+      "text": "Snipers professionnels",
+      "style": "story_title"
+    },
+    "030a9100/17": {
+      "text": "La nuit de la secte meurtrière",
+      "style": "story_title"
+    },
+    "030a9100/18": {
+      "text": "Miracle sur la corde",
+      "style": "story_title"
+    },
+    "030a9100/19": {
+      "text": "Le violon des souvenirs",
+      "style": "story_title"
+    },
+    "030a9100/20": {
+      "text": "NIVEAU SPÉCIAL",
+      "style": "story_title"
+    },
+    "030a9100/21": {
+      "text": "Magie du turf",
+      "style": "story_title"
+    },
+    "03133f80/00": {
+      "text": "Tirer depuis l'intérieur d'un train",
+      "style": "objective"
+    },
+    "03189b20/00": {
+      "text": "Voyons ce que vous avez à me dire…",
+      "style": "caption"
+    },
+    "03189b20/01": {
+      "text": "La cible est Huang Dazong.",
+      "style": "caption"
+    },
+    "03189b20/02": {
+      "text": "Officiellement, il dirige un fabricant d'ordinateurs, mais…",
+      "style": "caption"
+    },
+    "03189b20/03": {
+      "text": "En coulisses, il fait de la contrebande de semi-conducteurs.",
+      "style": "caption"
+    },
+    "03189b20/04": {
+      "text": "Huang se trouve actuellement au Japon, mais",
+      "style": "caption"
+    },
+    "03189b20/05": {
+      "text": "Le problème, c'est la position de tir.",
+      "style": "caption"
+    },
+    "03189b20/06": {
+      "text": "Il habite au dernier étage d'une tour résidentielle.",
+      "style": "caption"
+    },
+    "03189b20/07": {
+      "text": "Pardon du dérangement, mais nous allons tourner un film.",
+      "style": "caption"
+    },
+    "03189b20/08": {
+      "text": "Nous utiliserons une cartouche à blanc.",
+      "style": "caption"
+    },
+    "03189b20/09": {
+      "text": "Aujourd'hui, nous avons quelque chose à montrer au président…",
+      "style": "caption"
+    },
+    "03189b20/10": {
+      "text": "Ce sera la pièce maîtresse de la campagne publicitaire.",
+      "style": "caption"
+    },
+    "03189b20/11": {
+      "text": "Cadre de police Hong",
+      "style": "plate"
+    },
+    "03189b20/12": {
+      "text": "Huang Dazong",
+      "style": "plate"
+    },
+    "03189b20/13": {
+      "text": "Président Hidate Akiyama",
+      "style": "plate"
+    },
+    "cap:card_m1:ammo": {
+      "capture": "card_m1",
+      "select": {
+        "rect": [
+          160,
+          50,
+          320,
+          100
+        ],
+        "tp": [
+          1
+        ],
+        "clut_y": [
+          761,
+          762,
+          763,
+          764
+        ]
+      },
+      "erase": [
+        160,
+        50,
+        322,
+        103
+      ],
+      "text": "Munitions",
+      "style": "card_label",
+      "text_area": [
+        160,
+        50,
+        322,
+        98
+      ]
+    },
+    "cap:card_m1:sec": {
+      "capture": "card_m1",
+      "select": {
+        "rect": [
+          430,
+          250,
+          502,
+          310
+        ],
+        "tp": [
+          1
+        ],
+        "clut_y": [
+          761,
+          762,
+          763,
+          764
+        ]
+      },
+      "erase": [
+        434,
+        252,
+        498,
+        308
+      ],
+      "text": "sec",
+      "style": "card_label",
+      "text_area": [
+        434,
+        252,
+        498,
+        302
+      ]
+    },
+    "cap:card_m1:shot": {
+      "capture": "card_m1",
+      "select": {
+        "rect": [
+          255,
+          250,
+          320,
+          310
+        ],
+        "tp": [
+          1
+        ],
+        "clut_y": [
+          761,
+          762,
+          763,
+          764
+        ]
+      },
+      "erase": [
+        256,
+        252,
+        312,
+        308
+      ],
+      "text": "coup",
+      "style": "card_label",
+      "text_area": [
+        256,
+        252,
+        312,
+        302
+      ]
+    },
+    "cap:card_m1:target": {
+      "capture": "card_m1",
+      "select": {
+        "rect": [
+          36,
+          384,
+          140,
+          416
+        ],
+        "tp": [
+          1
+        ],
+        "clut_y": [
+          761,
+          762,
+          763,
+          764
+        ]
+      },
+      "erase": [
+        36,
+        384,
+        140,
+        416
+      ],
+      "text": "Cible",
+      "style": "card_label"
+    },
+    "cap:card_m1:time": {
+      "capture": "card_m1",
+      "select": {
+        "rect": [
+          340,
+          50,
+          502,
+          100
+        ],
+        "tp": [
+          1
+        ],
+        "clut_y": [
+          761,
+          762,
+          763,
+          764
+        ]
+      },
+      "erase": [
+        339,
+        50,
+        502,
+        103
+      ],
+      "text": "Temps limite",
+      "style": "card_label",
+      "text_area": [
+        339,
+        50,
+        502,
+        98
+      ]
+    },
+    "cap:tut_a:box": {
+      "capture": "tut_a",
+      "select": {
+        "rect": [
+          64,
+          358,
+          448,
+          422
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          762,
+          763
+        ]
+      },
+      "paint": {
+        "rect": [
+          64,
+          358,
+          448,
+          422
+        ],
+        "fill": "auto"
+      },
+      "text": "Mettez-vous en position à côté du fusil",
+      "style": "tut_box"
+    },
+    "cap:tut_b:box": {
+      "capture": "tut_b",
+      "select": {
+        "rect": [
+          64,
+          358,
+          448,
+          422
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          761,
+          762
+        ]
+      },
+      "paint": {
+        "rect": [
+          64,
+          358,
+          448,
+          422
+        ],
+        "fill": "auto"
+      },
+      "text": "Vous ne pouvez pas le voir si vous approchez trop vos yeux",
+      "style": "tut_box"
+    },
+    "cap:tut_end:line": {
+      "capture": "tut_end",
+      "select": {
+        "rect": [
+          24,
+          415,
+          488,
+          447
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          767
+        ]
+      },
+      "paint": {
+        "rect": [
+          24,
+          415,
+          488,
+          447
+        ],
+        "fill": "auto"
+      },
+      "text": "Terminé",
+      "style": "tut_bar"
+    },
+    "cap:tut_manga:bubble": {
+      "capture": "tut_manga",
+      "select": {
+        "rect": [
+          376,
+          10,
+          492,
+          336
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          765,
+          766
+        ]
+      },
+      "paint": {
+        "rect": [
+          376,
+          10,
+          492,
+          336
+        ],
+        "fill": "#ffffff",
+        "sample": [
+          -4,
+          -4
+        ]
+      },
+      "lines": [
+        "Aucune",
+        "anomalie",
+        "sur l'arme,",
+        "on dirait…"
+      ],
+      "style": "bubble"
+    },
+    "cap:tut_range:line": {
+      "capture": "tut_range",
+      "select": {
+        "rect": [
+          24,
+          415,
+          488,
+          447
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          752
+        ]
+      },
+      "paint": {
+        "rect": [
+          24,
+          415,
+          488,
+          447
+        ],
+        "fill": "auto"
+      },
+      "text": "Visez la cible avec la lunette !",
+      "style": "tut_bar"
+    },
+    "cap:tut_range:title": {
+      "capture": "tut_range",
+      "select": {
+        "rect": [
+          60,
+          378,
+          452,
+          412
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          753
+        ]
+      },
+      "paint": {
+        "rect": [
+          60,
+          378,
+          452,
+          412
+        ],
+        "fill": "auto"
+      },
+      "text": "Réglage du fusil de sniper",
+      "style": "tut_bar"
+    },
+    "cap:tut_scope:line": {
+      "capture": "tut_scope",
+      "select": {
+        "rect": [
+          24,
+          415,
+          488,
+          447
+        ],
+        "tp": [
+          0
+        ],
+        "clut_y": [
+          744
+        ]
+      },
+      "paint": {
+        "rect": [
+          24,
+          415,
+          488,
+          447
+        ],
+        "fill": "auto"
+      },
+      "text": "Alignez le viseur et tirez !",
+      "style": "tut_bar"
+    }
+  }
+}

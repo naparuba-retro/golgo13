@@ -1,0 +1,20 @@
+{
+  "assets": {
+    "03225370/00": {"ja": "ターゲットはマフィアの幹部 バンディーニだ…", "text": "La cible est un cadre de la mafia, Bandini…", "style": "caption"},
+    "03225370/01": {"ja": "こいつは私利私欲のために、 私の友人の命を奪った…", "text": "Pour son propre profit, cet homme a ôté la vie à mon ami…", "style": "caption"},
+    "03225370/02": {"ja": "しかし、この男は神経質なほど 注意深く…", "text": "Mais cet homme est d'une prudence presque maniaque…", "style": "caption"},
+    "03225370/03": {"ja": "組織のアジトへ行く以外は 姿を見せないのだ。", "text": "Il ne se montre jamais, sauf pour aller à la planque de l'organisation.", "style": "caption"},
+    "03225370/04": {"ja": "そのアジトも狭い路地に 囲まれた場所にあり…", "text": "Et cette planque se trouve dans un endroit entouré de ruelles étroites…", "style": "caption"},
+    "03225370/05": {"ja": "仮に狙撃ができても、 逃走が困難となる。", "text": "Même si le tir est possible, la fuite serait difficile.", "style": "caption"},
+    "03225370/06": {"ja": "だから、あなたに不可能を 可能にして欲しいのだ！", "text": "C'est pourquoi nous voulons que vous rendiez possible l'impossible !", "style": "caption"},
+    "03225370/07": {"ja": "たのむ、ゴルゴ13！", "text": "Je compte sur toi, Golgo 13 !", "style": "caption"},
+    "03225370/08": {"ja": "このビルのオーナーはあんたか？", "text": "C'est vous, le propriétaire de cet immeuble ?", "style": "caption"},
+    "03225370/09": {"ja": "な、なんだ…！？", "text": "Q-qu'est-ce que… !?", "style": "caption"},
+    "03225370/10": {"ja": "ビルを売ってくれ… 支払いは現金だ。", "text": "Vendez-moi l'immeuble… Je paie en liquide.", "style": "caption"},
+    "03225370/11": {"ja": "警備は万全なんだろうな？", "text": "La sécurité est bien assurée, j'espère ?", "style": "caption"},
+    "03225370/12": {"ja": "周辺は若い連中が固めていますし…", "text": "Des jeunes gars quadrillent les environs…", "style": "caption"},
+    "03225370/13": {"ja": "住民もチェック済みです。", "text": "Les habitants ont aussi été vérifiés.", "style": "caption"},
+    "03225370/14": {"ja": "元銀行員　パークス", "text": "Ancien banquier Parks", "style": "plate"},
+    "03225370/15": {"ja": "マフィアの幹部　バンディーニ", "text": "Cadre de la mafia Bandini", "style": "plate"}
+  }
+}

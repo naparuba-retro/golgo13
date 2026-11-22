@@ -1,0 +1,188 @@
+{
+ "assets": {
+  "cap:result_fail:title": {
+   "ja": "狙撃失敗",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     74,
+     6,
+     438,
+     114
+    ],
+    "tp": [
+     1
+    ],
+    "clut_y": [
+     760
+    ]
+   },
+   "erase": [
+    74,
+    6,
+    438,
+    114
+   ],
+   "text": "TIR RATÉ",
+   "style": "result_title"
+  },
+  "cap:result_fail:accuracy": {
+   "ja": "精度ポイント",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     158,
+     118,
+     222,
+     162
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     757
+    ]
+   },
+   "erase": [
+    158,
+    118,
+    222,
+    162
+   ],
+   "text": "Précision",
+   "style": "result_label_k"
+  },
+  "cap:result_fail:time": {
+   "ja": "タイム",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     130,
+     157,
+     222,
+     203
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     756
+    ]
+   },
+   "erase": [
+    130,
+    157,
+    222,
+    203
+   ],
+   "text": "Temps",
+   "style": "result_label_k"
+  },
+  "cap:result_fail:trust": {
+   "ja": "信頼度",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     130,
+     205,
+     290,
+     315
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     755
+    ]
+   },
+   "text": "Confiance",
+   "style": "result_label",
+   "paint": {
+    "rect": [
+     138,
+     214,
+     222,
+     258
+    ],
+    "fill": "#00185a"
+   }
+  },
+  "cap:result_fail:reward": {
+   "ja": "報酬",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     157,
+     333,
+     222,
+     377
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     753
+    ]
+   },
+   "erase": [
+    157,
+    333,
+    222,
+    377
+   ],
+   "text": "Prime",
+   "style": "result_label_k"
+  },
+  "cap:result_fail:swiss": {
+   "ja": "スイス銀行残高",
+   "capture": "result_fail",
+   "select": {
+    "rect": [
+     17,
+     372,
+     221,
+     418
+    ],
+    "tp": [
+     0
+    ],
+    "clut_y": [
+     752
+    ]
+   },
+   "erase": [
+    17,
+    372,
+    221,
+    418
+   ],
+   "text": "Banque suisse",
+   "style": "result_label_k"
+  }
+ },
+ "styles": {
+  "result_label_k": {
+   "mode": "overlay",
+   "font": "impact.ttf",
+   "size": 24,
+   "min_size": 10,
+   "fill": "#ffb040",
+   "gradient": [
+    "#ffd98a",
+    "#c4580a"
+   ],
+   "outline": "#3a1800",
+   "outline_width": 1,
+   "shadow": {
+    "offset": [
+     2,
+     2
+    ],
+    "color": "#000000"
+   },
+   "align": "left",
+   "valign": "middle",
+   "max_lines": 1
+  }
+ }
+}

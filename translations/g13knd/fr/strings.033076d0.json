@@ -1,0 +1,64 @@
+{
+ "assets": {
+  "033076d0/00": {
+   "ja": "情報局長は君達の活躍に大変満足している…",
+   "text": "Le directeur du service est très satisfait de votre action…",
+   "style": "caption"
+  },
+  "033076d0/01": {
+   "ja": "しかし、ここにきてこの国の警察も…",
+   "text": "Mais voilà que la police de ce pays aussi…",
+   "style": "caption"
+  },
+  "033076d0/02": {
+   "ja": "君達の行動に不信感を抱いているようだ…",
+   "text": "semble se méfier de vos agissements…",
+   "style": "caption"
+  },
+  "033076d0/03": {
+   "ja": "そこで君達には一時的に帰国してもらう。",
+   "text": "Vous allez donc rentrer au pays pour un temps.",
+   "style": "caption"
+  },
+  "033076d0/04": {
+   "ja": "命は守ってもらえるのでしょうね…？",
+   "text": "Ma vie sera protégée, n'est-ce pas… ?",
+   "style": "caption"
+  },
+  "033076d0/05": {
+   "ja": "もちろんだ！",
+   "text": "Bien sûr !",
+   "style": "caption"
+  },
+  "033076d0/06": {
+   "ja": "そのために世界一の男を呼んである…",
+   "text": "Pour cela, j'ai fait appel au meilleur homme du monde…",
+   "style": "caption"
+  },
+  "033076d0/07": {
+   "ja": "止まれ！",
+   "text": "Halte !",
+   "style": "caption"
+  },
+  "033076d0/08": {
+   "ja": "動くな！",
+   "text": "Ne bougez pas !",
+   "style": "caption"
+  },
+  "033076d0/09": {
+   "ja": "…せ、戦車だ！",
+   "text": "…U-un char d'assaut !",
+   "style": "caption"
+  },
+  "033076d0/10": {
+   "ja": "情報局局員　ソメール",
+   "text": "Agent du service Sommer",
+   "style": "plate"
+  },
+  "033076d0/11": {
+   "ja": "情報局スパイ　ブラッコ夫妻",
+   "text": "Espions du service Bracco",
+   "style": "plate"
+  }
+ }
+}

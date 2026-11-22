@@ -1,0 +1,8465 @@
+{
+"format": 1,
+"assets": [
+{
+"id": "00103820/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+120
+],
+"palette": 0,
+"tiles": 50,
+"writable_fraction": 0.13,
+"content_crc32": "b5265acd"
+},
+{
+"id": "00103820/01",
+"kind": "tile_layout",
+"canvas": [
+56,
+50
+],
+"palette": 1,
+"tiles": 4,
+"writable_fraction": 0.794,
+"content_crc32": "f71904bd"
+},
+{
+"id": "00103820/02",
+"kind": "tile_layout",
+"canvas": [
+56,
+50
+],
+"palette": 2,
+"tiles": 4,
+"writable_fraction": 0.846,
+"content_crc32": "1a75ce8e"
+},
+{
+"id": "00103820/03",
+"kind": "tile_layout",
+"canvas": [
+56,
+50
+],
+"palette": 3,
+"tiles": 4,
+"writable_fraction": 0.846,
+"content_crc32": "21048be3"
+},
+{
+"id": "00103820/04",
+"kind": "tile_layout",
+"canvas": [
+56,
+50
+],
+"palette": 4,
+"tiles": 4,
+"writable_fraction": 0.794,
+"content_crc32": "3321a634"
+},
+{
+"id": "00103820/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+120
+],
+"palette": 5,
+"tiles": 64,
+"writable_fraction": 0.0,
+"content_crc32": "0ea5b687"
+},
+{
+"id": "00106f80/00",
+"kind": "tile_layout",
+"canvas": [
+27,
+29
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "7d01a1f6"
+},
+{
+"id": "00106f80/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+2
+],
+"palette": 1,
+"tiles": 16,
+"writable_fraction": 0.0,
+"content_crc32": "0e5feb0a"
+},
+{
+"id": "00106f80/02",
+"kind": "tile_layout",
+"canvas": [
+2,
+480
+],
+"palette": 2,
+"tiles": 15,
+"writable_fraction": 0.0,
+"content_crc32": "7ef92f43"
+},
+{
+"id": "00106f80/03",
+"kind": "tile_layout",
+"canvas": [
+24,
+56
+],
+"palette": 3,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "c35c5afe"
+},
+{
+"id": "00106f80/04",
+"kind": "tile_layout",
+"canvas": [
+24,
+56
+],
+"palette": 4,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "a9ca30f6"
+},
+{
+"id": "00106f80/05",
+"kind": "tile_layout",
+"canvas": [
+24,
+56
+],
+"palette": 5,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "6d86fb3a"
+},
+{
+"id": "00106f80/06",
+"kind": "tile_layout",
+"canvas": [
+24,
+56
+],
+"palette": 6,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "6f660017"
+},
+{
+"id": "00106f80/07",
+"kind": "tile_layout",
+"canvas": [
+24,
+56
+],
+"palette": 7,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "4fd23aa9"
+},
+{
+"id": "00106f80/08",
+"kind": "tile_layout",
+"canvas": [
+24,
+56
+],
+"palette": 8,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "8a22651f"
+},
+{
+"id": "00106f80/09",
+"kind": "tile_layout",
+"canvas": [
+24,
+56
+],
+"palette": 9,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "4ffccee1"
+},
+{
+"id": "00106f80/10",
+"kind": "tile_layout",
+"canvas": [
+24,
+56
+],
+"palette": 10,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "1b35618b"
+},
+{
+"id": "00106f80/11",
+"kind": "tile_layout",
+"canvas": [
+24,
+56
+],
+"palette": 11,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "757a13b9"
+},
+{
+"id": "00106f80/12",
+"kind": "tile_layout",
+"canvas": [
+24,
+56
+],
+"palette": 12,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "a3131dfe"
+},
+{
+"id": "00106f80/13",
+"kind": "tile_layout",
+"canvas": [
+256,
+256
+],
+"palette": 13,
+"tiles": 56,
+"writable_fraction": 1.0,
+"content_crc32": "f3baf1b9"
+},
+{
+"id": "00106f80/14",
+"kind": "tile_layout",
+"canvas": [
+256,
+256
+],
+"palette": 14,
+"tiles": 29,
+"writable_fraction": 0.379,
+"content_crc32": "a05f3c7a"
+},
+{
+"id": "00106f80/15",
+"kind": "tile_layout",
+"canvas": [
+79,
+79
+],
+"palette": 15,
+"tiles": 8,
+"writable_fraction": 1.0,
+"content_crc32": "a8d17fcc"
+},
+{
+"id": "00106f80/16",
+"kind": "tile_layout",
+"canvas": [
+64,
+64
+],
+"palette": 16,
+"tiles": 4,
+"writable_fraction": 1.0,
+"content_crc32": "b5f7833b"
+},
+{
+"id": "00106f80/17",
+"kind": "tile_layout",
+"canvas": [
+64,
+64
+],
+"palette": 17,
+"tiles": 4,
+"writable_fraction": 1.0,
+"content_crc32": "67d43f3a"
+},
+{
+"id": "00106f80/18",
+"kind": "tile_layout",
+"canvas": [
+512,
+160
+],
+"palette": 18,
+"tiles": 73,
+"writable_fraction": 1.0,
+"content_crc32": "77c4ad57"
+},
+{
+"id": "00106f80/19",
+"kind": "tile_layout",
+"canvas": [
+512,
+160
+],
+"palette": 19,
+"tiles": 80,
+"writable_fraction": 0.963,
+"content_crc32": "ef5c0c5e"
+},
+{
+"id": "00106f80/20",
+"kind": "tile_layout",
+"canvas": [
+512,
+160
+],
+"palette": 20,
+"tiles": 80,
+"writable_fraction": 0.887,
+"content_crc32": "c0eaa085"
+},
+{
+"id": "00106f80/21",
+"kind": "tile_layout",
+"canvas": [
+176,
+40
+],
+"palette": 21,
+"tiles": 12,
+"writable_fraction": 0.891,
+"content_crc32": "e874c50b"
+},
+{
+"id": "00106f80/22",
+"kind": "tile_layout",
+"canvas": [
+80,
+24
+],
+"palette": 22,
+"tiles": 3,
+"writable_fraction": 1.0,
+"content_crc32": "fea079f8"
+},
+{
+"id": "00106f80/23",
+"kind": "tile_layout",
+"canvas": [
+80,
+112
+],
+"palette": 23,
+"tiles": 12,
+"writable_fraction": 0.857,
+"content_crc32": "1e17e7e1"
+},
+{
+"id": "00106f80/24",
+"kind": "tile_layout",
+"canvas": [
+48,
+48
+],
+"palette": 24,
+"tiles": 4,
+"writable_fraction": 1.0,
+"content_crc32": "0b722bc4"
+},
+{
+"id": "00106f80/25",
+"kind": "tile_layout",
+"canvas": [
+48,
+48
+],
+"palette": 24,
+"tiles": 4,
+"writable_fraction": 0.889,
+"content_crc32": "3fec25bf"
+},
+{
+"id": "00106f80/26",
+"kind": "tile_layout",
+"canvas": [
+48,
+38
+],
+"palette": 24,
+"tiles": 4,
+"writable_fraction": 0.0,
+"content_crc32": "18b86108"
+},
+{
+"id": "00106f80/27",
+"kind": "tile_layout",
+"canvas": [
+48,
+48
+],
+"palette": 24,
+"tiles": 4,
+"writable_fraction": 0.667,
+"content_crc32": "ed366bb7"
+},
+{
+"id": "00106f80/28",
+"kind": "tile_layout",
+"canvas": [
+48,
+48
+],
+"palette": 24,
+"tiles": 4,
+"writable_fraction": 0.889,
+"content_crc32": "1bed7fc7"
+},
+{
+"id": "00106f80/29",
+"kind": "tile_layout",
+"canvas": [
+48,
+38
+],
+"palette": 24,
+"tiles": 4,
+"writable_fraction": 0.0,
+"content_crc32": "18b86108"
+},
+{
+"id": "00106f80/30",
+"kind": "tile_layout",
+"canvas": [
+16,
+56
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "79cbfff2"
+},
+{
+"id": "00106f80/31",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "e8b2893f"
+},
+{
+"id": "00106f80/32",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "9df61693"
+},
+{
+"id": "00106f80/33",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "708db216"
+},
+{
+"id": "00106f80/34",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "25092ba1"
+},
+{
+"id": "00106f80/35",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "046184af"
+},
+{
+"id": "00106f80/36",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "96e61ef6"
+},
+{
+"id": "00106f80/37",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "991eff58"
+},
+{
+"id": "00106f80/38",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "6913de29"
+},
+{
+"id": "00106f80/39",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "d73681d9"
+},
+{
+"id": "00106f80/40",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "8e388766"
+},
+{
+"id": "00106f80/41",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "8cfee007"
+},
+{
+"id": "00106f80/42",
+"kind": "tile_layout",
+"canvas": [
+16,
+48
+],
+"palette": 25,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "c2d3a46a"
+},
+{
+"id": "00106f80/43",
+"kind": "tile_layout",
+"canvas": [
+40,
+40
+],
+"palette": 25,
+"tiles": 4,
+"writable_fraction": 0.96,
+"content_crc32": "9bef8b25"
+},
+{
+"id": "00106f80/44",
+"kind": "tile_layout",
+"canvas": [
+40,
+40
+],
+"palette": 25,
+"tiles": 4,
+"writable_fraction": 0.96,
+"content_crc32": "b9a17161"
+},
+{
+"id": "00106f80/45",
+"kind": "tile_layout",
+"canvas": [
+16,
+56
+],
+"palette": 26,
+"tiles": 2,
+"writable_fraction": 0.571,
+"content_crc32": "eeeeb576"
+},
+{
+"id": "00106f80/46",
+"kind": "tile_layout",
+"canvas": [
+16,
+56
+],
+"palette": 26,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "1a89a594"
+},
+{
+"id": "00106f80/47",
+"kind": "tile_layout",
+"canvas": [
+16,
+56
+],
+"palette": 26,
+"tiles": 2,
+"writable_fraction": 0.571,
+"content_crc32": "f994a3d0"
+},
+{
+"id": "00106f80/48",
+"kind": "tile_layout",
+"canvas": [
+16,
+24
+],
+"palette": 26,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "1a5c5539"
+},
+{
+"id": "00106f80/49",
+"kind": "tile_layout",
+"canvas": [
+16,
+24
+],
+"palette": 26,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "a0cefe9c"
+},
+{
+"id": "00106f80/50",
+"kind": "tile_layout",
+"canvas": [
+16,
+24
+],
+"palette": 26,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "7dc58074"
+},
+{
+"id": "00106f80/51",
+"kind": "tile_layout",
+"canvas": [
+16,
+24
+],
+"palette": 26,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b123b850"
+},
+{
+"id": "00106f80/52",
+"kind": "tile_layout",
+"canvas": [
+16,
+24
+],
+"palette": 26,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b2a643f5"
+},
+{
+"id": "00106f80/53",
+"kind": "tile_layout",
+"canvas": [
+16,
+24
+],
+"palette": 26,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "7401e3be"
+},
+{
+"id": "00106f80/54",
+"kind": "tile_layout",
+"canvas": [
+16,
+24
+],
+"palette": 26,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "11a72be3"
+},
+{
+"id": "00106f80/55",
+"kind": "tile_layout",
+"canvas": [
+16,
+24
+],
+"palette": 26,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "13776246"
+},
+{
+"id": "00106f80/56",
+"kind": "tile_layout",
+"canvas": [
+16,
+24
+],
+"palette": 26,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "26d49c79"
+},
+{
+"id": "00106f80/57",
+"kind": "tile_layout",
+"canvas": [
+16,
+24
+],
+"palette": 26,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "be2d43bc"
+},
+{
+"id": "00106f80/58",
+"kind": "tile_layout",
+"canvas": [
+112,
+172
+],
+"palette": 27,
+"tiles": 24,
+"writable_fraction": 1.0,
+"content_crc32": "39c10ba1"
+},
+{
+"id": "001408a0/00",
+"kind": "tile_layout",
+"canvas": [
+70,
+16
+],
+"palette": 0,
+"tiles": 3,
+"writable_fraction": 1.0,
+"content_crc32": "6b27550a"
+},
+{
+"id": "001408a0/01",
+"kind": "tile_layout",
+"canvas": [
+40,
+24
+],
+"palette": 1,
+"tiles": 2,
+"writable_fraction": 0.8,
+"content_crc32": "8d13153a"
+},
+{
+"id": "001408a0/02",
+"kind": "tile_layout",
+"canvas": [
+40,
+24
+],
+"palette": 1,
+"tiles": 2,
+"writable_fraction": 0.8,
+"content_crc32": "4f173419"
+},
+{
+"id": "001408a0/03",
+"kind": "tile_layout",
+"canvas": [
+40,
+24
+],
+"palette": 1,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "11040cf6"
+},
+{
+"id": "001408a0/04",
+"kind": "tile_layout",
+"canvas": [
+40,
+24
+],
+"palette": 1,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "ab2a2a64"
+},
+{
+"id": "001408a0/05",
+"kind": "tile_layout",
+"canvas": [
+40,
+24
+],
+"palette": 1,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "fae8877f"
+},
+{
+"id": "001408a0/06",
+"kind": "tile_layout",
+"canvas": [
+40,
+24
+],
+"palette": 1,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "0975ba71"
+},
+{
+"id": "001408a0/07",
+"kind": "tile_layout",
+"canvas": [
+40,
+24
+],
+"palette": 1,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "9c652acd"
+},
+{
+"id": "001408a0/08",
+"kind": "tile_layout",
+"canvas": [
+40,
+24
+],
+"palette": 1,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "c5d5004f"
+},
+{
+"id": "001408a0/09",
+"kind": "tile_layout",
+"canvas": [
+40,
+24
+],
+"palette": 1,
+"tiles": 2,
+"writable_fraction": 1.0,
+"content_crc32": "9bcb28ca"
+},
+{
+"id": "001408a0/10",
+"kind": "tile_layout",
+"canvas": [
+40,
+24
+],
+"palette": 1,
+"tiles": 2,
+"writable_fraction": 0.8,
+"content_crc32": "505f5405"
+},
+{
+"id": "001408a0/11",
+"kind": "tile_layout",
+"canvas": [
+24,
+72
+],
+"palette": 2,
+"tiles": 3,
+"writable_fraction": 0.889,
+"content_crc32": "a76dd6a1"
+},
+{
+"id": "001408a0/12",
+"kind": "tile_layout",
+"canvas": [
+24,
+72
+],
+"palette": 2,
+"tiles": 3,
+"writable_fraction": 0.889,
+"content_crc32": "97dd5468"
+},
+{
+"id": "001408a0/13",
+"kind": "tile_layout",
+"canvas": [
+24,
+72
+],
+"palette": 2,
+"tiles": 3,
+"writable_fraction": 0.889,
+"content_crc32": "328e0875"
+},
+{
+"id": "001408a0/14",
+"kind": "tile_layout",
+"canvas": [
+24,
+72
+],
+"palette": 2,
+"tiles": 3,
+"writable_fraction": 0.889,
+"content_crc32": "f76c97eb"
+},
+{
+"id": "001408a0/15",
+"kind": "tile_layout",
+"canvas": [
+24,
+72
+],
+"palette": 2,
+"tiles": 3,
+"writable_fraction": 0.889,
+"content_crc32": "403864d9"
+},
+{
+"id": "001408a0/16",
+"kind": "tile_layout",
+"canvas": [
+24,
+72
+],
+"palette": 2,
+"tiles": 3,
+"writable_fraction": 0.889,
+"content_crc32": "e9c4e3a8"
+},
+{
+"id": "001408a0/17",
+"kind": "tile_layout",
+"canvas": [
+24,
+72
+],
+"palette": 2,
+"tiles": 3,
+"writable_fraction": 0.889,
+"content_crc32": "418a30ee"
+},
+{
+"id": "001408a0/18",
+"kind": "tile_layout",
+"canvas": [
+24,
+72
+],
+"palette": 2,
+"tiles": 3,
+"writable_fraction": 0.889,
+"content_crc32": "44638ab0"
+},
+{
+"id": "001408a0/19",
+"kind": "tile_layout",
+"canvas": [
+24,
+72
+],
+"palette": 2,
+"tiles": 3,
+"writable_fraction": 0.889,
+"content_crc32": "3438e7d4"
+},
+{
+"id": "001408a0/20",
+"kind": "tile_layout",
+"canvas": [
+24,
+72
+],
+"palette": 2,
+"tiles": 3,
+"writable_fraction": 0.889,
+"content_crc32": "1eb74772"
+},
+{
+"id": "001408a0/21",
+"kind": "tile_layout",
+"canvas": [
+150,
+102
+],
+"palette": 3,
+"tiles": 20,
+"writable_fraction": 1.0,
+"content_crc32": "370ffb20"
+},
+{
+"id": "006c70b0/00",
+"kind": "tile_layout",
+"canvas": [
+213,
+480
+],
+"palette": 0,
+"tiles": 105,
+"writable_fraction": 1.0,
+"content_crc32": "65a250a2"
+},
+{
+"id": "006c70b0/01",
+"kind": "tile_layout",
+"canvas": [
+250,
+480
+],
+"palette": 1,
+"tiles": 120,
+"writable_fraction": 0.966,
+"content_crc32": "c162ca08"
+},
+{
+"id": "006c70b0/02",
+"kind": "tile_layout",
+"canvas": [
+288,
+480
+],
+"palette": 2,
+"tiles": 135,
+"writable_fraction": 1.0,
+"content_crc32": "0c72e5e1"
+},
+{
+"id": "006c70b0/03",
+"kind": "tile_layout",
+"canvas": [
+221,
+480
+],
+"palette": 3,
+"tiles": 105,
+"writable_fraction": 0.952,
+"content_crc32": "49aaf20b"
+},
+{
+"id": "006c70b0/04",
+"kind": "tile_layout",
+"canvas": [
+288,
+480
+],
+"palette": 4,
+"tiles": 135,
+"writable_fraction": 0.978,
+"content_crc32": "c489a04b"
+},
+{
+"id": "006c70b0/05",
+"kind": "tile_layout",
+"canvas": [
+288,
+302
+],
+"palette": 5,
+"tiles": 90,
+"writable_fraction": 0.995,
+"content_crc32": "9466ca42"
+},
+{
+"id": "006c70b0/06",
+"kind": "tile_layout",
+"canvas": [
+243,
+191
+],
+"palette": 6,
+"tiles": 36,
+"writable_fraction": 1.0,
+"content_crc32": "fd14a9b7"
+},
+{
+"id": "006c70b0/07",
+"kind": "tile_layout",
+"canvas": [
+288,
+253
+],
+"palette": 7,
+"tiles": 72,
+"writable_fraction": 1.0,
+"content_crc32": "fcdfe325"
+},
+{
+"id": "006c70b0/08",
+"kind": "tile_layout",
+"canvas": [
+288,
+263
+],
+"palette": 8,
+"tiles": 55,
+"writable_fraction": 0.979,
+"content_crc32": "cd0cabb3"
+},
+{
+"id": "006c70b0/09",
+"kind": "tile_layout",
+"canvas": [
+174,
+162
+],
+"palette": 9,
+"tiles": 28,
+"writable_fraction": 1.0,
+"content_crc32": "d1b94f19"
+},
+{
+"id": "006c70b0/10",
+"kind": "tile_layout",
+"canvas": [
+288,
+480
+],
+"palette": 10,
+"tiles": 135,
+"writable_fraction": 0.733,
+"content_crc32": "5360ae6c"
+},
+{
+"id": "006c70b0/11",
+"kind": "tile_layout",
+"canvas": [
+288,
+480
+],
+"palette": 11,
+"tiles": 135,
+"writable_fraction": 0.793,
+"content_crc32": "d204486f"
+},
+{
+"id": "006c70b0/12",
+"kind": "tile_layout",
+"canvas": [
+145,
+480
+],
+"palette": 12,
+"tiles": 34,
+"writable_fraction": 1.0,
+"content_crc32": "c3595b65"
+},
+{
+"id": "018ba850/00",
+"kind": "tile_layout",
+"canvas": [
+562,
+360
+],
+"palette": 0,
+"tiles": 216,
+"writable_fraction": 0.897,
+"content_crc32": "019c96cf"
+},
+{
+"id": "018ba850/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+847
+],
+"palette": 1,
+"tiles": 432,
+"writable_fraction": 0.979,
+"content_crc32": "baee160f"
+},
+{
+"id": "018ba850/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+432
+],
+"palette": 2,
+"tiles": 224,
+"writable_fraction": 0.604,
+"content_crc32": "eb9d52b5"
+},
+{
+"id": "018ba850/03",
+"kind": "tile_layout",
+"canvas": [
+273,
+360
+],
+"palette": 3,
+"tiles": 108,
+"writable_fraction": 0.752,
+"content_crc32": "2973c4a1"
+},
+{
+"id": "018ba850/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 4,
+"tiles": 192,
+"writable_fraction": 1.0,
+"content_crc32": "1203c4d1"
+},
+{
+"id": "018ba850/05",
+"kind": "tile_layout",
+"canvas": [
+399,
+360
+],
+"palette": 5,
+"tiles": 156,
+"writable_fraction": 0.628,
+"content_crc32": "333b2ba9"
+},
+{
+"id": "018ba850/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 6,
+"tiles": 192,
+"writable_fraction": 0.75,
+"content_crc32": "974bb0ee"
+},
+{
+"id": "018ba850/07",
+"kind": "tile_layout",
+"canvas": [
+640,
+730
+],
+"palette": 7,
+"tiles": 460,
+"writable_fraction": 1.0,
+"content_crc32": "4933c79a"
+},
+{
+"id": "018ba850/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 8,
+"tiles": 192,
+"writable_fraction": 0.682,
+"content_crc32": "2fdfea19"
+},
+{
+"id": "01a45190/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+649
+],
+"palette": 0,
+"tiles": 336,
+"writable_fraction": 0.988,
+"content_crc32": "aa717793"
+},
+{
+"id": "01a45190/01",
+"kind": "tile_layout",
+"canvas": [
+811,
+360
+],
+"palette": 1,
+"tiles": 312,
+"writable_fraction": 0.979,
+"content_crc32": "9d816e43"
+},
+{
+"id": "01a45190/02",
+"kind": "tile_layout",
+"canvas": [
+878,
+360
+],
+"palette": 2,
+"tiles": 336,
+"writable_fraction": 0.879,
+"content_crc32": "26c2d6e4"
+},
+{
+"id": "01a45190/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 3,
+"tiles": 192,
+"writable_fraction": 0.651,
+"content_crc32": "48a1d7df"
+},
+{
+"id": "01a45190/04",
+"kind": "tile_layout",
+"canvas": [
+584,
+632
+],
+"palette": 4,
+"tiles": 380,
+"writable_fraction": 0.971,
+"content_crc32": "58d973df"
+},
+{
+"id": "01cd8810/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+697
+],
+"palette": 0,
+"tiles": 352,
+"writable_fraction": 0.991,
+"content_crc32": "564698b1"
+},
+{
+"id": "01cd8810/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 1,
+"tiles": 192,
+"writable_fraction": 0.956,
+"content_crc32": "629df82f"
+},
+{
+"id": "01cd8810/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+667
+],
+"palette": 2,
+"tiles": 336,
+"writable_fraction": 1.0,
+"content_crc32": "604dcf84"
+},
+{
+"id": "01cd8810/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+578
+],
+"palette": 3,
+"tiles": 304,
+"writable_fraction": 0.968,
+"content_crc32": "924a203c"
+},
+{
+"id": "01cd8810/04",
+"kind": "tile_layout",
+"canvas": [
+598,
+360
+],
+"palette": 4,
+"tiles": 228,
+"writable_fraction": 0.962,
+"content_crc32": "19096d7c"
+},
+{
+"id": "01cd8810/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+215
+],
+"palette": 5,
+"tiles": 112,
+"writable_fraction": 0.898,
+"content_crc32": "a7ec36ce"
+},
+{
+"id": "01f6da00/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+850
+],
+"palette": 0,
+"tiles": 432,
+"writable_fraction": 0.948,
+"content_crc32": "3f690624"
+},
+{
+"id": "01f6da00/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+972
+],
+"palette": 1,
+"tiles": 496,
+"writable_fraction": 0.95,
+"content_crc32": "8a372a37"
+},
+{
+"id": "01f6da00/02",
+"kind": "tile_layout",
+"canvas": [
+307,
+360
+],
+"palette": 2,
+"tiles": 120,
+"writable_fraction": 0.917,
+"content_crc32": "c5e455cc"
+},
+{
+"id": "01f6da00/03",
+"kind": "tile_layout",
+"canvas": [
+874,
+540
+],
+"palette": 3,
+"tiles": 476,
+"writable_fraction": 0.809,
+"content_crc32": "e7fbfe49"
+},
+{
+"id": "01f6da00/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+596
+],
+"palette": 4,
+"tiles": 304,
+"writable_fraction": 0.698,
+"content_crc32": "a4c8c5e9"
+},
+{
+"id": "01f6da00/05",
+"kind": "tile_layout",
+"canvas": [
+378,
+360
+],
+"palette": 5,
+"tiles": 144,
+"writable_fraction": 0.708,
+"content_crc32": "04f7c2aa"
+},
+{
+"id": "020bd9b0/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+511
+],
+"palette": 0,
+"tiles": 256,
+"writable_fraction": 0.941,
+"content_crc32": "0dd4dfb9"
+},
+{
+"id": "020bd9b0/01",
+"kind": "tile_layout",
+"canvas": [
+371,
+360
+],
+"palette": 1,
+"tiles": 144,
+"writable_fraction": 0.613,
+"content_crc32": "6fee43f3"
+},
+{
+"id": "020bd9b0/02",
+"kind": "tile_layout",
+"canvas": [
+768,
+418
+],
+"palette": 2,
+"tiles": 336,
+"writable_fraction": 0.835,
+"content_crc32": "3870f8ef"
+},
+{
+"id": "020bd9b0/03",
+"kind": "tile_layout",
+"canvas": [
+240,
+360
+],
+"palette": 3,
+"tiles": 96,
+"writable_fraction": 0.929,
+"content_crc32": "6bdece17"
+},
+{
+"id": "020bd9b0/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+739
+],
+"palette": 4,
+"tiles": 384,
+"writable_fraction": 0.713,
+"content_crc32": "6c0c75fa"
+},
+{
+"id": "020bd9b0/05",
+"kind": "tile_layout",
+"canvas": [
+473,
+360
+],
+"palette": 5,
+"tiles": 180,
+"writable_fraction": 0.741,
+"content_crc32": "b6a3b607"
+},
+{
+"id": "02232090/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+427
+],
+"palette": 0,
+"tiles": 224,
+"writable_fraction": 0.986,
+"content_crc32": "5693a202"
+},
+{
+"id": "02232090/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+552
+],
+"palette": 1,
+"tiles": 288,
+"writable_fraction": 0.884,
+"content_crc32": "71b64601"
+},
+{
+"id": "02232090/02",
+"kind": "tile_layout",
+"canvas": [
+414,
+360
+],
+"palette": 2,
+"tiles": 156,
+"writable_fraction": 0.591,
+"content_crc32": "b1a1753b"
+},
+{
+"id": "02232090/03",
+"kind": "tile_layout",
+"canvas": [
+664,
+360
+],
+"palette": 3,
+"tiles": 252,
+"writable_fraction": 0.916,
+"content_crc32": "718bbd35"
+},
+{
+"id": "02232090/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+911
+],
+"palette": 4,
+"tiles": 464,
+"writable_fraction": 0.669,
+"content_crc32": "e8f5e57c"
+},
+{
+"id": "02232090/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 5,
+"tiles": 192,
+"writable_fraction": 1.0,
+"content_crc32": "fb9f6721"
+},
+{
+"id": "02232090/06",
+"kind": "tile_layout",
+"canvas": [
+932,
+360
+],
+"palette": 6,
+"tiles": 360,
+"writable_fraction": 0.836,
+"content_crc32": "4bdc5f0f"
+},
+{
+"id": "02374e00/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+566
+],
+"palette": 0,
+"tiles": 288,
+"writable_fraction": 0.831,
+"content_crc32": "8faae850"
+},
+{
+"id": "02374e00/01",
+"kind": "tile_layout",
+"canvas": [
+694,
+360
+],
+"palette": 1,
+"tiles": 264,
+"writable_fraction": 0.902,
+"content_crc32": "b29df968"
+},
+{
+"id": "02374e00/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 2,
+"tiles": 192,
+"writable_fraction": 0.914,
+"content_crc32": "8e395c9a"
+},
+{
+"id": "02374e00/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+693
+],
+"palette": 3,
+"tiles": 352,
+"writable_fraction": 0.988,
+"content_crc32": "c14c79f1"
+},
+{
+"id": "02374e00/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 4,
+"tiles": 192,
+"writable_fraction": 0.894,
+"content_crc32": "69dffe56"
+},
+{
+"id": "02374e00/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 5,
+"tiles": 192,
+"writable_fraction": 1.0,
+"content_crc32": "f5be00a9"
+},
+{
+"id": "02374e00/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 6,
+"tiles": 192,
+"writable_fraction": 0.956,
+"content_crc32": "97155962"
+},
+{
+"id": "02374e00/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+264
+],
+"palette": 7,
+"tiles": 144,
+"writable_fraction": 0.962,
+"content_crc32": "a7b86db1"
+},
+{
+"id": "02374e00/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+564
+],
+"palette": 8,
+"tiles": 288,
+"writable_fraction": 0.996,
+"content_crc32": "0cd02be3"
+},
+{
+"id": "02374e00/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 9,
+"tiles": 192,
+"writable_fraction": 0.871,
+"content_crc32": "cef317d8"
+},
+{
+"id": "02374e00/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 10,
+"tiles": 192,
+"writable_fraction": 0.675,
+"content_crc32": "71e3e715"
+},
+{
+"id": "02a75f90/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 0,
+"tiles": 192,
+"writable_fraction": 0.912,
+"content_crc32": "6ae7d43f"
+},
+{
+"id": "02a75f90/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 1,
+"tiles": 192,
+"writable_fraction": 0.721,
+"content_crc32": "9a5b310b"
+},
+{
+"id": "02a75f90/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+597
+],
+"palette": 2,
+"tiles": 304,
+"writable_fraction": 0.584,
+"content_crc32": "6546d238"
+},
+{
+"id": "02a75f90/03",
+"kind": "tile_layout",
+"canvas": [
+324,
+360
+],
+"palette": 3,
+"tiles": 132,
+"writable_fraction": 0.914,
+"content_crc32": "786d0747"
+},
+{
+"id": "02a75f90/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+360
+],
+"palette": 4,
+"tiles": 192,
+"writable_fraction": 0.999,
+"content_crc32": "47535bd4"
+},
+{
+"id": "02a75f90/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+676
+],
+"palette": 5,
+"tiles": 352,
+"writable_fraction": 0.917,
+"content_crc32": "130ee146"
+},
+{
+"id": "02a75f90/06",
+"kind": "tile_layout",
+"canvas": [
+702,
+360
+],
+"palette": 6,
+"tiles": 264,
+"writable_fraction": 0.987,
+"content_crc32": "246a6c16"
+},
+{
+"id": "02e35e50/00",
+"kind": "tile_layout",
+"canvas": [
+96,
+128
+],
+"palette": 0,
+"tiles": 12,
+"writable_fraction": 1.0,
+"content_crc32": "e5bc4a8f"
+},
+{
+"id": "03000000/00",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "7e244dee"
+},
+{
+"id": "03000000/01",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "0c86ef77"
+},
+{
+"id": "03000000/02",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "39072e38"
+},
+{
+"id": "03000000/03",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "a114e2c7"
+},
+{
+"id": "03000000/04",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "87c60ef8"
+},
+{
+"id": "03000000/05",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "67a601e9"
+},
+{
+"id": "03000000/06",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "36f32bb7"
+},
+{
+"id": "03000000/07",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "5154e5a9"
+},
+{
+"id": "03000000/08",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "99e1541f"
+},
+{
+"id": "03000000/09",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "2b63b342"
+},
+{
+"id": "03000000/10",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b6d50ad1"
+},
+{
+"id": "03000000/11",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "4db4b372"
+},
+{
+"id": "03000000/12",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "26832f22"
+},
+{
+"id": "03000000/13",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "dc9e13bc"
+},
+{
+"id": "03000000/14",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "2d943f9f"
+},
+{
+"id": "03000000/15",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "868e0a79"
+},
+{
+"id": "03000000/16",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "e40cec14"
+},
+{
+"id": "03000000/17",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "26fe65e7"
+},
+{
+"id": "03000000/18",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "0c86ef77"
+},
+{
+"id": "03000000/19",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "d3fe9507"
+},
+{
+"id": "03000000/20",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "577e0240"
+},
+{
+"id": "03000000/21",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b9c694a9"
+},
+{
+"id": "03000000/22",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "49ffa61f"
+},
+{
+"id": "03000000/23",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "44c6b1c9"
+},
+{
+"id": "03000000/24",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "59de587b"
+},
+{
+"id": "03000000/25",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "623f751f"
+},
+{
+"id": "03000000/26",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "70e170b5"
+},
+{
+"id": "03000000/27",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "c9bddbd7"
+},
+{
+"id": "03000000/28",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "da23ed05"
+},
+{
+"id": "03000000/29",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "5f31ab17"
+},
+{
+"id": "03000000/30",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "472ddab7"
+},
+{
+"id": "03000000/31",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "e7a46595"
+},
+{
+"id": "03000000/32",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "cb25cef7"
+},
+{
+"id": "03000000/33",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "6ce58dbe"
+},
+{
+"id": "03000000/34",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "21a14c43"
+},
+{
+"id": "03000000/35",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "19f4f6a7"
+},
+{
+"id": "03000000/36",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "207bd3f3"
+},
+{
+"id": "03000000/37",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "6c000c14"
+},
+{
+"id": "03000000/38",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "f834441a"
+},
+{
+"id": "03000000/39",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "c297d4bf"
+},
+{
+"id": "03000000/40",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "a5c31b5a"
+},
+{
+"id": "03000000/41",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "e4246903"
+},
+{
+"id": "03000000/42",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "90565335"
+},
+{
+"id": "03000000/43",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "c81a9cfd"
+},
+{
+"id": "03000000/44",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "65d30e70"
+},
+{
+"id": "03000000/45",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "3b846db0"
+},
+{
+"id": "03000000/46",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "14c8326b"
+},
+{
+"id": "03000000/47",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "389d6128"
+},
+{
+"id": "03000000/48",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "0b35e1ed"
+},
+{
+"id": "03000000/49",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "6c71dfc9"
+},
+{
+"id": "03000000/50",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b23ebc24"
+},
+{
+"id": "03000000/51",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "5601d4a3"
+},
+{
+"id": "03000000/52",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "9437a1a8"
+},
+{
+"id": "03000000/53",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b55f82da"
+},
+{
+"id": "03000000/54",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "bd14e977"
+},
+{
+"id": "03000000/55",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "0246fa33"
+},
+{
+"id": "03000000/56",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "f047a969"
+},
+{
+"id": "03000000/57",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "056fe646"
+},
+{
+"id": "03000000/58",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "03871eaf"
+},
+{
+"id": "03000000/59",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "3b5f6226"
+},
+{
+"id": "03000000/60",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "922833e7"
+},
+{
+"id": "03000000/61",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "e34bd3a0"
+},
+{
+"id": "03000000/62",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "36b8e0bd"
+},
+{
+"id": "03000000/63",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "a44091ff"
+},
+{
+"id": "03000000/64",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "236868d1"
+},
+{
+"id": "03000000/65",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "e1b19811"
+},
+{
+"id": "03000000/66",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "0db8beb9"
+},
+{
+"id": "03000000/67",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "ea3fd5e8"
+},
+{
+"id": "03000000/68",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b84a9bac"
+},
+{
+"id": "03000000/69",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "36ac128d"
+},
+{
+"id": "03000000/70",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "192e2bef"
+},
+{
+"id": "03000000/71",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "36edb967"
+},
+{
+"id": "03000000/72",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "f68fc6b9"
+},
+{
+"id": "03000000/73",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "a9db4eba"
+},
+{
+"id": "03000000/74",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "768f6f31"
+},
+{
+"id": "03000000/75",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "d44ea7b7"
+},
+{
+"id": "03000000/76",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "0bc5de06"
+},
+{
+"id": "03000000/77",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "f869cf6e"
+},
+{
+"id": "03000000/78",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "77f14e8f"
+},
+{
+"id": "03000000/79",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "35076962"
+},
+{
+"id": "03000000/80",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "dddaef12"
+},
+{
+"id": "03000000/81",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "2138d46b"
+},
+{
+"id": "03000000/82",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "ff927a72"
+},
+{
+"id": "03000000/83",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "eaaa1c7e"
+},
+{
+"id": "03000000/84",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "41d05ca8"
+},
+{
+"id": "03000000/85",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "d2d7ff16"
+},
+{
+"id": "03000000/86",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "3fc391f3"
+},
+{
+"id": "03000000/87",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "ca719d0b"
+},
+{
+"id": "03000000/88",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "6ec480f9"
+},
+{
+"id": "03000000/89",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "e65c94b1"
+},
+{
+"id": "03000000/90",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "cff3d31d"
+},
+{
+"id": "03000000/91",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "78025f53"
+},
+{
+"id": "03000000/92",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "5aa6aeb9"
+},
+{
+"id": "03000000/93",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "850a610a"
+},
+{
+"id": "03000000/94",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "2b5d76ef"
+},
+{
+"id": "03000000/95",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "6ca12d2a"
+},
+{
+"id": "03000000/96",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "4f508d2c"
+},
+{
+"id": "03000000/97",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "65cfd871"
+},
+{
+"id": "03000000/98",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "c5eb84df"
+},
+{
+"id": "03000000/99",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "82c6b8c5"
+},
+{
+"id": "03000000/100",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "c52ff7c9"
+},
+{
+"id": "03000000/101",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "82eb1840"
+},
+{
+"id": "03000000/102",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "0dbab849"
+},
+{
+"id": "03000000/103",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "db516202"
+},
+{
+"id": "03000000/104",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "8a149dcf"
+},
+{
+"id": "03000000/105",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "750cf3d6"
+},
+{
+"id": "03000000/106",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "65cfd871"
+},
+{
+"id": "03000000/107",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "0b35e1ed"
+},
+{
+"id": "03000000/108",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "6c71dfc9"
+},
+{
+"id": "03000000/109",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "51674a90"
+},
+{
+"id": "03000000/110",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "3b58def3"
+},
+{
+"id": "03000000/111",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "1fe1ed34"
+},
+{
+"id": "03000000/112",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "39638a07"
+},
+{
+"id": "03000000/113",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "f90fc570"
+},
+{
+"id": "03000000/114",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "2a51e59b"
+},
+{
+"id": "03000000/115",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "73fbf689"
+},
+{
+"id": "03000000/116",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 1,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "056fe646"
+},
+{
+"id": "03000000/117",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "664619aa"
+},
+{
+"id": "03000000/118",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "ac3a0106"
+},
+{
+"id": "03000000/119",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "acdc4354"
+},
+{
+"id": "03000000/120",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "3aa0d623"
+},
+{
+"id": "03000000/121",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "ffdbbf72"
+},
+{
+"id": "03000000/122",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "4829edd7"
+},
+{
+"id": "03000000/123",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b1f34d86"
+},
+{
+"id": "03000000/124",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "9b1008d3"
+},
+{
+"id": "03000000/125",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "d98f69bd"
+},
+{
+"id": "03000000/126",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "e00d9ecb"
+},
+{
+"id": "03000000/127",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "f47bf3e3"
+},
+{
+"id": "03000000/128",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "e847e443"
+},
+{
+"id": "03000000/129",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "4ddfd965"
+},
+{
+"id": "03000000/130",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "7661e234"
+},
+{
+"id": "03000000/131",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "727875ed"
+},
+{
+"id": "03000000/132",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "5508eb12"
+},
+{
+"id": "03000000/133",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "a177312a"
+},
+{
+"id": "03000000/134",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "ed57ea30"
+},
+{
+"id": "03000000/135",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "c9c7db1d"
+},
+{
+"id": "03000000/136",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "8f5f9332"
+},
+{
+"id": "03000000/137",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b16a4fff"
+},
+{
+"id": "03000000/138",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "5df56fb1"
+},
+{
+"id": "03000000/139",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "7cc03157"
+},
+{
+"id": "03000000/140",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "7d7c2e25"
+},
+{
+"id": "03000000/141",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "f315ae35"
+},
+{
+"id": "03000000/142",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "73799f8b"
+},
+{
+"id": "03000000/143",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "943ae616"
+},
+{
+"id": "03000000/144",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "45de815f"
+},
+{
+"id": "03000000/145",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "3ecc990a"
+},
+{
+"id": "03000000/146",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "39eb8eb4"
+},
+{
+"id": "03000000/147",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "fe89837d"
+},
+{
+"id": "03000000/148",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "34fb114a"
+},
+{
+"id": "03000000/149",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "640b53d0"
+},
+{
+"id": "03000000/150",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "af062bc7"
+},
+{
+"id": "03000000/151",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "26ab26c4"
+},
+{
+"id": "03000000/152",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "3be3015d"
+},
+{
+"id": "03000000/153",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "f822a02d"
+},
+{
+"id": "03000000/154",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "d737cdc6"
+},
+{
+"id": "03000000/155",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b4837a56"
+},
+{
+"id": "03000000/156",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "a92817eb"
+},
+{
+"id": "03000000/157",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b2cc6f61"
+},
+{
+"id": "03000000/158",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "5f93ae05"
+},
+{
+"id": "03000000/159",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "708d3e16"
+},
+{
+"id": "03000000/160",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "50ecc0b6"
+},
+{
+"id": "03000000/161",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "97b03551"
+},
+{
+"id": "03000000/162",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "d1eb5456"
+},
+{
+"id": "03000000/163",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "68344546"
+},
+{
+"id": "03000000/164",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "389d6128"
+},
+{
+"id": "03000000/165",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "6dadf026"
+},
+{
+"id": "03000000/166",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "2bcb7e2f"
+},
+{
+"id": "03000000/167",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "27408aa2"
+},
+{
+"id": "03000000/168",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "03eeefaa"
+},
+{
+"id": "03000000/169",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "3ea02279"
+},
+{
+"id": "03000000/170",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "98e5096f"
+},
+{
+"id": "03000000/171",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "c7f56704"
+},
+{
+"id": "03000000/172",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "c5e39672"
+},
+{
+"id": "03000000/173",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "6f5573f9"
+},
+{
+"id": "03000000/174",
+"kind": "tile_layout",
+"canvas": [
+32,
+32
+],
+"palette": 2,
+"tiles": 1,
+"writable_fraction": 0.0,
+"content_crc32": "056fe646"
+},
+{
+"id": "03000000/175",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b9dfb54c"
+},
+{
+"id": "03000000/176",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "d8079389"
+},
+{
+"id": "03000000/177",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "dc4ab128"
+},
+{
+"id": "03000000/178",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "27c011db"
+},
+{
+"id": "03000000/179",
+"kind": "tile_layout",
+"canvas": [
+14,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "d94be376"
+},
+{
+"id": "03000000/180",
+"kind": "tile_layout",
+"canvas": [
+18,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "77d74fac"
+},
+{
+"id": "03000000/181",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "821bc658"
+},
+{
+"id": "03000000/182",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "402b31f2"
+},
+{
+"id": "03000000/183",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "885f2955"
+},
+{
+"id": "03000000/184",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b7da9f62"
+},
+{
+"id": "03000000/185",
+"kind": "tile_layout",
+"canvas": [
+8,
+16
+],
+"palette": 3,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "4c486fe4"
+},
+{
+"id": "03000000/186",
+"kind": "tile_layout",
+"canvas": [
+80,
+16
+],
+"palette": 3,
+"tiles": 3,
+"writable_fraction": 0.2,
+"content_crc32": "6abb78ca"
+},
+{
+"id": "03000000/187",
+"kind": "tile_layout",
+"canvas": [
+80,
+16
+],
+"palette": 3,
+"tiles": 3,
+"writable_fraction": 0.2,
+"content_crc32": "d9e2deca"
+},
+{
+"id": "03000000/188",
+"kind": "tile_layout",
+"canvas": [
+128,
+16
+],
+"palette": 3,
+"tiles": 4,
+"writable_fraction": 1.0,
+"content_crc32": "34527321"
+},
+{
+"id": "03000000/189",
+"kind": "tile_layout",
+"canvas": [
+96,
+16
+],
+"palette": 3,
+"tiles": 3,
+"writable_fraction": 1.0,
+"content_crc32": "f86d8938"
+},
+{
+"id": "03000000/190",
+"kind": "tile_layout",
+"canvas": [
+144,
+16
+],
+"palette": 3,
+"tiles": 5,
+"writable_fraction": 1.0,
+"content_crc32": "4079ef47"
+},
+{
+"id": "03000000/191",
+"kind": "tile_layout",
+"canvas": [
+120,
+16
+],
+"palette": 3,
+"tiles": 4,
+"writable_fraction": 1.0,
+"content_crc32": "fabcd8a7"
+},
+{
+"id": "03000000/192",
+"kind": "tile_layout",
+"canvas": [
+184,
+16
+],
+"palette": 3,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "63f2f0ef"
+},
+{
+"id": "03000000/193",
+"kind": "tile_layout",
+"canvas": [
+96,
+32
+],
+"palette": 4,
+"tiles": 3,
+"writable_fraction": 1.0,
+"content_crc32": "2f55823d"
+},
+{
+"id": "0301b9b0/00",
+"kind": "tile_layout",
+"canvas": [
+16,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "db4d85b1"
+},
+{
+"id": "0301b9b0/01",
+"kind": "tile_layout",
+"canvas": [
+16,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "15266ef8"
+},
+{
+"id": "0301b9b0/02",
+"kind": "tile_layout",
+"canvas": [
+10,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "accb6317"
+},
+{
+"id": "0301b9b0/03",
+"kind": "tile_layout",
+"canvas": [
+22,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "53e48c5d"
+},
+{
+"id": "0301b9b0/04",
+"kind": "tile_layout",
+"canvas": [
+14,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "da015642"
+},
+{
+"id": "0301b9b0/05",
+"kind": "tile_layout",
+"canvas": [
+18,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "99c3b2d5"
+},
+{
+"id": "0301b9b0/06",
+"kind": "tile_layout",
+"canvas": [
+16,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "fa9703c4"
+},
+{
+"id": "0301b9b0/07",
+"kind": "tile_layout",
+"canvas": [
+16,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "cc06d122"
+},
+{
+"id": "0301b9b0/08",
+"kind": "tile_layout",
+"canvas": [
+16,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "1c160b3d"
+},
+{
+"id": "0301b9b0/09",
+"kind": "tile_layout",
+"canvas": [
+16,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "085e2eaa"
+},
+{
+"id": "0301b9b0/10",
+"kind": "tile_layout",
+"canvas": [
+8,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "dd1735ae"
+},
+{
+"id": "0301b9b0/11",
+"kind": "tile_layout",
+"canvas": [
+16,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "9afab432"
+},
+{
+"id": "0301b9b0/12",
+"kind": "tile_layout",
+"canvas": [
+16,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "4f3b3926"
+},
+{
+"id": "0301b9b0/13",
+"kind": "tile_layout",
+"canvas": [
+8,
+32
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "7849f2f8"
+},
+{
+"id": "0301b9b0/14",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "16d52ebb"
+},
+{
+"id": "0301b9b0/15",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "a22a7a1e"
+},
+{
+"id": "0301b9b0/16",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "8eeea342"
+},
+{
+"id": "0301b9b0/17",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "9ba11eaf"
+},
+{
+"id": "0301b9b0/18",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "702a1556"
+},
+{
+"id": "0301b9b0/19",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "7c0cdf43"
+},
+{
+"id": "0301b9b0/20",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "07519ad2"
+},
+{
+"id": "0301b9b0/21",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "b385e1f0"
+},
+{
+"id": "0301b9b0/22",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "2a3c58d2"
+},
+{
+"id": "0301b9b0/23",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "d743c542"
+},
+{
+"id": "0301b9b0/24",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "5f5043bb"
+},
+{
+"id": "0301b9b0/25",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "157a3fe4"
+},
+{
+"id": "0301b9b0/26",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "892de18a"
+},
+{
+"id": "0301b9b0/27",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "95bce0d8"
+},
+{
+"id": "0301b9b0/28",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "a8ae2b6e"
+},
+{
+"id": "0301b9b0/29",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "620a4c51"
+},
+{
+"id": "0301b9b0/30",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "7f918c32"
+},
+{
+"id": "0301b9b0/31",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "bc711174"
+},
+{
+"id": "0301b9b0/32",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "4041fe88"
+},
+{
+"id": "0301b9b0/33",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "ea8aed2e"
+},
+{
+"id": "0301b9b0/34",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "8ae23910"
+},
+{
+"id": "0301b9b0/35",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "8ad1c7f7"
+},
+{
+"id": "0301b9b0/36",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "c43e6808"
+},
+{
+"id": "0301b9b0/37",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "af4527be"
+},
+{
+"id": "0301b9b0/38",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "456e08b4"
+},
+{
+"id": "0301b9b0/39",
+"kind": "tile_layout",
+"canvas": [
+16,
+16
+],
+"palette": 0,
+"tiles": 1,
+"writable_fraction": 1.0,
+"content_crc32": "5b20d605"
+},
+{
+"id": "03020f40/00",
+"kind": "tile_layout",
+"canvas": [
+292,
+16
+],
+"palette": 0,
+"tiles": 10,
+"writable_fraction": 0.658,
+"content_crc32": "41dd7341"
+},
+{
+"id": "03020f40/01",
+"kind": "tile_layout",
+"canvas": [
+329,
+57
+],
+"palette": 1,
+"tiles": 22,
+"writable_fraction": 0.973,
+"content_crc32": "650cd17a"
+},
+{
+"id": "0305f5d0/00",
+"kind": "tile_layout",
+"canvas": [
+185,
+48
+],
+"palette": 0,
+"tiles": 12,
+"writable_fraction": 1.0,
+"content_crc32": "1727c5a0"
+},
+{
+"id": "0305f5d0/01",
+"kind": "tile_layout",
+"canvas": [
+320,
+120
+],
+"palette": 1,
+"tiles": 40,
+"writable_fraction": 0.48,
+"content_crc32": "03a5caae"
+},
+{
+"id": "0305f5d0/02",
+"kind": "tile_layout",
+"canvas": [
+320,
+120
+],
+"palette": 2,
+"tiles": 40,
+"writable_fraction": 0.693,
+"content_crc32": "1e7145c2"
+},
+{
+"id": "0305f5d0/03",
+"kind": "tile_layout",
+"canvas": [
+320,
+120
+],
+"palette": 3,
+"tiles": 40,
+"writable_fraction": 0.64,
+"content_crc32": "d2f0f970"
+},
+{
+"id": "0305f5d0/04",
+"kind": "tile_layout",
+"canvas": [
+320,
+120
+],
+"palette": 4,
+"tiles": 40,
+"writable_fraction": 0.693,
+"content_crc32": "c8a36fee"
+},
+{
+"id": "0305f5d0/05",
+"kind": "tile_layout",
+"canvas": [
+320,
+120
+],
+"palette": 5,
+"tiles": 40,
+"writable_fraction": 0.84,
+"content_crc32": "c33ba494"
+},
+{
+"id": "0305f5d0/06",
+"kind": "tile_layout",
+"canvas": [
+320,
+120
+],
+"palette": 6,
+"tiles": 40,
+"writable_fraction": 0.453,
+"content_crc32": "cb5572ed"
+},
+{
+"id": "0305f5d0/07",
+"kind": "tile_layout",
+"canvas": [
+320,
+120
+],
+"palette": 7,
+"tiles": 40,
+"writable_fraction": 0.693,
+"content_crc32": "1cfe3f77"
+},
+{
+"id": "0305f5d0/08",
+"kind": "tile_layout",
+"canvas": [
+320,
+120
+],
+"palette": 8,
+"tiles": 40,
+"writable_fraction": 0.747,
+"content_crc32": "13474b4e"
+},
+{
+"id": "030a2dc0/00",
+"kind": "tile_layout",
+"canvas": [
+72,
+16
+],
+"palette": 0,
+"tiles": 3,
+"writable_fraction": 1.0,
+"content_crc32": "f4982708"
+},
+{
+"id": "030a2dc0/01",
+"kind": "tile_layout",
+"canvas": [
+400,
+80
+],
+"palette": 1,
+"tiles": 39,
+"writable_fraction": 0.448,
+"content_crc32": "bcbb0b24"
+},
+{
+"id": "030a2dc0/02",
+"kind": "tile_layout",
+"canvas": [
+400,
+80
+],
+"palette": 2,
+"tiles": 39,
+"writable_fraction": 0.704,
+"content_crc32": "7c067647"
+},
+{
+"id": "030a9100/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+27
+],
+"palette": 0,
+"tiles": 16,
+"writable_fraction": 1.0,
+"content_crc32": "6432cd15"
+},
+{
+"id": "030a9100/01",
+"kind": "tile_layout",
+"canvas": [
+160,
+32
+],
+"palette": 1,
+"tiles": 3,
+"writable_fraction": 1.0,
+"content_crc32": "38ef868e"
+},
+{
+"id": "030a9100/02",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 2,
+"tiles": 27,
+"writable_fraction": 1.0,
+"content_crc32": "7676ddf7"
+},
+{
+"id": "030a9100/03",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 3,
+"tiles": 26,
+"writable_fraction": 1.0,
+"content_crc32": "1f8f25c2"
+},
+{
+"id": "030a9100/04",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 4,
+"tiles": 28,
+"writable_fraction": 1.0,
+"content_crc32": "f83b340b"
+},
+{
+"id": "030a9100/05",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 5,
+"tiles": 26,
+"writable_fraction": 1.0,
+"content_crc32": "304360c4"
+},
+{
+"id": "030a9100/06",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 6,
+"tiles": 26,
+"writable_fraction": 1.0,
+"content_crc32": "f95c7d6d"
+},
+{
+"id": "030a9100/07",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 7,
+"tiles": 28,
+"writable_fraction": 1.0,
+"content_crc32": "8556bdb9"
+},
+{
+"id": "030a9100/08",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 8,
+"tiles": 28,
+"writable_fraction": 1.0,
+"content_crc32": "9cc4a08b"
+},
+{
+"id": "030a9100/09",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 9,
+"tiles": 26,
+"writable_fraction": 1.0,
+"content_crc32": "3abe4237"
+},
+{
+"id": "030a9100/10",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 10,
+"tiles": 26,
+"writable_fraction": 1.0,
+"content_crc32": "2cb9ce73"
+},
+{
+"id": "030a9100/11",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 11,
+"tiles": 26,
+"writable_fraction": 1.0,
+"content_crc32": "b304ac2d"
+},
+{
+"id": "030a9100/12",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 12,
+"tiles": 26,
+"writable_fraction": 1.0,
+"content_crc32": "f9e03975"
+},
+{
+"id": "030a9100/13",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 13,
+"tiles": 27,
+"writable_fraction": 1.0,
+"content_crc32": "10e64716"
+},
+{
+"id": "030a9100/14",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 14,
+"tiles": 26,
+"writable_fraction": 1.0,
+"content_crc32": "e14cc9d1"
+},
+{
+"id": "030a9100/15",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 15,
+"tiles": 28,
+"writable_fraction": 1.0,
+"content_crc32": "86099588"
+},
+{
+"id": "030a9100/16",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 16,
+"tiles": 28,
+"writable_fraction": 1.0,
+"content_crc32": "5bc717ad"
+},
+{
+"id": "030a9100/17",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 17,
+"tiles": 28,
+"writable_fraction": 1.0,
+"content_crc32": "cec80b4c"
+},
+{
+"id": "030a9100/18",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 18,
+"tiles": 27,
+"writable_fraction": 1.0,
+"content_crc32": "ce8838d8"
+},
+{
+"id": "030a9100/19",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 19,
+"tiles": 26,
+"writable_fraction": 1.0,
+"content_crc32": "528f3ac2"
+},
+{
+"id": "030a9100/20",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 20,
+"tiles": 28,
+"writable_fraction": 1.0,
+"content_crc32": "f7896595"
+},
+{
+"id": "030a9100/21",
+"kind": "tile_layout",
+"canvas": [
+432,
+66
+],
+"palette": 21,
+"tiles": 26,
+"writable_fraction": 1.0,
+"content_crc32": "edce372b"
+},
+{
+"id": "03133f80/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 27,
+"writable_fraction": 0.692,
+"content_crc32": "bfdc056e"
+},
+{
+"id": "031364b0/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 21,
+"writable_fraction": 1.0,
+"content_crc32": "2382c38f"
+},
+{
+"id": "03138fb0/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 13,
+"writable_fraction": 1.0,
+"content_crc32": "7aef2558"
+},
+{
+"id": "0313aa70/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 20,
+"writable_fraction": 1.0,
+"content_crc32": "f740d829"
+},
+{
+"id": "0313d360/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 20,
+"writable_fraction": 1.0,
+"content_crc32": "eee24e75"
+},
+{
+"id": "0313fc50/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 21,
+"writable_fraction": 1.0,
+"content_crc32": "efae3276"
+},
+{
+"id": "03142750/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 19,
+"writable_fraction": 1.0,
+"content_crc32": "dcd3265f"
+},
+{
+"id": "03144e40/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 16,
+"writable_fraction": 1.0,
+"content_crc32": "20be3851"
+},
+{
+"id": "03146f10/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 22,
+"writable_fraction": 1.0,
+"content_crc32": "43ccc7c3"
+},
+{
+"id": "03149c10/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 20,
+"writable_fraction": 1.0,
+"content_crc32": "3f7690b9"
+},
+{
+"id": "0314c500/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 19,
+"writable_fraction": 1.0,
+"content_crc32": "b2a36e5f"
+},
+{
+"id": "0314ebf0/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 15,
+"writable_fraction": 1.0,
+"content_crc32": "12f65ef4"
+},
+{
+"id": "0315c2f0/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 18,
+"writable_fraction": 1.0,
+"content_crc32": "9442f7a1"
+},
+{
+"id": "0315e7d0/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 14,
+"writable_fraction": 1.0,
+"content_crc32": "f92f8beb"
+},
+{
+"id": "03160490/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 29,
+"writable_fraction": 0.717,
+"content_crc32": "43bc4708"
+},
+{
+"id": "03162dd0/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 23,
+"writable_fraction": 0.629,
+"content_crc32": "fafd711d"
+},
+{
+"id": "03164ae0/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 25,
+"writable_fraction": 0.664,
+"content_crc32": "d904ccc6"
+},
+{
+"id": "03166c00/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 19,
+"writable_fraction": 1.0,
+"content_crc32": "10956883"
+},
+{
+"id": "031692f0/00",
+"kind": "tile_layout",
+"canvas": [
+328,
+87
+],
+"palette": 0,
+"tiles": 26,
+"writable_fraction": 0.679,
+"content_crc32": "9e129d43"
+},
+{
+"id": "03189b20/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.405,
+"content_crc32": "25f31f31"
+},
+{
+"id": "03189b20/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.595,
+"content_crc32": "9b1d6da0"
+},
+{
+"id": "03189b20/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "c03b630a"
+},
+{
+"id": "03189b20/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "2421d6bf"
+},
+{
+"id": "03189b20/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "0f9759a9"
+},
+{
+"id": "03189b20/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "40244e3f"
+},
+{
+"id": "03189b20/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.768,
+"content_crc32": "1a5bdd08"
+},
+{
+"id": "03189b20/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.845,
+"content_crc32": "69ebe6e8"
+},
+{
+"id": "03189b20/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.571,
+"content_crc32": "96be8392"
+},
+{
+"id": "03189b20/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.753,
+"content_crc32": "d3779907"
+},
+{
+"id": "03189b20/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.714,
+"content_crc32": "728f9187"
+},
+{
+"id": "03189b20/11",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 11,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "5b381bc6"
+},
+{
+"id": "03189b20/12",
+"kind": "tile_layout",
+"canvas": [
+176,
+32
+],
+"palette": 12,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "1e310fb0"
+},
+{
+"id": "03189b20/13",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 13,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "16072df0"
+},
+{
+"id": "031b5520/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "08a0abca"
+},
+{
+"id": "031b5520/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.708,
+"content_crc32": "84d1ede3"
+},
+{
+"id": "031b5520/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "df58161c"
+},
+{
+"id": "031b5520/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.69,
+"content_crc32": "ea94c1dc"
+},
+{
+"id": "031b5520/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.771,
+"content_crc32": "8a0a1fd6"
+},
+{
+"id": "031b5520/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.452,
+"content_crc32": "a68eb1f3"
+},
+{
+"id": "031b5520/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "e568b6b2"
+},
+{
+"id": "031b5520/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.619,
+"content_crc32": "3879228b"
+},
+{
+"id": "031b5520/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.798,
+"content_crc32": "5808a308"
+},
+{
+"id": "031b5520/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.595,
+"content_crc32": "64d78470"
+},
+{
+"id": "031b5520/10",
+"kind": "tile_layout",
+"canvas": [
+190,
+32
+],
+"palette": 10,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "30cee275"
+},
+{
+"id": "031b5520/11",
+"kind": "tile_layout",
+"canvas": [
+211,
+32
+],
+"palette": 11,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "059b5ea5"
+},
+{
+"id": "031b5520/12",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 12,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "7e515c85"
+},
+{
+"id": "031dd170/00",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 0,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "1b19ff59"
+},
+{
+"id": "031dd170/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "4bb48455"
+},
+{
+"id": "031dd170/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.688,
+"content_crc32": "f93d787f"
+},
+{
+"id": "031dd170/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.524,
+"content_crc32": "543ab987"
+},
+{
+"id": "031dd170/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.723,
+"content_crc32": "bf712b38"
+},
+{
+"id": "031dd170/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "bbc634a7"
+},
+{
+"id": "031f0870/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.619,
+"content_crc32": "4c7831b5"
+},
+{
+"id": "031f0870/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.756,
+"content_crc32": "bf8ede9b"
+},
+{
+"id": "031f0870/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "52b035c7"
+},
+{
+"id": "031f0870/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "5fc2594d"
+},
+{
+"id": "031f0870/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.708,
+"content_crc32": "539e842f"
+},
+{
+"id": "031f0870/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.807,
+"content_crc32": "82bd3479"
+},
+{
+"id": "031f0870/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.476,
+"content_crc32": "f27091ee"
+},
+{
+"id": "031f0870/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "cac9a0b9"
+},
+{
+"id": "031f0870/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.693,
+"content_crc32": "e6321cda"
+},
+{
+"id": "031f0870/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.705,
+"content_crc32": "ccd4e417"
+},
+{
+"id": "031f0870/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.741,
+"content_crc32": "07a35608"
+},
+{
+"id": "031f0870/11",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 11,
+"tiles": 48,
+"writable_fraction": 0.771,
+"content_crc32": "a4cc455b"
+},
+{
+"id": "031f0870/12",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 12,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "c7b570fc"
+},
+{
+"id": "031f0870/13",
+"kind": "tile_layout",
+"canvas": [
+210,
+32
+],
+"palette": 13,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "f86fa9f3"
+},
+{
+"id": "031f0870/14",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 14,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "fa19add9"
+},
+{
+"id": "03225370/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.771,
+"content_crc32": "16725fe3"
+},
+{
+"id": "03225370/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.83,
+"content_crc32": "5a0a74e9"
+},
+{
+"id": "03225370/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.726,
+"content_crc32": "7e0cb943"
+},
+{
+"id": "03225370/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.768,
+"content_crc32": "b8ddf172"
+},
+{
+"id": "03225370/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.72,
+"content_crc32": "c6982ed9"
+},
+{
+"id": "03225370/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.649,
+"content_crc32": "a32ffe06"
+},
+{
+"id": "03225370/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.798,
+"content_crc32": "d4d3dc09"
+},
+{
+"id": "03225370/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.452,
+"content_crc32": "1c741098"
+},
+{
+"id": "03225370/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "926b33be"
+},
+{
+"id": "03225370/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.429,
+"content_crc32": "02d4bd5b"
+},
+{
+"id": "03225370/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.571,
+"content_crc32": "2576e5d3"
+},
+{
+"id": "03225370/11",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 11,
+"tiles": 48,
+"writable_fraction": 0.619,
+"content_crc32": "0a622801"
+},
+{
+"id": "03225370/12",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 12,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "883d80c2"
+},
+{
+"id": "03225370/13",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 13,
+"tiles": 48,
+"writable_fraction": 0.595,
+"content_crc32": "12c4fe73"
+},
+{
+"id": "03225370/14",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 14,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "a72bb52b"
+},
+{
+"id": "03225370/15",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 15,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "ec2d238a"
+},
+{
+"id": "0325ca20/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.548,
+"content_crc32": "1b41c065"
+},
+{
+"id": "0325ca20/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.726,
+"content_crc32": "1965dee0"
+},
+{
+"id": "0325ca20/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.571,
+"content_crc32": "4789cc65"
+},
+{
+"id": "0325ca20/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "c1562b9b"
+},
+{
+"id": "0325ca20/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.646,
+"content_crc32": "2d94e182"
+},
+{
+"id": "0325ca20/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "52cc95a9"
+},
+{
+"id": "0325ca20/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.783,
+"content_crc32": "e2616aac"
+},
+{
+"id": "0325ca20/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.801,
+"content_crc32": "dfa06377"
+},
+{
+"id": "0325ca20/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.705,
+"content_crc32": "ada13f32"
+},
+{
+"id": "0325ca20/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.676,
+"content_crc32": "4171d326"
+},
+{
+"id": "0325ca20/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.661,
+"content_crc32": "16a4abca"
+},
+{
+"id": "0325ca20/11",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 11,
+"tiles": 48,
+"writable_fraction": 0.676,
+"content_crc32": "bb776bbb"
+},
+{
+"id": "0325ca20/12",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 12,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "7d911371"
+},
+{
+"id": "0325ca20/13",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 13,
+"tiles": 48,
+"writable_fraction": 0.524,
+"content_crc32": "1f9714ae"
+},
+{
+"id": "0325ca20/14",
+"kind": "tile_layout",
+"canvas": [
+176,
+32
+],
+"palette": 14,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "de9ff9dc"
+},
+{
+"id": "0325ca20/15",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 15,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "419265df"
+},
+{
+"id": "0325ca20/16",
+"kind": "tile_layout",
+"canvas": [
+190,
+32
+],
+"palette": 16,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "f72eb61b"
+},
+{
+"id": "03294930/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.357,
+"content_crc32": "bca566e4"
+},
+{
+"id": "03294930/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.815,
+"content_crc32": "a84abdc0"
+},
+{
+"id": "03294930/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "afaeaa33"
+},
+{
+"id": "03294930/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.619,
+"content_crc32": "5a21ee64"
+},
+{
+"id": "03294930/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.738,
+"content_crc32": "1369a575"
+},
+{
+"id": "03294930/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "f2d5566a"
+},
+{
+"id": "03294930/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.333,
+"content_crc32": "2461fa62"
+},
+{
+"id": "03294930/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.548,
+"content_crc32": "9e8cb577"
+},
+{
+"id": "03294930/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.5,
+"content_crc32": "5ed23197"
+},
+{
+"id": "03294930/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.798,
+"content_crc32": "8d942548"
+},
+{
+"id": "03294930/10",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 10,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "8983a91a"
+},
+{
+"id": "032b7ab0/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.571,
+"content_crc32": "d20e6ef0"
+},
+{
+"id": "032b7ab0/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "34046ceb"
+},
+{
+"id": "032b7ab0/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.357,
+"content_crc32": "54fa2a6d"
+},
+{
+"id": "032b7ab0/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.786,
+"content_crc32": "e2fad58c"
+},
+{
+"id": "032b7ab0/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.815,
+"content_crc32": "a487b9e3"
+},
+{
+"id": "032b7ab0/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.774,
+"content_crc32": "eeb1680a"
+},
+{
+"id": "032b7ab0/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.756,
+"content_crc32": "688b4434"
+},
+{
+"id": "032b7ab0/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.735,
+"content_crc32": "4fb191fd"
+},
+{
+"id": "032b7ab0/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.429,
+"content_crc32": "a5100e98"
+},
+{
+"id": "032b7ab0/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.774,
+"content_crc32": "b8c1c4cd"
+},
+{
+"id": "032b7ab0/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.723,
+"content_crc32": "f20cf2a2"
+},
+{
+"id": "032b7ab0/11",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 11,
+"tiles": 48,
+"writable_fraction": 0.735,
+"content_crc32": "e60aaff6"
+},
+{
+"id": "032b7ab0/12",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 12,
+"tiles": 48,
+"writable_fraction": 0.738,
+"content_crc32": "52c4a2d8"
+},
+{
+"id": "032b7ab0/13",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 13,
+"tiles": 48,
+"writable_fraction": 0.723,
+"content_crc32": "a202b811"
+},
+{
+"id": "032b7ab0/14",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 14,
+"tiles": 48,
+"writable_fraction": 0.705,
+"content_crc32": "dceb644c"
+},
+{
+"id": "032b7ab0/15",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 15,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "49224077"
+},
+{
+"id": "032b7ab0/16",
+"kind": "tile_layout",
+"canvas": [
+176,
+32
+],
+"palette": 16,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "f4a898a0"
+},
+{
+"id": "032f5b10/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.619,
+"content_crc32": "93932bec"
+},
+{
+"id": "032f5b10/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "6a754ade"
+},
+{
+"id": "032f5b10/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.628,
+"content_crc32": "d92c4539"
+},
+{
+"id": "032f5b10/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.548,
+"content_crc32": "c1e152f8"
+},
+{
+"id": "032f5b10/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.753,
+"content_crc32": "2c2115c7"
+},
+{
+"id": "032f5b10/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.807,
+"content_crc32": "2d766252"
+},
+{
+"id": "032f5b10/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.619,
+"content_crc32": "f0819518"
+},
+{
+"id": "032f5b10/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.405,
+"content_crc32": "f8ffe56f"
+},
+{
+"id": "032f5b10/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.548,
+"content_crc32": "063c690e"
+},
+{
+"id": "032f5b10/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.756,
+"content_crc32": "2d02e803"
+},
+{
+"id": "032f5b10/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.845,
+"content_crc32": "a094c819"
+},
+{
+"id": "032f5b10/11",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 11,
+"tiles": 48,
+"writable_fraction": 0.836,
+"content_crc32": "99101af9"
+},
+{
+"id": "032f5b10/12",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 12,
+"tiles": 48,
+"writable_fraction": 0.777,
+"content_crc32": "726b4488"
+},
+{
+"id": "032f5b10/13",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 13,
+"tiles": 48,
+"writable_fraction": 0.577,
+"content_crc32": "f793ff8f"
+},
+{
+"id": "032f5b10/14",
+"kind": "tile_layout",
+"canvas": [
+210,
+32
+],
+"palette": 14,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "8196698a"
+},
+{
+"id": "032f5b10/15",
+"kind": "tile_layout",
+"canvas": [
+176,
+32
+],
+"palette": 15,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "19d274ba"
+},
+{
+"id": "0332ddb0/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.786,
+"content_crc32": "1d4a5e20"
+},
+{
+"id": "0332ddb0/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.357,
+"content_crc32": "0ae737e3"
+},
+{
+"id": "0332ddb0/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "7834b2e5"
+},
+{
+"id": "0332ddb0/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "9d6eaa86"
+},
+{
+"id": "0332ddb0/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.708,
+"content_crc32": "c47ce8ba"
+},
+{
+"id": "0332ddb0/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.798,
+"content_crc32": "2e334b80"
+},
+{
+"id": "0332ddb0/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.69,
+"content_crc32": "7731f67d"
+},
+{
+"id": "0332ddb0/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.717,
+"content_crc32": "22f0d3b4"
+},
+{
+"id": "0332ddb0/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.78,
+"content_crc32": "b890cd32"
+},
+{
+"id": "0332ddb0/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.702,
+"content_crc32": "86e18c56"
+},
+{
+"id": "0332ddb0/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.747,
+"content_crc32": "4d73fe5a"
+},
+{
+"id": "0332ddb0/11",
+"kind": "tile_layout",
+"canvas": [
+215,
+32
+],
+"palette": 11,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "6005638e"
+},
+{
+"id": "0332ddb0/12",
+"kind": "tile_layout",
+"canvas": [
+190,
+32
+],
+"palette": 12,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "f28f4295"
+},
+{
+"id": "0332ddb0/13",
+"kind": "tile_layout",
+"canvas": [
+210,
+32
+],
+"palette": 13,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "b86297a8"
+},
+{
+"id": "0335cdb0/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.696,
+"content_crc32": "92c04d83"
+},
+{
+"id": "0335cdb0/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.771,
+"content_crc32": "b3532631"
+},
+{
+"id": "0335cdb0/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "917ccd3b"
+},
+{
+"id": "0335cdb0/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.815,
+"content_crc32": "ee2c1706"
+},
+{
+"id": "0335cdb0/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.827,
+"content_crc32": "7ab68ab2"
+},
+{
+"id": "0335cdb0/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.524,
+"content_crc32": "bd98f110"
+},
+{
+"id": "0335cdb0/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "a676bd58"
+},
+{
+"id": "0335cdb0/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "0807e7ac"
+},
+{
+"id": "0335cdb0/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.83,
+"content_crc32": "21b921cb"
+},
+{
+"id": "0335cdb0/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.771,
+"content_crc32": "ea8f962e"
+},
+{
+"id": "0335cdb0/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.756,
+"content_crc32": "62dc0a4a"
+},
+{
+"id": "0335cdb0/11",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 11,
+"tiles": 48,
+"writable_fraction": 0.548,
+"content_crc32": "02010dd4"
+},
+{
+"id": "0335cdb0/12",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 12,
+"tiles": 48,
+"writable_fraction": 0.768,
+"content_crc32": "7188b36b"
+},
+{
+"id": "0335cdb0/13",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 13,
+"tiles": 48,
+"writable_fraction": 0.524,
+"content_crc32": "c28e495d"
+},
+{
+"id": "0335cdb0/14",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 14,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "14abe3c4"
+},
+{
+"id": "0335cdb0/15",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 15,
+"tiles": 48,
+"writable_fraction": 0.31,
+"content_crc32": "5457c648"
+},
+{
+"id": "0335cdb0/16",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 16,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "08a66086"
+},
+{
+"id": "0335cdb0/17",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 17,
+"tiles": 48,
+"writable_fraction": 0.646,
+"content_crc32": "ecf3884e"
+},
+{
+"id": "0335cdb0/18",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 18,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "fedbfbe6"
+},
+{
+"id": "0335cdb0/19",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 19,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "0ef6efc2"
+},
+{
+"id": "0335cdb0/20",
+"kind": "tile_layout",
+"canvas": [
+210,
+32
+],
+"palette": 20,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "31e0716d"
+},
+{
+"id": "033a4d90/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.589,
+"content_crc32": "56c62db3"
+},
+{
+"id": "033a4d90/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.658,
+"content_crc32": "ba8c39bd"
+},
+{
+"id": "033a4d90/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.86,
+"content_crc32": "872d5434"
+},
+{
+"id": "033a4d90/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.801,
+"content_crc32": "1168ef52"
+},
+{
+"id": "033a4d90/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.815,
+"content_crc32": "c70bdc1e"
+},
+{
+"id": "033a4d90/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.702,
+"content_crc32": "41e33955"
+},
+{
+"id": "033a4d90/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.804,
+"content_crc32": "66ed8a37"
+},
+{
+"id": "033a4d90/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.405,
+"content_crc32": "34fc3abb"
+},
+{
+"id": "033a4d90/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.783,
+"content_crc32": "7d2a5f94"
+},
+{
+"id": "033a4d90/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.595,
+"content_crc32": "bae7c5bc"
+},
+{
+"id": "033a4d90/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.595,
+"content_crc32": "18e9d45e"
+},
+{
+"id": "033a4d90/11",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 11,
+"tiles": 48,
+"writable_fraction": 0.625,
+"content_crc32": "0c443ead"
+},
+{
+"id": "033a4d90/12",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 12,
+"tiles": 48,
+"writable_fraction": 0.738,
+"content_crc32": "25908262"
+},
+{
+"id": "033a4d90/13",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 13,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "49433a08"
+},
+{
+"id": "033a4d90/14",
+"kind": "tile_layout",
+"canvas": [
+210,
+32
+],
+"palette": 14,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "c950ca34"
+},
+{
+"id": "033dc690/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "b6bea543"
+},
+{
+"id": "033dc690/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.357,
+"content_crc32": "bcf82a0e"
+},
+{
+"id": "033dc690/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.381,
+"content_crc32": "7ac2f8cf"
+},
+{
+"id": "033dc690/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.119,
+"content_crc32": "acb44ddd"
+},
+{
+"id": "033dc690/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.19,
+"content_crc32": "84c4fcde"
+},
+{
+"id": "033dc690/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.238,
+"content_crc32": "5c39b8d7"
+},
+{
+"id": "033dc690/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.619,
+"content_crc32": "c0404fdb"
+},
+{
+"id": "033dc690/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.357,
+"content_crc32": "7b396df9"
+},
+{
+"id": "033dc690/08",
+"kind": "tile_layout",
+"canvas": [
+195,
+32
+],
+"palette": 8,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "721d3f28"
+},
+{
+"id": "033dc690/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.798,
+"content_crc32": "cce3c28d"
+},
+{
+"id": "033f2660/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.5,
+"content_crc32": "61519007"
+},
+{
+"id": "033f2660/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "009f4b5b"
+},
+{
+"id": "033f2660/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.357,
+"content_crc32": "6ee280ea"
+},
+{
+"id": "033f2660/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.812,
+"content_crc32": "dc44c903"
+},
+{
+"id": "033f2660/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.801,
+"content_crc32": "2eefdfca"
+},
+{
+"id": "033f2660/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.702,
+"content_crc32": "92cebfc3"
+},
+{
+"id": "033f2660/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.577,
+"content_crc32": "74b67d22"
+},
+{
+"id": "033f2660/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.777,
+"content_crc32": "37743dcb"
+},
+{
+"id": "033f2660/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.765,
+"content_crc32": "4650564a"
+},
+{
+"id": "033f2660/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.714,
+"content_crc32": "490ee02b"
+},
+{
+"id": "033f2660/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "770977c1"
+},
+{
+"id": "033f2660/11",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 11,
+"tiles": 48,
+"writable_fraction": 0.732,
+"content_crc32": "65ceaa77"
+},
+{
+"id": "033f2660/12",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 12,
+"tiles": 48,
+"writable_fraction": 0.357,
+"content_crc32": "4e5d67d9"
+},
+{
+"id": "033f2660/13",
+"kind": "tile_layout",
+"canvas": [
+180,
+32
+],
+"palette": 13,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "bc86f7fc"
+},
+{
+"id": "033f2660/14",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 14,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "d1243612"
+},
+{
+"id": "033f2660/15",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 15,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "292db469"
+},
+{
+"id": "034265c0/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "f1024f18"
+},
+{
+"id": "034265c0/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.741,
+"content_crc32": "056a9511"
+},
+{
+"id": "034265c0/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.476,
+"content_crc32": "96de8686"
+},
+{
+"id": "034265c0/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.705,
+"content_crc32": "c30afeef"
+},
+{
+"id": "034265c0/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.83,
+"content_crc32": "bc28daca"
+},
+{
+"id": "034265c0/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.771,
+"content_crc32": "4d8a1942"
+},
+{
+"id": "034265c0/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.69,
+"content_crc32": "74c9386a"
+},
+{
+"id": "034265c0/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.708,
+"content_crc32": "830b9ec1"
+},
+{
+"id": "034265c0/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.571,
+"content_crc32": "50b79b0e"
+},
+{
+"id": "034265c0/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "8ac5e049"
+},
+{
+"id": "034265c0/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.714,
+"content_crc32": "10b91ca1"
+},
+{
+"id": "034265c0/11",
+"kind": "tile_layout",
+"canvas": [
+189,
+32
+],
+"palette": 11,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "cb6f5b4c"
+},
+{
+"id": "034265c0/12",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 12,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "e9f5fc62"
+},
+{
+"id": "034265c0/13",
+"kind": "tile_layout",
+"canvas": [
+195,
+32
+],
+"palette": 13,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "92ced926"
+},
+{
+"id": "034541c0/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.571,
+"content_crc32": "206f76b3"
+},
+{
+"id": "034541c0/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.771,
+"content_crc32": "506544c1"
+},
+{
+"id": "034541c0/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.661,
+"content_crc32": "09952d67"
+},
+{
+"id": "034541c0/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "a0d93f9c"
+},
+{
+"id": "034541c0/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "be15d896"
+},
+{
+"id": "034541c0/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "d4924276"
+},
+{
+"id": "034541c0/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.783,
+"content_crc32": "e6d393ec"
+},
+{
+"id": "034541c0/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.78,
+"content_crc32": "f467219d"
+},
+{
+"id": "034541c0/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.571,
+"content_crc32": "ecd9fc5b"
+},
+{
+"id": "034541c0/09",
+"kind": "tile_layout",
+"canvas": [
+220,
+32
+],
+"palette": 9,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "3ddcf678"
+},
+{
+"id": "034541c0/10",
+"kind": "tile_layout",
+"canvas": [
+210,
+32
+],
+"palette": 10,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "fde9f023"
+},
+{
+"id": "03478df0/00",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 0,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "6e1fd512"
+},
+{
+"id": "03478df0/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.405,
+"content_crc32": "da2f8dd9"
+},
+{
+"id": "03478df0/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.565,
+"content_crc32": "7375901e"
+},
+{
+"id": "03478df0/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.735,
+"content_crc32": "73d1e4cf"
+},
+{
+"id": "03478df0/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.723,
+"content_crc32": "f35a53a1"
+},
+{
+"id": "03488340/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 0,
+"tiles": 48,
+"writable_fraction": 0.75,
+"content_crc32": "fa74fdd0"
+},
+{
+"id": "03488340/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.69,
+"content_crc32": "3050d737"
+},
+{
+"id": "03488340/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "1b3cd162"
+},
+{
+"id": "03488340/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.726,
+"content_crc32": "99eae6b5"
+},
+{
+"id": "03488340/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "9566a554"
+},
+{
+"id": "03488340/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.667,
+"content_crc32": "be37376f"
+},
+{
+"id": "03488340/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.571,
+"content_crc32": "e77ff582"
+},
+{
+"id": "03488340/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.548,
+"content_crc32": "19a877d9"
+},
+{
+"id": "03488340/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.214,
+"content_crc32": "5ae64880"
+},
+{
+"id": "03488340/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.5,
+"content_crc32": "5a7c73bf"
+},
+{
+"id": "03488340/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.643,
+"content_crc32": "8facd1b0"
+},
+{
+"id": "03488340/11",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 11,
+"tiles": 48,
+"writable_fraction": 0.705,
+"content_crc32": "939e9a0f"
+},
+{
+"id": "03488340/12",
+"kind": "tile_layout",
+"canvas": [
+200,
+32
+],
+"palette": 12,
+"tiles": 7,
+"writable_fraction": 1.0,
+"content_crc32": "d065db9a"
+},
+{
+"id": "034b3220/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+170
+],
+"palette": 0,
+"tiles": 96,
+"writable_fraction": 0.8,
+"content_crc32": "a9c02003"
+},
+{
+"id": "034bc170/00",
+"kind": "tile_layout",
+"canvas": [
+180,
+32
+],
+"palette": 0,
+"tiles": 6,
+"writable_fraction": 1.0,
+"content_crc32": "185aeb08"
+},
+{
+"id": "034bc170/01",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 1,
+"tiles": 48,
+"writable_fraction": 0.357,
+"content_crc32": "2b63de51"
+},
+{
+"id": "034bc170/02",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 2,
+"tiles": 48,
+"writable_fraction": 0.723,
+"content_crc32": "2647a0af"
+},
+{
+"id": "034bc170/03",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 3,
+"tiles": 48,
+"writable_fraction": 0.723,
+"content_crc32": "3d32efe8"
+},
+{
+"id": "034bc170/04",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 4,
+"tiles": 48,
+"writable_fraction": 0.676,
+"content_crc32": "8d7d6bec"
+},
+{
+"id": "034bc170/05",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 5,
+"tiles": 48,
+"writable_fraction": 0.741,
+"content_crc32": "a746764d"
+},
+{
+"id": "034bc170/06",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 6,
+"tiles": 48,
+"writable_fraction": 0.646,
+"content_crc32": "87137455"
+},
+{
+"id": "034bc170/07",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 7,
+"tiles": 48,
+"writable_fraction": 0.693,
+"content_crc32": "7a1bbfbd"
+},
+{
+"id": "034bc170/08",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 8,
+"tiles": 48,
+"writable_fraction": 0.661,
+"content_crc32": "20db1ae9"
+},
+{
+"id": "034bc170/09",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 9,
+"tiles": 48,
+"writable_fraction": 0.595,
+"content_crc32": "a681cbb4"
+},
+{
+"id": "034bc170/10",
+"kind": "tile_layout",
+"canvas": [
+512,
+84
+],
+"palette": 10,
+"tiles": 48,
+"writable_fraction": 0.619,
+"content_crc32": "9332716e"
+},
+{
+"id": "03611eb0/00",
+"kind": "tile_layout",
+"canvas": [
+360,
+64
+],
+"palette": 0,
+"tiles": 24,
+"writable_fraction": 1.0,
+"content_crc32": "bede71ee"
+},
+{
+"id": "03614fc0/00",
+"kind": "tile_layout",
+"canvas": [
+512,
+480
+],
+"palette": 0,
+"tiles": 240,
+"writable_fraction": 0.183,
+"content_crc32": "e4aab933"
+}
+]
+}

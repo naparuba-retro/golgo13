@@ -1,0 +1,84 @@
+{
+ "assets": {
+  "032d7770/00": {
+   "ja": "Mr.トウゴウ、よく来てくれた！",
+   "text": "M. Togo, merci d'être venu !",
+   "style": "caption"
+  },
+  "032d7770/01": {
+   "ja": "こちらは爆発物処理チームのベルだ。",
+   "text": "Voici Bell, de l'équipe de déminage.",
+   "style": "caption"
+  },
+  "032d7770/02": {
+   "ja": "よろしく…",
+   "text": "Enchanté…",
+   "style": "caption"
+  },
+  "032d7770/03": {
+   "ja": "時間がないはずだが…",
+   "text": "Nous n'avons pourtant pas beaucoup de temps…",
+   "style": "caption"
+  },
+  "032d7770/04": {
+   "ja": "そうだ…さっそく来てくれ！",
+   "text": "C'est vrai… venez tout de suite !",
+   "style": "caption"
+  },
+  "032d7770/05": {
+   "ja": "くっくっく…もうすぐだ…",
+   "text": "Hé hé hé… ça ne va plus tarder…",
+   "style": "caption"
+  },
+  "032d7770/06": {
+   "ja": "警察のやつらに私の作品は解除できまい！",
+   "text": "Ces policiers ne pourront jamais désamorcer mon œuvre !",
+   "style": "caption"
+  },
+  "032d7770/07": {
+   "ja": "わざわざ教えてやってもな…くくく…",
+   "text": "J'ai beau vous l'expliquer… hé hé hé…",
+   "style": "caption"
+  },
+  "032d7770/08": {
+   "ja": "エレベーターにはこの爆弾が仕掛けられている…",
+   "text": "Cette bombe est cachée dans l'ascenseur…",
+   "style": "caption"
+  },
+  "032d7770/09": {
+   "ja": "ビルの中央に来た時、爆発する仕組みだ。",
+   "text": "Elle explose quand la cabine atteint le milieu de l'immeuble.",
+   "style": "caption"
+  },
+  "032d7770/10": {
+   "ja": "爆弾を解除するためには…",
+   "text": "Pour désamorcer la bombe…",
+   "style": "caption"
+  },
+  "032d7770/11": {
+   "ja": "外に張り出したバッテリーを破壊するしかない……",
+   "text": "il faut détruire la batterie fixée à l'extérieur……",
+   "style": "caption"
+  },
+  "032d7770/12": {
+   "ja": "エレベーターが動き始めたぞ！",
+   "text": "L'ascenseur se met en marche !",
+   "style": "caption"
+  },
+  "032d7770/13": {
+   "ja": "警察幹部　ハワード",
+   "text": "Cadre de police Howard",
+   "style": "plate"
+  },
+  "032d7770/14": {
+   "ja": "爆発物処理チーム　ベル",
+   "text": "Déminage Bell",
+   "style": "plate"
+  },
+  "032d7770/15": {
+   "ja": "爆弾魔　フレール",
+   "text": "Poseur de bombes Flare",
+   "style": "plate"
+  }
+ }
+}

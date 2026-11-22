@@ -1,0 +1,69 @@
+{
+  "assets": {
+    "031b5520/00": {
+      "ja": "どうしても行くというのか…",
+      "text": "Vous tenez absolument à y aller…",
+      "style": "caption"
+    },
+    "031b5520/01": {
+      "ja": "現政権では我が国に未来はありません…",
+      "text": "Avec le gouvernement actuel, notre pays n'a pas d'avenir…",
+      "style": "caption"
+    },
+    "031b5520/02": {
+      "ja": "私はこの国を強くしたいんだ…",
+      "text": "Je veux rendre ce pays plus fort…",
+      "style": "caption"
+    },
+    "031b5520/03": {
+      "ja": "…武力で事態がどう変わるというのだ。",
+      "text": "…En quoi la force changerait-elle la situation ?",
+      "style": "caption"
+    },
+    "031b5520/04": {
+      "ja": "わかりました… 協力が得られなくて残念です。",
+      "text": "Je comprends… Dommage de ne pas obtenir votre coopération.",
+      "style": "caption"
+    },
+    "031b5520/05": {
+      "ja": "用件に入ってくれ…",
+      "text": "Venons-en à l'affaire…",
+      "style": "caption"
+    },
+    "031b5520/06": {
+      "ja": "ターゲットは陸軍将校グラントだ！",
+      "text": "La cible est un officier de l'armée de terre, Grant !",
+      "style": "caption"
+    },
+    "031b5520/07": {
+      "ja": "彼はクーデターを計画しており…",
+      "text": "Il prépare un coup d'État…",
+      "style": "caption"
+    },
+    "031b5520/08": {
+      "ja": "…このまま放っておいては国家の存亡にかかわる。",
+      "text": "…Si on le laisse faire, c'est l'existence même de la nation qui est en jeu.",
+      "style": "caption"
+    },
+    "031b5520/09": {
+      "ja": "わかった…やってみよう…",
+      "text": "Compris… Je vais essayer…",
+      "style": "caption"
+    },
+    "031b5520/10": {
+      "ja": "陸軍将校　グラント",
+      "text": "Officier Grant",
+      "style": "plate"
+    },
+    "031b5520/11": {
+      "ja": "元政務次官　ハミルトン",
+      "text": "Ex-vice-ministre Hamilton",
+      "style": "plate"
+    },
+    "031b5520/12": {
+      "ja": "反政府軍基地",
+      "text": "Base des rebelles",
+      "style": "plate"
+    }
+  }
+}

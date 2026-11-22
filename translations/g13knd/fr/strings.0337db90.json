@@ -1,0 +1,64 @@
+{
+ "assets": {
+  "0337db90/00": {
+   "ja": "昨日の陸軍将校狙撃事件だが…",
+   "text": "À propos de l'attentat d'hier contre un officier de l'armée…",
+   "style": "caption"
+  },
+  "0337db90/01": {
+   "ja": "犯人はこいつのようだ…",
+   "text": "Le coupable semble être cet homme…",
+   "style": "caption"
+  },
+  "0337db90/02": {
+   "ja": "…ゴ、ゴルゴ13！",
+   "text": "…G-Golgo 13 !",
+   "style": "caption"
+  },
+  "0337db90/03": {
+   "ja": "国家警察の威信にかけて…",
+   "text": "Sur l'honneur de la Police nationale…",
+   "style": "caption"
+  },
+  "0337db90/04": {
+   "ja": "何としても追いつめるのだ！",
+   "text": "nous devons le traquer coûte que coûte !",
+   "style": "caption"
+  },
+  "0337db90/05": {
+   "ja": "ゴルゴが逃げた方へ案内しろ…",
+   "text": "Conduisez-moi là où Golgo s'est enfui…",
+   "style": "caption"
+  },
+  "0337db90/06": {
+   "ja": "はっ！",
+   "text": "À vos ordres !",
+   "style": "caption"
+  },
+  "0337db90/07": {
+   "ja": "クラスツだ…",
+   "text": "Ici Krasts…",
+   "style": "caption"
+  },
+  "0337db90/08": {
+   "ja": "ゴルゴは発見できたか？",
+   "text": "A-t-on retrouvé Golgo ?",
+   "style": "caption"
+  },
+  "0337db90/09": {
+   "ja": "…クラスツだ…",
+   "text": "…Ici Krasts…",
+   "style": "caption"
+  },
+  "0337db90/10": {
+   "ja": "国家警察長官　ラフモノフ",
+   "text": "Chef de la Police Rakhmonov",
+   "style": "plate"
+  },
+  "0337db90/11": {
+   "ja": "国家警察　クラスツ",
+   "text": "Police nationale Krasts",
+   "style": "plate"
+  }
+ }
+}

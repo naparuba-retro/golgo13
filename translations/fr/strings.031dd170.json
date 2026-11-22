@@ -1,0 +1,10 @@
+{
+  "assets": {
+    "031dd170/00": {"ja": "マフィアのボス　フィオリオ", "text": "Parrain de la mafia Fiorio", "style": "plate"},
+    "031dd170/01": {"ja": "俺を狙っている奴がいるのか…？", "text": "Quelqu'un en voudrait à ma peau… ?", "style": "caption"},
+    "031dd170/02": {"ja": "デューク・トウゴウ… またの名をゴルゴ13！", "text": "Duke Togo… alias Golgo 13 !", "style": "caption", "lines": ["Duke Togo…", "alias Golgo 13 !"]},
+    "031dd170/03": {"ja": "ゴ、ゴルゴ13だと？！", "text": "G-Golgo 13, dis-tu ?!", "style": "caption"},
+    "031dd170/04": {"ja": "週末は別荘で過ごした方が安全でしょう…", "text": "Il serait plus sûr de passer le week-end à la villa…", "style": "caption"},
+    "031dd170/05": {"ja": "くれぐれも警備を怠るなっ…。", "text": "Surtout, ne relâchez pas la garde…", "style": "caption"}
+  }
+}

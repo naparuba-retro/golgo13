@@ -1,0 +1,14 @@
+02719000/00|ui_bar_red|Choix : fusil    Valider : gâchette
+02719000/02|t|Détournement depuis le sol
+02719000/05|t|Zone de neige abondante
+02719000/11|t|La tradition couleur raisin
+02719000/12|t|Overload
+02719000/13|t|Portée utile maximale
+02719000/14|t|Vol acrobatique
+02719000/15|t|Syndrome chinois
+02719000/16|t|Le corridor à treillis
+02719000/17|t|Accord entre gentlemen
+02719000/18|t|Au-delà du champ de mines
+02719000/19|t|Soixante minutes inéluctables
+02719000/20|t|Tireurs d'élite de l'escorte
+02760000/01|tut_box|Placez-vous à côté du fusil

@@ -1,0 +1,79 @@
+name: build
+
+# The recompiled game code (generated/) is derived from the ROMs and is never published, so CI builds the program WITHOUT game code:
+# it checks that everything compiles on Windows and Linux, renders the menu pages (smoke test) and publishes the binaries.
+# To play, build locally with your own ROMs (see README, "Construire").
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Python tools
+        run: python -m pip install pillow numpy
+      - name: Third-party (SDL3, minimp3)
+        run: |
+          python tools/setup_sdl3.py
+          python tools/setup_deps.py
+      - name: Menu fonts (baked from the runner's system fonts)
+        run: python tools/ui/bake_font.py
+      - name: Build (MSVC)
+        run: python tools/build/build.py
+      - name: Menu smoke test (renders every menu page without a window)
+        run: build\golgo13.exe --menu-shots menu-shots --lang fr
+      - uses: actions/upload-artifact@v4
+        with:
+          name: golgo13-windows-x64
+          path: |
+            build/golgo13.exe
+            build/SDL3.dll
+            data/ui/README.md
+            roms/README.md
+            README.md
+            LICENSE
+            NOTICE.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: menu-shots
+          path: menu-shots/*.ppm
+
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: System packages (SDL3 is built from source below)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build libasound2-dev libpulse-dev libx11-dev libxext-dev libxrandr-dev libxcursor-dev \
+            libxfixes-dev libxi-dev libxss-dev libxkbcommon-dev libwayland-dev libdrm-dev libgbm-dev libgl1-mesa-dev libegl1-mesa-dev \
+            libudev-dev libdbus-1-dev fonts-dejavu-core
+          python -m pip install pillow numpy
+      - name: Third-party (minimp3)
+        run: python tools/setup_deps.py
+      - name: Menu fonts
+        run: python tools/ui/bake_font.py
+      - name: Build (CMake, SDL3 fetched)
+        run: |
+          cmake -S . -B build-linux -G Ninja -DGOLGO_FETCH_SDL3=ON
+          cmake --build build-linux
+      - name: Menu smoke test
+        run: ./build-linux/golgo13 --menu-shots menu-shots --lang fr
+      - uses: actions/upload-artifact@v4
+        with:
+          name: golgo13-linux-x64
+          path: |
+            build-linux/golgo13
+            data/ui/README.md
+            roms/README.md
+            README.md
+            LICENSE
+            NOTICE.md

@@ -1,0 +1,100 @@
+{
+ "card": {
+  "note": "jnr: objective card (SECRET DOCUMENT), ruins mission",
+  "frame": 4700,
+  "presses": [
+   "600:6:coin",
+   "700:6:coin",
+   "900:30:start",
+   "1800:8:trigger",
+   "2400:8:trigger",
+   "4500:8:start",
+   "4700:8:start",
+   "4900:8:start",
+   "5100:8:start",
+   "5300:8:start"
+  ]
+ },
+ "res_fail": {
+  "note": "jnr: result screen after a failed shot",
+  "frame": 6450,
+  "presses": [
+   "600:6:coin",
+   "700:6:coin",
+   "900:30:start",
+   "1800:8:trigger",
+   "2400:8:trigger",
+   "4500:8:start",
+   "4700:8:start",
+   "4900:8:start",
+   "5100:8:start",
+   "5300:8:start"
+  ]
+ },
+ "at_dist": {
+  "note": "jnr attract at_dist",
+  "frame": 2670,
+  "presses": [
+   "99999:1:test"
+  ]
+ },
+ "at_miracle": {
+  "note": "jnr attract at_miracle",
+  "frame": 2850,
+  "presses": [
+   "99999:1:test"
+  ]
+ },
+ "at_assets": {
+  "note": "jnr attract at_assets",
+  "frame": 2965,
+  "presses": [
+   "99999:1:test"
+  ]
+ },
+ "at_bounty": {
+  "note": "jnr attract at_bounty",
+  "frame": 3030,
+  "presses": [
+   "99999:1:test"
+  ]
+ },
+ "at_death": {
+  "note": "jnr attract at_death",
+  "frame": 3200,
+  "presses": [
+   "99999:1:test"
+  ]
+ },
+ "at_grid": {
+  "note": "jnr attract at_grid",
+  "frame": 3450,
+  "presses": [
+   "99999:1:test"
+  ]
+ },
+ "at_req": {
+  "note": "jnr attract at_req",
+  "frame": 3630,
+  "presses": [
+   "99999:1:test"
+  ]
+ },
+ "at_title": {
+  "note": "jnr attract at_title",
+  "frame": 3990,
+  "presses": [
+   "99999:1:test"
+  ]
+ },
+ "tut_bub": {
+  "note": "jnr tutorial vertical bubble",
+  "frame": 2860,
+  "presses": [
+   "600:6:coin",
+   "700:6:coin",
+   "900:30:start",
+   "1800:8:trigger"
+  ]
+ }
+}

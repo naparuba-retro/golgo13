@@ -1,0 +1,79 @@
+{
+  "assets": {
+    "031f0870/00": {
+      "ja": "新開発の銃が手に入った。",
+      "text": "On a mis la main sur une arme de nouvelle conception.",
+      "style": "caption"
+    },
+    "031f0870/01": {
+      "ja": "プラスティックボディにサーモカメラという構成だ。",
+      "text": "Corps en plastique et caméra thermique : voilà sa conception.",
+      "style": "caption"
+    },
+    "031f0870/02": {
+      "ja": "従来よりも軽いというだけでなく…",
+      "text": "Elle n'est pas seulement plus légère que les modèles précédents…",
+      "style": "caption"
+    },
+    "031f0870/03": {
+      "ja": "金属探知器に引っかからないらしい！",
+      "text": "Il paraît qu'elle ne déclenche pas les détecteurs de métaux !",
+      "style": "caption"
+    },
+    "031f0870/04": {
+      "ja": "今度の計画にうってつけというわけだ。",
+      "text": "Elle est donc idéale pour notre prochain plan.",
+      "style": "caption"
+    },
+    "031f0870/05": {
+      "ja": "さすがプラスティック製だ… まったく反応しない！",
+      "text": "Bien sûr, c'est du plastique… Aucune réaction !",
+      "style": "caption"
+    },
+    "031f0870/06": {
+      "ja": "おとなしくしろ！！",
+      "text": "Tenez-vous tranquilles !!",
+      "style": "caption"
+    },
+    "031f0870/07": {
+      "ja": "言うことを聞けば危害は加えない！",
+      "text": "Obéissez et il ne vous sera fait aucun mal !",
+      "style": "caption"
+    },
+    "031f0870/08": {
+      "ja": "というわけで、連続ハイジャック犯の持つ…",
+      "text": "C'est pourquoi les armes que possède ce pirate de l'air en série…",
+      "style": "caption"
+    },
+    "031f0870/09": {
+      "ja": "高性能ライフルをすべて 破壊して欲しい！",
+      "text": "Nous voulons que vous détruisiez tous ses fusils haute performance !",
+      "style": "caption"
+    },
+    "031f0870/10": {
+      "ja": "金属探知器でチェックできない 現状では…",
+      "text": "Dans la situation actuelle, où les détecteurs de métaux ne les repèrent pas…",
+      "style": "caption"
+    },
+    "031f0870/11": {
+      "ja": "機内への持ち込みを防ぐことは 不可能なのだ。",
+      "text": "il est impossible d'empêcher qu'elles soient introduites à bord.",
+      "style": "caption"
+    },
+    "031f0870/12": {
+      "ja": "空港の様子を詳しく聞こうか…",
+      "text": "Voyons en détail comment se présente l'aéroport…",
+      "style": "caption"
+    },
+    "031f0870/13": {
+      "ja": "テロ集団　国民解放軍",
+      "text": "Armée de libération",
+      "style": "plate"
+    },
+    "031f0870/14": {
+      "ja": "国家保安委員長　メレス",
+      "text": "Sécurité d'État Meres",
+      "style": "plate"
+    }
+  }
+}

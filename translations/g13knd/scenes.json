@@ -1,0 +1,106 @@
+{
+  "result_fail": {
+    "note": "knd: result screen after a failed shot (replay of a bot session)",
+    "frame": 10000,
+    "replay": "captures/ref_bot.g13r"
+  },
+  "card_dia": {
+    "note": "knd: objective card (SECRET DOCUMENT frame), diamond mission",
+    "frame": 11400,
+    "replay": "captures/ref_bot.g13r"
+  },
+  "story_sel": {
+    "note": "knd: story select screen with the trust gauge",
+    "frame": 10200,
+    "replay": "captures/ref_bot.g13r"
+  },
+  "tut_bubble": {
+    "note": "knd: tutorial bubble 'cannot see when the eye is close'",
+    "frame": 4800,
+    "replay": "captures/ref_bot.g13r"
+  },
+  "crawl": {
+    "note": "knd: attract intro, scrolling Japanese sentence",
+    "frame": 11000,
+    "presses": [
+      "99999:1:test"
+    ]
+  },
+  "bigcomic": {
+    "note": "knd: attract credit card 'Shogakukan Big Comic'",
+    "frame": 20000,
+    "presses": [
+      "99999:1:test"
+    ]
+  },
+  "ok_gauge": {
+    "note": "knd (user session): SNIPE POINT gauge, success",
+    "frame": 6000,
+    "replay": "captures/ref_user1.g13r"
+  },
+  "ok_result": {
+    "note": "knd (user session): result screen after success",
+    "frame": 6120,
+    "replay": "captures/ref_user1.g13r"
+  },
+  "ok_diamond": {
+    "note": "knd (user session): SNIPE POINT diamond, success",
+    "frame": 7450,
+    "replay": "captures/ref_user1.g13r"
+  },
+  "tut_manga": {
+    "note": "knd (user session): tutorial manga vertical bubble",
+    "frame": 4000,
+    "replay": "captures/ref_user1.g13r"
+  },
+  "tut_pos": {
+    "note": "knd (user session): tutorial: first instruction (position next to the gun)",
+    "frame": 3000,
+    "replay": "captures/ref_user1.g13r"
+  },
+  "intro1": {
+    "note": "knd: attract intro: 狙撃 成功 flying in",
+    "frame": 10500,
+    "presses": [
+      "99999:1:test"
+    ]
+  },
+  "intro2": {
+    "note": "knd: attract intro: tagline (all organisations fear/trust)",
+    "frame": 11100,
+    "presses": [
+      "99999:1:test"
+    ]
+  },
+  "intro3": {
+    "note": "knd: attract intro: デューク東郷",
+    "frame": 11400,
+    "presses": [
+      "99999:1:test"
+    ]
+  },
+  "intro4": {
+    "note": "knd: attract intro: またの名を…",
+    "frame": 11550,
+    "presses": [
+      "99999:1:test"
+    ]
+  },
+  "go_bubble": {
+    "note": "knd: game over screen with the manga bubble",
+    "frame": 18000,
+    "presses": [
+      "3000:6:coin",
+      "3030:6:coin",
+      "3300:30:start",
+      "3500:30:start"
+    ]
+  },
+  "intro1b": {
+    "note": "knd: attract intro, 狙撃成功確率 99.98% complete",
+    "frame": 10620,
+    "presses": [
+      "99999:1:test"
+    ]
+  }
+}

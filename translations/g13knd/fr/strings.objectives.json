@@ -1,0 +1,104 @@
+{
+ "assets": {
+  "030db8c0/00": {
+   "ja": "列車の中から狙撃",
+   "text": "Tirer depuis l'intérieur d'un train",
+   "style": "objective"
+  },
+  "030dcdb0/00": {
+   "ja": "ヘリコプターに乗るまでに撃て",
+   "text": "Tirez avant qu'il monte dans l'hélicoptère",
+   "style": "objective"
+  },
+  "030df6a0/00": {
+   "ja": "ボートから狙撃",
+   "text": "Tirer depuis un bateau",
+   "style": "objective"
+  },
+  "030e0530/00": {
+   "ja": "チャンスを逃さず撃て",
+   "text": "Ne ratez pas l'occasion, tirez !",
+   "style": "objective"
+  },
+  "030e17d0/00": {
+   "ja": "スパイを探し出せ",
+   "text": "Débusquez l'espion",
+   "style": "objective"
+  },
+  "030e2660/00": {
+   "ja": "靴のかかと部分を狙撃",
+   "text": "Visez le talon de la chaussure",
+   "style": "objective"
+  },
+  "030e3900/00": {
+   "ja": "ダイヤを撃ち砕け",
+   "text": "Brisez le diamant d'un tir",
+   "style": "objective"
+  },
+  "030e4790/00": {
+   "ja": "照明弾を頼りに撃て",
+   "text": "Tirez en vous guidant sur la fusée éclairante",
+   "style": "objective"
+  },
+  "030e5820/00": {
+   "ja": "ゲリラ部隊を殲滅",
+   "text": "Anéantissez les guérilleros",
+   "style": "objective"
+  },
+  "030e7d00/00": {
+   "ja": "中和剤を狙撃注射",
+   "text": "Injectez l'antidote d'un tir",
+   "style": "objective"
+  },
+  "030e91f0/00": {
+   "ja": "ターゲットの飼犬に特定させて狙撃",
+   "text": "Faites identifier la cible par son chien, puis tirez",
+   "style": "objective"
+  },
+  "030eb2c0/00": {
+   "ja": "人質越しに隠れたターゲットを狙撃",
+   "text": "Visez la cible cachée derrière l'otage",
+   "style": "objective"
+  },
+  "030ed390/00": {
+   "ja": "バッテリー部分を狙撃",
+   "text": "Visez la batterie",
+   "style": "objective"
+  },
+  "030ee630/00": {
+   "ja": "砲身を正面から狙撃",
+   "text": "Tirez dans le canon, de face",
+   "style": "objective"
+  },
+  "030ef8d0/00": {
+   "ja": "ヘリコプターから狙撃",
+   "text": "Tirer depuis un hélicoptère",
+   "style": "objective"
+  },
+  "030f0b70/00": {
+   "ja": "タイヤ部分を狙撃",
+   "text": "Visez le pneu",
+   "style": "objective"
+  },
+  "030f1c00/00": {
+   "ja": "国家警察部隊を殲滅",
+   "text": "Anéantissez la police nationale",
+   "style": "objective"
+  },
+  "030f2ea0/00": {
+   "ja": "牽引ロープを狙撃",
+   "text": "Visez le câble de remorquage",
+   "style": "objective"
+  },
+  "030f3f30/00": {
+   "ja": "通気口から狙撃",
+   "text": "Tirez par la bouche d'aération",
+   "style": "objective"
+  },
+  "030f4dc0/00": {
+   "ja": "生物工学で強化された戦士と対決",
+   "text": "Affrontez le guerrier issu de la bio-ingénierie",
+   "style": "objective"
+  }
+ }
+}

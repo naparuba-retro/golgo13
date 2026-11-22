@@ -1,0 +1,39 @@
+{
+ "assets": {
+  "033cdd30/00": {
+   "ja": "命を狙われているって本当なの？",
+   "text": "C'est vrai qu'on en veut à ta vie ?",
+   "style": "caption"
+  },
+  "033cdd30/01": {
+   "ja": "スパイからの情報だ…間違いない！",
+   "text": "Information d'un espion… aucun doute !",
+   "style": "caption"
+  },
+  "033cdd30/02": {
+   "ja": "まさか刺客がゴルゴ13だとは…",
+   "text": "Dire que le tueur envoyé est Golgo 13…",
+   "style": "caption"
+  },
+  "033cdd30/03": {
+   "ja": "やつから逃れるには…あそこしかないっ！",
+   "text": "Pour lui échapper… il n'y a que cet endroit !",
+   "style": "caption"
+  },
+  "033cdd30/04": {
+   "ja": "１枚岩で囲まれたここなら…",
+   "text": "Ici, entouré d'un seul bloc de roche…",
+   "style": "caption"
+  },
+  "033cdd30/05": {
+   "ja": "…相手がゴルゴ13といえども大丈夫だ！",
+   "text": "…même contre Golgo 13, nous sommes en sécurité !",
+   "style": "caption"
+  },
+  "033cdd30/06": {
+   "ja": "警備局長　ハサド",
+   "text": "Chef de la sûreté Hassad",
+   "style": "plate"
+  }
+ }
+}

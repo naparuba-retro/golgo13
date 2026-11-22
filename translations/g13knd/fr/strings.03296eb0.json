@@ -1,0 +1,64 @@
+{
+ "assets": {
+  "03296eb0/00": {
+   "ja": "またせたな…Mrトウゴウ",
+   "text": "Désolé de vous avoir fait attendre… M. Togo",
+   "style": "caption"
+  },
+  "03296eb0/01": {
+   "ja": "用件を聞こうか",
+   "text": "Voyons, de quoi s'agit-il ?",
+   "style": "caption"
+  },
+  "03296eb0/02": {
+   "ja": "写真を出すんだ！",
+   "text": "Sortez la photo !",
+   "style": "caption"
+  },
+  "03296eb0/03": {
+   "ja": "俺の腹心だったスルタノフだ…",
+   "text": "C'est Sultanov, mon homme de confiance…",
+   "style": "caption"
+  },
+  "03296eb0/04": {
+   "ja": "やつは組織の情報と引き換えに…",
+   "text": "Il compte, en échange d'informations sur l'organisation…",
+   "style": "caption"
+  },
+  "03296eb0/05": {
+   "ja": "森林調査団に紛れて亡命を計画している…",
+   "text": "Il prépare sa fuite à l'étranger en se mêlant à une mission d'étude forestière…",
+   "style": "caption"
+  },
+  "03296eb0/06": {
+   "ja": "このまま放ってはおけないのだが…",
+   "text": "On ne peut pas le laisser faire…",
+   "style": "caption"
+  },
+  "03296eb0/07": {
+   "ja": "その顔も、今は整形でわかりはしねえ…",
+   "text": "Même son visage est méconnaissable, avec la chirurgie esthétique…",
+   "style": "caption"
+  },
+  "03296eb0/08": {
+   "ja": "この仕事にはあんたの鋭い嗅覚が必要なんだ！",
+   "text": "Pour ce travail, il me faut votre flair !",
+   "style": "caption"
+  },
+  "03296eb0/09": {
+   "ja": "頼む、Mr.トウゴウ！",
+   "text": "Je compte sur vous, M. Togo !",
+   "style": "caption"
+  },
+  "03296eb0/10": {
+   "ja": "企業集団のボス　ルカシェンコ",
+   "text": "Patron du groupe Loukachenko",
+   "style": "plate"
+  },
+  "03296eb0/11": {
+   "ja": "スルタノフ",
+   "text": "Sultanov",
+   "style": "plate"
+  }
+ }
+}
