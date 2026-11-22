@@ -210,6 +210,16 @@ typedef struct { const char *id, *name; uint32_t accent; } gstyle_t;
 static const gstyle_t GST[] = { { "golgo13", "GOLGO 13", UI_RGB(214, 28, 36) }, { "g13knd", "LE MIRACLE", UI_RGB(20, 160, 140) }, { "g13jnr", "REQUIEM", UI_RGB(230, 140, 20) } };
 static const char *g_userroms; static int g_roms[8];
 
+/* drawn sniper scope: stands in for a card picture (no game image needed) */
+static void scope_art(float cx, float cy, float r)
+{
+    for (int dy = (int)-r; dy <= (int)r; dy++) {
+        float o = sqrtf(r * r - (float)(dy * dy)), i2 = r - 10, in = (float)abs(dy) < i2 ? sqrtf(i2 * i2 - (float)(dy * dy)) : 0;
+        if (in > 0) { ui_fill_rect(cx - o, cy + dy, o - in, 1, PAPER); ui_fill_rect(cx + in, cy + dy, o - in, 1, PAPER); } else ui_fill_rect(cx - o, cy + dy, 2 * o, 1, PAPER);
+    }
+    ui_fill_rect(cx - r - 26, cy - 2, 2 * r + 52, 4, PAPER); ui_fill_rect(cx - 2, cy - r - 26, 4, 2 * r + 52, PAPER);
+}
+
 static void card(int gi, float x, float y, int focused)
 {
     const game_info_t *g = game_info(gi); const gstyle_t *st = NULL; for (unsigned k = 0; k < sizeof GST / sizeof *GST; k++) if (!strcmp(GST[k].id, g->id)) st = &GST[k];
@@ -221,7 +231,7 @@ static void card(int gi, float x, float y, int focused)
     ui_para(x, y, w, h, sk, X, Y); ui_fill_quad(X, Y, PAPER); ui_clip_quad(X, Y);
     ui_halftone(x, y, w, h, acc, 10, 30, 1, 0.0f, 0.55f);
     if (g_card[gi]) ui_image_draw(g_card[gi], x, y, w, 300, !ok);
-    else { ui_fill_rect(x, y, w, 300, UI_RGB(20, 24, 48)); ui_halftone(x, y, w, 300, acc, 9, 45, 3, 0.1f, 0.9f); text_o(UI_TITLE, 72, x + w / 2, y + 100, PAPER, "13", UI_CENTER, 4); }
+    else { ui_fill_rect(x, y, w, 300, UI_RGB(20, 24, 48)); ui_halftone(x, y, w, 300, acc, 9, 45, 3, 0.1f, 0.9f); scope_art(x + w / 2, y + 150, 112); text_o(UI_TITLE, 72, x + w / 2, y + 116, PAPER, "13", UI_CENTER, 4); }
     ui_fill_rect(x, y + 300, w, 6, INK); ui_fill_rect(x, y + 306, w, 130, PAPER);
     float PX[4] = { x, x + w, x + w, x }, PY[4] = { y + h - 36, y + h - 52, y + h, y + h }; ui_fill_quad(PX, PY, acc);
     text_o(UI_TITLE, 46, x + 18, y + 312, PAPER, name, UI_LEFT, 3);
