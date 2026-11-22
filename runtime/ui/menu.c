@@ -505,6 +505,8 @@ static int find_root(char *root, size_t n)                 /* the project folder
 }
 static int find_python(const char *root, char py[3][1200])   /* fills the argv prefix (1 or 2 words); returns the number of words, 0 if none */
 {
+    const char *bp = getenv("GOLGO13_PYTHON");                 /* AppImage: the bundled interpreter, used as is */
+    if (bp && *bp) { snprintf(py[0], 1200, "%s", bp); py[1][0] = 0; return 1; }
     char v[1300]; static const char *VENV[2] = { "%s/.venv/Scripts/python.exe", "%s/.venv/bin/python" };
     for (int k = 0; k < 2; k++) { snprintf(v, sizeof v, VENV[k], root); FILE *f = fopen(v, "rb"); if (f) { fclose(f); snprintf(py[0], 1200, "%s", v); py[1][0] = 0; return 1; } }
     static const char *C[4][2] = { { "py", "-3" }, { "python", NULL }, { "python3", NULL }, { NULL, NULL } };
@@ -530,7 +532,7 @@ static int build_screen(const char *gid)
         if (st == S_CHECK) {                                                    /* find the project and a Python */
             if (!find_root(root, sizeof root)) st = S_NOROOT;
             else if (!find_python(root, py)) st = S_NOPY;
-            else if (!strstr(py[0], ".venv")) {                                  /* only a global Python: never use it for the project, make the venv first */
+            else if (!strstr(py[0], ".venv") && !getenv("GOLGO13_PYTHON")) {                                  /* only a global Python: never use it for the project, make the venv first */
                 snprintf(stepname, sizeof stepname, "%s", fr() ? "Création de l'environnement virtuel (.venv)" : "Creating the virtual environment (.venv)");
                 nit = 0; draw_bg(); header(fr() ? "CONSTRUCTION" : "BUILD", stepname); present();
                 char venv[1300]; snprintf(venv, sizeof venv, "%s/.venv", root);

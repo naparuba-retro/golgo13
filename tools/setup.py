@@ -19,6 +19,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 def _bootstrap_venv():
     """Everything runs inside a project-local virtual environment (.venv): nothing is installed in your global Python.
     The first run creates it, installs the few Python packages the tools need, and restarts this script with it."""
+    if os.environ.get('GOLGO13_BUNDLED'): return sys.executable      # AppImage: a private Python that already holds the packages (nothing global is touched)
     venv = os.path.join(ROOT, '.venv')
     py = os.path.join(venv, 'Scripts', 'python.exe') if os.name == 'nt' else os.path.join(venv, 'bin', 'python')
     if os.path.realpath(sys.prefix) == os.path.realpath(venv):         # already inside the project's venv: make sure its packages are there
@@ -53,7 +54,8 @@ def build(label):
     say('Build (%s)' % label)
     if WIN: run([PY, 'tools/build/build.py'])
     else:
-        run(['cmake', '-S', '.', '-B', 'build-linux', '-DCMAKE_BUILD_TYPE=Release'] + (['-DGOLGO_FETCH_SDL3=ON'] if not shutil.which('pkg-config') else []))
+        run(['cmake', '-S', '.', '-B', 'build-linux', '-DCMAKE_BUILD_TYPE=Release'] + (['-DGOLGO_FETCH_SDL3=ON'] if not shutil.which('pkg-config') and not os.environ.get('GOLGO13_SDL3_PREFIX') else []) +
+            (['-DCMAKE_PREFIX_PATH=' + os.environ['GOLGO13_SDL3_PREFIX'], '-G', 'Ninja'] if os.environ.get('GOLGO13_SDL3_PREFIX') else []))
         run(['cmake', '--build', 'build-linux', '--parallel', str(max(1, (os.cpu_count() or 2) // 2))])
 
 def rom_folder(gid):

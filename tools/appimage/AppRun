@@ -1,0 +1,30 @@
+#!/bin/sh
+# AppImage entry point: the program, plus every tool needed to build the games from the user's ROMs (private Python, CMake, Ninja, zig cc, SDL3).
+# Nothing is installed on the system. The writable project lives NEXT TO the AppImage, in ./golgo13/ (roms/, generated code, the built program, settings).
+HERE="$(dirname "$(readlink -f "$0")")"
+SRC="$HERE/opt/golgo13"
+OUTER="$(dirname "${APPIMAGE:-$HERE}")"
+WORK="${GOLGO13_HOME:-$OUTER/golgo13}"
+VER="$(cat "$SRC/VERSION" 2>/dev/null)"
+
+export PATH="$HERE/usr/python/bin:$HERE/usr/bin:$PATH"
+export GOLGO13_PYTHON="$HERE/usr/python/bin/python3"
+export GOLGO13_BUNDLED=1
+export GOLGO13_SDL3_PREFIX="$HERE/usr/sdl3"
+export CC="$HERE/usr/bin/zigcc"
+export PYTHONNOUSERSITE=1
+export ZIG_GLOBAL_CACHE_DIR="$WORK/.cache/zig" ZIG_LOCAL_CACHE_DIR="$WORK/.cache/zig-local"
+
+mkdir -p "$WORK"
+# first run, or a new AppImage version: copy the project files (never touches roms/, generated code, settings, saves)
+if [ ! -f "$WORK/.appimage-version" ] || [ "$(cat "$WORK/.appimage-version")" != "$VER" ]; then
+  ( cd "$SRC" && find . -mindepth 1 -maxdepth 1 ! -name build-linux | while read -r f; do cp -a "$f" "$WORK/" 2>/dev/null; done )
+  mkdir -p "$WORK/build-linux" "$WORK/roms"
+  # keep an already built game program (it holds the generated code); otherwise start with the menu-only one
+  if [ ! -d "$WORK/generated" ] && [ ! -d "$WORK/generated_g13knd" ] && [ ! -d "$WORK/generated_g13jnr" ]; then cp -f "$SRC/build-linux/golgo13" "$WORK/build-linux/golgo13"; fi
+  [ -f "$WORK/build-linux/golgo13" ] || cp -f "$SRC/build-linux/golgo13" "$WORK/build-linux/golgo13"
+  echo "$VER" > "$WORK/.appimage-version"
+fi
+chmod +x "$WORK/build-linux/golgo13" 2>/dev/null
+cd "$WORK" || exit 1
+exec "$WORK/build-linux/golgo13" "$@"

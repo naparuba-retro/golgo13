@@ -101,15 +101,40 @@ jobs:
             !menu-shots/**
             build-linux/golgo13
 
+  appimage:
+    needs: linux
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: golgo13-linux-x64, path: golgo13-linux-x64 }
+      - name: System packages (only to build the static SDL3 that goes inside)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake ninja-build libasound2-dev libpulse-dev libx11-dev libxext-dev libxrandr-dev libxcursor-dev             libxfixes-dev libxi-dev libxss-dev libxkbcommon-dev libwayland-dev libdrm-dev libgbm-dev libgl1-mesa-dev libegl1-mesa-dev             libudev-dev libdbus-1-dev libxtst-dev libxkbcommon-x11-dev
+      - name: Build the AppImage
+        env:
+          BUNDLE: ${{ github.workspace }}/golgo13-linux-x64
+          OUT: ${{ github.workspace }}
+        run: |
+          chmod +x golgo13-linux-x64/build-linux/golgo13 || true
+          tools/appimage/build_appimage.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: golgo13-appimage
+          path: golgo13-*.AppImage
+
   release:
     if: github.ref_type == 'tag'
-    needs: [windows, linux]
+    needs: [windows, linux, appimage]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
         with: { name: golgo13-windows-x64, path: golgo13-windows-x64 }
       - uses: actions/download-artifact@v4
         with: { name: golgo13-linux-x64, path: golgo13-linux-x64 }
+      - uses: actions/download-artifact@v4
+        with: { name: golgo13-appimage, path: golgo13-appimage }
       - name: "Zip the bundles"
         run: |
           chmod +x golgo13-linux-x64/build-linux/golgo13 || true
@@ -127,4 +152,4 @@ jobs:
           *your* ROMs and compiles it (needs Python 3.10+ and a C compiler: Visual Studio Build Tools on Windows, gcc + CMake on Linux).
           Or run `python tools/setup.py`. See the README for details.
           NOTES
-          gh release create "$GOLGO13_VERSION" golgo13-${GOLGO13_VERSION}-windows-x64.zip golgo13-${GOLGO13_VERSION}-linux-x64.tar.gz             --repo "$GITHUB_REPOSITORY" --title "Golgo 13 native port $GOLGO13_VERSION" --notes-file notes.md
+          gh release create "$GOLGO13_VERSION" golgo13-${GOLGO13_VERSION}-windows-x64.zip golgo13-${GOLGO13_VERSION}-linux-x64.tar.gz golgo13-appimage/*.AppImage             --repo "$GITHUB_REPOSITORY" --title "Golgo 13 native port $GOLGO13_VERSION" --notes-file notes.md
