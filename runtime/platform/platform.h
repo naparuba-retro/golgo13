@@ -44,4 +44,5 @@ void plat_audio_set(int volume, int mute);
 void plat_wiimote_params(int smooth, int deadzone);
 int  plat_wiimote_state(void);                      /* 0 off, 1 searching, 2 connected */
 void plat_wiimote_recalibrate(void);
+void plat_open_folder(const char *path);            /* show a folder in the system file manager */
 #endif

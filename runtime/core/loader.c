@@ -87,18 +87,21 @@ int rom_select_game(int i) { if (i < 0 || i >= NT(GAMES)) return 1; cur = &GAMES
 int game_is_sys10(void) { return cur->sys10; }
 static int file_exists(const char *p) { FILE *f = fopen(p, "rb"); if (f) fclose(f); return f != NULL; }
 /* Looks for the ROMs of game i: a folder (user data copy, ./roms/<id>) or a zip (./roms/<id>.zip, ./<id>.zip). 0 = none, 1 = folder, 2 = zip. */
+static char g_extra[4][1100]; static int g_nextra;
+void rom_add_search_dir(const char *d) { if (d && *d && g_nextra < 4) snprintf(g_extra[g_nextra++], sizeof g_extra[0], "%s", d); }
 int game_find_roms(int i, const char *userroms, char *path, size_t n)
 {
     if (i < 0 || i >= NT(GAMES)) return 0;
     const game_def_t *g = &GAMES[i]; char c[1100];
-    const char *base[2] = { userroms, "roms" };
-    for (int k = 0; k < 2; k++) {
+    const char *base[8]; int nb = 0; base[nb++] = "roms"; for (int k = 0; k < g_nextra; k++) base[nb++] = g_extra[k]; base[nb++] = userroms;   /* ./roms first, then next to the program, then the data folder */
+    for (int k = 0; k < nb; k++) {
         if (!base[k] || !*base[k]) continue;
         snprintf(c, sizeof c, "%s/%s/%s", base[k], g->info.id, g->probe);
         if (file_exists(c)) { snprintf(path, n, "%s/%s", base[k], g->info.id); return 1; }
+        snprintf(c, sizeof c, "%s/%s.zip", base[k], g->info.id);
+        if (file_exists(c)) { snprintf(path, n, "%s", c); return 2; }
     }
-    const char *zips[2] = { "roms/%s.zip", "%s.zip" };
-    for (int k = 0; k < 2; k++) { char f[200]; snprintf(f, sizeof f, zips[k], g->info.id); if (file_exists(f)) { snprintf(path, n, "%s", f); return 2; } }
+    snprintf(c, sizeof c, "%s.zip", g->info.id); if (file_exists(c)) { snprintf(path, n, "%s", c); return 2; }
     return 0;
 }
 
@@ -230,4 +233,15 @@ int rom_import(const char *src, const char *dest, char *err, size_t errsz)
     size_t n = strlen(src);
     int is_zip = n > 4 && (src[n-4] == '.') && (src[n-3] | 32) == 'z' && (src[n-2] | 32) == 'i' && (src[n-1] | 32) == 'p';
     return is_zip ? import_zip(src, dest, err, errsz) : import_dir(src, dest, err, errsz);
+}
+
+#include <sys/stat.h>
+int fs_dir_exists(const char *path) { struct stat st; return stat(path, &st) == 0 && (st.st_mode & S_IFDIR) != 0; }
+void fs_abs_path(const char *path, char *out, size_t n)
+{
+#ifdef _WIN32
+    if (!_fullpath(out, path, n)) snprintf(out, n, "%s", path);
+#else
+    char tmp[4096]; if (realpath(path, tmp)) snprintf(out, n, "%s", tmp); else snprintf(out, n, "%s", path);
+#endif
 }

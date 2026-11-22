@@ -315,9 +315,10 @@ static void replay_get(plat_input_t *in, long frame)
     in->trigger = f & 1; in->sensor = (f >> 1) & 1; in->enter = (f >> 2) & 1; in->up = (f >> 3) & 1; in->down = (f >> 4) & 1; in->start = (f >> 5) & 1; in->coin = (f >> 6) & 1; in->service = (f >> 7) & 1; in->test = (f >> 8) & 1;
 }
 
+extern int rt_code_is_stub;
 int main(int argc, char **argv)
 {
-    int want_wiimote = getenv("GOLGO13_WIIMOTE") != NULL; const char *game_opt = NULL, *menu_shots_dir = NULL;
+    int want_wiimote = getenv("GOLGO13_WIIMOTE") != NULL; const char *game_opt = NULL, *menu_shots_dir = NULL, *dump_regions_dir = NULL;
     const char *lang = getenv("GOLGO13_LANG"), *tr_dir = NULL, *replay_path = NULL; const char *dump_aux = NULL; const char *roms = NULL, *dump = NULL, *dump_vram = NULL, *import_src = NULL; long frames = 0; int trace = 0, headless = 0, noh8 = 0, noaudio = 0; const char *wav_path = NULL; long autoquit = 0, nframes = 0; const char *shot_p = NULL; uint64_t shot_f = 0, log_f = 0;
     for (int i = 1; i < argc; i++) {
         if (!strcmp(argv[i], "--roms") && i + 1 < argc) roms = argv[++i];
@@ -347,6 +348,7 @@ int main(int argc, char **argv)
         else if (!strcmp(argv[i], "--replay") && i + 1 < argc) replay_path = argv[++i];
         else if (!strcmp(argv[i], "--game") && i + 1 < argc) game_opt = argv[++i];
         else if (!strcmp(argv[i], "--menu-shots") && i + 1 < argc) menu_shots_dir = argv[++i];
+        else if (!strcmp(argv[i], "--dump-regions") && i + 1 < argc) dump_regions_dir = argv[++i];
         else if (!strcmp(argv[i], "--wiimote")) want_wiimote = 1;
         else if (!strcmp(argv[i], "--wiimote-pair")) return plat_wiimote_pair() ? 0 : 1;
         else if (!strcmp(argv[i], "--bot") && i + 1 < argc) { if (!bot_open(&g_bot, argv[++i])) return 1; }
@@ -390,7 +392,7 @@ int main(int argc, char **argv)
         char exedir[1100] = ""; if (argc > 0) { snprintf(exedir, sizeof exedir, "%s", argv[0]); char *sl = strrchr(exedir, 47), *bs = strrchr(exedir, 92); if (bs > sl) sl = bs; if (sl) *sl = 0; }
         char ur[1200]; { const char *ov = getenv("GOLGO13_DATA"); snprintf(ur, sizeof ur, "%s%sroms", ov ? ov : "", ov ? "/" : "./"); }
         menu_init(exedir, ""); if (!menu_available()) { fprintf(stderr, "menu fonts missing (run tools/ui/bake_font.py)\n"); return 1; }
-        menu_ctx_fill(); return menu_shots(menu_shots_dir, &g_mctx, ur);
+        menu_ctx_fill(); { const char *e = getenv("GOLGO13_UIROMS"); if (e) menu_set_roms_dir(e); } return menu_shots(menu_shots_dir, &g_mctx, ur);
     }
     char err[256];
     char datadir[1100] = ""; int window = (frames == 0 && !headless);
@@ -398,6 +400,12 @@ int main(int argc, char **argv)
     if (window) {
         char exedir[1100] = ""; if (argc > 0) { snprintf(exedir, sizeof exedir, "%s", argv[0]); char *sl = strrchr(exedir, 47), *bs = strrchr(exedir, 92); if (bs > sl) sl = bs; if (sl) *sl = 0; else exedir[0] = 0; }
         lang_dirs_init(argc > 0 ? argv[0] : NULL, tr_dir); opts_init_once();
+        { char d1[1200], d2[1200]; snprintf(d1, sizeof d1, "%s/roms", exedir[0] ? exedir : "."); snprintf(d2, sizeof d2, "%s/../roms", exedir[0] ? exedir : ".");
+          rom_add_search_dir(d1); rom_add_search_dir(d2);
+          char shown[1200];
+          int have_cwd = 0; { char probe[1200]; snprintf(probe, sizeof probe, "roms"); have_cwd = fs_dir_exists(probe); }
+          snprintf(shown, sizeof shown, "%s", have_cwd ? "roms" : d1); if (!have_cwd) fs_mkdir_p(d1);
+          char full[1300]; fs_abs_path(shown, full, sizeof full); menu_set_roms_dir(full); }
         menu_init(exedir, plat_pref_dir()); menu_apply_options(); menu_set_ui_lang(lang && *lang ? lang : g_opt_lang); if (g_opt[OPT_WIIMOTE]) want_wiimote = 1;
     }
     if (window && want_wiimote) plat_wiimote_enable();
@@ -418,6 +426,16 @@ int main(int argc, char **argv)
         if (gi < 0) { plat_shutdown(); return 0; }
     }
     rom_select_game(gi); snprintf(g_gameid, sizeof g_gameid, "%s", game_info(gi)->id);
+    if (dump_regions_dir) {                                           /* tooling (tools/setup.py): write the ROM regions the recompiler reads */
+        char found[1100], err2[256]; int st = game_find_roms(gi, userroms, found, sizeof found);
+        if (!st) { fprintf(stderr, "no ROMs found for %s\n", game_info(gi)->id); return 1; }
+        if (st == 2) { char tmpd[1200]; snprintf(tmpd, sizeof tmpd, "%s/%s", userroms, game_info(gi)->id); if (rom_import(found, tmpd, err2, sizeof err2)) { fprintf(stderr, "import failed: %s\n", err2); return 1; } snprintf(found, sizeof found, "%s", tmpd); }
+        if (rom_load(found, err2, sizeof err2)) { fprintf(stderr, "ROM error: %s\n", err2); return 1; }
+        fs_mkdir_p(dump_regions_dir); char fn[1300]; FILE *f;
+        snprintf(fn, sizeof fn, "%s/maincpu.bin", dump_regions_dir); if ((f = fopen(fn, "wb"))) { fwrite(G.rom_main, 1, 0x400000, f); fclose(f); }
+        if (G.rom_sub) { snprintf(fn, sizeof fn, "%s/sub.bin", dump_regions_dir); if ((f = fopen(fn, "wb"))) { fwrite(G.rom_sub, 1, 0x80000, f); fclose(f); } }
+        fprintf(stderr, "regions of %s written to %s\n", game_info(gi)->id, dump_regions_dir); return 0;
+    }
     if (game_code_select(game_info(gi)->id)) { fprintf(stderr, "this build has no recompiled code for %s\n", game_info(gi)->title); if (window) plat_shutdown(); return 1; }
     snprintf(datadir, sizeof datadir, "%s/%s", userroms, game_info(gi)->id);
     if (import_src) {                                                 /* --import <zip|folder>: copy the ROMs into the data folder */
@@ -444,6 +462,11 @@ int main(int argc, char **argv)
       (void)have; apply_language((lang && *lang) ? lang : saved); }
     G.max_frames = (uint64_t)frames; G.shot_path = shot_p; G.shot_frame = shot_f; G.log_frame = log_f; G.prof_noh8 = noh8; G.prof_noaudio = noaudio; G.trace_io = trace;
     machine_reset();
+    if (rt_code_is_stub && window) {                                  /* a build without recompiled code (e.g. downloaded from CI): say what to do */
+        const char *L[] = { "#This build has no game code", "", "The game code is generated from your own ROMs and is never published.", "Run this once in the project folder, then start the game again:", "", "    python tools/setup.py", "", "Click or press Enter to quit." };
+        plat_input_t qi; do { plat_poll(&qi); plat_present_text(L, 8); plat_sleep_us(16000); } while (!qi.quit && !qi.ui_zip && !qi.pause);
+        plat_shutdown(); return 1;
+    }
     if (wav_path) G.audio_sink = wav_sink;
     if (window) {                                /* interactive: window + keyboard/mouse, 60 Hz pacing */
         plat_show_cursor(0);

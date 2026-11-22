@@ -363,3 +363,9 @@ void plat_audio_set(int volume, int mute) { audio_vol = volume < 0 ? 0 : volume 
 void plat_wiimote_params(int smooth, int dz) { wm_smooth = smooth; wm_dz = dz; }
 int plat_wiimote_state(void) { return !wm_on ? 0 : wm.connected ? 2 : 1; }
 void plat_wiimote_recalibrate(void) { if (wm_on) wiimote_recalibrate(); }
+void plat_open_folder(const char *path)
+{
+    char url[1300]; size_t k = 0; k += (size_t)SDL_snprintf(url, sizeof url, "file:///");
+    for (const char *p = path; *p && k + 4 < sizeof url; p++) { if (*p == 92) url[k++] = 47; else if (*p == 32) { url[k++] = 37; url[k++] = 50; url[k++] = 48; } else url[k++] = *p; }
+    url[k] = 0; SDL_OpenURL(url);
+}

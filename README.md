@@ -1,97 +1,140 @@
-# Golgo 13 — port natif (arcade Namco System 12)
+# Golgo 13 — native port of the Namco arcade games
 
-Port **natif** (C11 + SDL3) de *Golgo 13* (arcade, 1999) : le code du jeu est recompilé statiquement MIPS → C, sans interpréteur de CPU.
-Les **ROM ne sont pas fournies** : il faut les tiennes (set MAME `golgo13`). Le C généré en dérive et n'est pas redistribué.
+[![build](https://github.com/naparuba-retro/golgo13/actions/workflows/ci.yml/badge.svg)](https://github.com/naparuba-retro/golgo13/actions/workflows/ci.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux-lightgrey)
+![language](https://img.shields.io/badge/C-11-informational)
+![SDL3](https://img.shields.io/badge/SDL-3-orange)
+![no interpreter](https://img.shields.io/badge/CPU%20emulator-none%20(static%20recompilation)-success)
+![ROMs](https://img.shields.io/badge/ROMs-not%20included-red)
+![translation](https://img.shields.io/badge/translation-fr-blueviolet)
 
-## Démarrage
+A **native** port (C11 + SDL3) of three *Golgo 13* arcade light-gun games. The game code is **statically recompiled** (MIPS → C): there is no CPU interpreter, the games run as plain compiled code.
+**No ROM, no game code and no game image is included** — you bring your own ROMs, the port builds everything else on your machine.
 
-1. Construire (voir plus bas), puis importer tes ROM une fois :
-   ```
-   golgo13.exe --import chemin\vers\golgo13.zip     (ou un dossier)
-   ```
-   Sans ROM, le jeu affiche un écran « fournis tes ROM » (glisser-déposer du zip sur la fenêtre, ou Entrée / clic).
-2. Lancer : `golgo13.exe` — en français : `golgo13.exe --lang fr` (ou menu langue avec **F4**).
+![Game selector](docs/img/selection.png)
 
-## Choix du jeu
-
-Au lancement (fenêtre), un sélecteur liste **tous** les jeux connus, avec l'état des ROM (dossier ou zip trouvé dans le dossier de données ou dans `./roms`, sous la forme `roms/<id>/` ou `roms/<id>.zip`) :
-
-| id | Jeu | État |
+| Game | Board | Status |
 |---|---|---|
-| `golgo13` | Golgo 13 (1999, System 12) | jouable |
-| `g13knd` | Golgo 13 : Kiseki no Dandou (2000, System 12) | jouable, traduction française avancée |
-| `g13jnr` | Golgo 13 : Juusei no Requiem (2001, System 10 + MP3) | jouable, avec son (effets SPU + musique MP3 ; le processeur de la carte MP3 est reproduit en haut niveau), traduction française en cours |
+| **Golgo 13** (1999) | Namco System 12 | playable, French translation |
+| **Golgo 13: Kiseki no Dandou** (2000) | Namco System 12 | playable, French translation (advanced) |
+| **Golgo 13: Juusei no Requiem** (2001) | Namco System 10 + MP3 board | playable with sound and music, French translation in progress |
 
-Haut/Bas, puis Entrée (ou clic) pour lancer ; le dernier choix est retenu. `--game <id>` saute le sélecteur (outils, tests ; par défaut `golgo13` en mode sans fenêtre).
+## Quick start (3 steps)
 
-## Le menu
+**1. Put your ROMs in the `roms/` folder** (next to this README). MAME sets, zip files or folders:
 
-![Sélecteur de jeux](docs/img/selection.png)
+```
+roms/
+  golgo13.zip     Golgo 13
+  g13knd.zip      Golgo 13: Kiseki no Dandou
+  g13jnr.zip      Golgo 13: Juusei no Requiem
+```
 
-Au lancement, un menu « planche de manga » liste les jeux : on choisit une carte (flèches, souris, manette ou pointeur de Wiimote), puis **JOUER**. **F1** ouvre les options, **Échap** met le jeu en pause (reprendre, options, changer de jeu, réinitialiser, quitter).
+You only need the games you want to play. Launching the game with no ROM shows a screen that tells you exactly where to put them (and it notices them as soon as you drop them in):
 
-| Options | Langue |
+![First launch without ROMs](docs/img/first-run.png)
+
+**2. Build everything with one command** (Python 3.10+, and a C compiler: Visual Studio / Build Tools on Windows, CMake + gcc on Linux):
+
+```
+python tools/setup.py
+```
+
+It downloads the small third-party files (SDL3, minimp3), reads your ROMs, generates the game code **on your machine**, and compiles the program. Run it again whenever you add a ROM; finished steps are skipped.
+
+**3. Play**: run `build\golgo13.exe` (Windows) or `build-linux/golgo13` (Linux). By default the game looks for your ROMs in `roms/`.
+
+> Why a build step? The recompiled game code is derived from the ROMs, so it can neither be shipped nor redistributed. The GitHub CI therefore builds the program *without* game code (menu only); `tools/setup.py` does the rest locally.
+
+## The menu
+
+On start you get a comic-book launcher: pick a card (arrows, mouse, gamepad, or Wiimote pointer), then **PLAY**. **F1** opens the options, **Esc** pauses a running game (resume, options, change game, restart, quit).
+
+| Options | Language |
 |---|---|
-| ![Options](docs/img/options.png) | ![Langue](docs/img/langue.png) |
+| ![Options](docs/img/options.png) | ![Language](docs/img/langue.png) |
 
-- **Image** : plein écran (F11), échelle entière, 4:3 ou fenêtre, filtre net/lissé, lignes de balayage CRT, FPS, vsync.
-- **Son** : volume, coupure. **Commandes** : 2 touches par action (capture de touche), réinitialisation. **Wiimote** : activer, lissage, zone morte, appairer, calibrer.
-- **Langue** : Original ou une traduction trouvée dans `translations/`. **Jeu** : crédits toujours au maximum, la gâchette (ou le zoom) sert de Start (on joue à la souris seule : tir + zoom), enregistrement des sessions, viseur.
-- Réglages enregistrés dans `settings.ini` (dossier de données, seules les valeurs modifiées sont écrites).
-- L'écran NOTICE du début est raccourci : Golgo y arrive, vise le compteur et tire (clic droit pour passer).
+- **Video**: fullscreen (F11), integer scaling, 4:3 or fill window, sharp/smooth filter, CRT scanlines, FPS counter, vsync.
+- **Sound**: volume, mute. **Controls**: two keys per action (press-a-key capture), reset. **Wiimote**: enable, smoothing, dead zone, pair, calibrate.
+- **Language**: Original, or any translation found in `translations/` (French included).
+- **Game**: credits always at maximum, trigger/scope doubling as Start (play with the mouse only: fire + scope), session recording, crosshair.
+- Settings are saved in `settings.ini` (data folder); only changed values are written.
+- The long *NOTICE* screen at start is shortened: Golgo walks in, aims at the countdown and shoots (right click skips).
 
-> Illustrations : cases du manga *Golgo 13* de Takao Saito (Saito Production / Shogakukan), reproduites en petit pour illustrer le menu. Dans le programme, ces images sont découpées **chez toi** à partir de tes propres scans (`tools/ui/make_art.py`) et ne sont pas distribuées ; sans elles, les cartes sont dessinées à la trame.
+> The manga panels shown are from *Golgo 13* by Takao Saito (Saito Production / Shogakukan), reproduced small to illustrate the menu. In the program, card pictures are cut **on your machine** from your own scans (`tools/ui/make_art.py`) and are not distributed; without them the cards are drawn with a halftone pattern.
 
-## Commandes
+## Controls
 
-| Action | Clavier / souris | Manette | Wiimote |
+| Action | Keyboard / mouse | Gamepad | Wiimote |
 |---|---|---|---|
-| Viser | souris | stick droit | pointeur IR |
-| Tirer | clic gauche, Ctrl, Espace | RT / A | B |
-| Lunette (zoom) | clic droit, Maj | LT / B | A |
+| Aim | mouse | right stick | IR pointer |
+| Fire | left click, Ctrl, Space | RT / A | B |
+| Scope (zoom) | right click, Shift | LT / B | A |
 | Start | 1 | Start | + |
 | Coin | 5 | Back | − |
-| Entrée / Haut / Bas | Entrée, ↑, ↓ | X, croix | 1, croix |
-| Menu pause | Échap | L1 + R1 (options) | Home |
+| Enter / Up / Down | Enter, ↑, ↓ | X, d-pad | 1, d-pad |
 | Test / Service | F1 / F2 | | 2 |
-| Viseur à l'écran, plein écran, quitter | F3, F11, Échap | | |
+| Pause menu | Esc | L1 + R1 (options) | Home |
+| Crosshair, fullscreen | F3, F11 | | |
 
-Un pistolet moderne (Sinden, Aimtrak, Gun4IR…) arrive comme une souris absolue et fonctionne tel quel.
+Modern light guns (Sinden, Aimtrak, Gun4IR…) show up as an absolute mouse and work as is.
 
-## Jouer à la Wiimote (Windows)
+## Playing with a Wiimote (Windows)
 
-Il faut une Wiimote, un adaptateur Bluetooth et la **barre infrarouge** (alimentée en 5 V par USB, ou deux bougies, sans quoi la manette ne voit rien).
+You need a Wiimote, a Bluetooth adapter and the **infrared sensor bar** (powered by 5 V USB, or two candles — without it the remote sees nothing).
 
-1. **Appairer** (une seule fois). Windows 11 ne sait pas fournir le code PIN binaire de la Wiimote : le jeu le fait lui-même.
-   - Supprime d'abord toute entrée « Nintendo RVL-CNT-01 » dans les paramètres Bluetooth de Windows.
-   - Lance `golgo13.exe --wiimote-pair`, puis **maintiens le bouton rouge SYNC** (sous le cache-piles) ou 1+2 jusqu'à « Paired ».
-   - Il peut falloir recommencer : le programme alterne les deux méthodes de code. L'appairage au PC remplace celui de la Wii (refaire un SYNC sur la console pour y rejouer).
-2. **Placer la barre** centrée au-dessus ou en dessous de l'écran.
-3. **Lancer** : `golgo13.exe --wiimote` (ou variable `GOLGO13_WIIMOTE=1`). Appuie sur un bouton de la manette pour la réveiller ; la LED 1 s'allume.
-4. **Calibrer** : un écran plein cadre apparaît au premier lancement. Il indique si la barre est détectée. Vise la croix verte en haut à gauche, **A** ; puis en bas à droite, **A** ; enfin vérifie que la croix rouge suit la manette, **A** pour valider (le menu Options > Wiimote > Calibrer recommence). Le réglage est enregistré dans `wiimote.cal` (dossier de données). **Home** ouvre le menu pause ; la calibration se relance dans Options > Wiimote.
+1. **Pair** (once). Windows 11 cannot supply the Wiimote's binary PIN, so the game does it itself.
+   - Remove any existing “Nintendo RVL-CNT-01” in the Windows Bluetooth settings first.
+   - Run `golgo13.exe --wiimote-pair`, then **hold the red SYNC button** (under the battery cover) or 1+2 until it prints “Paired”.
+   - You may have to retry: the program alternates between two PIN methods. Pairing with the PC replaces the Wii pairing (press SYNC on the console to use it there again).
+2. **Place the bar** centred above or below the screen.
+3. **Run** `golgo13.exe --wiimote` (or enable it in Options > Wiimote). Press a button on the remote to wake it; LED 1 lights up.
+4. **Calibrate**: a full-screen assistant appears on first use. Aim at the green cross (top-left), press **A**; then bottom-right, **A**; then check the red cross follows you, **A**. Saved in `wiimote.cal`. Redo it any time from Options > Wiimote > Calibrate.
 
-La souris reste utilisable ; la Wiimote prend la main tant que la barre est en vue. Si l'appairage échoue, essaie un autre adaptateur Bluetooth, ou une Dolphin Bar (la Wiimote se comporte alors comme une souris, sans rien changer ici). Détails : `docs_wiimote.md`.
+The mouse still works; the Wiimote takes over while the bar is in view. If pairing fails, try another Bluetooth adapter, or a Dolphin Bar (the remote then behaves like a mouse, nothing to change here). Details: `docs_wiimote.md`.
 
-## Construire
+## Translation
 
-**Important : le code du jeu n'est pas dans le dépôt.** Il est *recompilé à partir de tes ROM* (MIPS → C) puis compilé avec le programme ; il est donc propre à ta machine et jamais publié (`generated*/` est ignoré par git). Le CI GitHub compile le programme **sans** code de jeu (menu seulement) pour vérifier que tout compile sous Windows et Linux ; pour jouer il faut construire chez toi.
+Modular system (Original / `fr`): Japanese texts are translated, English texts are left as they are. The texts (`strings*.json`) are versioned; the translated pictures (`overlay.g13o`, `patch.g13t`) are built from your ROMs (they embed game pixels, so they are not published). See `translations/README.md` and `translations/TODO.md`.
 
-1. **Préparer les dossiers** : mets tes ROM dans `roms/` (voir `roms/README.md`), les polices et images du menu se fabriquent dans `data/ui/` (voir `data/ui/README.md`).
-2. **Dépendances** (une fois) : `python tools/setup_deps.py` (minimp3, CC0) ; Windows : `python tools/setup_sdl3.py` (SDL3 local) ; Linux : SDL3 du système ou `-DGOLGO_FETCH_SDL3=ON`.
-3. **Générer le code du jeu** depuis tes ROM : `python tools/recomp_mips/analyze.py` puis `gen_all.py`, et `tools/recomp_h8/flow.py` puis `gen.py` (dossiers `generated/`, `generated_h8/`). Pour un autre jeu : variable `GOLGO_GAME=g13knd` (régions extraites dans `work/g13knd/`, sortie dans `generated_g13knd/` et `generated_h8_g13knd/`, symboles préfixés) ; `tools/jnr/` prépare le jeu 3 (NAND). Un seul exécutable contient les jeux générés ; le sélecteur choisit lequel exécuter. Python sert uniquement aux outils, dans un venv local `.venv`.
-4. **Compiler** : Windows (MSVC / Build Tools) `python tools/build/build.py` → `build/golgo13.exe` (compilation incrémentale, la moitié des cœurs) ; Linux / Steam Deck `cmake -S . -B build && cmake --build build`.
-5. **Menu BD** (facultatif) : `python tools/ui/bake_font.py`, puis `python tools/ui/make_art.py <tes scans>`.
-6. **Traductions** : `python tools/translation/build.py --lang fr` (jeu 1), `--translations translations/g13knd --rom <dossier ROM>`, ou `translations/g13jnr` (jeu 3 : `python tools/jnr/packs.py` d'abord). Elles se fabriquent depuis tes ROM et ne sont pas versionnées.
+Rebuild translations: `python tools/translation/build.py --lang fr` (game 1); for the others `--translations translations/g13knd --rom <ROM folder>` or `translations/g13jnr` (game 3: run `python tools/jnr/packs.py` first).
 
-## Traduction
+## Manual build (what `tools/setup.py` does)
 
-Système modulaire (Original / `fr`) : textes japonais traduits, textes anglais laissés tels quels. Les textes (`strings*.json`) sont versionnés ; les images traduites (`overlay.g13o`, `patch.g13t`) se fabriquent depuis tes ROM. Voir `translations/README.md`, `translations/TODO.md` et `translations/g13knd/TODO.md`.
+- **Windows (MSVC)**: `python tools/setup_sdl3.py`, `python tools/setup_deps.py`, then `python tools/build/build.py` → `build/golgo13.exe`.
+- **Linux / Steam Deck**: `cmake -S . -B build && cmake --build build` (add `-DGOLGO_FETCH_SDL3=ON` if SDL3 is not installed).
+- **Game code**: `golgo13 --game <id> --dump-regions <dir>` writes the ROM regions; then `python tools/recomp_mips/analyze.py` and `gen_all.py`, and for System 12 games `tools/recomp_h8/flow.py` then `gen.py` (folders `generated*/`, git-ignored). Other games: `GOLGO_GAME=g13knd` (regions in `work/g13knd/`, output in `generated_g13knd/`, prefixed symbols); the System 10 game uses `tools/jnr/prepare.py` (NAND). One executable holds every generated game; the selector picks which one runs. Python is only used by the tools.
+- **Menu pictures** (optional): `python tools/ui/bake_font.py`, then `python tools/ui/make_art.py <your scans>`.
 
-## Autres notes
+## Where things are looked for
 
-- `PLAN.md` : architecture et contraintes. `docs_aim.md` : calibration de la visée. `docs_wiimote.md` : Wiimote.
-- Options de test : `--replay fichier.g13r`, `--headless`, `--frames N`. Les parties sont enregistrées dans le dossier de données (`sessions/*.g13r`).
+ROMs: `./roms`, then `roms/` next to the program, then your user data folder (`roms/<id>/` or `roms/<id>.zip`). Settings, calibration, recorded sessions and imported ROMs live in the per-user data folder (`GOLGO13_DATA` overrides it).
 
-## Licence et crédits
+## Notes
 
-Code sous licence MIT (`LICENSE`). Crédits et marques : `NOTICE.md`. Ce projet n'est affilié ni à Namco/Bandai Namco, ni à Shogakukan, ni à Saito Production ; les ROM et les œuvres restent leur propriété.
+- `PLAN.md`: architecture and constraints. `docs_aim.md`: aim calibration. `docs_wiimote.md`: Wiimote.
+
+## Command line (debug / tooling)
+
+None of this is needed to play.
+
+| Option | Effect |
+|---|---|
+| `--game <id>` | skip the selector (`golgo13`, `g13knd`, `g13jnr`) |
+| `--lang <code>` | force a language for this run (`original`, `fr`) |
+| `--roms DIR` / `--import ZIP\|DIR` | use ROMs from a folder / copy a ROM set into the data folder |
+| `--wiimote` / `--wiimote-pair` | enable the Wiimote / pair it |
+| `--headless --frames N [--noaudio]` | run without a window for N frames |
+| `--press frame:duration:button` | scripted input (coin, start, trigger, sensor, enter, up, down, test, pause…) |
+| `--replay file.g13r` | replay a recorded session (sessions are recorded in the data folder) |
+| `--shot FRAME FILE`, `--shotat f1,f2:prefix`, `--shotseq start:step:count:prefix` | screenshots at given frames |
+| `--ramat f1,f2:prefix`, `--dump-ram FILE` | RAM dumps |
+| `--menu-shots DIR` | render every menu page to PPM files (no window) |
+| `--dump-regions DIR` | write the ROM regions read by the recompiler (used by `tools/setup.py`) |
+| `--bot FILE` | test bot that plays from the display (tooling) |
+| env `GOLGO13_NOGAG=1` | disable the NOTICE gag; `GOLGO13_DATA=dir` changes the data folder |
+
+## License and credits
+
+Code under the MIT license (`LICENSE`). Credits and trademarks: `NOTICE.md`. This project is not affiliated with Namco / Bandai Namco, Shogakukan or Saito Production; the ROMs and the works remain their property.

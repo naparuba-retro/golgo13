@@ -4,7 +4,7 @@
 import subprocess, sys, os, re, json
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 PY = sys.executable
-er = os.path.join(ROOT, 'work', 'h8', 'extra_roots.json')
+er = os.path.join(ROOT, 'tools', 'recomp_h8', 'data', 'extra_roots_golgo13.json')
 frames = sys.argv[1] if len(sys.argv) > 1 else '600'
 roots = json.load(open(er)) if os.path.exists(er) else []
 for it in range(int(sys.argv[2]) if len(sys.argv) > 2 else 40):

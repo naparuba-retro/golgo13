@@ -3,9 +3,10 @@
 #include <stdio.h>
 #include "rt.h"
 #include "h8_state.h"
+extern int rt_code_is_stub;
 void code_export_all(blk_fn *ram_tbl, uint32_t ram_words, blk_fn *rom_tbl, uint32_t rom_words)
 {
-    (void)ram_tbl; (void)ram_words; (void)rom_tbl; (void)rom_words;
+    (void)ram_tbl; (void)ram_words; (void)rom_tbl; (void)rom_words; rt_code_is_stub = 1;
     fprintf(stderr, "This build contains no recompiled game code (generated/ is created from your own ROMs, see README: \"Construire\").\n");
 }
 h8_blk_fn h8_lookup(uint32_t pc) { (void)pc; return 0; }

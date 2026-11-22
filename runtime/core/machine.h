@@ -66,10 +66,13 @@ int  games_count(void);
 const game_info_t *game_info(int i);
 int  game_index(const char *id);                                          /* -1 if unknown */
 int  rom_select_game(int i);                                              /* choose which ROM table rom_load / rom_import use (default: golgo13) */
+void rom_add_search_dir(const char *dir);                                 /* extra folder searched for <id>/ or <id>.zip (besides ./roms and the data folder) */
 int  game_find_roms(int i, const char *userroms, char *path, size_t n);   /* 0 none, 1 folder (path), 2 zip (path) */
 int  rom_load(const char *dir, char *err, size_t errsz);   /* 0 = ok */
 void rom_unload(void);
 int  game_is_sys10(void);                             /* the selected game runs on the System 10 board */
+int  fs_dir_exists(const char *path);
+void fs_abs_path(const char *path, char *out, size_t n);       /* absolute path (for messages) */
 void fs_mkdir_p(const char *path);                    /* mkdir -p (used for the data folder and recorded sessions) */
 int  rom_import(const char *src, const char *dest, char *err, size_t errsz);   /* src = .zip or folder; copies verified files into dest */
 

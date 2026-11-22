@@ -18,9 +18,9 @@ for i in range(0, 0x100, 4):
     v = struct.unpack_from('>I', rom, i)[0] & 0xffffff
     if v and i != 0 or i == 0:
         if 0x100 <= v < SIZE: vec_roots[i] = v; add(v, True)
-_er = os.path.join(gamecfg.H8FLOW, 'extra_roots.json')
-if os.path.exists(_er):
-    for a in json.load(open(_er)): add(a, True)
+for _er in (os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'extra_roots_%s.json' % gamecfg.GAME), os.path.join(gamecfg.H8FLOW, 'extra_roots.json')):
+    if os.path.exists(_er):                       # extra entry points found by tools/recomp_h8/discover.py (versioned: addresses only)
+        for a in json.load(open(_er)): add(a, True)
 COND = {'bhi', 'bls', 'bcc', 'bcs', 'bne', 'beq', 'bvc', 'bvs', 'bpl', 'bmi', 'bge', 'blt', 'bgt', 'ble', 'bf'}
 def mem32(a): return struct.unpack_from('>I', rom, a)[0] & 0xffffff
 while work:
@@ -85,4 +85,4 @@ print(f"vectors: {len(vec_roots)} roots; code instrs {len(code)}, bytes {cover} 
 print("unresolved:", [hex(x) for x in unres][:20])
 print("vector table:", {hex(k): hex(v) for k, v in sorted(vec_roots.items())})
 json.dump({'code': sorted(code), 'funcs': sorted(funcs), 'unresolved': unres, 'vectors': {str(k): v for k, v in vec_roots.items()}},
-          open(os.path.join(gamecfg.H8FLOW, 'flow.json'), 'w'))
+          open(os.path.join(os.makedirs(gamecfg.H8FLOW, exist_ok=True) or gamecfg.H8FLOW, 'flow.json'), 'w'))

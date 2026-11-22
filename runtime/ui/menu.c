@@ -23,7 +23,7 @@ enum { S_CHOOSE, S_TAGLINE, S_OPTIONS, S_ROMS_OK, S_ROMS_MISSING, S_NOT_PLAYABLE
        S_T_IMAGE, S_T_SOUND, S_T_CONTROLS, S_T_WIIMOTE, S_T_LANG, S_T_GAME, S_FULLSCREEN, S_INTEGER, S_ASPECT, S_ASPECT43, S_ASPECTFILL, S_FILTER, S_SHARP, S_SMOOTH,
        S_SCAN, S_FPS, S_VSYNC, S_VOLUME, S_MUTE, S_WM_ENABLE, S_WM_STATE, S_WM_OFF, S_WM_SEARCH, S_WM_OK, S_SMOOTHING, S_DEADZONE, S_PAIR, S_CALIB, S_LANG_ORIG,
        S_START_LAST, S_RECORD, S_RETICLE, S_RESET_KEYS, S_PRESS_KEY, S_ACT_FIRE, S_ACT_SENSOR, S_ACT_ENTER, S_ACT_UP, S_ACT_DOWN, S_ACT_START, S_ACT_COIN, S_ACT_SERVICE, S_ACT_TEST,
-       S_PAUSE, S_RESUME, S_CHANGE_GAME, S_RESET, S_QUIT_GAME, S_SURE, S_YES, S_NO, S_SUB_OPT, S_SUB_CTRL, S_ROMHELP, S_KEYHINT, S_PAIRING, S_PLAYBTN, S_PICKED, S_FREE, S_TRIGSTART, S_N };
+       S_PAUSE, S_RESUME, S_CHANGE_GAME, S_RESET, S_QUIT_GAME, S_SURE, S_YES, S_NO, S_SUB_OPT, S_SUB_CTRL, S_ROMHELP, S_KEYHINT, S_PAIRING, S_PLAYBTN, S_PICKED, S_FREE, S_TRIGSTART, S_NOROM_T, S_NOROM_1, S_NOROM_2, S_NOROM_3, S_OPENDIR, S_AUTO, S_N };
 static const char *STR[S_N][2] = {
     [S_CHOOSE] = { "CHOOSE YOUR MISSION", "CHOISIS TA MISSION" }, [S_TAGLINE] = { "One game, one target, one shot.", "Un jeu, une cible, un seul tir." },
     [S_OPTIONS] = { "OPTIONS", "OPTIONS" }, [S_ROMS_OK] = { "ROMS OK", "ROMS OK" }, [S_ROMS_MISSING] = { "NO ROMS", "ROMS MANQUANTES" },
@@ -48,6 +48,11 @@ static const char *STR[S_N][2] = {
     [S_ROMHELP] = { "Put the ROM folder or zip in the data folder (roms/<game>).", "Mets le dossier ou le zip des ROM dans le dossier de données (roms/<jeu>)." },
     [S_PLAYBTN] = { "PLAY", "JOUER" }, [S_PICKED] = { "Now press PLAY", "Appuie maintenant sur JOUER" },
     [S_FREE] = { "Credits always at maximum", "Crédits toujours au maximum" }, [S_TRIGSTART] = { "Trigger also acts as Start", "La gâchette sert aussi de Start" },
+    [S_NOROM_T] = { "NO ROMS FOUND", "AUCUNE ROM TROUVÉE" },
+    [S_NOROM_1] = { "1. Put your own ROMs (zip or folder) in this folder:", "1. Place tes propres ROM (zip ou dossier) dans ce dossier :" },
+    [S_NOROM_2] = { "2. Name them like this (MAME sets):", "2. Nomme-les ainsi (sets MAME) :" },
+    [S_NOROM_3] = { "3. Restart the game: it reads this folder by default.", "3. Relance le jeu : il lit ce dossier par défaut." },
+    [S_OPENDIR] = { "OPEN THE FOLDER", "OUVRIR LE DOSSIER" }, [S_AUTO] = { "(ROMs added now are detected automatically)", "(les ROM ajoutées maintenant sont détectées toute seules)" },
     [S_KEYHINT] = { "Enter: change a key   Del: clear", "Entrée : changer une touche   Suppr : effacer" }, [S_PAIRING] = { "Pairing... press 1+2 on the Wiimote", "Appairage... appuie sur 1+2 sur la Wiimote" },
 };
 static char g_uilang[32];
@@ -193,9 +198,11 @@ static void row_button(const char *label, int id, const char *desc)
 
 /* ---------------------------------------------------------------- pages */
 enum { PG_SELECT, PG_OPTIONS, PG_PAUSE };
-enum { BT_OPTIONS = 1, BT_RESUME, BT_CHANGE, BT_RESET, BT_QUIT, BT_YES, BT_NO, BT_PAIR, BT_CALIB, BT_RESETKEYS, BT_PLAY, BT_DONE };
+enum { BT_OPENDIR = 100, BT_OPTIONS = 1, BT_RESUME, BT_CHANGE, BT_RESET, BT_QUIT, BT_YES, BT_NO, BT_PAIR, BT_CALIB, BT_RESETKEYS, BT_PLAY, BT_DONE };
 static int g_picked = -1;
 static int g_confirm_quit;
+static char g_roms_dir[1100] = "roms";
+void menu_set_roms_dir(const char *d) { if (d && *d) snprintf(g_roms_dir, sizeof g_roms_dir, "%s", d); }
 static int options_last_index(void) { return g_opt_lastgame[0] ? game_index(g_opt_lastgame) : -1; }
 typedef struct { const char *id, *name; uint32_t accent; } gstyle_t;
 static const gstyle_t GST[] = { { "golgo13", "GOLGO 13", UI_RGB(214, 28, 36) }, { "g13knd", "LE MIRACLE", UI_RGB(20, 160, 140) }, { "g13jnr", "REQUIEM", UI_RGB(230, 140, 20) } };
@@ -355,6 +362,28 @@ static void draw_pause(void)
     }
 }
 
+/* first-run page: no ROM set found anywhere */
+static void draw_roms_help(void)
+{
+    draw_bg(); header(T(S_NOROM_T), fr() ? "Un dossier, trois noms." : "One folder, three names.");
+    panel(120, 130, 1040, 470, 20, PAPER, 1);
+    ui_text(UI_BODY, 24, 170, 160, INK, T(S_NOROM_1), UI_LEFT);
+    ui_fill_para(160, 200, 960, 52, 0, INK); ui_fill_para(164, 204, 952, 44, 0, UI_RGB(255, 244, 190));
+    { char p[1100]; snprintf(p, sizeof p, "%s", g_roms_dir); int sz = 22; while (sz > 14 && ui_text_width(UI_BODY, sz, p) > 920) sz--; ui_text(UI_BODY, sz, 180, 214, INK, p, UI_LEFT); }
+    ui_text(UI_BODY, 24, 170, 276, INK, T(S_NOROM_2), UI_LEFT);
+    static const char *ROWS[3][2] = { { "golgo13.zip", "Golgo 13 (1999)" }, { "g13knd.zip", "Kiseki no Dandou (2000)" }, { "g13jnr.zip", "Juusei no Requiem (2001)" } };
+    for (int k = 0; k < 3; k++) {
+        float y = 314 + k * 44; ui_fill_para(190, y, 280, 36, 8, INK); ui_fill_para(193, y + 3, 274, 30, 8, PAPER);
+        ui_text(UI_TITLE, 24, 330, y + 3, RED, ROWS[k][0], UI_CENTER); ui_text(UI_BODY, 22, 500, y + 5, INK, ROWS[k][1], UI_LEFT);
+    }
+    ui_text(UI_BODY, 24, 170, 454, INK, T(S_NOROM_3), UI_LEFT); ui_text(UI_BODY, 18, 170, 490, UI_RGB(90, 80, 60), T(S_AUTO), UI_LEFT);
+    int b1 = reg(260, 530, 360, 56, IK_BTN, BT_OPENDIR, 0, NULL), b2 = reg(660, 530, 360, 56, IK_BTN, BT_QUIT, 0, NULL);
+    ui_fill_para(268, 538, 360, 56, 16, INK); ui_fill_para(260, 530, 360, 56, 16, focus == b1 ? YEL : RED); ui_stroke_para(260, 530, 360, 56, 16, 5, INK);
+    text_o(UI_TITLE, 32, 440, 536, focus == b1 ? INK : PAPER, T(S_OPENDIR), UI_CENTER, focus == b1 ? 0 : 2);
+    ui_fill_para(668, 538, 360, 56, 16, INK); ui_fill_para(660, 530, 360, 56, 16, focus == b2 ? YEL : PAPER); ui_stroke_para(660, 530, 360, 56, 16, 5, INK);
+    ui_text(UI_TITLE, 32, 840, 536, INK, T(S_QUIT_GAME), UI_CENTER);
+}
+
 /* ---------------------------------------------------------------- input */
 static void gather(void)
 {
@@ -467,6 +496,19 @@ int menu_select_game(const char *userroms, const menu_ctx_t *ctx)
 {
     static uint32_t buf[UI_W * UI_H]; g_buf = buf; g_ctx = ctx; g_userroms = userroms; int n = games_count(); if (n > 3) n = 3;
     for (int i = 0; i < n; i++) { char p[1100]; g_roms[i] = game_find_roms(i, userroms, p, sizeof p); }
+    for (;;) {                                                           /* nothing found anywhere: explain where to put the ROMs, rescan every second */
+        int any = 0; for (int i = 0; i < n; i++) if (g_roms[i]) any = 1;
+        if (any) break;
+        focus = 0; nit = 0; int tick = 0;
+        while (!any) {
+            gather(); if (g_quit) return -1;
+            int back, act = process(0, &back);
+            if (act == BT_OPENDIR) plat_open_folder(g_roms_dir);
+            if (act == BT_QUIT || back) return -1;
+            nit = 0; draw_roms_help(); present();
+            if (++tick % 60 == 0) for (int i = 0; i < n; i++) { char p[1100]; g_roms[i] = game_find_roms(i, userroms, p, sizeof p); if (g_roms[i]) any = 1; }
+        }
+    }
     focus = 0; nit = 0; g_msg[0] = 0; g_picked = -1;
     { int g = options_last_index(); if (g >= 0 && g < n) { focus = g; g_picked = g; } }
     for (;;) {
@@ -580,6 +622,7 @@ int menu_shots(const char *dir, const menu_ctx_t *ctx, const char *userroms)
     fs_mkdir_p(dir);
     focus = 1; nit = 0; draw_select(); nit = 0; draw_select(); snprintf(p, sizeof p, "%s/1_select.ppm", dir); save_ppm(p);
     for (int t = 0; t < 6; t++) { g_tab = t; focus = NTABS + (t == 3 ? 2 : 1); nit = 0; draw_options(); nit = 0; draw_options(); snprintf(p, sizeof p, "%s/2_options_%d.ppm", dir, t); save_ppm(p); }
+    focus = 0; nit = 0; draw_roms_help(); nit = 0; draw_roms_help(); snprintf(p, sizeof p, "%s/5_roms_help.ppm", dir); save_ppm(p);
     focus = 0; nit = 0; draw_pause(); nit = 0; draw_pause(); snprintf(p, sizeof p, "%s/3_pause.ppm", dir); save_ppm(p);
     for (int k = 0; k < 6; k++) { float pp[6] = { 0.1f, 0.35f, 0.54f, 0.58f, 0.7f, 0.97f }; menu_notice(NULL, 0, 0, pp[k], 20000 + k * 700); snprintf(p, sizeof p, "%s/4_notice_%d.ppm", dir, k); save_ppm(p); }
     return 0;

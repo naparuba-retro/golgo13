@@ -6,7 +6,7 @@ Olivier Galibert); operand decoding follows h8d.cpp. Produces Insn objects with 
 import re, os, struct
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-HXX = os.path.join(ROOT, 'work', 'h8', 'h8d.hxx')
+HXX = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'h8d.hxx')
 _ROW = re.compile(r'\{ (\d+), (0x[0-9a-f]+), (0x[0-9a-f]+), (0x[0-9a-f]+), (0x[0-9a-f]+), "([^"]*)", (DASM_\w+), (DASM_\w+), (\d+)(?: \| ([A-Z_]+))? \}')
 TABLE = []
 for l in open(HXX):
