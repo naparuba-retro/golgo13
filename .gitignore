@@ -51,10 +51,12 @@ gls1*
 /data/ui/cards/*
 !/data/ui/cards/golgo13.rgba
 !/data/ui/cards/g13knd.rgba
+!/data/ui/cards/g13jnr.rgba
 *.rgba
 *.g13i
 !/data/ui/cards/golgo13.rgba
 !/data/ui/cards/g13knd.rgba
+!/data/ui/cards/g13jnr.rgba
 
 # --- recorded sessions / screenshots / dumps produced by tests --------------------------------------------------
 *.g13r
