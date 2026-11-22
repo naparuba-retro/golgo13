@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/img/logo.png" alt="Golgo 13 - native arcade port" width="720"></p>
+
 # Golgo 13 — native port of the Namco arcade games
 
 [![build](https://github.com/naparuba-retro/golgo13/actions/workflows/ci.yml/badge.svg)](https://github.com/naparuba-retro/golgo13/actions/workflows/ci.yml)
