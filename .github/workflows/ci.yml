@@ -118,7 +118,7 @@ jobs:
           OUT: ${{ github.workspace }}
         run: |
           chmod +x golgo13-linux-x64/build-linux/golgo13 || true
-          tools/appimage/build_appimage.sh
+          bash tools/appimage/build_appimage.sh
       - uses: actions/upload-artifact@v4
         with:
           name: golgo13-appimage
