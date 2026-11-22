@@ -15,17 +15,17 @@
 A **native** port (C11 + SDL3) of three *Golgo 13* arcade light-gun games. The game code is **statically recompiled** (MIPS → C): there is no CPU interpreter, the games run as plain compiled code.
 **No ROM, no game code and no game image is included** — you bring your own ROMs, the port builds everything else on your machine.
 
-![Game selector](docs/img/selection.png)
-
 | Game | Board | Status |
 |---|---|---|
 | **Golgo 13** (1999) | Namco System 12 | playable, French translation |
 | **Golgo 13: Kiseki no Dandou** (2000) | Namco System 12 | playable, French translation (advanced) |
 | **Golgo 13: Juusei no Requiem** (2001) | Namco System 10 + MP3 board | playable with sound and music, French translation in progress |
 
-## Quick start (3 steps)
+## Quick start (nothing to type)
 
-**1. Put your ROMs in the `roms/` folder** (next to this README). MAME sets, zip files or folders:
+**1. Download** the latest bundle from the [Releases](https://github.com/naparuba-retro/golgo13/releases) page and extract it: the Windows zip, or on Linux / Steam Deck the single `golgo13-<version>-x86_64.AppImage` file (make it executable, then double-click it).
+
+**2. Put your ROMs in the `roms/` folder** next to the program (for the AppImage: the `golgo13/roms/` folder it creates next to itself). MAME sets, zip files or folders:
 
 ```
 roms/
@@ -34,25 +34,19 @@ roms/
   g13jnr.zip      Golgo 13: Juusei no Requiem
 ```
 
-You only need the games you want to play. Launching the game with no ROM shows a screen that tells you exactly where to put them (and it notices them as soon as you drop them in):
+You only need the games you want to play. Launching the program with no ROM shows a screen that tells you exactly where to put them (and it notices them as soon as you drop them in):
 
 ![First launch without ROMs](docs/img/first-run.png)
 
-**2. Build everything with one command** (Python 3.10+, and a C compiler: Visual Studio / Build Tools on Windows, CMake + gcc on Linux):
+**3. Run the program and pick a game.** The first time, an in-app **build screen** reads your ROMs, generates the game code **on your machine**, compiles it and builds the French translation, with a progress display (it takes several minutes, once per game). Then you play. Everything is done from the menu: no command line.
 
-```
-python tools/setup.py
-```
+![Game selector](docs/img/selection.png)
 
-Everything runs inside a project-local virtual environment (`.venv`, created automatically): **nothing is ever installed in your global Python**. It downloads the small third-party files (SDL3, minimp3), reads your ROMs, generates the game code **on your machine**, compiles the program and builds the French translation. Run it again whenever you add a ROM; finished steps are skipped (`--no-translations` to skip the slow translation step).
+- **Linux / Steam Deck (AppImage)**: it carries its own Python, CMake, Ninja, zig cc and SDL3, so there is nothing to install. Everything is kept in the `golgo13/` folder beside the AppImage. Tested on a Steam Deck (desktop mode).
+- **Windows**: the in-app build needs [Python 3.10+](https://www.python.org/downloads/) and the Visual Studio *Build Tools* (C++ workload) installed once. It works in a project-local environment: nothing is ever installed in your global Python.
+- **Linux tar.gz**: needs Python 3.10+, CMake and gcc.
 
-> **Prefer not to clone?** Download the latest bundle from the [Releases](https://github.com/naparuba-retro/golgo13/releases) page (Windows zip / Linux tar.gz), extract it, put your ROMs in `roms/`, run the program, pick a game: the in-app build screen does step 2 for you (it needs Python 3.10+ and a C compiler).
-
-> **Linux / Steam Deck: one file, nothing to install.** Download `golgo13-<version>-x86_64.AppImage` from [Releases](https://github.com/naparuba-retro/golgo13/releases), `chmod +x` it, put your ROMs in the `golgo13/roms/` folder it creates next to itself, run it and pick a game: it carries its own Python, CMake, Ninja, zig cc and SDL3, builds the game from your ROMs (about 10 minutes the first time) and keeps everything in `golgo13/` beside the AppImage. Tested on a Steam Deck (desktop mode).
-
-**3. Play**: run `build\golgo13.exe` (Windows) or `build-linux/golgo13` (Linux). By default the game looks for your ROMs in `roms/`.
-
-> Why a build step? The recompiled game code is derived from the ROMs, so it can neither be shipped nor redistributed. The GitHub CI therefore builds the program *without* game code (menu only); `tools/setup.py` does the rest locally.
+> Why a build step? The recompiled game code is derived from the ROMs, so it can neither be shipped nor redistributed. The GitHub CI therefore builds the program *without* game code (menu only); the in-app build does the rest locally. **No ROM, no game code and no game image is included.**
 
 ## The menu
 
@@ -105,9 +99,11 @@ The mouse still works; the Wiimote takes over while the bar is in view. If pairi
 
 Modular system (Original / `fr`): Japanese texts are translated, English texts are left as they are. The texts (`strings*.json`) are versioned; the translated pictures (`overlay.g13o`, `patch.g13t`) are built from your ROMs (they embed game pixels, so they are not published). See `translations/README.md` and `translations/TODO.md`.
 
-**You do not have to build them by hand**: `python tools/setup.py` records the scenes and builds the translated pictures for every game you have (the first run is the slowest step, about as long as the game code; `--no-translations` skips it). Then pick *Français* in Options > Language. By hand: `python tools/translation/build.py --lang fr` (game 1), or `--translations translations/g13knd --rom <ROM folder>` / `translations/g13jnr` (game 3: `python tools/jnr/packs.py` first).
+**You do not have to build them by hand**: the in-app build records the scenes and builds the translated pictures for every game you have (the slowest step, about as long as the game code). Then pick *Français* in Options > Language. For developers: `python tools/translation/build.py --lang fr` (game 1), or `--translations translations/g13knd --rom <ROM folder>` / `translations/g13jnr` (game 3: `python tools/jnr/packs.py` first).
 
-## Manual build (what `tools/setup.py` does)
+## Building from source (developers)
+
+The in-app build runs `python tools/setup.py` for you; developers can run it directly (`--no-translations` skips the slow translation step). The manual steps:
 
 - **Windows (MSVC)**: `python tools/setup_sdl3.py`, `python tools/setup_deps.py`, then `python tools/build/build.py` → `build/golgo13.exe`.
 - **Linux / Steam Deck**: `cmake -S . -B build && cmake --build build` (add `-DGOLGO_FETCH_SDL3=ON` if SDL3 is not installed).
