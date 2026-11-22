@@ -126,6 +126,12 @@ def main():
     if a.no_build: print('\nPrepared. Build with: ' + ('python tools/build/build.py' if WIN else 'cmake --build build-linux')); return 0
     say('4/4 Final build with your games')
     build('with game code')
+    CARD_FRAME = {'golgo13': 3000, 'g13knd': 3150, 'g13jnr': 4100}      # title screens
+    for gid in found:                                                    # menu card pictures: the game's own title screen (manga cards from make_art.py take precedence)
+        card = os.path.join(ROOT, 'data', 'ui', 'cards', gid + '.rgba')
+        if not os.path.exists(card):
+            os.makedirs(os.path.dirname(card), exist_ok=True)
+            subprocess.run([EXE, '--game', gid, '--headless', '--noaudio', '--lang', 'original', '--frames', str(CARD_FRAME[gid]), '--card-art', card], cwd=ROOT)
     if not a.no_translations:
         say('5/5 Translations (recording the scenes is slow the first time)')
         for gid in [g for g in ('golgo13', 'g13knd', 'g13jnr') if g in found]: translate(gid)

@@ -121,8 +121,9 @@ static void header(const char *title, const char *sub)
 {
     float X[4] = { 30, 620, 580, 30 }, Y[4] = { 22, 22, 96, 96 }; ui_fill_quad(X, Y, INK);
     float X2[4] = { 26, 610, 570, 26 }, Y2[4] = { 18, 18, 90, 90 }; ui_fill_quad(X2, Y2, RED);
-    text_o(UI_TITLE, 54, 52, 24, PAPER, title, UI_LEFT, 3);
-    if (sub) ui_text(UI_BODY, 22, 640, 48, PAPER, sub, UI_LEFT);
+    int ts = 54; while (ts > 30 && ui_text_width(UI_TITLE, ts, title) > 520) ts -= 4;           /* wider fonts (the free fallback) must still fit the banner */
+    text_o(UI_TITLE, ts, 52, 24 + (54 - ts) / 3, PAPER, title, UI_LEFT, 3);
+    if (sub) { int ss = 22; while (ss > 14 && 640 + ui_text_width(UI_BODY, ss, sub) > 1000) ss -= 2; ui_text(UI_BODY, ss, 640, 48, PAPER, sub, UI_LEFT); }
     text_o(UI_TITLE, 72, UI_W - 40, 8, YEL, "13", UI_RIGHT, 4); text_o(UI_TITLE, 46, UI_W - 130, 22, PAPER, "GOLGO", UI_RIGHT, 3);
 }
 static void hint_bar(const char *const *kv, int n)           /* pairs: key, label */

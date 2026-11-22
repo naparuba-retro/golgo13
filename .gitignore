@@ -48,9 +48,13 @@ gls1*
 
 # --- menu assets built locally (fonts baked from system fonts, card art cut from the user's own manga scans) ----
 /data/ui/*.bin
-/data/ui/cards/
+/data/ui/cards/*
+!/data/ui/cards/golgo13.rgba
+!/data/ui/cards/g13knd.rgba
 *.rgba
 *.g13i
+!/data/ui/cards/golgo13.rgba
+!/data/ui/cards/g13knd.rgba
 
 # --- recorded sessions / screenshots / dumps produced by tests --------------------------------------------------
 *.g13r

@@ -319,7 +319,7 @@ extern int rt_code_is_stub;
 int main(int argc, char **argv)
 {
     int want_wiimote = getenv("GOLGO13_WIIMOTE") != NULL; const char *game_opt = NULL, *menu_shots_dir = NULL, *dump_regions_dir = NULL;
-    const char *lang = getenv("GOLGO13_LANG"), *tr_dir = NULL, *replay_path = NULL; const char *dump_aux = NULL; const char *roms = NULL, *dump = NULL, *dump_vram = NULL, *import_src = NULL; long frames = 0; int trace = 0, headless = 0, noh8 = 0, noaudio = 0; const char *wav_path = NULL; long autoquit = 0, nframes = 0; const char *shot_p = NULL; uint64_t shot_f = 0, log_f = 0;
+    const char *lang = getenv("GOLGO13_LANG"), *tr_dir = NULL, *replay_path = NULL; const char *dump_aux = NULL, *card_art_path = NULL; const char *roms = NULL, *dump = NULL, *dump_vram = NULL, *import_src = NULL; long frames = 0; int trace = 0, headless = 0, noh8 = 0, noaudio = 0; const char *wav_path = NULL; long autoquit = 0, nframes = 0; const char *shot_p = NULL; uint64_t shot_f = 0, log_f = 0;
     for (int i = 1; i < argc; i++) {
         if (!strcmp(argv[i], "--roms") && i + 1 < argc) roms = argv[++i];
         else if (!strcmp(argv[i], "--shotseq") && i + 1 < argc) {            /* start:step:count:prefix  (with --press; test tool) */
@@ -367,6 +367,7 @@ int main(int argc, char **argv)
         else if (!strcmp(argv[i], "--traceload")) gpu_trace_loads = 1;
         else if (!strcmp(argv[i], "--dump-aux") && i + 1 < argc) dump_aux = argv[++i];
         else if (!strcmp(argv[i], "--dump-vram") && i + 1 < argc) dump_vram = argv[++i];
+        else if (!strcmp(argv[i], "--card-art") && i + 1 < argc) card_art_path = argv[++i];      /* tooling: save the display after --frames as a menu card picture */
         else if (!strcmp(argv[i], "--dump-ram") && i + 1 < argc) dump = argv[++i];
         else if (!strcmp(argv[i], "--press") && i + 1 < argc && npress < 64) {      /* frame:duration:name */
             char *a = argv[++i]; presses[npress].at = atol(a); char *c = strchr(a, ':');
@@ -577,6 +578,11 @@ int main(int argc, char **argv)
     fprintf(stderr, "mdec macroblocks decoded: %llu\n", (unsigned long long)mdec_blocks);
     machine_dump_state(); h8m_dump();
     if (wav_path) wav_write(wav_path);
+    if (card_art_path) {                                                  /* menu card picture: the game'"'"'s own screen, cropped to the card ratio ("G13I" w h + RGBA) */
+        static uint8_t cb[1024 * 512 * 4]; int cw = 0, ch = 0; gpu_get_display(cb, &cw, &ch);
+        int th = cw * 300 / 360; if (th > ch) th = ch; int y0 = (ch - th) / 2; FILE *cf = fopen(card_art_path, "wb");
+        if (cf) { uint32_t hd[3] = { 0x49333147u, (uint32_t)cw, (uint32_t)th }; fwrite(hd, 4, 3, cf); fwrite(cb + (size_t)y0 * cw * 4, 4, (size_t)cw * th, cf); fclose(cf); }
+    }
     if (dump) machine_dump_ram(dump);
     if (dump_aux) { char nm[1200]; FILE *af; snprintf(nm, sizeof nm, "%s.shared", dump_aux); if ((af = fopen(nm, "wb"))) { fwrite(G.sharedram, 1, sizeof G.sharedram, af); fclose(af); }
                     snprintf(nm, sizeof nm, "%s.eeprom", dump_aux); if ((af = fopen(nm, "wb"))) { fwrite(G.eeprom, 1, sizeof G.eeprom, af); fclose(af); } }
