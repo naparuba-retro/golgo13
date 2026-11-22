@@ -50,6 +50,14 @@ static uint16_t dc_decrypt(uint16_t c)
     dc.mask = m; return p;
 }
 
+/* getenv() is slow on Windows (it scans the environment on every call) and these tests sit on hot I/O paths: ask once per name */
+static const char *envc(const char *name)
+{
+    static struct { const char *k; const char *v; } c[16]; static int n;
+    for (int i = 0; i < n; i++) if (c[i].k == name) return c[i].v;
+    const char *v = getenv(name); if (n < 16) { c[n].k = name; c[n].v = v; n++; }
+    return v;
+}
 /* ---- NAND controller (registers at 0x1f4xxxxx) ---- */
 static struct { uint32_t dev, addr, ctrl, pos; int cmd; int id_phase; } nd;     /* pos: byte offset in the chip image of the next byte to read */
 static uint8_t *nand_base(void) { return G.nand; }
@@ -132,7 +140,7 @@ void sys10_build_bios(void)
 
 void sys10_reset(void)
 {
-    if (getenv("S10XHAIR")) sys_val &= ~1u;   /* dip "Show Crosshair" on: the game draws its own aim point (debug) */
+    if (envc("S10XHAIR")) sys_val &= ~1u;   /* dip "Show Crosshair" on: the game draws its own aim point (debug) */
     memset(&nd, 0, sizeof nd); memset(&dc, 0, sizeof dc); memset(blocktab, 0, sizeof blocktab);
     int_reg = 0; exio_bit = 7; exio_byte = 0; i2c_host_clock = i2c_host_data = i2c_dev_data = i2c_prev_clock = i2c_prev_data = 1; i2c_mode = 0; i2c_bit = 0; i2c_byte = 0;
 }
@@ -141,7 +149,7 @@ void sys10_tick(void) { int_reg |= 8; }
 
 static int sys10_read_(uint32_t p, int sz, uint32_t *out); static int sys10_write_(uint32_t p, int sz, uint32_t v); static void sys10_mcu_command(void);
 static int dbg = -1; static int dbg_n;
-static void dbgf(const char *what, uint32_t p, int sz, uint32_t v) { if (dbg < 0) dbg = getenv("S10DBG") != NULL; if (dbg && dbg_n < 4000) { dbg_n++; fprintf(stderr, "s10 %s %08x/%d = %08x\n", what, p, sz, v); } }
+static void dbgf(const char *what, uint32_t p, int sz, uint32_t v) { if (dbg < 0) dbg = envc("S10DBG") != NULL; if (dbg && dbg_n < 4000) { dbg_n++; fprintf(stderr, "s10 %s %08x/%d = %08x\n", what, p, sz, v); } }
 int sys10_read(uint32_t p, int sz, uint32_t *out)
 {
     uint32_t o = p - 0x10000000u; *out = 0;
@@ -151,7 +159,7 @@ static int sys10_read_(uint32_t p, int sz, uint32_t *out)
 {
     uint32_t o = p - 0x10000000u; *out = 0;
     if (p >= 0x1f500000u && p < 0x1f600000u) { uint32_t v = 0; memcpy(&v, &blocktab[p - 0x1f500000u], (size_t)sz); *out = v; return 1; }
-    if (p >= 0x1f320000u && p < 0x1f340000u && mcu_started && getenv("S10WIN") && win_log < 300000) { win_log++; uint32_t i0 = ((mcu_bank & 63) * 0x10000u + ((p - 0x1f320000u) >> 1)); fprintf(stderr, "win R bank=%u mcu=%06x/%d = %04x\n", mcu_bank, 0x800000u + i0 * 2, sz, mcu_ram ? mcu_ram[i0] : 0); }
+    if (p >= 0x1f320000u && p < 0x1f340000u && mcu_started && envc("S10WIN") && win_log < 300000) { win_log++; uint32_t i0 = ((mcu_bank & 63) * 0x10000u + ((p - 0x1f320000u) >> 1)); fprintf(stderr, "win R bank=%u mcu=%06x/%d = %04x\n", mcu_bank, 0x800000u + i0 * 2, sz, mcu_ram ? mcu_ram[i0] : 0); }
     if ((mcu_bank & 63) == 63 && p >= 0x1f33fff0u && p < 0x1f33fff8u) { *out = gun_ch[(p - 0x1f33fff0u) >> 1]; return 1; }   /* ADC mailbox written by the MCU firmware */
     if (p >= 0x1f320000u && p < 0x1f340000u) { if (!mcu_ram) mcu_ram = (uint16_t *)calloc(0x400000, 2); uint32_t i = ((mcu_bank & 63) * 0x10000u + ((p - 0x1f320000u) >> 1)); *out = sz == 4 ? (mcu_ram[i] | ((uint32_t)mcu_ram[i + 1] << 16)) : mcu_ram[i]; return 1; }
     if (p == 0x1f300006u) { *out = 1; return 1; }                         /* subcomm_busy_r: never busy (no MCU) */
@@ -184,14 +192,14 @@ static int sys10_write_(uint32_t p, int sz, uint32_t v)
 {
     uint32_t o = p - 0x10000000u; (void)sz;
     if (p >= 0x1f500000u && p < 0x1f600000u) { memcpy(&blocktab[p - 0x1f500000u], &v, (size_t)sz); return 1; }
-    if (p >= 0x1f320000u && p < 0x1f340000u && mcu_started && getenv("S10WIN") && win_log < 300000) { win_log++; uint32_t i0 = ((mcu_bank & 63) * 0x10000u + ((p - 0x1f320000u) >> 1)); fprintf(stderr, "win W bank=%u mcu=%06x/%d = %04x\n", mcu_bank, 0x800000u + i0 * 2, sz, v & 0xffff); }
+    if (p >= 0x1f320000u && p < 0x1f340000u && mcu_started && envc("S10WIN") && win_log < 300000) { win_log++; uint32_t i0 = ((mcu_bank & 63) * 0x10000u + ((p - 0x1f320000u) >> 1)); fprintf(stderr, "win W bank=%u mcu=%06x/%d = %04x\n", mcu_bank, 0x800000u + i0 * 2, sz, v & 0xffff); }
     if (p >= 0x1f320000u && p < 0x1f340000u) { if (!mcu_ram) mcu_ram = (uint16_t *)calloc(0x400000, 2); uint32_t i = ((mcu_bank & 63) * 0x10000u + ((p - 0x1f320000u) >> 1)); mcu_ram[i] = (uint16_t)v; if (sz == 4) mcu_ram[i + 1] = (uint16_t)(v >> 16); return 1; }
     if (p == 0x1f300000u && (v & 0xffff) == 1) mcu_started = 1;
-    if (p == 0x1f300000u && (v & 0xffff) == 1 && getenv("S10MCU") && mcu_ram) { FILE *f = fopen(getenv("S10MCU"), "wb"); if (f) { fwrite(mcu_ram, 2, 0x400000, f); fclose(f); } }
+    if (p == 0x1f300000u && (v & 0xffff) == 1 && envc("S10MCU") && mcu_ram) { FILE *f = fopen(envc("S10MCU"), "wb"); if (f) { fwrite(mcu_ram, 2, 0x400000, f); fclose(f); } }
     if (p == 0x1f300006u) { sys10_mcu_command(); return 1; }
     if (p == 0x1f300000u) return 1;                  /* firmware_write_w / subcomm_int_w: nothing to start yet */
     if (p == 0x1f30000cu) { mcu_bank = v & 0xffff; return 1; }
-    if (o >= 0x0f380000u && o < 0x0f380004u) { if (getenv("S10NAND")) fprintf(stderr, "crypto %04x\n", v & 0xffff); if (v & 0x8000u) dc_activate((int)(v & 0xf)); else dc.active = 0; return 1; }   /* crypto switch */
+    if (o >= 0x0f380000u && o < 0x0f380004u) { if (envc("S10NAND")) fprintf(stderr, "crypto %04x\n", v & 0xffff); if (v & 0x8000u) dc_activate((int)(v & 0xf)); else dc.active = 0; return 1; }   /* crypto switch */
     if (o >= 0x0f410000u && o < 0x0f410004u) { nd.cmd = (int)(v & 0xff); nd.id_phase = 0; if (nd.cmd == 0x00 || nd.cmd == 0x01 || nd.cmd == 0x50) nand_addr_update(); return 1; }
     if (o >= 0x0f420000u && o < 0x0f420004u) { nd.addr = (nd.addr & 0xffff00u) | (v & 0xff); nand_addr_update(); return 1; }
     if (o >= 0x0f430000u && o < 0x0f430004u) { nd.addr = (nd.addr & 0xff00ffu) | ((v & 0xff) << 8); nand_addr_update(); return 1; }
@@ -214,16 +222,16 @@ static void sys10_mcu_command(void)
 {
     if (!mcu_ram) return;
     const uint16_t *w = &mcu_ram[63u * 0x10000u]; int cmd = w[0] & 0xff, a1 = w[1], a2 = w[2];
-    if (getenv("S10CMD")) fprintf(stderr, "mcu cmd %c(%d) %04x %04x\n", cmd >= 32 && cmd < 127 ? cmd : 63, cmd, a1, a2);
+    if (envc("S10CMD")) fprintf(stderr, "mcu cmd %c(%d) %04x %04x\n", cmd >= 32 && cmd < 127 ? cmd : 63, cmd, a1, a2);
     static int cur_track = -1, loop = 1;
     switch (cmd) {
     case 'L': break;                                                        /* (arg 0x10 in every call seen) */
     case 'A': if (a1) cur_track = a1; else if (cur_track < 0) cur_track = 0; break;   /* (assumed) A n = select track n; A 0 = keep */
     case 'P': {
         int t = cur_track < 0 ? 0 : cur_track; if (t >= 12) break;
-        { static int dumped; if (!dumped && getenv("S10CMD")) { dumped = 1; for (int e = 0; e < 24; e++) fprintf(stderr, "  tab[%d] off=%05x size=%05x\n", e, w[8 + e * 4] | ((uint32_t)w[9 + e * 4] << 16), w[10 + e * 4] | ((uint32_t)w[11 + e * 4] << 16)); } }
+        { static int dumped; if (!dumped && envc("S10CMD")) { dumped = 1; for (int e = 0; e < 24; e++) fprintf(stderr, "  tab[%d] off=%05x size=%05x\n", e, w[8 + e * 4] | ((uint32_t)w[9 + e * 4] << 16), w[10 + e * 4] | ((uint32_t)w[11 + e * 4] << 16)); } }
         uint32_t off = w[8 + t * 4] | ((uint32_t)w[9 + t * 4] << 16), sz = w[10 + t * 4] | ((uint32_t)w[11 + t * 4] << 16);
-        if (getenv("S10CMD")) fprintf(stderr, "  play track %d off=%x size=%x loop=%d\n", t, off, sz, loop);
+        if (envc("S10CMD")) fprintf(stderr, "  play track %d off=%x size=%x loop=%d\n", t, off, sz, loop);
         loop = sz >= 0x70000u;                                                 /* (assumed) long tracks are BGM and repeat */
         if (sz && off + sz <= 0x800000u) mp3_play((const uint8_t *)mcu_ram + off, sz, loop); cur_track = -1; break; }
     case 'S': mp3_stop(); break;
@@ -234,7 +242,7 @@ static void sys10_mcu_command(void)
 
 void sys10_dma5(uint32_t *ram32, uint32_t addr, int32_t nwords)
 {
-    if (getenv("S10NAND")) fprintf(stderr, "nanddma dev=%u page=%u col=%u nwords=%d ram=%08x dc=%d\n", nd.dev, (nd.addr >> 8) & 0xffff, nd.addr & 0xff, nwords, addr, dc.active);
+    if (envc("S10NAND")) fprintf(stderr, "nanddma dev=%u page=%u col=%u nwords=%d ram=%08x dc=%d\n", nd.dev, (nd.addr >> 8) & 0xffff, nd.addr & 0xff, nwords, addr, dc.active);
     uint16_t *ptr = (uint16_t *)&ram32[addr / 4];
     uint32_t room = (RAM_BYTES - (addr & (RAM_BYTES - 1))) / 2;
     int32_t n = nwords * 2; if ((uint32_t)n > room) n = (int32_t)room;
