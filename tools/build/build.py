@@ -28,7 +28,7 @@ GROUPS = {   # name -> (sources, header dirs that invalidate it)
     'mips_g13knd': (sorted(glob.glob(os.path.join(ROOT, 'generated_g13knd', '*.c'))), ['generated_g13knd', 'runtime/include']),
     'h8_g13knd': (sorted(glob.glob(os.path.join(ROOT, 'generated_h8_g13knd', '*.c'))), ['generated_h8_g13knd', 'runtime/h8']),
     'mips_g13jnr': (sorted(glob.glob(os.path.join(ROOT, 'generated_g13jnr', '*.c'))), ['generated_g13jnr', 'runtime/include']),
-    'rt': ([os.path.join(ROOT, p) for p in ('runtime/core/main.c', 'runtime/core/machine.c', 'runtime/core/loader.c', 'runtime/core/inflate.c', 'runtime/core/translate.c', 'runtime/gte/gte.c', 'runtime/gte/rt_gte.c', 'runtime/h8/h8_machine.c', 'runtime/gpu/gpu.c', 'runtime/audio/c352.c', 'runtime/video/mdec.c', 'runtime/platform/platform_sdl3.c', 'runtime/platform/wiimote.c', 'runtime/core/games_code.c', 'runtime/core/sys10.c', 'runtime/audio/spu.c', 'runtime/audio/mp3.c', 'runtime/ui/ui.c', 'runtime/ui/options.c', 'runtime/ui/menu.c') + (() if glob.glob(os.path.join(ROOT, 'generated', '*.c')) else ('runtime/core/no_game_code.c',))],
+    'rt': ([os.path.join(ROOT, p) for p in ('runtime/core/main.c', 'runtime/core/machine.c', 'runtime/core/loader.c', 'runtime/core/inflate.c', 'runtime/core/translate.c', 'runtime/gte/gte.c', 'runtime/gte/rt_gte.c', 'runtime/h8/h8_machine.c', 'runtime/gpu/gpu.c', 'runtime/audio/c352.c', 'runtime/video/mdec.c', 'runtime/platform/platform_sdl3.c', 'runtime/platform/wiimote.c', 'runtime/core/games_code.c', 'runtime/core/sys10.c', 'runtime/audio/spu.c', 'runtime/audio/mp3.c', 'runtime/ui/ui.c', 'runtime/ui/options.c', 'runtime/ui/menu.c') + (() if glob.glob(os.path.join(ROOT, 'generated', '*.c')) else ('runtime/core/no_mips_code.c',)) + (() if glob.glob(os.path.join(ROOT, 'generated_h8', '*.c')) else ('runtime/core/no_h8_code.c',))],
            ['runtime/include', 'runtime/core', 'runtime/gte', 'runtime/h8', 'runtime/gpu', 'runtime/platform', 'runtime/audio', 'runtime/video', 'runtime/ui']),
 }
 JOBS = max(1, (os.cpu_count() or 2) // 2)       # half of the cores: keep the machine usable while building
@@ -49,6 +49,11 @@ objs = []; failed = False
 for name, (srcs, hdirs) in GROUPS.items():
     od = os.path.join(ROOT, 'build', 'obj', name); os.makedirs(od, exist_ok=True)
     hn = newest_header(hdirs); stale = []
+    if name == 'rt':                                      # the set of generated games changes the HAVE_* defines: rebuild the runtime when it does
+        defs = ','.join(d for d in ('generated_g13knd', 'generated_g13jnr', 'generated', 'generated_h8') if glob.glob(os.path.join(ROOT, d, '*.c')))
+        stamp = os.path.join(od, '.defines')
+        if not os.path.exists(stamp) or open(stamp).read() != defs:
+            hn = 1e18; open(stamp, 'w').write(defs)
     for s in srcs:
         o = os.path.join(od, os.path.splitext(os.path.basename(s))[0] + '.obj'); objs.append(o)
         if not os.path.exists(o) or os.path.getmtime(o) < max(os.path.getmtime(s), hn): stale.append(s)

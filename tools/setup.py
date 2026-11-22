@@ -59,15 +59,17 @@ def main():
     if not os.path.exists(EXE): build('menu only')
 
     for gid in found:
-        h8, regions, gen = GAMES[gid]
+        h8, regions, gen = GAMES[gid]; gen_h8 = gen.replace('generated', 'generated_h8', 1)
+        has_mips = bool(glob.glob(os.path.join(ROOT, gen, '*.c'))); has_h8 = (not h8) or bool(glob.glob(os.path.join(ROOT, gen_h8, '*.c')))
         say('3/4 %s: ROM regions, code analysis, C generation (a few minutes)' % gid)
-        env = {'GOLGO_GAME': gid}
-        if os.path.isdir(os.path.join(ROOT, gen)) and glob.glob(os.path.join(ROOT, gen, '*.c')):
+        if has_mips and has_h8:
             print('generated code already present (%s/): skipped. Delete that folder to regenerate.' % gen); continue
-        if gid == 'g13jnr': run([PY, 'tools/jnr/prepare.py'], env)
-        else: run([EXE, '--game', gid, '--dump-regions', regions])
-        run([PY, 'tools/recomp_mips/analyze.py'], env); run([PY, 'tools/recomp_mips/gen_all.py'], env)
-        if h8: run([PY, 'tools/recomp_h8/flow.py'], env); run([PY, 'tools/recomp_h8/gen.py'], env)
+        env = {'GOLGO_GAME': gid}
+        if not os.path.exists(os.path.join(ROOT, regions, 'maincpu.bin')):
+            if gid == 'g13jnr': run([PY, 'tools/jnr/prepare.py'], env)
+            else: run([EXE, '--game', gid, '--dump-regions', regions])
+        if not has_mips: run([PY, 'tools/recomp_mips/analyze.py'], env); run([PY, 'tools/recomp_mips/gen_all.py'], env)
+        if not has_h8: run([PY, 'tools/recomp_h8/flow.py'], env); run([PY, 'tools/recomp_h8/gen.py'], env)
 
     if a.no_build: print('\nPrepared. Build with: ' + ('python tools/build/build.py' if WIN else 'cmake --build build-linux')); return 0
     say('4/4 Final build with your games')
