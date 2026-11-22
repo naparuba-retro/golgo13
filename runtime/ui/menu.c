@@ -62,7 +62,7 @@ static const char *T(int id) { return STR[id][fr() ? 1 : 0]; }
 
 /* ---------------------------------------------------------------- state */
 static uint32_t *g_buf; static uint32_t g_bg[UI_W * UI_H]; static int g_bg_ok; static int g_tick;
-static char g_dirs[4][1200]; static const char *g_dirp[4]; static int g_nd;
+static char g_dirs[6][1200]; static const char *g_dirp[6]; static int g_nd;
 static ui_image_t *g_card[8], *g_notice;
 typedef struct { float x, y, w, h; int kind, a, b; const char *desc; } item_t;
 #define NTABS 6
@@ -76,6 +76,7 @@ void menu_init(const char *exe_dir, const char *pref_dir)
 {
     g_nd = 0;
     if (exe_dir && *exe_dir) snprintf(g_dirs[g_nd++], 1200, "%s/data/ui", exe_dir);
+    if (exe_dir && *exe_dir) snprintf(g_dirs[g_nd++], 1200, "%s/../data/ui", exe_dir);           /* program in build/, data/ at the project root */
     snprintf(g_dirs[g_nd++], 1200, "data/ui");
     if (pref_dir && *pref_dir) snprintf(g_dirs[g_nd++], 1200, "%sui", pref_dir);
     for (int i = 0; i < g_nd; i++) g_dirp[i] = g_dirs[i];

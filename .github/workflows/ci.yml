@@ -12,8 +12,14 @@ on:
 jobs:
   windows:
     runs-on: windows-latest
+    needs: linux
     steps:
       - uses: actions/checkout@v4
+      - name: Menu fonts (baked on Linux from the free DejaVu font)
+        uses: actions/download-artifact@v4
+        with:
+          name: menu-fonts
+          path: data/ui
       - uses: actions/setup-python@v5
         with: { python-version: '3.11' }
       - name: Python venv (tools run inside .venv)
@@ -26,23 +32,20 @@ jobs:
         run: |
           python tools/setup_sdl3.py
           python tools/setup_deps.py
-      - name: Menu fonts (baked from the runner's system fonts)
-        run: python tools/ui/bake_font.py
       - name: Build (MSVC)
         run: python tools/build/build.py
       - name: Menu smoke test (renders every menu page without a window)
         run: build\golgo13.exe --menu-shots menu-shots --lang fr
-      - uses: actions/upload-artifact@v4
+      - name: Bundle (program + project files + free menu font: extract, add your ROMs to roms/, run build\golgo13.exe)
+        uses: actions/upload-artifact@v4
         with:
           name: golgo13-windows-x64
           path: |
-            build/golgo13.exe
-            build/SDL3.dll
-            data/ui/README.md
-            roms/README.md
-            README.md
-            LICENSE
-            NOTICE.md
+            .
+            !.git/**
+            !.venv/**
+            !build/obj/**
+            !menu-shots/**
       - uses: actions/upload-artifact@v4
         with:
           name: menu-shots
@@ -67,6 +70,11 @@ jobs:
         run: python tools/setup_deps.py
       - name: Menu fonts
         run: python tools/ui/bake_font.py
+      - name: Share the baked free fonts with the Windows job
+        uses: actions/upload-artifact@v4
+        with:
+          name: menu-fonts
+          path: data/ui/*.bin
       - name: Build (CMake, SDL3 fetched)
         run: |
           cmake -S . -B build-linux -G Ninja -DGOLGO_FETCH_SDL3=ON -DSDL_X11_XTEST=OFF -DSDL_VULKAN=OFF -DSDL_TESTS=OFF
