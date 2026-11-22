@@ -246,6 +246,7 @@ static void draw_select(void)
     ui_fill_para(UI_W - 330, 112, 294, 40, 12, focus == ob ? YEL : INK); ui_text(UI_TITLE, 24, UI_W - 183, 118, focus == ob ? INK : YEL, "F1  OPTIONS", UI_CENTER);
     if (g_msg[0] && g_msg_t > 0) { int tw = ui_text_width(UI_BODY, 22, g_msg) + 40; bubble(640 - tw / 2.0f, 548, (float)tw, 46, g_msg, 600); }
     const char *h[] = { "< >", T(S_MOVE), "Enter", fr() ? "choisir" : "pick", "F1", T(S_OPTIONS), "Esc", T(S_QUIT) }; hint_bar(h, 4);
+    { extern const char *golgo13_version(void); char v[60]; snprintf(v, sizeof v, "v%s", golgo13_version()[0] == 'v' ? golgo13_version() + 1 : golgo13_version()); ui_text(UI_BODY, 18, UI_W - 20, UI_H - 36, UI_RGB(150, 150, 170), v, UI_RIGHT); }
 }
 
 static const char *TABN[6] = { 0 };

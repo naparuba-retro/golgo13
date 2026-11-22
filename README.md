@@ -1,6 +1,7 @@
 # Golgo 13 — native port of the Namco arcade games
 
 [![build](https://github.com/naparuba-retro/golgo13/actions/workflows/ci.yml/badge.svg)](https://github.com/naparuba-retro/golgo13/actions/workflows/ci.yml)
+[![release](https://img.shields.io/github/v/release/naparuba-retro/golgo13?include_prereleases)](https://github.com/naparuba-retro/golgo13/releases)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux-lightgrey)
 ![language](https://img.shields.io/badge/C-11-informational)
@@ -42,6 +43,8 @@ python tools/setup.py
 ```
 
 Everything runs inside a project-local virtual environment (`.venv`, created automatically): **nothing is ever installed in your global Python**. It downloads the small third-party files (SDL3, minimp3), reads your ROMs, generates the game code **on your machine**, compiles the program and builds the French translation. Run it again whenever you add a ROM; finished steps are skipped (`--no-translations` to skip the slow translation step).
+
+> **Prefer not to clone?** Download the latest bundle from the [Releases](https://github.com/naparuba-retro/golgo13/releases) page (Windows zip / Linux tar.gz), extract it, put your ROMs in `roms/`, run the program, pick a game: the in-app build screen does step 2 for you (it needs Python 3.10+ and a C compiler).
 
 **3. Play**: run `build\golgo13.exe` (Windows) or `build-linux/golgo13` (Linux). By default the game looks for your ROMs in `roms/`.
 

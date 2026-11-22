@@ -315,6 +315,10 @@ static void replay_get(plat_input_t *in, long frame)
     in->trigger = f & 1; in->sensor = (f >> 1) & 1; in->enter = (f >> 2) & 1; in->up = (f >> 3) & 1; in->down = (f >> 4) & 1; in->start = (f >> 5) & 1; in->coin = (f >> 6) & 1; in->service = (f >> 7) & 1; in->test = (f >> 8) & 1;
 }
 
+#ifndef GOLGO13_VERSION
+#define GOLGO13_VERSION "dev"
+#endif
+const char *golgo13_version(void) { return GOLGO13_VERSION; }
 extern int rt_code_is_stub;
 int main(int argc, char **argv)
 {
@@ -347,6 +351,7 @@ int main(int argc, char **argv)
         else if (!strcmp(argv[i], "--lang") && i + 1 < argc) lang = argv[++i];
         else if (!strcmp(argv[i], "--replay") && i + 1 < argc) replay_path = argv[++i];
         else if (!strcmp(argv[i], "--game") && i + 1 < argc) game_opt = argv[++i];
+        else if (!strcmp(argv[i], "--version")) { printf("golgo13 %s\n", GOLGO13_VERSION); return 0; }
         else if (!strcmp(argv[i], "--menu-shots") && i + 1 < argc) menu_shots_dir = argv[++i];
         else if (!strcmp(argv[i], "--dump-regions") && i + 1 < argc) dump_regions_dir = argv[++i];
         else if (!strcmp(argv[i], "--wiimote")) want_wiimote = 1;

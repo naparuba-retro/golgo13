@@ -59,7 +59,7 @@ for name, (srcs, hdirs) in GROUPS.items():
         if not os.path.exists(o) or os.path.getmtime(o) < max(os.path.getmtime(s), hn): stale.append(s)
     if stale:
         inc = ' '.join('/I' + i for i in INC)
-        r = run(f'cl /nologo /utf-8 /std:c11 /W3 /O2 /MP{JOBS} /c /D_CRT_SECURE_NO_WARNINGS {"/DRT_INLINE_MEM" if name.startswith("mips") else ""} {"/DHAVE_G13KND" if name == "rt" and os.path.isdir(os.path.join(ROOT, "generated_g13knd")) else ""} {"/DHAVE_G13JNR" if name == "rt" and os.path.isdir(os.path.join(ROOT, "generated_g13jnr")) else ""} {inc} /Fo{od}\ ' + ' '.join(f'"{s}"' for s in stale))
+        r = run(f'cl /nologo /utf-8 /std:c11 /W3 /O2 /MP{JOBS} /c /D_CRT_SECURE_NO_WARNINGS {("/DGOLGO13_VERSION=" + chr(92) + chr(34) + os.environ["GOLGO13_VERSION"] + chr(92) + chr(34)) if os.environ.get("GOLGO13_VERSION") and name == "rt" else ""} {"/DRT_INLINE_MEM" if name.startswith("mips") else ""} {"/DHAVE_G13KND" if name == "rt" and os.path.isdir(os.path.join(ROOT, "generated_g13knd")) else ""} {"/DHAVE_G13JNR" if name == "rt" and os.path.isdir(os.path.join(ROOT, "generated_g13jnr")) else ""} {inc} /Fo{od}\ ' + ' '.join(f'"{s}"' for s in stale))
         err = [l for l in (r.stdout + r.stderr).splitlines() if ' error ' in l or 'error C' in l]
         if r.returncode or err: print("COMPILE FAILED in group", name); print("\n".join(err[:15])); failed = True; break
         print(f"[{name}] compiled {len(stale)}/{len(srcs)}")

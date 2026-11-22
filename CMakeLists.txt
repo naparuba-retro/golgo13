@@ -55,6 +55,9 @@ set_source_files_properties(${GEN_MIPS} PROPERTIES COMPILE_DEFINITIONS RT_INLINE
 target_include_directories(golgo13 PRIVATE runtime/include runtime/core runtime/gte runtime/h8
   runtime/gpu runtime/platform runtime/audio runtime/video runtime/ui generated generated_h8)
 target_compile_options(golgo13 PRIVATE -fwrapv -fno-strict-aliasing -w)
+if(DEFINED ENV{GOLGO13_VERSION})
+  target_compile_definitions(golgo13 PRIVATE GOLGO13_VERSION="$ENV{GOLGO13_VERSION}")
+endif()
 target_link_libraries(golgo13 PRIVATE SDL3::SDL3 m)
 if(WIN32)
   target_link_libraries(golgo13 PRIVATE hid setupapi bthprops)   # Wiimote HID access

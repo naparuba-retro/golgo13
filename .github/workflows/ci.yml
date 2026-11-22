@@ -6,8 +6,16 @@ name: build
 
 on:
   push:
+    tags: ['v*']
+    branches: ['**']
   pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  GOLGO13_VERSION: ${{ github.ref_type == 'tag' && github.ref_name || 'dev' }}
 
 jobs:
   windows:
@@ -81,13 +89,42 @@ jobs:
           cmake --build build-linux
       - name: Menu smoke test
         run: ./build-linux/golgo13 --menu-shots menu-shots --lang fr
-      - uses: actions/upload-artifact@v4
+      - name: "Bundle (program + project files + free menu font)"
+        uses: actions/upload-artifact@v4
         with:
           name: golgo13-linux-x64
           path: |
+            .
+            !.git/**
+            !.venv/**
+            !build-linux/**
+            !menu-shots/**
             build-linux/golgo13
-            data/ui/README.md
-            roms/README.md
-            README.md
-            LICENSE
-            NOTICE.md
+
+  release:
+    if: github.ref_type == 'tag'
+    needs: [windows, linux]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { name: golgo13-windows-x64, path: golgo13-windows-x64 }
+      - uses: actions/download-artifact@v4
+        with: { name: golgo13-linux-x64, path: golgo13-linux-x64 }
+      - name: "Zip the bundles"
+        run: |
+          chmod +x golgo13-linux-x64/build-linux/golgo13 || true
+          (cd golgo13-windows-x64 && zip -qr ../golgo13-${GOLGO13_VERSION}-windows-x64.zip .)
+          tar -czf golgo13-${GOLGO13_VERSION}-linux-x64.tar.gz -C golgo13-linux-x64 .
+      - name: "Create the release"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat > notes.md <<'NOTES'
+          Native port of the Golgo 13 arcade games (Namco System 12 / System 10).
+
+          **No ROM and no game code is included.** Extract the bundle, put your own ROMs in `roms/` (golgo13.zip, g13knd.zip, g13jnr.zip),
+          then run the program (`build\golgo13.exe` on Windows): choose a game and the in-app build screen generates the game code from
+          *your* ROMs and compiles it (needs Python 3.10+ and a C compiler: Visual Studio Build Tools on Windows, gcc + CMake on Linux).
+          Or run `python tools/setup.py`. See the README for details.
+          NOTES
+          gh release create "$GOLGO13_VERSION" golgo13-${GOLGO13_VERSION}-windows-x64.zip golgo13-${GOLGO13_VERSION}-linux-x64.tar.gz             --repo "$GITHUB_REPOSITORY" --title "Golgo 13 native port $GOLGO13_VERSION" --notes-file notes.md
