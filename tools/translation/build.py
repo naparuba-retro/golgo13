@@ -386,17 +386,19 @@ def main():
     except (OSError, IndexError): d = b''; packs = {}          # games without a ROM bank (g13jnr, System 10): capture/paint overlays only
     global MIN_KEY_PIXELS
     if strings.get('meta', {}).get('force_overlay'): MIN_KEY_PIXELS = 48
-    records = []; overlays = []; report = {'lang': a.lang, 'assets': {}}; failed = 0
+    records = []; overlays = []; report = {'lang': a.lang, 'assets': {}}; failed = 0; skipped = 0
     for aid, spec in sorted(strings['assets'].items()):
         if 'paint' in spec:                                     # paint-over overlay (scene recognised, game keeps drawing, text painted on top)
-            rgba, keys, rep = build_paint_overlay(spec, styles, lang_dir, a.translations)
+            try: rgba, keys, rep = build_paint_overlay(spec, styles, lang_dir, a.translations)
+            except SystemExit as e: print('%s: SKIPPED (%s)' % (aid, e)); skipped += 1; continue
             overlays.append((rgba, keys, True, tuple(rep['sample']) if rep['sample'] else None)); report['assets'][aid] = dict(rep, ok=True, keys=len(keys))
             print('%s: %s -> paint overlay (%d recognition keys, fill %s)' % (aid, rep['lines'], len(keys), rep['fill']))
             if a.preview:
                 pv = os.path.join(lang_dir, 'preview'); os.makedirs(pv, exist_ok=True); Image.fromarray(rgba, 'RGBA').save(os.path.join(pv, aid.replace('/', '_').replace(':', '_') + '.png'))
             continue
         if 'capture' in spec:                                   # asset built from a recorded scene (id is free-form, e.g. "cap:card_m1:ammo")
-            rgba, keys, rep = build_capture_overlay(spec, styles, lang_dir, a.translations)
+            try: rgba, keys, rep = build_capture_overlay(spec, styles, lang_dir, a.translations)
+            except SystemExit as e: print('%s: SKIPPED (%s)' % (aid, e)); skipped += 1; continue       # a recorded scene that cannot be reproduced here: that text stays in Japanese
             overlays.append((rgba, keys)); report['assets'][aid] = dict(rep, ok=True, keys=len(keys))
             print('%s: %s -> overlay from capture (%d quads, %d recognition keys)' % (aid, rep['lines'], rep['quads'], len(keys)))
             if a.preview:
@@ -450,6 +452,7 @@ def main():
     nm = unicodedata.normalize('NFKD', strings.get('meta', {}).get('name', a.lang)).encode('ascii', 'ignore').decode() or a.lang
     open(os.path.join(lang_dir, 'info.txt'), 'w', encoding='ascii').write(nm + '\n')
     print('%d records (%d bytes of tile data) -> %s%s' % (len(merged), 512 * len(merged), out, '' if not failed else '   [%d asset(s) skipped]' % failed))
+    if skipped: print('%d scene-based text(s) skipped: their recorded scene could not be reproduced on this machine (those texts stay in the original language)' % skipped)
     return 1 if failed else 0
 
 if __name__ == '__main__':
