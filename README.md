@@ -48,6 +48,8 @@ Everything runs inside a project-local virtual environment (`.venv`, created aut
 
 > **Prefer not to clone?** Download the latest bundle from the [Releases](https://github.com/naparuba-retro/golgo13/releases) page (Windows zip / Linux tar.gz), extract it, put your ROMs in `roms/`, run the program, pick a game: the in-app build screen does step 2 for you (it needs Python 3.10+ and a C compiler).
 
+> **Linux / Steam Deck: one file, nothing to install.** Download `golgo13-<version>-x86_64.AppImage` from [Releases](https://github.com/naparuba-retro/golgo13/releases), `chmod +x` it, put your ROMs in the `golgo13/roms/` folder it creates next to itself, run it and pick a game: it carries its own Python, CMake, Ninja, zig cc and SDL3, builds the game from your ROMs (about 10 minutes the first time) and keeps everything in `golgo13/` beside the AppImage. Tested on a Steam Deck (desktop mode).
+
 **3. Play**: run `build\golgo13.exe` (Windows) or `build-linux/golgo13` (Linux). By default the game looks for your ROMs in `roms/`.
 
 > Why a build step? The recompiled game code is derived from the ROMs, so it can neither be shipped nor redistributed. The GitHub CI therefore builds the program *without* game code (menu only); `tools/setup.py` does the rest locally.
