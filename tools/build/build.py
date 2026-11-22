@@ -9,6 +9,15 @@ def find_vcvars():                                # VCVARS env var, else the fir
             for ed in ('BuildTools', 'Community', 'Professional', 'Enterprise'):
                 p = os.path.join(pf, 'Microsoft Visual Studio', year, ed, 'VC', 'Auxiliary', 'Build', 'vcvars64.bat')
                 if os.path.exists(p): return p
+    vw = os.path.join(os.environ.get('ProgramFiles(x86)', r'C:\Program Files (x86)'), 'Microsoft Visual Studio', 'Installer', 'vswhere.exe')
+    if os.path.exists(vw):                         # any installed version (2019 / 2022 / newer), including the CI runners'
+        try:
+            path = subprocess.run([vw, '-latest', '-products', '*', '-requires', 'Microsoft.VisualStudio.Component.VC.Tools.x86.x64', '-property', 'installationPath'],
+                                  capture_output=True, text=True).stdout.strip().splitlines()
+            if path:
+                p = os.path.join(path[0], 'VC', 'Auxiliary', 'Build', 'vcvars64.bat')
+                if os.path.exists(p): return p
+        except OSError: pass
     sys.exit('Visual Studio / Build Tools (MSVC) not found: set the VCVARS environment variable to vcvars64.bat')
 VCVARS = find_vcvars()
 SDL = os.path.join(ROOT, 'third_party', 'SDL3')
