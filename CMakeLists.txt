@@ -27,7 +27,8 @@ set(RT_SRC
   runtime/gte/gte.c runtime/gte/rt_gte.c runtime/h8/h8_machine.c
   runtime/gpu/gpu.c runtime/audio/c352.c runtime/video/mdec.c
   runtime/platform/platform_sdl3.c runtime/platform/wiimote.c runtime/core/games_code.c
-  runtime/ui/ui.c runtime/ui/options.c runtime/ui/menu.c)
+  runtime/ui/ui.c runtime/ui/options.c runtime/ui/menu.c
+  runtime/core/sys10.c runtime/audio/spu.c runtime/audio/mp3.c)
 
 file(GLOB GEN_KND_MIPS CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/generated_g13knd/*.c)
 file(GLOB GEN_KND_H8   CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/generated_h8_g13knd/*.c)
@@ -35,11 +36,17 @@ if(NOT GEN_MIPS)
   message(WARNING "generated/ is empty: building WITHOUT recompiled game code (menu only). See README, section Construire.")
   list(APPEND RT_SRC runtime/core/no_game_code.c)
 endif()
-add_executable(golgo13 ${RT_SRC} ${GEN_MIPS} ${GEN_H8} ${GEN_KND_MIPS} ${GEN_KND_H8})
+file(GLOB GEN_JNR_MIPS CONFIGURE_DEPENDS ${CMAKE_SOURCE_DIR}/generated_g13jnr/*.c)
+add_executable(golgo13 ${RT_SRC} ${GEN_MIPS} ${GEN_H8} ${GEN_KND_MIPS} ${GEN_KND_H8} ${GEN_JNR_MIPS})
 if(GEN_KND_MIPS)   # Kiseki no Dandou code, present only if generated (GOLGO_GAME=g13knd tools/recomp_*)
   set_source_files_properties(${GEN_KND_MIPS} PROPERTIES COMPILE_DEFINITIONS RT_INLINE_MEM)
   target_compile_definitions(golgo13 PRIVATE HAVE_G13KND)
   target_include_directories(golgo13 PRIVATE generated_g13knd generated_h8_g13knd)
+endif()
+if(GEN_JNR_MIPS)   # Juusei no Requiem code (System 10), present only if generated (GOLGO_GAME=g13jnr)
+  set_source_files_properties(${GEN_JNR_MIPS} PROPERTIES COMPILE_DEFINITIONS RT_INLINE_MEM)
+  target_compile_definitions(golgo13 PRIVATE HAVE_G13JNR)
+  target_include_directories(golgo13 PRIVATE generated_g13jnr)
 endif()
 set_source_files_properties(${GEN_MIPS} PROPERTIES COMPILE_DEFINITIONS RT_INLINE_MEM)
 target_include_directories(golgo13 PRIVATE runtime/include runtime/core runtime/gte runtime/h8
