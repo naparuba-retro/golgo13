@@ -71,3 +71,6 @@ third_party/
 __pycache__/
 *.pyc
 *.log
+
+# --- internal working notes / analysis reports (local only) ---
+/reports/
