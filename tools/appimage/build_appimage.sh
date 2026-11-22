@@ -36,7 +36,7 @@ Exec=AppRun
 Icon=golgo13
 Categories=Game;
 D
-python3 - <<'P'
+"$APP/usr/python/bin/python3" - <<'P'
 from PIL import Image
 im = Image.open('docs/img/logo.png').convert('RGB'); im = im.resize((256, int(256 * im.height / im.width))); c = Image.new('RGB', (256, 256), (14, 14, 22)); c.paste(im, (0, (256 - im.height) // 2)); c.save('AppDir/golgo13.png')
 P
