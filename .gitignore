@@ -44,8 +44,6 @@ gls1*
 /translations/**/patch.report.json
 /translations/**/preview/
 /translations/**/preview_sheet.png
-/translations/**/captures/
-/translations/captures/
 *.cap
 
 # --- menu assets built locally (fonts baked from system fonts, card art cut from the user's own manga scans) ----
@@ -56,6 +54,7 @@ gls1*
 
 # --- recorded sessions / screenshots / dumps produced by tests --------------------------------------------------
 *.g13r
+!/translations/**/captures/*.g13r
 *.ppm
 /sessions/
 settings.ini

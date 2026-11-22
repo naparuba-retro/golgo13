@@ -406,6 +406,7 @@ int main(int argc, char **argv)
           int have_cwd = 0; { char probe[1200]; snprintf(probe, sizeof probe, "roms"); have_cwd = fs_dir_exists(probe); }
           snprintf(shown, sizeof shown, "%s", have_cwd ? "roms" : d1); if (!have_cwd) fs_mkdir_p(d1);
           char full[1300]; fs_abs_path(shown, full, sizeof full); menu_set_roms_dir(full); }
+        { char self[1300]; fs_abs_path(argv[0], self, sizeof self); menu_set_exe_path(self); }
         menu_init(exedir, plat_pref_dir()); menu_apply_options(); menu_set_ui_lang(lang && *lang ? lang : g_opt_lang); if (g_opt[OPT_WIIMOTE]) want_wiimote = 1;
     }
     if (window && want_wiimote) plat_wiimote_enable();

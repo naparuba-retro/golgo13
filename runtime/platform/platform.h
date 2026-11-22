@@ -45,4 +45,13 @@ void plat_wiimote_params(int smooth, int deadzone);
 int  plat_wiimote_state(void);                      /* 0 off, 1 searching, 2 connected */
 void plat_wiimote_recalibrate(void);
 void plat_open_folder(const char *path);            /* show a folder in the system file manager */
+void plat_open_url(const char *url);
+typedef struct plat_proc plat_proc_t;               /* a child process whose output (stdout + stderr) is read without blocking */
+plat_proc_t *plat_proc_start(const char *const *args, const char *workdir);   /* NULL if the program cannot be started */
+int  plat_proc_read(plat_proc_t *p, char *buf, int n);                         /* bytes available now (0 = nothing yet) */
+int  plat_proc_done(plat_proc_t *p, int *exit_code);                           /* 1 once the process has ended */
+void plat_proc_kill(plat_proc_t *p);
+void plat_proc_free(plat_proc_t *p);
+int  plat_run_wait(const char *const *args);                                   /* run to completion, quiet; exit code or -1 */
+void plat_launch(const char *exe);                                             /* start another program (detached) */            /* show a folder in the system file manager */
 #endif

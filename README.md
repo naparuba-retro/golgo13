@@ -41,7 +41,7 @@ You only need the games you want to play. Launching the game with no ROM shows a
 python tools/setup.py
 ```
 
-It downloads the small third-party files (SDL3, minimp3), reads your ROMs, generates the game code **on your machine**, and compiles the program. Run it again whenever you add a ROM; finished steps are skipped.
+Everything runs inside a project-local virtual environment (`.venv`, created automatically): **nothing is ever installed in your global Python**. It downloads the small third-party files (SDL3, minimp3), reads your ROMs, generates the game code **on your machine**, compiles the program and builds the French translation. Run it again whenever you add a ROM; finished steps are skipped (`--no-translations` to skip the slow translation step).
 
 **3. Play**: run `build\golgo13.exe` (Windows) or `build-linux/golgo13` (Linux). By default the game looks for your ROMs in `roms/`.
 
@@ -98,7 +98,7 @@ The mouse still works; the Wiimote takes over while the bar is in view. If pairi
 
 Modular system (Original / `fr`): Japanese texts are translated, English texts are left as they are. The texts (`strings*.json`) are versioned; the translated pictures (`overlay.g13o`, `patch.g13t`) are built from your ROMs (they embed game pixels, so they are not published). See `translations/README.md` and `translations/TODO.md`.
 
-Rebuild translations: `python tools/translation/build.py --lang fr` (game 1); for the others `--translations translations/g13knd --rom <ROM folder>` or `translations/g13jnr` (game 3: run `python tools/jnr/packs.py` first).
+**You do not have to build them by hand**: `python tools/setup.py` records the scenes and builds the translated pictures for every game you have (the first run is the slowest step, about as long as the game code; `--no-translations` skips it). Then pick *Français* in Options > Language. By hand: `python tools/translation/build.py --lang fr` (game 1), or `--translations translations/g13knd --rom <ROM folder>` / `translations/g13jnr` (game 3: `python tools/jnr/packs.py` first).
 
 ## Manual build (what `tools/setup.py` does)
 

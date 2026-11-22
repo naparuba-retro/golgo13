@@ -9,12 +9,29 @@ Steps (each one is skipped when already done, so it is safe to run again after a
   1. third-party files (SDL3 on Windows, minimp3) and the menu fonts;
   2. a first program build WITHOUT game code (menu only), which is also used to read your ROMs;
   3. for each ROM set found in roms/: write the ROM regions, analyse the code, generate the C (generated*/ : derived from YOUR ROMs, never published);
-  4. the final build with the generated code.
+  4. the final build with the generated code;
+  5. the translations (French): scene captures, then the translated pictures, built from your ROMs (--no-translations skips it: it is the slowest step).
 """
-import os, sys, subprocess, shutil, argparse, glob, time
+import os, sys, subprocess, shutil, argparse, glob, time, json, zipfile
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-PY = sys.executable
+
+def _bootstrap_venv():
+    """Everything runs inside a project-local virtual environment (.venv): nothing is installed in your global Python.
+    The first run creates it, installs the few Python packages the tools need, and restarts this script with it."""
+    venv = os.path.join(ROOT, '.venv')
+    py = os.path.join(venv, 'Scripts', 'python.exe') if os.name == 'nt' else os.path.join(venv, 'bin', 'python')
+    if os.path.realpath(sys.prefix) == os.path.realpath(venv):         # already inside the project's venv: make sure its packages are there
+        try: import PIL, numpy
+        except ImportError: subprocess.run([sys.executable, '-m', 'pip', 'install', '--quiet', '--disable-pip-version-check', 'pillow', 'numpy'], check=True)
+        return sys.executable
+    if not os.path.exists(py):
+        print('Creating the virtual environment .venv ...', flush=True)
+        subprocess.run([sys.executable, '-m', 'venv', venv], check=True)
+    subprocess.run([py, '-m', 'pip', 'install', '--quiet', '--disable-pip-version-check', 'pillow', 'numpy'], check=True)
+    sys.exit(subprocess.run([py, os.path.abspath(__file__)] + sys.argv[1:]).returncode)
+
+PY = _bootstrap_venv()                      # (returns this interpreter when already inside .venv)
 WIN = os.name == 'nt'
 EXE = os.path.join(ROOT, 'build', 'golgo13.exe') if WIN else os.path.join(ROOT, 'build-linux', 'golgo13')
 GAMES = {   # id -> (needs H8 firmware, regions dir, generated dir)
@@ -39,9 +56,45 @@ def build(label):
         run(['cmake', '-S', '.', '-B', 'build-linux', '-DCMAKE_BUILD_TYPE=Release'] + (['-DGOLGO_FETCH_SDL3=ON'] if not shutil.which('pkg-config') else []))
         run(['cmake', '--build', 'build-linux', '--parallel', str(max(1, (os.cpu_count() or 2) // 2))])
 
+def rom_folder(gid):
+    """The ROM files of a set as a plain folder (the translation tools read files): work/roms/<id>/, extracted from roms/<id>.zip if needed."""
+    src = os.path.join(ROOT, 'roms', gid)
+    if os.path.isdir(src): return src
+    dst = os.path.join(ROOT, 'work', 'roms', gid)
+    if not os.path.isdir(dst) or not os.listdir(dst):
+        os.makedirs(dst, exist_ok=True)
+        with zipfile.ZipFile(os.path.join(ROOT, 'roms', gid + '.zip')) as z: z.extractall(dst)
+    return dst
+
+def tdir_of(gid): return 'translations' if gid == 'golgo13' else 'translations/' + gid
+
+def capture_scenes(gid):
+    tdir = tdir_of(gid); rom = '' if gid == 'g13jnr' else rom_folder(gid)
+    scenes = json.load(open(os.path.join(ROOT, tdir, 'scenes.json'), encoding='utf-8'))
+    todo = [n for n in scenes if not os.path.exists(os.path.join(ROOT, tdir, 'captures', n + '.cap'))]
+    print('%s: %d scene captures to record (%d already there)' % (gid, len(todo), len(scenes) - len(todo)))
+    for i, n in enumerate(todo, 1):
+        print('  [%d/%d] %s' % (i, len(todo), n), flush=True)
+        run([PY, 'tools/translation/capture_scene.py', n, '--exe', EXE, '--rom', rom, '--game', gid, '--translations', tdir])
+
+def translate(gid):
+    tdir = tdir_of(gid)
+    langs = [os.path.basename(os.path.dirname(f)) for f in glob.glob(os.path.join(ROOT, tdir, '*', 'strings.json'))]
+    if not langs: print('no translation for', gid); return
+    bank = rom = ''
+    if gid == 'g13jnr':
+        run([PY, 'tools/jnr/packs.py', EXE]); bank = 'work/g13jnr/bank.bin'
+        for other in ('golgo13', 'g13knd'):                        # System 12 captures are reused (renamed) by the port step below
+            if rom_present(other): capture_scenes(other)
+    else: rom = rom_folder(gid)
+    capture_scenes(gid)
+    if gid == 'g13jnr': run([PY, 'tools/translation/port_multi.py', '--to', 'translations/g13jnr', 'golgo13=translations', 'knd=translations/g13knd'])
+    for lang in langs:
+        run([PY, 'tools/translation/build.py', '--lang', lang, '--rom', bank or rom, '--translations', tdir], env={'PYTHONIOENCODING': 'utf-8'})
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('--games', default=','.join(GAMES)); ap.add_argument('--no-build', action='store_true'); a = ap.parse_args()
+    ap.add_argument('--games', default=','.join(GAMES)); ap.add_argument('--no-build', action='store_true'); ap.add_argument('--no-translations', action='store_true'); a = ap.parse_args()
     wanted = [g for g in a.games.split(',') if g in GAMES]; t0 = time.time()
     os.makedirs(os.path.join(ROOT, 'roms'), exist_ok=True)
     found = [g for g in wanted if rom_present(g)]
@@ -50,7 +103,6 @@ def main():
     print('ROM sets found:', ', '.join(found), '| missing:', ', '.join(g for g in wanted if g not in found) or 'none')
 
     say('1/4 Third-party files and menu fonts')
-    run([PY, '-m', 'pip', 'install', '--quiet', 'pillow', 'numpy'])
     run([PY, 'tools/setup_deps.py'])
     if WIN and not os.path.isdir(os.path.join(ROOT, 'third_party', 'SDL3')): run([PY, 'tools/setup_sdl3.py'])
     if subprocess.run([PY, 'tools/ui/bake_font.py'], cwd=ROOT).returncode: print('(menu fonts could not be baked: the plain text menu will be used)')
@@ -74,6 +126,9 @@ def main():
     if a.no_build: print('\nPrepared. Build with: ' + ('python tools/build/build.py' if WIN else 'cmake --build build-linux')); return 0
     say('4/4 Final build with your games')
     build('with game code')
+    if not a.no_translations:
+        say('5/5 Translations (recording the scenes is slow the first time)')
+        for gid in [g for g in ('golgo13', 'g13knd', 'g13jnr') if g in found]: translate(gid)
     print('\nDone in %.0f s. Run: %s' % (time.time() - t0, os.path.relpath(EXE, ROOT)))
     return 0
 

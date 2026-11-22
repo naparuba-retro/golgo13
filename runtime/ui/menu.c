@@ -474,6 +474,135 @@ static void draw_cursor(void)                 /* the aiming crosshair follows th
 }
 static void present(void) { draw_cursor(); plat_present_ui((const uint8_t *)g_buf); options_flush(0); plat_sleep_us(12000); g_tick++; if (g_msg_t > 0) g_msg_t--; }
 
+
+/* ---------------------------------------------------------------- build screen: recompile a game from the user's ROMs, inside the program */
+extern int rt_game_has_code(const char *id);
+static char g_exe_path[1100];
+void menu_set_exe_path(const char *exe) { snprintf(g_exe_path, sizeof g_exe_path, "%s", exe ? exe : ""); }
+
+static int file_has(const char *dir, const char *rel) { char p[1400]; snprintf(p, sizeof p, "%s/%s", dir, rel); FILE *f = fopen(p, "rb"); if (f) fclose(f); return f != NULL; }
+static int find_root(char *root, size_t n)                 /* the project folder: the one that has tools/setup.py (exe in build/ -> ..) */
+{
+    char exe[1100]; snprintf(exe, sizeof exe, "%s", g_exe_path); for (char *c = exe; *c; c++) if (*c == 92) *c = 47;
+    char d[1100]; snprintf(d, sizeof d, "%s", exe); char *sl = strrchr(d, 47); if (sl) *sl = 0; else snprintf(d, sizeof d, ".");
+    const char *rel[5] = { "", "/..", "/../..", "/../../..", NULL };
+    for (int k = 0; rel[k]; k++) { char c[1300]; snprintf(c, sizeof c, "%s%s", d, rel[k]); if (file_has(c, "tools/setup.py")) { fs_abs_path(c, root, n); return 1; } }
+    if (file_has(".", "tools/setup.py")) { fs_abs_path(".", root, n); return 1; }
+    return 0;
+}
+static int find_python(const char *root, char py[3][1200])   /* fills the argv prefix (1 or 2 words); returns the number of words, 0 if none */
+{
+    char v[1300]; static const char *VENV[2] = { "%s/.venv/Scripts/python.exe", "%s/.venv/bin/python" };
+    for (int k = 0; k < 2; k++) { snprintf(v, sizeof v, VENV[k], root); FILE *f = fopen(v, "rb"); if (f) { fclose(f); snprintf(py[0], 1200, "%s", v); py[1][0] = 0; return 1; } }
+    static const char *C[4][2] = { { "py", "-3" }, { "python", NULL }, { "python3", NULL }, { NULL, NULL } };
+    for (int k = 0; C[k][0]; k++) {
+        const char *a[4]; int na = 0; a[na++] = C[k][0]; if (C[k][1]) a[na++] = C[k][1]; a[na++] = "--version"; a[na] = NULL;
+        if (plat_run_wait(a) == 0) { snprintf(py[0], 1200, "%s", C[k][0]); if (C[k][1]) { snprintf(py[1], 1200, "%s", C[k][1]); return 2; } py[1][0] = 0; return 1; }
+    }
+    return 0;
+}
+
+/* returns 1 when a new program was built and started (the caller must quit), 0 otherwise */
+static int build_screen(const char *gid)
+{
+    static uint32_t buf[UI_W * UI_H]; g_buf = buf;
+    enum { S_CHECK, S_RUN, S_OK, S_FAIL, S_NOPY, S_NOROOT } st = S_CHECK;
+    char root[1300] = "", py[3][1200] = { "", "", "" }, out[1400] = "", old[1400] = ""; int renamed = 0;
+    char lines[12][130]; int nl = 0; char cur[400] = ""; int cl = 0;
+    int step = 0, nsteps = 4, tick = 0, code = 0; char stepname[160] = ""; plat_proc_t *pr = NULL;
+    focus = 0; nit = 0;
+    for (;;) {
+        gather(); if (g_quit) { if (pr) plat_proc_kill(pr); return 0; }
+        int back, act = process(0, &back);
+        if (st == S_CHECK) {                                                    /* find the project and a Python */
+            if (!find_root(root, sizeof root)) st = S_NOROOT;
+            else if (!find_python(root, py)) st = S_NOPY;
+            else if (!strstr(py[0], ".venv")) {                                  /* only a global Python: never use it for the project, make the venv first */
+                snprintf(stepname, sizeof stepname, "%s", fr() ? "Création de l'environnement virtuel (.venv)" : "Creating the virtual environment (.venv)");
+                nit = 0; draw_bg(); header(fr() ? "CONSTRUCTION" : "BUILD", stepname); present();
+                char venv[1300]; snprintf(venv, sizeof venv, "%s/.venv", root);
+                const char *av[6]; int na = 0; av[na++] = py[0]; if (py[1][0]) av[na++] = py[1]; av[na++] = "-m"; av[na++] = "venv"; av[na++] = venv; av[na] = NULL;
+                int rc = plat_run_wait(av); char vp[1300]; FILE *f;
+                snprintf(vp, sizeof vp, "%s/.venv/Scripts/python.exe", root); f = fopen(vp, "rb"); if (!f) { snprintf(vp, sizeof vp, "%s/.venv/bin/python", root); f = fopen(vp, "rb"); }
+                if (rc != 0 || !f) { if (f) fclose(f); st = S_FAIL; snprintf(lines[nl++], 130, "%s", "could not create .venv"); }
+                else { fclose(f); snprintf(py[0], 1200, "%s", vp); py[1][0] = 0; stepname[0] = 0; }
+            }
+            if (st == S_CHECK) {
+#ifdef _WIN32
+                snprintf(out, sizeof out, "%s/build/golgo13.exe", root);
+#else
+                snprintf(out, sizeof out, "%s/build-linux/golgo13", root);
+#endif
+                char a1[1300], a2[1300]; fs_abs_path(out, a1, sizeof a1); fs_abs_path(g_exe_path, a2, sizeof a2);
+                for (char *c = a1; *c; c++) if (*c == 92) *c = 47; for (char *c = a2; *c; c++) if (*c == 92) *c = 47;
+#ifdef _WIN32
+                if (!_stricmp(a1, a2))
+#else
+                if (!strcmp(a1, a2))
+#endif
+                { snprintf(old, sizeof old, "%s.old", out); remove(old); if (rename(out, old) == 0) renamed = 1; }   /* the running program cannot be overwritten on Windows, but it can be renamed */
+                const char *av[10]; int na = 0; av[na++] = py[0]; if (py[1][0]) av[na++] = py[1];
+                av[na++] = "tools/setup.py"; av[na++] = "--games"; av[na++] = gid; av[na++] = "--no-translations"; av[na] = NULL;
+                const char *tst = getenv("GOLGO13_BUILDTEST");                  /* tooling: run a fake slow build to check the screen */
+                const char *fav[3] = { py[0], "-c", "import time;[(print('=== %d/4 step' % i, flush=True), [(print('  working', flush=True), time.sleep(0.7)) for _ in range(4)]) for i in range(1, 5)]" };
+                if (tst) { av[0] = fav[0]; av[1] = fav[1]; av[2] = fav[2]; av[3] = NULL; }
+                pr = plat_proc_start(av, root); st = pr ? S_RUN : S_FAIL; if (!pr) snprintf(lines[nl++], 130, "cannot start Python");
+            }
+        }
+        if (st == S_RUN) {
+            char t[512]; int n;
+            while ((n = plat_proc_read(pr, t, sizeof t)) > 0) for (int i = 0; i < n; i++) {
+                if (t[i] == '\r') continue;
+                if (t[i] == '\n') {
+                    cur[cl] = 0;
+                    if (!strncmp(cur, "=== ", 4)) { int a = 0, b = 0; if (sscanf(cur + 4, "%d/%d", &a, &b) == 2) { step = a; nsteps = b; } snprintf(stepname, sizeof stepname, "%s", cur + 4); }
+                    if (cur[0]) { if (nl == 12) { memmove(lines[0], lines[1], 11 * 130); nl = 11; } snprintf(lines[nl++], 130, "%.126s", cur); }
+                    cl = 0;
+                } else if (cl < (int)sizeof cur - 1) cur[cl++] = t[i];
+            }
+            if (plat_proc_done(pr, &code)) { st = code == 0 ? S_OK : S_FAIL; plat_proc_free(pr); pr = NULL; if (st == S_FAIL && renamed) { remove(out); rename(old, out); renamed = 0; } }
+            if (back || act == BT_QUIT) { plat_proc_kill(pr); plat_proc_free(pr); pr = NULL; if (renamed) { remove(out); rename(old, out); } return 0; }
+        }
+        if (act == BT_OPENDIR) plat_open_url("https://www.python.org/downloads/");
+        if (st == S_OK && (act == BT_PLAY || act == BT_DONE)) { plat_launch(out); return 1; }
+        if ((st == S_FAIL || st == S_NOPY || st == S_NOROOT) && (act == BT_QUIT || back)) return 0;
+
+        nit = 0; draw_bg(); header(fr() ? "CONSTRUCTION" : "BUILD", fr() ? "À partir de TES ROM." : "From YOUR ROMs.");
+        panel(110, 130, 1060, 470, 20, PAPER, 1);
+        const char *title = st == S_OK ? (fr() ? "C'EST PRÊT !" : "READY!") : st == S_FAIL ? (fr() ? "ÉCHEC" : "FAILED") : st == S_NOPY ? (fr() ? "PYTHON INTROUVABLE" : "PYTHON NOT FOUND") :
+                            st == S_NOROOT ? (fr() ? "DOSSIER DU PROJET INTROUVABLE" : "PROJECT FOLDER NOT FOUND") : (fr() ? "Un instant..." : "One moment...");
+        ui_text(UI_TITLE, 46, 160, 150, st == S_FAIL || st == S_NOPY || st == S_NOROOT ? RED : INK, title, UI_LEFT);
+        if (st == S_NOPY) { ui_text(UI_BODY, 24, 160, 230, INK, fr() ? "Installe Python 3.10 ou plus récent (cocher « Add to PATH »), puis relance le jeu." : "Install Python 3.10 or newer (tick “Add to PATH”), then start the game again.", UI_LEFT); }
+        else if (st == S_NOROOT) { ui_text(UI_BODY, 24, 160, 230, INK, fr() ? "Lance le programme depuis le dossier du projet (celui qui contient tools/setup.py)." : "Start the program from the project folder (the one that contains tools/setup.py).", UI_LEFT); }
+        else {
+            static const char *EN[5] = { "Third-party files and menu fonts", "Program (menu only)", "Recompile the game from the ROMs", "Final build", "Translations" };
+            static const char *FRN[5] = { "Fichiers tiers et polices du menu", "Programme (menu seul)", "Recompilation du jeu depuis les ROM", "Construction finale", "Traductions" };
+            for (int k = 0; k < nsteps && k < 5; k++) {
+                float y = 215 + k * 44; int done = st == S_OK || step > k + 1, now = st == S_RUN && step == k + 1;
+                ui_fill_para(170, y, 36, 36, 0, INK); ui_fill_para(173, y + 3, 30, 30, 0, done ? GREEN : now ? YEL : PAPER);
+                if (done) { ui_stroke_quad((float[]){ 180, 187, 187, 180 }, (float[]){ y + 18, y + 26, y + 26, y + 18 }, 4, PAPER); ui_stroke_quad((float[]){ 187, 198, 198, 187 }, (float[]){ y + 26, y + 10, y + 10, y + 26 }, 4, PAPER); }
+                else if (now) { int ph = (tick / 6) % 4; for (int d = 0; d <= ph; d++) ui_fill_rect(178 + d * 7.0f, y + 16, 4, 4, INK); }
+                ui_text(UI_BODY, 24, 226, y + 4, now ? INK : done ? UI_RGB(60, 90, 60) : UI_RGB(120, 110, 90), (fr() ? FRN : EN)[k], UI_LEFT);
+            }
+            float pw = 900, pf = st == S_OK ? 1.0f : (step > 0 ? (step - 1) / (float)nsteps : 0.0f);
+            ui_fill_para(170, 448, pw, 18, 0, INK); ui_fill_para(173, 451, (pw - 6) * pf, 12, 0, st == S_FAIL ? RED : YEL);
+            if (stepname[0] && st == S_RUN) ui_text(UI_BODY, 18, 170, 424, UI_RGB(90, 80, 60), stepname, UI_LEFT);
+            for (int k = 0; k < nl && k < 4; k++) { int i = nl - (nl < 4 ? nl : 4) + k; ui_text(UI_BODY, 16, 170, 474 + k * 20, st == S_FAIL ? RED : UI_RGB(70, 70, 70), lines[i], UI_LEFT); }
+            if (st == S_RUN) ui_text(UI_BODY, 18, 700, 160, UI_RGB(90, 80, 60), fr() ? "Quelques minutes la première fois." : "A few minutes the first time.", UI_LEFT);
+        }
+        /* buttons */
+        int main_id = -1;
+        if (st == S_OK) main_id = reg(300, 536, 300, 52, IK_BTN, BT_PLAY, 0, NULL);
+        else if (st == S_NOPY) main_id = reg(300, 536, 300, 52, IK_BTN, BT_OPENDIR, 0, NULL);
+        int cancel = reg(st == S_OK || st == S_NOPY ? 680 : 480, 536, 280, 52, IK_BTN, BT_QUIT, 0, NULL);
+        if (main_id >= 0) { ui_fill_para(308, 544, 300, 52, 14, INK); ui_fill_para(300, 536, 300, 52, 14, focus == main_id ? YEL : RED); ui_stroke_para(300, 536, 300, 52, 14, 5, INK);
+            text_o(UI_TITLE, 30, 450, 541, focus == main_id ? INK : PAPER, st == S_OK ? (fr() ? "LANCER" : "LAUNCH") : (fr() ? "PAGE DE PYTHON" : "PYTHON PAGE"), UI_CENTER, focus == main_id ? 0 : 2); }
+        { float cx = st == S_OK || st == S_NOPY ? 680 : 480; ui_fill_para(cx + 8, 544, 280, 52, 14, INK); ui_fill_para(cx, 536, 280, 52, 14, focus == cancel ? YEL : PAPER); ui_stroke_para(cx, 536, 280, 52, 14, 5, INK);
+          ui_text(UI_TITLE, 30, cx + 140, 541, INK, st == S_RUN ? (fr() ? "ANNULER" : "CANCEL") : (fr() ? "FERMER" : "CLOSE"), UI_CENTER); }
+        present(); tick++;
+    }
+}
+
 /* ---------------------------------------------------------------- modal loops */
 static void options_loop(int tab)
 {
@@ -525,6 +654,7 @@ int menu_select_game(const char *userroms, const menu_ctx_t *ctx)
             int gi = g_picked >= 0 ? g_picked : (focus >= 0 && focus < nit && it[focus].kind == IK_CARD ? it[focus].a : 0); const game_info_t *g = game_info(gi);
             if (!g->supported) { snprintf(g_msg, sizeof g_msg, "%s", T(S_NOT_PLAYABLE)); g_msg_t = 180; }
             else if (!g_roms[gi]) { snprintf(g_msg, sizeof g_msg, "%s", T(S_ROMHELP)); g_msg_t = 240; }
+            else if (!rt_game_has_code(g->id) || getenv("GOLGO13_BUILDTEST")) { if (build_screen(g->id)) return -1; nit = 0; for (int i = 0; i < n; i++) { char p[1100]; g_roms[i] = game_find_roms(i, userroms, p, sizeof p); } }
             else { options_set_lastgame(g->id); options_flush(1); return gi; }
         }
         nit = 0; draw_select(); present();

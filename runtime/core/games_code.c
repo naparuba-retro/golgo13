@@ -26,6 +26,13 @@ static const code_set_t SETS[] = {
     { "g13jnr", g13jnr_code_export_all, 0 },   /* System 10: no H8 */
 #endif
 };
+/* 1 if this program contains the recompiled code of that game (a build made without it only has the menu) */
+int rt_game_has_code(const char *id)
+{
+    if (!strcmp(id, "golgo13")) return h8_lookup(0x100) != 0;        /* the stand-in (no_h8_code.c) answers 0 */
+    for (size_t i = 0; i < sizeof SETS / sizeof SETS[0]; i++) if (!strcmp(SETS[i].id, id)) return 1;
+    return 0;
+}
 int rt_code_is_stub;                      /* set by runtime/core/no_game_code.c when the build has no recompiled code */
 static const code_set_t *cur = &SETS[0];
 h8_blk_fn (*rt_h8_lookup)(uint32_t pc) = h8_lookup;

@@ -20,6 +20,7 @@ void menu_options(const menu_ctx_t *ctx, int tab);             /* options only; 
 int  menu_shots(const char *dir, const menu_ctx_t *ctx, const char *userroms);      /* writes one PPM per page, no window */
 void menu_notice(const uint8_t *game_rgba, int gw, int gh, float progress, unsigned ms);                  /* the 10-to-0 gag shown while the NOTICE screen runs unpaced; progress 0..1 */
 void menu_set_roms_dir(const char *abs_path);                    /* the folder where the user must put the ROMs (shown by the first-run page) */
+void menu_set_exe_path(const char *exe);                        /* this program's own path (the build screen replaces it with the new build) */
 void menu_tick_flush(void);
 void menu_set_ui_lang(const char *code);                       /* language of the menu texts ("fr" or anything else = English) */
 #endif

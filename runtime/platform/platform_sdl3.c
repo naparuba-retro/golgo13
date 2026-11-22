@@ -369,3 +369,50 @@ void plat_open_folder(const char *path)
     for (const char *p = path; *p && k + 4 < sizeof url; p++) { if (*p == 92) url[k++] = 47; else if (*p == 32) { url[k++] = 37; url[k++] = 50; url[k++] = 48; } else url[k++] = *p; }
     url[k] = 0; SDL_OpenURL(url);
 }
+
+/* ---------------- child processes (the in-app build screen) ---------------- */
+struct plat_proc { SDL_Process *p; SDL_Thread *th; SDL_Mutex *mu; char buf[1 << 16]; int len, pos; volatile int eof; };
+static int proc_reader(void *u)
+{
+    struct plat_proc *q = (struct plat_proc *)u; SDL_IOStream *io = SDL_GetProcessOutput(q->p); char t[512];
+    while (io) {
+        size_t n = SDL_ReadIO(io, t, sizeof t);
+        if (n == 0) { if (SDL_GetIOStatus(io) == SDL_IO_STATUS_NOT_READY) { SDL_Delay(20); continue; } break; }   /* no data yet is not the end */
+        SDL_LockMutex(q->mu);
+        if (q->len + (int)n > (int)sizeof q->buf) { int drop = q->pos; memmove(q->buf, q->buf + drop, (size_t)(q->len - drop)); q->len -= drop; q->pos = 0; if (q->len + (int)n > (int)sizeof q->buf) q->len = 0; }
+        memcpy(q->buf + q->len, t, n); q->len += (int)n; SDL_UnlockMutex(q->mu);
+    }
+    q->eof = 1; return 0;
+}
+plat_proc_t *plat_proc_start(const char *const *args, const char *workdir)
+{
+    SDL_PropertiesID pr = SDL_CreateProperties(); SDL_Environment *env = SDL_CreateEnvironment(true);
+    if (env) SDL_SetEnvironmentVariable(env, "PYTHONUNBUFFERED", "1", true);
+    SDL_SetPointerProperty(pr, SDL_PROP_PROCESS_CREATE_ARGS_POINTER, (void *)args);
+    SDL_SetNumberProperty(pr, SDL_PROP_PROCESS_CREATE_STDOUT_NUMBER, SDL_PROCESS_STDIO_APP);
+    SDL_SetBooleanProperty(pr, SDL_PROP_PROCESS_CREATE_STDERR_TO_STDOUT_BOOLEAN, true);
+    if (env) SDL_SetPointerProperty(pr, SDL_PROP_PROCESS_CREATE_ENVIRONMENT_POINTER, env);
+    if (workdir) SDL_SetStringProperty(pr, SDL_PROP_PROCESS_CREATE_WORKING_DIRECTORY_STRING, workdir);
+    SDL_Process *p = SDL_CreateProcessWithProperties(pr); SDL_DestroyProperties(pr); if (env) SDL_DestroyEnvironment(env);
+    if (!p) return NULL;
+    struct plat_proc *q = (struct plat_proc *)SDL_calloc(1, sizeof *q); q->p = p; q->mu = SDL_CreateMutex(); q->th = SDL_CreateThread(proc_reader, "proc_out", q); return q;
+}
+int plat_proc_read(plat_proc_t *q, char *buf, int n)
+{
+    SDL_LockMutex(q->mu); int k = q->len - q->pos; if (k > n) k = n; if (k > 0) { memcpy(buf, q->buf + q->pos, (size_t)k); q->pos += k; } else k = 0; SDL_UnlockMutex(q->mu); return k;
+}
+int plat_proc_done(plat_proc_t *q, int *code)
+{
+    int c = 0; if (!SDL_WaitProcess(q->p, false, &c)) return 0;
+    SDL_LockMutex(q->mu); int pending = q->len - q->pos; SDL_UnlockMutex(q->mu);
+    if (!q->eof && pending == 0) { SDL_Delay(5); }
+    if (code) *code = c; return 1;
+}
+void plat_proc_kill(plat_proc_t *q) { if (q && q->p) SDL_KillProcess(q->p, true); }
+void plat_proc_free(plat_proc_t *q) { if (!q) return; if (q->th) SDL_WaitThread(q->th, NULL); if (q->p) SDL_DestroyProcess(q->p); if (q->mu) SDL_DestroyMutex(q->mu); SDL_free(q); }
+int plat_run_wait(const char *const *args)
+{
+    SDL_Process *p = SDL_CreateProcess(args, false); if (!p) return -1; int c = -1; SDL_WaitProcess(p, true, &c); SDL_DestroyProcess(p); return c;
+}
+void plat_launch(const char *exe) { const char *a[2] = { exe, NULL }; SDL_Process *p = SDL_CreateProcess(a, false); if (p) SDL_DestroyProcess(p); }
+void plat_open_url(const char *url) { SDL_OpenURL(url); }
