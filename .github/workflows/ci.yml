@@ -39,7 +39,9 @@ jobs:
       - name: Third-party (SDL3, minimp3)
         run: |
           python tools/setup_sdl3.py
+          if ($LASTEXITCODE -ne 0) { exit 1 }
           python tools/setup_deps.py
+          if ($LASTEXITCODE -ne 0) { exit 1 }
       - name: Build (MSVC)
         run: python tools/build/build.py
       - name: Menu smoke test (renders every menu page without a window)
