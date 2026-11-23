@@ -1,5 +1,7 @@
 <p align="center"><img src="docs/img/logo.png" alt="Golgo 13 - native arcade port" width="720"></p>
 
+<a href="https://recomplauncher.com"><picture><source media="(prefers-color-scheme: dark)" srcset="https://recomplauncher.com/assets/press/launcher/badge-light.svg"><img alt="Get it on RecompLauncher" src="https://recomplauncher.com/assets/press/launcher/badge-dark.svg" height="48"></picture></a>
+
 # Golgo 13 — native port of the Namco arcade games
 
 [![build](https://github.com/naparuba-retro/golgo13/actions/workflows/ci.yml/badge.svg)](https://github.com/naparuba-retro/golgo13/actions/workflows/ci.yml)

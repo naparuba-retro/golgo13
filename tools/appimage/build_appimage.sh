@@ -32,6 +32,7 @@ echo "== project files + menu-only program"
 mkdir -p "$APP/opt/golgo13"; cp -a "$BUNDLE/." "$APP/opt/golgo13/"
 rm -rf "$APP/opt/golgo13/.venv" "$APP/opt/golgo13/.git"
 echo "$VERSION" > "$APP/opt/golgo13/VERSION"
+cp -f "$BUNDLE/recomplauncher.json" "$APP/recomplauncher.json"      # RecompLauncher reads it at the AppDir root
 cp tools/appimage/AppRun "$APP/AppRun"; chmod +x "$APP/AppRun"
 cat > "$APP/golgo13.desktop" <<D
 [Desktop Entry]
