@@ -4,13 +4,17 @@
   "name": "Golgo 13 - native arcade port",
   "repo": "naparuba-retro/golgo13",
   "inputs": [
-    {"id": "golgo13", "label": "Golgo 13 (1999), MAME set golgo13.zip", "optional": true, "formats": [{"type": "file", "extensions": ["zip"]}], "into": "roms", "name": "golgo13.zip"},
-    {"id": "g13knd", "label": "Golgo 13: Kiseki no Dandou (2000), MAME set g13knd.zip", "optional": true, "formats": [{"type": "file", "extensions": ["zip"]}], "into": "roms", "name": "g13knd.zip"},
-    {"id": "g13jnr", "label": "Golgo 13: Juusei no Requiem (2001), MAME set g13jnr.zip", "optional": true, "formats": [{"type": "file", "extensions": ["zip"]}], "into": "roms", "name": "g13jnr.zip"}
+    {"id": "golgo13", "label": "Golgo 13 (1999): your golgo13.zip ROM set", "formats": [{"type": "file", "extensions": ["zip"]}], "into": "roms", "name": "golgo13.zip"},
+    {"id": "g13knd", "label": "Golgo 13: Kiseki no Dandou (2000): your g13knd.zip ROM set", "formats": [{"type": "file", "extensions": ["zip"]}], "into": "roms", "name": "g13knd.zip"},
+    {"id": "g13jnr", "label": "Golgo 13: Juusei no Requiem (2001): your g13jnr.zip ROM set", "formats": [{"type": "file", "extensions": ["zip"]}], "into": "roms", "name": "g13jnr.zip"}
   ],
   "start": {
     "program": ["golgo13.exe", "build/golgo13.exe", "AppRun", "build-linux/golgo13", "golgo13"],
     "args": ["--roms", "{install}/roms"]
   },
-  "saves": []
+  "games": [
+    {"id": "golgo13", "name": "Golgo 13", "args": ["--game", "golgo13"], "inputs": ["golgo13"]},
+    {"id": "g13knd", "name": "Golgo 13: Kiseki no Dandou", "args": ["--game", "g13knd"], "inputs": ["g13knd"]},
+    {"id": "g13jnr", "name": "Golgo 13: Juusei no Requiem", "args": ["--game", "g13jnr"], "inputs": ["g13jnr"]}
+  ]
 }
