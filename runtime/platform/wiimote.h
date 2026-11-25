@@ -1,4 +1,4 @@
-/* Wii Remote (Wiimote) as a light gun: Bluetooth HID + the IR camera looking at a sensor bar. Windows only (other platforms: stubs). */
+/* Wii Remote (Wiimote) as a light gun: Bluetooth HID + the IR camera looking at a sensor bar. Windows (HID API) and Linux (hidraw); other platforms: stubs. */
 #ifndef GOLGO_WIIMOTE_H
 #define GOLGO_WIIMOTE_H
 

@@ -1,0 +1,4 @@
+# Lets the logged-in user read and write a Bluetooth Wiimote's hidraw node (used by golgo13 for the IR pointer).
+# SteamOS / Linux: copy to /etc/udev/rules.d/ (needs root once), then re-pair or reconnect the Wiimote.
+KERNEL=="hidraw*", KERNELS=="*057E:0306*", MODE="0660", TAG+="uaccess"
+KERNEL=="hidraw*", KERNELS=="*057E:0330*", MODE="0660", TAG+="uaccess"

@@ -61,4 +61,7 @@ endif()
 target_link_libraries(golgo13 PRIVATE SDL3::SDL3 m)
 if(WIN32)
   target_link_libraries(golgo13 PRIVATE hid setupapi bthprops)   # Wiimote HID access
+else()
+  find_package(Threads REQUIRED)
+  target_link_libraries(golgo13 PRIVATE Threads::Threads)        # Wiimote reader thread (hidraw)
 endif()

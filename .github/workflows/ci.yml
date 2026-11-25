@@ -91,6 +91,10 @@ jobs:
           cmake --build build-linux
       - name: Menu smoke test
         run: ./build-linux/golgo13 --menu-shots menu-shots --lang fr
+      - name: Wiimote driver test (a pseudo-terminal plays the Wiimote)
+        run: |
+          cc -O1 -Wall -Iruntime/platform tests/wm_linux_sim.c -lm -lpthread -o wm_sim
+          ./wm_sim
       - name: "Bundle (program + project files + free menu font)"
         uses: actions/upload-artifact@v4
         with:

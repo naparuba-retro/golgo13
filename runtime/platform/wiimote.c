@@ -1,77 +1,77 @@
-/* Wiimote driver: finds a paired Wiimote through the Windows HID API (no external library), turns on its IR camera,
- * and derives the pointing position from the two sensor-bar blobs (roll-compensated, then mapped by a 2-point calibration).
- * Reports used: 0x12 data mode, 0x13/0x1a IR enable, 0x16 register write, 0x11 LED; input 0x33 (buttons + accel + 12 IR bytes). */
+/* Wiimote driver: a paired Wiimote (Bluetooth HID) turns on its IR camera, and the pointing position is derived from the two sensor-bar blobs
+ * (roll-compensated, then mapped by a 2-point calibration).
+ * Reports used: 0x12 data mode, 0x13/0x1a IR enable, 0x16 register write, 0x11 LED; input 0x33 (buttons + accel + 12 IR bytes).
+ * Windows: the Windows HID API (no external library).  Linux / Steam Deck: the kernel's hidraw node of the paired Wiimote (no external library).
+ * Everything above the device access (IR maths, smoothing, calibration, buttons) is shared by the two backends. */
 #include "wiimote.h"
 
-#ifndef _WIN32
+#if !defined(_WIN32) && !defined(__linux__)
 int  wiimote_pair(void) { return 0; }
 int  wiimote_start(const char *cal_path) { (void)cal_path; return 0; }
 void wiimote_stop(void) {}
 void wiimote_recalibrate(void) {}
 void wiimote_poll(wiimote_state_t *out) { out->connected = out->aiming = 0; out->msg = 0; out->mark = 0; out->trigger = out->sensor = out->start = out->coin = out->enter = out->test = out->up = out->down = 0; }
 #else
-#include <windows.h>
-#include <bluetoothapis.h>
-#include <setupapi.h>
-#include <hidsdi.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
+#ifdef _WIN32
+#include <windows.h>
+#include <bluetoothapis.h>
+#include <setupapi.h>
+#include <hidsdi.h>
+#else
+#include <pthread.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <errno.h>
+#include <poll.h>
+#include <dirent.h>
+#include <time.h>
+#endif
 
 #define REPORT_LEN 22
 
-static CRITICAL_SECTION cs; static int cs_ready;
-static HANDLE thread; static volatile int stop_flag;
+static volatile int stop_flag;
 static volatile int connected;
 static uint16_t btn;                         /* core buttons, as sent (byte1 | byte2 << 8) */
 static int have_dots; static float raw_x, raw_y;   /* roll-compensated midpoint, units of 1024 */
 static char cal_file[1024];
+#ifdef __linux__
+static volatile int g_perm;                  /* a Wiimote is there but its hidraw node cannot be opened (permissions) */
+#endif
 
-/* ---- device access (worker thread only) ---- */
-static HANDLE dev = INVALID_HANDLE_VALUE;
-
-static HANDLE find_wiimote(void)
+/* ---- platform primitives ---- */
+#ifdef _WIN32
+static CRITICAL_SECTION cs; static int cs_ready;
+#define LOCK()   EnterCriticalSection(&cs)
+#define UNLOCK() LeaveCriticalSection(&cs)
+static float wm_dt(void)                      /* seconds since the previous report (clamped) */
 {
-    GUID g; HidD_GetHidGuid(&g);
-    HDEVINFO set = SetupDiGetClassDevsA(&g, NULL, NULL, DIGCF_PRESENT | DIGCF_DEVICEINTERFACE);
-    if (set == INVALID_HANDLE_VALUE) return INVALID_HANDLE_VALUE;
-    HANDLE found = INVALID_HANDLE_VALUE;
-    SP_DEVICE_INTERFACE_DATA id; id.cbSize = sizeof id;
-    for (DWORD i = 0; found == INVALID_HANDLE_VALUE && SetupDiEnumDeviceInterfaces(set, NULL, &g, i, &id); i++) {
-        DWORD need = 0; SetupDiGetDeviceInterfaceDetailA(set, &id, NULL, 0, &need, NULL);
-        if (!need) continue;
-        SP_DEVICE_INTERFACE_DETAIL_DATA_A *d = (SP_DEVICE_INTERFACE_DETAIL_DATA_A *)malloc(need);
-        if (!d) continue;
-        d->cbSize = sizeof *d;
-        if (SetupDiGetDeviceInterfaceDetailA(set, &id, d, need, NULL, NULL)) {
-            HANDLE h = CreateFileA(d->DevicePath, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_FLAG_OVERLAPPED, NULL);
-            if (h != INVALID_HANDLE_VALUE) {
-                HIDD_ATTRIBUTES at; at.Size = sizeof at;
-                if (HidD_GetAttributes(h, &at) && at.VendorID == 0x057E && (at.ProductID == 0x0306 || at.ProductID == 0x0330)) found = h;
-                else CloseHandle(h);
-            }
-        }
-        free(d);
-    }
-    SetupDiDestroyDeviceInfoList(set);
-    return found;
+    static LARGE_INTEGER t0, fq; LARGE_INTEGER t1; QueryPerformanceCounter(&t1); if (!fq.QuadPart) QueryPerformanceFrequency(&fq);
+    float dt = t0.QuadPart ? (float)(t1.QuadPart - t0.QuadPart) / (float)fq.QuadPart : 0.01f; t0 = t1;
+    if (dt < 0.002f) dt = 0.002f; if (dt > 0.1f) dt = 0.1f;
+    return dt;
 }
-
-static int wm_write(const uint8_t *buf)
+#else
+static pthread_mutex_t cs = PTHREAD_MUTEX_INITIALIZER;
+#define LOCK()   pthread_mutex_lock(&cs)
+#define UNLOCK() pthread_mutex_unlock(&cs)
+static void Sleep(int ms) { struct timespec t = { ms / 1000, (long)(ms % 1000) * 1000000L }; nanosleep(&t, NULL); }
+static float wm_dt(void)
 {
-    OVERLAPPED ov; memset(&ov, 0, sizeof ov); ov.hEvent = CreateEventA(NULL, TRUE, FALSE, NULL);
-    DWORD w = 0; BOOL ok = WriteFile(dev, buf, REPORT_LEN, &w, &ov);
-    if (!ok && GetLastError() == ERROR_IO_PENDING) {
-        if (WaitForSingleObject(ov.hEvent, 500) == WAIT_OBJECT_0) ok = GetOverlappedResult(dev, &ov, &w, FALSE);
-        else { CancelIo(dev); ok = FALSE; }
-    }
-    CloseHandle(ov.hEvent);
-    if (!ok) ok = HidD_SetOutputReport(dev, (PVOID)buf, REPORT_LEN);   /* some Bluetooth stacks only accept this */
-    Sleep(40);
-    return ok;
+    static double t0; struct timespec ts; clock_gettime(CLOCK_MONOTONIC, &ts);
+    double t1 = (double)ts.tv_sec + (double)ts.tv_nsec * 1e-9; float dt = t0 > 0 ? (float)(t1 - t0) : 0.01f; t0 = t1;
+    if (dt < 0.002f) dt = 0.002f; if (dt > 0.1f) dt = 0.1f;
+    return dt;
 }
+#endif
+
+static int wm_write(const uint8_t *buf);      /* one output report to the device (defined by the backend below) */
+
+/* ---- protocol (shared) ---- */
 static int wm_report(int id, int a, int b)
 {
     uint8_t buf[REPORT_LEN]; memset(buf, 0, sizeof buf); buf[0] = (uint8_t)id; buf[1] = (uint8_t)a; buf[2] = (uint8_t)b;
@@ -120,9 +120,7 @@ static float oe_filter(oe_t *f, float v, float dt)
 static void handle_report(const uint8_t *r)
 {
     if (r[0] != 0x33) return;
-    static LARGE_INTEGER t0, fq; LARGE_INTEGER t1; QueryPerformanceCounter(&t1); if (!fq.QuadPart) QueryPerformanceFrequency(&fq);
-    float dt = t0.QuadPart ? (float)(t1.QuadPart - t0.QuadPart) / (float)fq.QuadPart : 0.01f; t0 = t1;
-    if (dt < 0.002f) dt = 0.002f; if (dt > 0.1f) dt = 0.1f;
+    float dt = wm_dt();
     uint16_t b = (uint16_t)(r[1] | (r[2] << 8));
     float px[4], py[4]; int n = 0;
     for (int i = 0; i < 4; i++) {
@@ -145,11 +143,57 @@ static void handle_report(const uint8_t *r)
         my = (-cx * sa + cy * ca + 384.0f) / 1024.0f;
         ok = 1;
     }
-    EnterCriticalSection(&cs);
+    LOCK();
     btn = b;
     if (ok) { if (!have_dots) { f_x.init = f_y.init = 0; } raw_x = oe_filter(&f_x, mx, dt); raw_y = oe_filter(&f_y, my, dt); have_dots = 1; }
     else have_dots = 0;
-    LeaveCriticalSection(&cs);
+    UNLOCK();
+}
+
+#ifdef _WIN32
+/* ---- Windows backend ---- */
+static HANDLE thread;
+static HANDLE dev = INVALID_HANDLE_VALUE;
+
+static HANDLE find_wiimote(void)
+{
+    GUID g; HidD_GetHidGuid(&g);
+    HDEVINFO set = SetupDiGetClassDevsA(&g, NULL, NULL, DIGCF_PRESENT | DIGCF_DEVICEINTERFACE);
+    if (set == INVALID_HANDLE_VALUE) return INVALID_HANDLE_VALUE;
+    HANDLE found = INVALID_HANDLE_VALUE;
+    SP_DEVICE_INTERFACE_DATA id; id.cbSize = sizeof id;
+    for (DWORD i = 0; found == INVALID_HANDLE_VALUE && SetupDiEnumDeviceInterfaces(set, NULL, &g, i, &id); i++) {
+        DWORD need = 0; SetupDiGetDeviceInterfaceDetailA(set, &id, NULL, 0, &need, NULL);
+        if (!need) continue;
+        SP_DEVICE_INTERFACE_DETAIL_DATA_A *d = (SP_DEVICE_INTERFACE_DETAIL_DATA_A *)malloc(need);
+        if (!d) continue;
+        d->cbSize = sizeof *d;
+        if (SetupDiGetDeviceInterfaceDetailA(set, &id, d, need, NULL, NULL)) {
+            HANDLE h = CreateFileA(d->DevicePath, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, NULL, OPEN_EXISTING, FILE_FLAG_OVERLAPPED, NULL);
+            if (h != INVALID_HANDLE_VALUE) {
+                HIDD_ATTRIBUTES at; at.Size = sizeof at;
+                if (HidD_GetAttributes(h, &at) && at.VendorID == 0x057E && (at.ProductID == 0x0306 || at.ProductID == 0x0330)) found = h;
+                else CloseHandle(h);
+            }
+        }
+        free(d);
+    }
+    SetupDiDestroyDeviceInfoList(set);
+    return found;
+}
+
+static int wm_write(const uint8_t *buf)
+{
+    OVERLAPPED ov; memset(&ov, 0, sizeof ov); ov.hEvent = CreateEventA(NULL, TRUE, FALSE, NULL);
+    DWORD w = 0; BOOL ok = WriteFile(dev, buf, REPORT_LEN, &w, &ov);
+    if (!ok && GetLastError() == ERROR_IO_PENDING) {
+        if (WaitForSingleObject(ov.hEvent, 500) == WAIT_OBJECT_0) ok = GetOverlappedResult(dev, &ov, &w, FALSE);
+        else { CancelIo(dev); ok = FALSE; }
+    }
+    CloseHandle(ov.hEvent);
+    if (!ok) ok = HidD_SetOutputReport(dev, (PVOID)buf, REPORT_LEN);   /* some Bluetooth stacks only accept this */
+    Sleep(40);
+    return ok;
 }
 
 static DWORD WINAPI worker(LPVOID arg)
@@ -175,7 +219,7 @@ static DWORD WINAPI worker(LPVOID arg)
             if (got >= 6) handle_report(buf);
         }
         CloseHandle(ov.hEvent);
-        connected = 0; EnterCriticalSection(&cs); btn = 0; have_dots = 0; LeaveCriticalSection(&cs);
+        connected = 0; LOCK(); btn = 0; have_dots = 0; UNLOCK();
         CloseHandle(dev); dev = INVALID_HANDLE_VALUE;
     }
     return 0;
@@ -243,7 +287,110 @@ int wiimote_pair(void)
     return 0;
 }
 
-/* ---- main-thread side: calibration and mapping ---- */
+static int backend_running(void) { return thread != NULL; }
+static int backend_start(void)
+{
+    InitializeCriticalSection(&cs); cs_ready = 1;
+    stop_flag = 0;
+    thread = CreateThread(NULL, 0, worker, NULL, 0, NULL);
+    return thread != NULL;
+}
+static void backend_stop(void)
+{
+    if (!thread) return;
+    stop_flag = 1; WaitForSingleObject(thread, 2000); CloseHandle(thread); thread = NULL;
+}
+#else
+/* ---- Linux backend: the /dev/hidraw node of the paired Wiimote ----
+ * The kernel's hid-wiimote driver keeps the device bound and exposes it through hidraw, which carries the raw reports in both directions:
+ * the same protocol as on Windows. Needs read/write access to the node (the udev rule that tags hidraw devices with uaccess, as Steam installs). */
+static pthread_t th; static int th_on; static int fd = -1;
+
+static int is_wiimote_line(const char *line)             /* a line of the hidraw device's uevent file */
+{
+    unsigned bus, vid, pid;
+    if (!strncmp(line, "HID_NAME=Nintendo RVL-CNT", 25)) return 1;
+    if (sscanf(line, "HID_ID=%x:%x:%x", &bus, &vid, &pid) != 3) return 0;
+    return vid == 0x057E && (pid == 0x0306 || pid == 0x0330);
+}
+static int find_wiimote(void)                             /* opens the device into fd; 1 if found */
+{
+    const char *force = getenv("GOLGO13_WM_DEVICE");     /* a given node (test tool) instead of the scan */
+    char path[200]; int perm = 0;
+    if (force && *force) { fd = open(force, O_RDWR | O_NONBLOCK); g_perm = fd < 0 && errno == EACCES; return fd >= 0; }
+    DIR *d = opendir("/sys/class/hidraw"); if (!d) return 0;
+    struct dirent *e;
+    while (fd < 0 && (e = readdir(d))) {
+        if (strncmp(e->d_name, "hidraw", 6)) continue;
+        snprintf(path, sizeof path, "/sys/class/hidraw/%s/device/uevent", e->d_name);
+        FILE *f = fopen(path, "r"); if (!f) continue;
+        char ln[256]; int ok = 0;
+        while (!ok && fgets(ln, sizeof ln, f)) ok = is_wiimote_line(ln);
+        fclose(f); if (!ok) continue;
+        snprintf(path, sizeof path, "/dev/%s", e->d_name);
+        fd = open(path, O_RDWR | O_NONBLOCK);
+        if (fd < 0 && errno == EACCES) perm = 1;
+    }
+    closedir(d); g_perm = fd < 0 && perm;
+    return fd >= 0;
+}
+
+static int wm_write(const uint8_t *buf)
+{
+    if (fd < 0) return 0;
+    ssize_t w = -1;
+    for (int tries = 0; tries < 50; tries++) {
+        w = write(fd, buf, REPORT_LEN);
+        if (w >= 0 || (errno != EINTR && errno != EAGAIN)) break;
+        Sleep(2);
+    }
+    Sleep(40);
+    return w > 0;
+}
+
+static void *worker(void *arg)
+{
+    (void)arg; uint8_t buf[64];
+    while (!stop_flag) {
+        if (!find_wiimote()) { for (int i = 0; i < 10 && !stop_flag; i++) Sleep(100); continue; }
+        if (!wm_init()) { close(fd); fd = -1; Sleep(1000); continue; }
+        connected = 1; int foreign = 0;
+        struct pollfd p; p.fd = fd; p.events = POLLIN; p.revents = 0;
+        while (!stop_flag) {
+            int r = poll(&p, 1, 200);
+            if (r < 0) { if (errno == EINTR) continue; break; }
+            if (r == 0) continue;
+            if (p.revents & (POLLERR | POLLHUP | POLLNVAL)) break;           /* powered off / unpaired */
+            ssize_t got = read(fd, buf, sizeof buf);
+            if (got < 0) { if (errno == EAGAIN || errno == EINTR) continue; break; }
+            if (got >= 6 && buf[0] == 0x33) { handle_report(buf); foreign = 0; }
+            else if (got >= 1 && buf[0] >= 0x30 && buf[0] <= 0x3f && ++foreign >= 60) { wm_init(); foreign = 0; }   /* the kernel driver changed the data mode: take it back */
+        }
+        connected = 0; LOCK(); btn = 0; have_dots = 0; UNLOCK();
+        close(fd); fd = -1;
+    }
+    return NULL;
+}
+
+int wiimote_pair(void)
+{
+    printf("Linux / Steam Deck: pair the Wiimote with the system Bluetooth settings (desktop mode > Bluetooth), no PIN needed:\n"
+           "press the red SYNC button (under the battery cover), or 1+2, then choose \"Nintendo RVL-CNT-01\".\nWaiting for it...\n"); fflush(stdout);
+    for (int i = 0; i < 240; i++) {
+        if (find_wiimote()) { close(fd); fd = -1; printf("Wiimote found. You can now start the game with --wiimote.\n"); return 1; }
+        if (g_perm && i % 10 == 0) { printf("  a Wiimote is there but access to its /dev/hidraw node is denied (udev rule needed).\n"); fflush(stdout); }
+        Sleep(500);
+    }
+    printf("No Wiimote found.\n");
+    return 0;
+}
+
+static int backend_running(void) { return th_on; }
+static int backend_start(void) { stop_flag = 0; th_on = pthread_create(&th, NULL, worker, NULL) == 0; return th_on; }
+static void backend_stop(void) { if (!th_on) return; stop_flag = 1; pthread_join(th, NULL); th_on = 0; }
+#endif
+
+/* ---- main-thread side: calibration and mapping (shared) ---- */
 static int cal_ok, cal_step = -1;
 void wiimote_recalibrate(void) { cal_step = 0; }            /* cal_step: -1 idle, 0 = top-left target, 1 = bottom-right target */
 static float c0x, c0y, c1x, c1y;
@@ -263,29 +410,26 @@ static void cal_save(void)
 
 int wiimote_start(const char *cal_path)
 {
-    if (thread) return 1;
-    InitializeCriticalSection(&cs); cs_ready = 1;
+    if (backend_running()) return 1;
     snprintf(cal_file, sizeof cal_file, "%s%s", cal_path ? cal_path : "", "wiimote.cal");
     cal_load();
-    stop_flag = 0;
-    thread = CreateThread(NULL, 0, worker, NULL, 0, NULL);
-    return thread != NULL;
+    return backend_start();
 }
-void wiimote_stop(void)
-{
-    if (!thread) return;
-    stop_flag = 1; WaitForSingleObject(thread, 2000); CloseHandle(thread); thread = NULL;
-}
+void wiimote_stop(void) { backend_stop(); }
 
 void wiimote_poll(wiimote_state_t *o)
 {
     static char msg[128]; static int wait_release;
     memset(o, 0, sizeof *o);
-    if (!thread) return;
+    if (!backend_running()) return;
     uint16_t b; int dots; float rx, ry;
-    EnterCriticalSection(&cs); b = btn; dots = have_dots; rx = raw_x; ry = raw_y; LeaveCriticalSection(&cs);
+    LOCK(); b = btn; dots = have_dots; rx = raw_x; ry = raw_y; UNLOCK();
     o->connected = connected;
-    if (!o->connected) { cal_step = -1; prev_btn = 0; o->msg = "WIIMOTE: appuie sur un bouton (ou 1+2) pour la connecter"; return; }
+    if (!o->connected) { cal_step = -1; prev_btn = 0; o->msg = "WIIMOTE: appuie sur un bouton (ou 1+2) pour la connecter";
+#ifdef __linux__
+        if (g_perm) o->msg = "WIIMOTE: acces refuse a /dev/hidraw (regle udev)";
+#endif
+        return; }
     uint16_t edge = (uint16_t)(b & ~prev_btn); prev_btn = b;
     /* core button bits: byte1 = d-pad L 1, R 2, D 4, U 8, + 0x10 ; byte2 (<<8) = 2 0x01, 1 0x02, B 0x04, A 0x08, - 0x10, Home 0x80 */
     const uint16_t UP = 0x0008, DOWN = 0x0004, PLUS = 0x0010, TWO = 0x0100, ONE = 0x0200, BB = 0x0400, AA = 0x0800, MINUS = 0x1000, HOME = 0x8000;

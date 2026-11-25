@@ -83,7 +83,7 @@ On start you get a comic-book launcher: pick a card (arrows, mouse, gamepad, or 
 
 Modern light guns (Sinden, Aimtrak, Gun4IR…) show up as an absolute mouse and work as is.
 
-## Playing with a Wiimote (Windows)
+## Playing with a Wiimote (Windows, Linux / Steam Deck)
 
 You need a Wiimote, a Bluetooth adapter and the **infrared sensor bar** (powered by 5 V USB, or two candles — without it the remote sees nothing).
 
@@ -94,6 +94,8 @@ You need a Wiimote, a Bluetooth adapter and the **infrared sensor bar** (powered
 2. **Place the bar** centred above or below the screen.
 3. **Run** `golgo13.exe --wiimote` (or enable it in Options > Wiimote). Press a button on the remote to wake it; LED 1 lights up.
 4. **Calibrate**: a full-screen assistant appears on first use. Aim at the green cross (top-left), press **A**; then bottom-right, **A**; then check the red cross follows you, **A**. Saved in `wiimote.cal`. Redo it any time from Options > Wiimote > Calibrate.
+
+**Linux / Steam Deck**: pair the Wiimote in the system Bluetooth settings (press SYNC or 1+2, pick *Nintendo RVL-CNT-01*, no PIN needed), place the bar, and enable the Wiimote in Options > Wiimote. The program talks to the Wiimote's `/dev/hidraw` node, which is only readable by the logged-in user if a udev rule says so; SteamOS has none for the Wiimote, so install `tools/linux/70-wiimote.rules` once (copy it to `/etc/udev/rules.d/`, which needs the admin password), then reconnect the Wiimote. Without it the menu says "acces refuse a /dev/hidraw". The calibration is the same. Not tested with a real Wiimote yet: the Linux driver is checked in CI with a simulated one.
 
 The mouse still works; the Wiimote takes over while the bar is in view. If pairing fails, try another Bluetooth adapter, or a Dolphin Bar (the remote then behaves like a mouse, nothing to change here). Details: `docs_wiimote.md`.
 
