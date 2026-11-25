@@ -66,7 +66,7 @@ static char g_dirs[6][1200]; static const char *g_dirp[6]; static int g_nd;
 static ui_image_t *g_card[8], *g_notice;
 typedef struct { float x, y, w, h; int kind, a, b; const char *desc; } item_t;
 #define NTABS 6
-enum { IK_BTN, IK_CHECK, IK_CHOICE, IK_SLIDER, IK_KEY, IK_CARD, IK_TAB, IK_LANG, IK_INFO };
+enum { IK_BTN, IK_CHECK, IK_CHOICE, IK_SLIDER, IK_KEY, IK_CARD, IK_TAB, IK_LANG, IK_INFO, IK_FOOT };   /* IK_FOOT: a clickable chip of the bottom hint bar (skipped by the keyboard focus) */
 static item_t it[96]; static int nit, focus; static const menu_ctx_t *g_ctx;
 static int g_mx, g_my, g_mouse_in, g_moved, g_click, g_rclick; static int g_nav[24], g_nnav; static int g_raw[8], g_nraw;
 static int g_quit, g_tab, g_capturing = -1; static char g_msg[200]; static int g_msg_t;
@@ -126,13 +126,19 @@ static void header(const char *title, const char *sub)
     if (sub) { int ss = 22; while (ss > 14 && 640 + ui_text_width(UI_BODY, ss, sub) > 1000) ss -= 2; ui_text(UI_BODY, ss, 640, 48, PAPER, sub, UI_LEFT); }
     text_o(UI_TITLE, 72, UI_W - 40, 8, YEL, "13", UI_RIGHT, 4); text_o(UI_TITLE, 46, UI_W - 130, 22, PAPER, "GOLGO", UI_RIGHT, 3);
 }
-static void hint_bar(const char *const *kv, int n)           /* pairs: key, label */
+static int reg(float x, float y, float w, float h, int kind, int a, int b, const char *desc);
+static void hint_bar(const char *const *kv, int n, const int *acts)    /* pairs: key, label; acts[i] = the click action of chip i (0: none) */
 {
     ui_fill_rect(0, UI_H - 44, UI_W, 44, INK); float x = 24;
-    for (int i = 0; i + 1 < n * 2; i += 2) {
-        float w = (float)ui_text_width(UI_TITLE, 18, kv[i]) + 20; ui_fill_para(x, UI_H - 39, w, 31, 0, YEL);
-        ui_text(UI_TITLE, 18, x + 10, UI_H - 38, INK, kv[i], UI_LEFT); ui_text(UI_BODY, 18, x + w + 8, UI_H - 36, PAPER, kv[i + 1], UI_LEFT);
-        x += w + 12 + ui_text_width(UI_BODY, 18, kv[i + 1]) + 26;
+    for (int i = 0; i < n; i++) {
+        const char *key = kv[2 * i], *lab = kv[2 * i + 1];
+        float w = (float)ui_text_width(UI_TITLE, 18, key) + 20, tw = (float)ui_text_width(UI_BODY, 18, lab);
+        int id = acts && acts[i] ? reg(x - 4, UI_H - 41, w + 8 + tw + 12, 35, IK_FOOT, acts[i], 0, NULL) : -1;
+        int fo = id >= 0 && focus == id;
+        if (fo) ui_fill_para(x - 4, UI_H - 41, w + 8 + tw + 12, 35, 0, UI_RGB(70, 70, 90));
+        ui_fill_para(x, UI_H - 39, w, 31, 0, fo ? PAPER : YEL);
+        ui_text(UI_TITLE, 18, x + 10, UI_H - 38, INK, key, UI_LEFT); ui_text(UI_BODY, 18, x + w + 8, UI_H - 36, fo ? YEL : PAPER, lab, UI_LEFT);
+        x += w + 12 + tw + 26;
     }
 }
 static void panel(float x, float y, float w, float h, float skew, uint32_t col, int dots)       /* comic panel: hard shadow, thick border */
@@ -200,7 +206,7 @@ static void row_button(const char *label, int id, const char *desc)
 
 /* ---------------------------------------------------------------- pages */
 enum { PG_SELECT, PG_OPTIONS, PG_PAUSE };
-enum { BT_OPENDIR = 100, BT_OPTIONS = 1, BT_RESUME, BT_CHANGE, BT_RESET, BT_QUIT, BT_YES, BT_NO, BT_PAIR, BT_CALIB, BT_RESETKEYS, BT_PLAY, BT_DONE };
+enum { BT_OPENDIR = 100, BT_OPTIONS = 1, BT_RESUME, BT_CHANGE, BT_RESET, BT_QUIT, BT_YES, BT_NO, BT_PAIR, BT_CALIB, BT_RESETKEYS, BT_PLAY, BT_DONE, BT_BACK, BT_PGUP, BT_PGDN };
 static int g_picked = -1;
 static int g_confirm_quit;
 static char g_roms_dir[1100] = "roms";
@@ -255,7 +261,7 @@ static void draw_select(void)
     int ob = reg(UI_W - 330, 112, 294, 40, IK_BTN, BT_OPTIONS, 0, NULL);
     ui_fill_para(UI_W - 330, 112, 294, 40, 12, focus == ob ? YEL : INK); ui_text(UI_TITLE, 24, UI_W - 183, 118, focus == ob ? INK : YEL, "F1  OPTIONS", UI_CENTER);
     if (g_msg[0] && g_msg_t > 0) { int tw = ui_text_width(UI_BODY, 22, g_msg) + 40; bubble(640 - tw / 2.0f, 548, (float)tw, 46, g_msg, 600); }
-    const char *h[] = { "< >", T(S_MOVE), "Enter", fr() ? "choisir" : "pick", "F1", T(S_OPTIONS), "Esc", T(S_QUIT) }; hint_bar(h, 4);
+    const char *h[] = { "< >", T(S_MOVE), "Enter", fr() ? "choisir" : "pick", "F1", T(S_OPTIONS), "Esc", T(S_QUIT) }; { static const int a[4] = { 0, BT_PLAY, BT_OPTIONS, BT_QUIT }; hint_bar(h, 4, a); }
     { extern const char *golgo13_version(void); char v[60]; snprintf(v, sizeof v, "v%s", golgo13_version()[0] == 'v' ? golgo13_version() + 1 : golgo13_version()); ui_text(UI_BODY, 18, UI_W - 20, UI_H - 36, UI_RGB(150, 150, 170), v, UI_RIGHT); }
 }
 
@@ -347,7 +353,7 @@ static void draw_options(void)
         break;
     }
     if (focus >= 0 && focus < nit && it[focus].desc) bubble(400, 566, 780, 46, it[focus].desc, 440);
-    const char *h[] = { "Up/Down", fr() ? "choisir" : "choose", "Left/Right", T(S_CHANGE), "PgUp/PgDn", T(S_TAB), "Esc", T(S_BACK) }; hint_bar(h, 4);
+    const char *h[] = { "Up/Down", fr() ? "choisir" : "choose", "Left/Right", T(S_CHANGE), "PgUp/PgDn", T(S_TAB), "Esc", T(S_BACK) }; { static const int a[4] = { 0, 0, BT_PGUP, BT_BACK }; hint_bar(h, 4, a); }
 }
 
 static void draw_pause(void)
@@ -412,7 +418,7 @@ static int hit(void) { if (!g_mouse_in) return -1; for (int i = nit - 1; i >= 0;
 static int step_focus(int dir)
 {
     if (nit == 0) return 0; int f = focus;
-    for (int k = 0; k < nit; k++) { f = (f + dir + nit) % nit; if (it[f].kind != IK_INFO && it[f].kind != IK_TAB) break; }
+    for (int k = 0; k < nit; k++) { f = (f + dir + nit) % nit; if (it[f].kind != IK_INFO && it[f].kind != IK_TAB && it[f].kind != IK_FOOT) break; }
     return f;
 }
 /* returns an item action code (>0 = BT_ id / card index + 1000) or 0 */
@@ -435,6 +441,7 @@ static int activate(int i, int mx)
 {
     item_t *m = &it[i];
     switch (m->kind) {
+    case IK_FOOT: if (m->a == BT_PGUP && mx >= m->x + m->w / 2) return BT_PGDN; return m->a;       /* the PgUp/PgDn chip: left half = previous tab, right half = next */
     case IK_BTN: return m->a;
     case IK_CARD: return 1000 + m->a;
     case IK_TAB: g_tab = m->a; focus = NTABS; return 0;
@@ -471,6 +478,8 @@ static int process(int horiz, int *back)
     if (g_moved) { int h = hit(); if (h >= 0 && it[h].kind != IK_TAB) focus = h; }
     if (g_click) { int h = hit(); if (h >= 0) { focus = h; act = activate(h, g_mx); } }
     if (g_rclick) *back = 1;
+    if (act == BT_BACK) { *back = 1; act = 0; }                              /* the footer's Esc chip */
+    else if (act == BT_PGUP || act == BT_PGDN) { if (nit && it[0].kind == IK_TAB) { g_tab += act == BT_PGUP ? -1 : 1; if (g_tab < 0) g_tab = 0; if (g_tab > 5) g_tab = 5; focus = NTABS; } act = 0; }
     if (focus >= nit) focus = nit ? nit - 1 : 0;
     if (nit && (it[focus].kind == IK_INFO || (it[focus].kind == IK_TAB && g_nnav + g_moved == 0))) focus = step_focus(1);
     return act;
@@ -659,7 +668,7 @@ int menu_select_game(const char *userroms, const menu_ctx_t *ctx)
         gather(); if (g_quit) return -1;
         int back, act = process(1, &back);
         for (int k = 0; k < g_nraw; k++) { const char *nm = plat_key_name(g_raw[k]); if (!strcmp(nm, "F1")) act = BT_OPTIONS; if (!strcmp(nm, "Escape")) g_quit = 1; }
-        if (g_quit) return -1;
+        if (g_quit || act == BT_QUIT) return -1;
         if (act == BT_OPTIONS) { options_loop(0); if (g_quit) return -1; nit = 0; continue; }
         if (act >= 1000 && act < 1100) {                          /* a card is picked: the PLAY button starts it */
             g_picked = act - 1000; g_msg[0] = 0;

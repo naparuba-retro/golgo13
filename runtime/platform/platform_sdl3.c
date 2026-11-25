@@ -107,13 +107,15 @@ static void to_logical(float wx, float wy)
     mx = lx; my = ly;
 }
 
-static void test_events(void)          /* tooling: GOLGO13_UIEVENTS=\"F1,n8,n3,kG,...\" injects one UI event every 4th poll (n<k> navigation, k<name> raw key, c click) */
+static int test_mx = -1, test_my = -1;                                   /* tooling: token m<x>,<y>: a fake mouse position over the menu */
+static void test_events(void)          /* tooling: GOLGO13_UIEVENTS=\"F1,n8,n3,kG,...\" injects one UI event every 4th poll (n<k> navigation, k<name> raw key, c click, m<x>;<y> mouse position) */
 {
     static const char *env; static int init, n, wait; if (!init) { init = 1; env = SDL_getenv("GOLGO13_UIEVENTS"); } if (!env) return;
     if (++wait < 4) return; wait = 0;
     const char *p = env; for (int i = 0; i < n && p; i++) { p = SDL_strchr(p, ','); if (p) p++; } if (!p || !*p) return; n++;
     char tok[40]; size_t l = 0; while (p[l] && p[l] != ',' && l < 39) { tok[l] = p[l]; l++; } tok[l] = 0;
-    if (tok[0] == 'n') ev_push(6, SDL_atoi(tok + 1)); else if (tok[0] == 'c') ev_push(3, 0);
+    if (tok[0] == 'm') { char *q = SDL_strchr(tok, ';'); test_mx = SDL_atoi(tok + 1); test_my = q ? SDL_atoi(q + 1) : 0; }
+    else if (tok[0] == 'n') ev_push(6, SDL_atoi(tok + 1)); else if (tok[0] == 'c') ev_push(3, 0);
     else if (tok[0] == 'k') { SDL_Scancode c = SDL_GetScancodeFromName(tok + 1); if (c != SDL_SCANCODE_UNKNOWN) ev_push(1, (int)c); }
     else { SDL_Scancode c = SDL_GetScancodeFromName(tok); if (c != SDL_SCANCODE_UNKNOWN) ev_push(1, (int)c); }
 }
@@ -337,6 +339,7 @@ void plat_video_set(const plat_video_t *v)
 int plat_ui_mouse(int *x, int *y)
 {
     if (wm_on && wm.aiming) { *x = (int)(wm.x * 1279); *y = (int)(wm.y * 719); return 1; }
+    if (test_mx >= 0) { *x = test_mx; *y = test_my; return 1; }
     float lx = 0, ly = 0; SDL_SetRenderLogicalPresentation(ren, 1280, 720, SDL_LOGICAL_PRESENTATION_LETTERBOX);
     SDL_RenderCoordinatesFromWindow(ren, mwx, mwy, &lx, &ly); apply_logical();
     *x = (int)lx; *y = (int)ly; return lx >= 0 && ly >= 0 && lx < 1280 && ly < 720;
