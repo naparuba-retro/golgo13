@@ -210,6 +210,30 @@ void plat_poll(plat_input_t *in)
     if (pending_ok) { SDL_strlcpy(in->drop_path, pending, sizeof in->drop_path); pending_ok = 0; }
 }
 
+static void wm_calib_screen(void)                  /* the 2-point Wiimote calibration, drawn on the LWxLH logical picture (game and menu) */
+{
+    SDL_SetRenderDrawColor(ren, 8, 10, 24, 255); SDL_RenderClear(ren);
+    SDL_SetRenderDrawColor(ren, 40, 50, 90, 255);
+    for (int i = 1; i < 8; i++) { SDL_RenderLine(ren, i * LW / 8.0f, 0, i * LW / 8.0f, LH); SDL_RenderLine(ren, 0, i * LH / 8.0f, LW, i * LH / 8.0f); }
+    SDL_SetRenderDrawColor(ren, 120, 140, 220, 255); SDL_FRect fr = { 6, 6, LW - 12, LH - 12 }; SDL_RenderRect(ren, &fr);
+    #define CTEXT(Y, SC, R, G, B, T) do { const char *t_ = (T); float sc_ = (SC); SDL_SetRenderScale(ren, sc_, sc_); SDL_SetRenderDrawColor(ren, R, G, B, 255); \
+        SDL_RenderDebugText(ren, (LW - 8.0f * sc_ * (float)strlen(t_)) / 2 / sc_, (Y) / sc_, t_); SDL_SetRenderScale(ren, 1, 1); } while (0)
+    CTEXT(150, 2.0f, 255, 220, 80, "CALIBRATION WIIMOTE");
+    CTEXT(200, 1.0f, 235, 235, 235, wm.text[0]);
+    CTEXT(216, 1.0f, 235, 235, 235, wm.text[1]);
+    if (wm.text[2][0]) CTEXT(232, 1.0f, 255, 120, 80, wm.text[2]);
+    char st[96];
+    if (wm.dots) { snprintf(st, sizeof st, "Barre infrarouge : DETECTEE   (x=%4d  y=%4d)", (int)(wm.raw_x * 1024), (int)(wm.raw_y * 1024)); CTEXT(300, 1.0f, 100, 255, 120, st); }
+    else CTEXT(300, 1.0f, 255, 90, 90, "Barre infrarouge : NON DETECTEE - allume la barre et pointe vers elle");
+    if (wm.mark) {
+        float x = wm.mark_x * LW, y = wm.mark_y * LH; SDL_SetRenderDrawColor(ren, 40, 255, 80, 255);
+        SDL_FRect r[2] = { { x - 22, y - 2, 44, 4 }, { x - 2, y - 22, 4, 44 } }; SDL_RenderFillRects(ren, r, 2);
+        SDL_FRect ring = { x - 10, y - 10, 20, 20 }; SDL_RenderRect(ren, &ring);
+    } else if (wm.aiming) {                      /* verification: live crosshair */
+        float x = wm.x * (LW - 1), y = wm.y * (LH - 1); SDL_SetRenderDrawColor(ren, 255, 60, 60, 255);
+        SDL_FRect r[2] = { { x - 16, y - 1.5f, 32, 3 }, { x - 1.5f, y - 16, 3, 32 } }; SDL_RenderFillRects(ren, r, 2);
+    }
+}
 void plat_present(const uint8_t *rgba, int w, int h)
 {
     if (!tex || tex_w != w || tex_h != h) {
@@ -243,29 +267,8 @@ void plat_present(const uint8_t *rgba, int w, int h)
             SDL_RenderFillRects(ren, r, 5);
         }
     }
-    if (wm_on && wm.calib) {                         /* full-screen Wiimote calibration */
-        SDL_SetRenderDrawColor(ren, 8, 10, 24, 255); SDL_RenderClear(ren);
-        SDL_SetRenderDrawColor(ren, 40, 50, 90, 255);
-        for (int i = 1; i < 8; i++) { SDL_RenderLine(ren, i * LW / 8.0f, 0, i * LW / 8.0f, LH); SDL_RenderLine(ren, 0, i * LH / 8.0f, LW, i * LH / 8.0f); }
-        SDL_SetRenderDrawColor(ren, 120, 140, 220, 255); SDL_FRect fr = { 6, 6, LW - 12, LH - 12 }; SDL_RenderRect(ren, &fr);
-        #define CTEXT(Y, SC, R, G, B, T) do { const char *t_ = (T); float sc_ = (SC); SDL_SetRenderScale(ren, sc_, sc_); SDL_SetRenderDrawColor(ren, R, G, B, 255); \
-            SDL_RenderDebugText(ren, (LW - 8.0f * sc_ * (float)strlen(t_)) / 2 / sc_, (Y) / sc_, t_); SDL_SetRenderScale(ren, 1, 1); } while (0)
-        CTEXT(150, 2.0f, 255, 220, 80, "CALIBRATION WIIMOTE");
-        CTEXT(200, 1.0f, 235, 235, 235, wm.text[0]);
-        CTEXT(216, 1.0f, 235, 235, 235, wm.text[1]);
-        if (wm.text[2][0]) CTEXT(232, 1.0f, 255, 120, 80, wm.text[2]);
-        char st[96];
-        if (wm.dots) { snprintf(st, sizeof st, "Barre infrarouge : DETECTEE   (x=%4d  y=%4d)", (int)(wm.raw_x * 1024), (int)(wm.raw_y * 1024)); CTEXT(300, 1.0f, 100, 255, 120, st); }
-        else CTEXT(300, 1.0f, 255, 90, 90, "Barre infrarouge : NON DETECTEE - allume la barre et pointe vers elle");
-        if (wm.mark) {
-            float x = wm.mark_x * LW, y = wm.mark_y * LH; SDL_SetRenderDrawColor(ren, 40, 255, 80, 255);
-            SDL_FRect r[2] = { { x - 22, y - 2, 44, 4 }, { x - 2, y - 22, 4, 44 } }; SDL_RenderFillRects(ren, r, 2);
-            SDL_FRect ring = { x - 10, y - 10, 20, 20 }; SDL_RenderRect(ren, &ring);
-        } else if (wm.aiming) {                      /* verification: live crosshair */
-            float x = wm.x * (LW - 1), y = wm.y * (LH - 1); SDL_SetRenderDrawColor(ren, 255, 60, 60, 255);
-            SDL_FRect r[2] = { { x - 16, y - 1.5f, 32, 3 }, { x - 1.5f, y - 16, 3, 32 } }; SDL_RenderFillRects(ren, r, 2);
-        }
-    } else if (wm_on && wm.msg) { SDL_SetRenderDrawColor(ren, 255, 255, 255, 255); SDL_RenderDebugText(ren, 12, 12, wm.msg); }
+    if (wm_on && wm.calib) wm_calib_screen();                          /* full-screen Wiimote calibration */
+    else if (wm_on && wm.msg) { SDL_SetRenderDrawColor(ren, 255, 255, 255, 255); SDL_RenderDebugText(ren, 12, 12, wm.msg); }
     SDL_RenderPresent(ren);
 }
 
@@ -353,6 +356,7 @@ void plat_present_ui(const uint8_t *rgba)
     if (!ui_tex) { ui_tex = SDL_CreateTexture(ren, SDL_PIXELFORMAT_RGBA32, SDL_TEXTUREACCESS_STREAMING, 1280, 720); SDL_SetTextureScaleMode(ui_tex, SDL_SCALEMODE_LINEAR); }
     SDL_SetRenderLogicalPresentation(ren, 1280, 720, SDL_LOGICAL_PRESENTATION_LETTERBOX);
     SDL_UpdateTexture(ui_tex, NULL, rgba, 1280 * 4);
+    if (wm_on && wm.calib) { SDL_SetRenderLogicalPresentation(ren, LW, LH, SDL_LOGICAL_PRESENTATION_LETTERBOX); SDL_SetRenderDrawColor(ren, 0, 0, 0, 255); SDL_RenderClear(ren); wm_calib_screen(); SDL_RenderPresent(ren); apply_logical(); return; }   /* started from the options page: no game running yet */
     SDL_SetRenderDrawColor(ren, 0, 0, 0, 255); SDL_RenderClear(ren); SDL_RenderTexture(ren, ui_tex, NULL, NULL);
     SDL_RenderPresent(ren); apply_logical();
 }
