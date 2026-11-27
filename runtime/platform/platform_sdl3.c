@@ -4,6 +4,7 @@
 #include <SDL3/SDL.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "platform.h"
 #include "wiimote.h"
@@ -276,7 +277,8 @@ int plat_wiimote_pair(void) { return wiimote_pair(); }
 
 void plat_wiimote_enable(void)
 {
-    char p[1100]; snprintf(p, sizeof p, "%s", plat_pref_dir());
+    const char *ov = getenv("GOLGO13_DATA");                         /* wiimote.cal follows the same data folder override as settings.ini */
+    char p[1100]; snprintf(p, sizeof p, "%s%s", ov ? ov : plat_pref_dir(), ov ? "/" : "");
     wm_on = wiimote_start(p);
 }
 
