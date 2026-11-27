@@ -1,10 +1,11 @@
 #!/bin/sh
 # AppImage entry point: the program, plus every tool needed to build the games from the user's ROMs (private Python, CMake, Ninja, zig cc, SDL3).
 # Nothing is installed on the system. The writable project lives NEXT TO the AppImage, in ./golgo13/ (roms/, generated code, the built program, settings).
+# Started by RecompLauncher (RECOMPLAUNCHER_DATA set), the project lives in this unpacked folder and the per-user data in $RECOMPLAUNCHER_DATA.
 HERE="$(dirname "$(readlink -f "$0")")"
 SRC="$HERE/opt/golgo13"
 OUTER="$(dirname "${APPIMAGE:-$HERE}")"
-WORK="${GOLGO13_HOME:-$OUTER/golgo13}"
+if [ -n "$RECOMPLAUNCHER_DATA" ]; then WORK="${GOLGO13_HOME:-$HERE}"; else WORK="${GOLGO13_HOME:-$OUTER/golgo13}"; fi
 VER="$(cat "$SRC/VERSION" 2>/dev/null)"
 
 export PATH="$HERE/usr/bin:$HERE/usr/python/bin:$PATH"
@@ -14,11 +15,54 @@ export GOLGO13_SDL3_PREFIX="$HERE/usr/sdl3"
 export CC="$HERE/usr/bin/zigcc"
 export PYTHONNOUSERSITE=1
 export ZIG_GLOBAL_CACHE_DIR="$WORK/.cache/zig" ZIG_LOCAL_CACHE_DIR="$WORK/.cache/zig-local"
+# most of the private Python's standard library ships without .pyc: don't let it write __pycache__ into the release's usr/
+[ -n "$RECOMPLAUNCHER_DATA" ] && export PYTHONDONTWRITEBYTECODE=1
+
+# RecompLauncher: copy the data of earlier starts without it (SDL's per-user folder) into $RECOMPLAUNCHER_DATA once; the originals stay.
+# Each item goes through <name>.part and a rename; its name is journaled just before the rename, and a failed or cut-off copy takes back
+# exactly the journaled items. The marker, written last, is the only "done". Returns 0 once the marker exists (then the data folder is used).
+adopt_old_data() {
+  old="${XDG_DATA_HOME:-$HOME/.local/share}/golgo13-port/golgo13"
+  new="$RECOMPLAUNCHER_DATA"; mark="$new/.copied-from-golgo13-port"; jr="$new/.copying-from-golgo13-port"
+  [ -f "$mark" ] && return 0
+  mkdir -p "$new" || return 1
+  undo_copied || return 1
+  if [ -d "$old" ]; then
+    for src in "$old"/* "$old"/.[!.]* "$old"/..?*; do
+      [ -e "$src" ] || [ -L "$src" ] || continue
+      n="${src##*/}"
+      case "$n" in *"
+"*) continue ;; esac
+      # settings.ini: the old one replaces the file the launcher wrote; everything else never goes over an existing item
+      if [ "$n" != settings.ini ] && { [ -e "$new/$n" ] || [ -L "$new/$n" ]; }; then continue; fi
+      rm -rf "$new/$n.part" || { undo_copied; return 1; }
+      if ! cp -a "$src" "$new/$n.part"; then rm -rf "$new/$n.part"; undo_copied; return 1; fi
+      printf '%s\n' "$n" >> "$jr" || { rm -rf "$new/$n.part"; undo_copied; return 1; }
+      if ! mv -f "$new/$n.part" "$new/$n"; then rm -rf "$new/$n.part"; undo_copied; return 1; fi
+    done
+  fi
+  echo "$old" > "$mark" || { rm -f "$mark"; undo_copied; return 1; }
+  rm -f "$jr"
+  return 0
+}
+undo_copied() {
+  [ -f "$jr" ] || return 0
+  while IFS= read -r n; do
+    case "$n" in ""|.|..|*/*) continue ;; esac
+    rm -rf "$new/$n" "$new/$n.part" || return 1
+  done < "$jr"
+  rm -f "$jr"
+}
+if [ -n "$RECOMPLAUNCHER_DATA" ] && [ -z "$GOLGO13_DATA" ]; then
+  adopt_old_data && export GOLGO13_DATA="$RECOMPLAUNCHER_DATA"
+fi
 
 mkdir -p "$WORK"
 # first run, or a new AppImage version: copy the project files (never touches roms/, generated code, settings, saves)
 if [ ! -f "$WORK/.appimage-version" ] || [ "$(cat "$WORK/.appimage-version")" != "$VER" ]; then
-  ( cd "$SRC" && find . -mindepth 1 -maxdepth 1 ! -name build-linux | while read -r f; do cp -a "$f" "$WORK/" 2>/dev/null; done )
+  ( cd "$SRC" && find . -mindepth 1 -maxdepth 1 ! -name build-linux | while read -r f; do
+      [ -n "$RECOMPLAUNCHER_DATA" ] && [ "$WORK" = "$HERE" ] && [ "$f" = ./recomplauncher.json ] && continue      # the release already ships it here
+      cp -a "$f" "$WORK/" 2>/dev/null; done )
   mkdir -p "$WORK/build-linux" "$WORK/roms"
   # keep an already built game program (it holds the generated code); otherwise start with the menu-only one
   if [ ! -d "$WORK/generated" ] && [ ! -d "$WORK/generated_g13knd" ] && [ ! -d "$WORK/generated_g13jnr" ]; then cp -f "$SRC/build-linux/golgo13" "$WORK/build-linux/golgo13"; fi
