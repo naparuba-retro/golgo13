@@ -12,6 +12,25 @@
     "program": ["golgo13.exe", "build/golgo13.exe", "AppRun", "build-linux/golgo13", "golgo13"],
     "args": ["--roms", "{install}/roms"]
   },
+  "config": [
+    {"format": "ini", "file": [
+      {"path": "{data}/settings.ini", "if": "{data}/.copied-from-golgo13-port"},
+      {"path": "{config}/golgo13-port/golgo13/settings.ini", "if": "{config}/golgo13-port/golgo13/settings.ini"},
+      {"path": "{local}/golgo13-port/golgo13/settings.ini"}
+    ]}
+  ],
+  "saves": [
+    "{data}/settings.ini", "{data}/lastgame.txt", "{data}/wiimote.cal",
+    "{local}/golgo13-port/golgo13/settings.ini", "{local}/golgo13-port/golgo13/lastgame.txt", "{local}/golgo13-port/golgo13/wiimote.cal",
+    "{config}/golgo13-port/golgo13/settings.ini", "{config}/golgo13-port/golgo13/lastgame.txt", "{config}/golgo13-port/golgo13/wiimote.cal"
+  ],
+  "folders": {
+    "saves": [
+      {"path": "{data}", "if": "{data}/.copied-from-golgo13-port"},
+      {"path": "{config}/golgo13-port/golgo13", "if": "{config}/golgo13-port/golgo13"},
+      {"path": "{local}/golgo13-port/golgo13"}
+    ]
+  },
   "games": [
     {"id": "golgo13", "name": "Golgo 13", "args": ["--game", "golgo13"], "inputs": ["golgo13"]},
     {"id": "g13knd", "name": "Golgo 13: Kiseki no Dandou", "args": ["--game", "g13knd"], "inputs": ["g13knd"]},
